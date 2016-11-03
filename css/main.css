@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body {
+  font-size: 1.1vw;
+  font-weight: 400;
+  font-family: "Lato", sans-serif; }
+
+h1 {
+  font-size: 1.8rem; }
+
+h2 {
+  font-size: 1.6rem; }
+
+h3 {
+  font-size: 1.4rem; }
+
+h4 {
+  font-size: 1.2rem; }
+
+.headline-text-big {
+  font-size: 4rem;
+  font-family: "Droid Serif", sans-serif; }
+
+.headline-text span {
+  height: 2em;
+  width: 2em;
+  font-size: 0.4em;
+  font-weight: 300;
+  /* tu może jeszcze zmienną dać*/
+  font-style: italic;
+  line-height: 1.9em;
+  text-transform: lowercase;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -0.44em 0.1em 0;
+  border: 0.1em solid #fff;
+  background-color: rgba(128, 0, 128, 0.5); }
+
+.section-title {
+  width: 100%;
+  /*font-size: 2.0vw;*/
+  font-weight: 500;
+  text-align: center;
+  height: 150px;
+  line-height: 150px; }
+
+.section-title-lead {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto; }
+
+.icon-headline {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2vh; }
