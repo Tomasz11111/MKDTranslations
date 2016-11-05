@@ -1,8 +1,9 @@
-body {
-    font-size: $base-font-size;
-    font-weight: $base-font-weight;
+html {
+	font-size: $base-font-size;	
+	font-weight: $base-font-weight;
     font-family: $base-font-family;
 }
+
 
 h1 {
     font-size: 1.8rem;
@@ -16,6 +17,10 @@ h3 {
     font-size: 1.4rem;
     
 }
+
+/*h3 {
+	margin-top: 0;
+} */
 h4 {
     font-size: 1.2rem;
 }
@@ -25,7 +30,7 @@ h4 {
     font-family: $title-font-family;
 }
 
-.headline-text span {
+.headline-text-big span {
     height: 2em;
     width: 2em;
     font-size: 0.4em;
@@ -42,11 +47,11 @@ h4 {
 
 .section-title {
     width: 100%;
-    /*font-size: 2.0vw;*/
+    
 	font-weight: 500;
 	text-align: center;
-	height: 150px; //to może do przerobienia 
-	line-height: 150px; //to do przerobienia
+	height: 10vh; //to może do przerobienia 
+	line-height: 10vh !important; //to do przerobienia
 }
 .section-title-lead {
     font-size: 1.2rem;
@@ -55,12 +60,218 @@ h4 {
     margin: 0 auto;
 }
 
+
+.icon_description_text {
+
+	font-size: 1.1vw;
+	font-weight: 400;
+	text-align: center;
+    padding-top: 1vh;
+}
+
 .icon-headline {
     
 	font-weight: 600;
 	text-align: center;
     margin-bottom: 2vh;
 }
+
+.icon-headline-animation {
+    -webkit-animation-name: emerge;
+    -moz-animation-name: emerge;
+    animation-name: emerge;
+    animation-duration: 1s;
+
+
+}
+//sprawdzić czy potrzebne
+
+.thin-title-first-headline {
+	font-size: 3em;
+	color: white;
+	font-weight: 400;
+
+}
+.thin-title {
+	font-size: 3vh;
+	font-weight: 400;
+	color: white;
+
+}
+.thin-title-more {
+	font-size: 3vh;
+	font-weight: 400;
+	color: white;
+}
+
+.big-title {
+	font-size: 3.5em;
+	color: white;
+	border: 0;
+	text-decoration: overline;
+
+}
+//sprawdzić po co te headers titles
+.headers-titles {
+	border: 2px solid white;
+	border-radius: 8px;
+	padding: 5px;
+	color: #0E365C;
+	background-color: white;
+
+}
+
+
+.headers-titles-grey {
+	border: 1px solid white;
+	padding: 5px;
+	background-color: #4A4E52;
+	border-radius: 8px;
+	color: white;
+}
+.header-title {;
+
+	background-color: #0E365C;
+	
+	color: white;
+}
+
+// Sidepage Terms and conditions
+
+.terms_conditions_header > p > span {
+    border: 3px solid rgba(128, 0, 128, 0.7);
+    
+    color: rgba(128, 0, 128, 0.7);
+    padding: 5px;
+    font-weight: 600;
+}
+
+// czy to potrzebne
+
+.text-violet {
+	color: #504cff !important;
+}
+.text-red {
+	color: #f04150 !important;
+}
+.text-blue {
+	color: #ff5d19 !important;
+}
+.text-grey {
+	color: slategrey !important;
+}
+.text-teal {
+	color: teal !important;;
+}
+.text-gainsboro {
+	color: gainsboro;
+}
+
+.about_main {
+	font-size: 3vh;
+	background-color: rgba(0, 128, 128, 0.5);
+	width: 80%;
+    margin-top: 100px;
+	padding: 20px;
+	font-weight: 500;
+	color: white;
+
+}
+.about_secondary {
+	font-size: 2.2vh;
+margin-top: 50px;
+	background-color: rgba(0, 128, 128, 0.5);
+	width: 60%;
+	padding: 20px;
+	color: white;
+
+}
+
+
+.about_main span {
+
+	background-color: rgba(255, 255, 255, 0.8);
+
+	color: teal;
+}
+.about_title, .about_mobile {
+    font-size: 5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    margin-top: 10vh;
+    float: right;
+    
+    
+    
+}
+.about_mobile {
+    float: left;
+}
+.about_title span, .about_mobile span {
+    background-color: rgba(0, 128, 128, 0.5);
+    color: white;
+    height: 100%;
+    padding: 5px;
+    padding-right: 0;
+    margin-right: 0;
+    display: inline-block;
+}
+
+
+.about_title_right {
+    font-size: 5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(0, 128, 128, 0.5);
+    border-left: 0;
+    color: teal;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    padding: 3px;
+}
+
+//może się przydać
+
+       .contact_left_title {
+    font-size: 5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(128, 0, 128, 0.5);
+    color: purple;
+}
+// Portfolio section 
+.portfolio-overlay-text-hover {
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 128, 128, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.portfolio-overlay-text-hover p {
+	color: white;
+	font-weight: 600;
+
+}
+
+.portfolio-overlay-text p {
+	color: white;
+	font-weight: 600;
+
+	font-size: 3vh;
+
+}
+
+//do czego to? 
+.pic_overlaytext_hover {
+	text-align: center;
+	font-weight: 400;
+
+}
+
+
+
 
 
 

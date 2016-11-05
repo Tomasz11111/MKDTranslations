@@ -1,0 +1,197 @@
+.container-fluid {
+	width: 100% !important;
+   	padding: 0;
+
+}
+.padding {
+	padding-bottom: 0 !important;
+}
+/*.row {
+	width: 100% !important;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+}*/
+.row {
+	margin:0;
+}
+
+#photos { margin-top: 50px;
+
+}
+
+#pricing {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    
+    
+}
+
+
+//sprawdzić czy się nie powtarzy w typografii
+.headline {
+	text-align:center;
+	color: white;
+	z-index: 1000;
+	position: absolute;
+	top: 35%;
+	width: 100%;
+	
+}
+//sprawdzić czy potrzebne
+#terms_title {
+    margin-top: 58px !important;
+}
+/*#portfolio {
+	width: 100%;
+	height: 100vh;
+	background-color: #f04150;
+}*/ 
+/*sprawdzić po co jest portfolio*/
+
+
+//sprawdzić po co to wszystko
+
+.container-section-title {
+	width: 100%;
+	height: 30vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+
+
+
+.container-section-title-col {
+	height: 100% !important;
+	margin-bottom: 0;
+}
+
+.container-section-content {
+	width: 100%;
+	height: 70vh;
+}
+.container-section-map {
+	width: 100%;
+	height: 50vh;
+	margin: 0;
+	padding: 0;
+
+}
+.container-section-map > .row-col > .col-lg-12 {
+	padding: 0 !important;
+}
+.section-contact {
+	width: 100%;
+	width: 100%;
+	height: 60vh;
+}
+
+.slideanim {
+    visibility: hidden;
+}
+.slide {
+    
+	animation-name: slideRight;
+    -webkit-animation-name: slideRight; 
+    -moz-animation-name: slideRight;
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    -moz-animation-name: slideRight;
+    
+    visibility: visible; 
+}
+
+.confidentiality {
+	font-size: 3.5vh;
+	text-align: center;
+	color: white;
+	display: inline-block;
+	width: 60%;
+	font-weight: 600;
+	font-style: italic ;
+    
+
+
+
+
+}
+
+
+
+#learn-language {
+    margin-top: 10vh;
+}
+
+.icons_row > div {
+    height: 260px;
+    margin-bottom: 20px;
+}
+
+.about-right {
+	
+	height: 100vh;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 100;
+	float:right;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0 !important;
+    position: relative;
+
+}
+.about-left {
+    height: 100vh;
+    padding: 0 !important;
+}
+//być może będzie niepotrzebny
+.contact-left {
+    height: 100vh;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    
+}
+.contacts-items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	text-align: center;
+	height: 19vh;
+
+
+}
+.contacts-items> p {
+	height: 9vh;
+}
+//do sekcji contact
+.address {
+	list-style: none;
+	padding: 0;
+}
+
+
+#googleMap {
+
+	
+    width: 100%;
+    height: 100vh;
+}
+//sprawdzić po co
+.competence {
+	margin-top: 20px;
+}
+
+.col-centered{
+	float: none;
+	margin: 0 auto;
+}
+

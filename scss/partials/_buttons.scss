@@ -1,0 +1,136 @@
+.btn-quote {
+	background: transparent;
+	border: 2px solid white;
+	z-index: 1001;
+	padding: 10px 5px 10px 5px;
+	width: 200px;
+	margin-top: 200px;
+
+}
+.btn-more {
+	background: transparent;
+	border: 2px solid white;
+	z-index: 1001;
+	padding: 10px;
+	margin-top: 200px;
+	width: 200px;
+}
+
+           
+
+
+
+
+.btn-quote:hover {
+	border: 4px white solid;
+	background-color: #0E365C;
+	text-decoration: none;
+	color: white;
+}
+
+.help:hover {
+	background-color: rgba(255, 255, 255, 1);
+	font-weight: 700;
+}
+.help:hover + .help span {
+	background-color: rgba(0, 128, 128, 1);
+	font-weight: 700;
+}
+
+.help span {
+    background-color: rgba(0, 128, 128, 0.5);
+    color: white;
+	height: 100%;
+	display: inline-block;
+	padding: 5px;
+}
+
+// to do poprawienia
+
+.btn-submit {
+
+
+	width: 15% !important;
+	background-color: slategray;
+	border-color: slategray;
+	border-radius: 0;
+	font-size: 1.8vw;
+	padding: 15px;
+	color: white;
+
+}
+//krzyżyk zamykakący
+
+.closing {
+    width: 30px;
+	height: 30px;
+    position: absolute;
+    top: 2vh;
+	left: 2vw;
+    border-radius: 10%;
+    background-color: #F04150;
+	color: white;
+	font-size: 1vw;
+	font-weight: 600;
+    -webkit-animation: closing 1s infinite;
+	animation: closing 1s infinite;
+    z-index: 10000;
+    
+	
+}
+.closing div {
+	
+	cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+   
+}
+//zamienić
+
+
+.process-buttons p{
+    display: inline-block;
+    width: 15vw;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.morespecialties, .pricing-buttons {
+	height: 15vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.morespecialties p, .process-buttons-pricing, .process-buttons-terms {
+	font-weight: 600;
+	font-size: 3vh;
+	border: 2px solid teal;
+	border-radius: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+
+.help {
+	font-size: 4vh;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 3px solid rgba(0, 128, 128, 0.5);
+	color: teal;
+	
+	left: -89px;
+	top: 90vh;
+	position: absolute;
+	padding-right: 5px;
+}
+
+.help a{
+    color: teal;
+}
+

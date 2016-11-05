@@ -1,0 +1,165 @@
+//sprawdzić czy potrzebne
+
+.bg-about {
+	background-image: url('../images/about.jpeg');
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	background-attachment: fixed;
+}
+.bg-contact {
+	background-image: url('../images/prague.jpeg');
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+.bg-gainsboro {
+	background-color: white;
+
+}
+.bg-blue {
+	background-color: #ff5d19;
+
+}
+.bg-teal {
+	background-color: teal;
+}
+.bg-darkgrey {
+	background-color: darkgrey;
+
+
+}
+.bg-red {
+	background-color: #f04150;
+}
+.bg-white {
+	background-color: white !important;
+}
+.bg-grey {
+	background-color: rgba(218, 216, 255, 0.4);
+	padding-bottom: 50px;
+}
+.bg-violet {
+	background-color: #504cff;
+}
+.changeWidth {
+    width: 600px;
+}
+.bg-green {
+	background-color: rgba(0, 128, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+
+}
+.border-bottom-white {
+	border-bottom: 15px solid white;
+
+}
+.border-bottom-blue {
+	border-bottom: 15px solid #ff5d19;
+}
+.border-grey {
+	border-bottom: 15px solid slategrey;
+}
+.border-red {
+	border-bottom: 15px solid #f04150;
+}
+.border-teal {
+	border-bottom: 5px solid teal;
+}
+.border-top-grey {
+	border-top: 5px solid slategrey;
+}
+.border-violet {
+	border-bottom: 15px solid #504cff;
+}
+.border-gainsboro {
+	border-bottom: 15px solid gainsboro;
+}
+.border-top-gainsboro {
+	border-top: 5px solid gainsboro;
+}
+.border-top-red {
+	border-top: 5px solid #f04150;
+}
+.border-top-violet {
+	border-top: 5px solid #504cff;
+
+}
+.border-top-teal {
+	border-top: 5px solid teal;
+}
+
+.outer_border {
+    border: 3px solid white;
+    width: 80%;
+    height: 80%;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner_border {
+    border: 3px solid white;
+    width: 40%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+    
+}
+.outer_bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+}
+.inner_border p {
+    color: white;
+    font-weight: 600;
+    font-size: 2.8vh;
+    display:inline-block;
+    height: 3vh;
+}
+
+.french .inner_border:hover   {
+    background-color: rgba(128, 0, 128, 0.4);
+    cursor: pointer;
+}
+.polish .inner_border:hover {
+    background-color: rgba(0, 128, 128, 0.6);
+    cursor: pointer;
+}
+
+//to ew do wyrzucenia
+
+.bg-icons {
+	background-color: #ff5d19;
+	width: 4vw;
+	height: 4vw;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.terms_conditions_header {
+    background-image: url('../images/termsandconditions.jpg');
+    margin-bottom: 30px;
+    background-position: center;
+      
+    
+}
