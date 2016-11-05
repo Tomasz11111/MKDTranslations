@@ -1,15 +1,13 @@
 .high_standards_and_guidelines_list li {
     padding: 5px;
-    
+    font-size: $base-font-size;
 }
 
 .icon_circle {
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@extend %flex-centered;
 	margin: 0 auto;
 	margin-bottom: 2vh;
 	background-color: white;
@@ -55,9 +53,7 @@
 }
 
 .payments_methods_flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-centered
 }
 .payments_methods_flex img {
     margin-left: 1vw;

@@ -48,37 +48,23 @@
 	width: 100%;
 	height: 20%;
 	background-color: rgba(0, 128, 128, 0.5);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@extend %flex-centered;
 
 
 }
 
 .french {
     background-image: url('../images/paris.jpg');
-	background-size: cover;
-	
-	height: 50vh;
-    margin:0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+	@extend %learnlanguage;
+    @extend %flex-centered;
+    
 
 }
 .polish {
-     background-image: url('../images/cracow.jpeg');
-	background-size: cover;
-	
-	height: 50vh;
-    margin:0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    background-image: url('../images/cracow.jpeg');
+	@extend %learnlanguage;
+	@extend %flex-centered;
+    
 }
 
 .logo {

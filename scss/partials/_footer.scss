@@ -1,0 +1,24 @@
+ul.footer-nav-horizontal {
+	height: 25vh;
+	width: 100%;
+	list-style-type: none;
+	li {
+		display: inline-block;
+		position: relative;
+		padding-right: 3vw;
+		
+		ul {
+			
+		position: absolute;
+		top: 50px;
+		left: 0px;
+		padding: 0;
+		height: 20vh;
+			li {
+				display: block;
+			}
+			}
+		}
+		
+	}
+
