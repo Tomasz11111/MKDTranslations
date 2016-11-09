@@ -1,24 +1,52 @@
+footer {
+	@extend %flex-centered;
+	height: 30vh;
+	.navbar {
+	margin: 0 !important;
+	padding: 0 !important;
+	}
+}
 ul.footer-nav-horizontal {
-	height: 25vh;
-	width: 100%;
-	list-style-type: none;
+	
+	
+	text-align: left;
+	
 	li {
-		display: inline-block;
-		position: relative;
-		padding-right: 3vw;
+		
+		
+		
+		width: (100vw/7.5) !important;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		
+		a {
+			padding-left: 0;
+			text-size: 1.2rem !important;
+			color: white !important;
+			&:hover {
+				color: $base-color-2 !important;
+				background-color: transparent !important;
+				font-size: ($base-font-size * 1.05) 
+				
+			}
+			
+		}
+		
 		
 		ul {
 			
-		position: absolute;
-		top: 50px;
-		left: 0px;
-		padding: 0;
-		height: 20vh;
+		
+		
+		padding-left: 0;
+		padding-top: 1vh;
+		
 			li {
-				display: block;
-			}
+				
+				width: (100vw/7.5) !important;
 			}
 		}
-		
 	}
+}
+		
+
 

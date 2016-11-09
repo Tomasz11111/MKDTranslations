@@ -1,6 +1,7 @@
 // Fonts
 
 $base-font-size: 1.1vw;
+$base-font-size-mobile: $base-font-size * 3; 
 $base-font-weight: 400;
 $base-font-family: 'Lato', sans-serif;
 $title-font-family: 'Droid Serif', sans-serif;
@@ -9,4 +10,17 @@ $title-font-family: 'Droid Serif', sans-serif;
 
 $base-color-1: teal;
 $base-color-2: purple;
-$nav-and-background-color: rgba(105, 105, 105, 0.8);
+$nav-and-background-color: rgba(105, 105, 105, 1);
+
+//Assets paths
+
+$path-img: '/images';
+$path-icons: '../icons';
+
+// Screen sizes 
+
+$mobile-max: 767px;
+$tablet: 768px;
+/*small-screen: 
+$reg-screen: */
+$large-screen: 1600px;

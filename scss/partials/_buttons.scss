@@ -4,6 +4,10 @@
 	z-index: 1001;
 	padding: 10px;
 	min-width: 12vw;
+	@include mobile {
+		min-width: 50vw;
+		margin: 3vw;
+	}
 	
 	
 	
@@ -126,17 +130,12 @@
 //zamienić
 
 
-.process-buttons p{
-    display: inline-block;
-    width: 15vw;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-}
+
 
 .morespecialties, .pricing-buttons {
 	height: 15vh;
 	@extend %flex-centered;
+	
 }
 
 

@@ -1,38 +1,12 @@
-.pic1 {
+// Portfolio images
 
-	background-image: url('../images/aircraft.jpg');
-
-}
-.pic2 {
-
-	background-image: url('../images/business.jpg');
-
-}
-.pic3 {
-
-	background-image: url('../images/marketing.jpg');
-
-}
+@each $theme in tourism, business, marketing, technical, law, finance { .portfolio-#{$theme}-pic { background-image: url('#{$path-img}/#{$theme}.jpg') }; 
+} 
 
 
-.pic4 {
-
-	background-image: url('../images/engine.jpg');
-
-}
-.pic5 {
-
-	background-image: url('../images/contract.jpg');
-
-}
-.pic6 {
-
-	background-image: url('../images/finance.jpg');
-
-}
 
 
-.pic_square {
+.pic-square {
 	height: 40vh;
 
 	background-size: cover;
@@ -54,14 +28,14 @@
 }
 
 .french {
-    background-image: url('../images/paris.jpg');
+    background-image: url('#{$path-img}/paris.jpg');
 	@extend %learnlanguage;
     @extend %flex-centered;
     
 
 }
 .polish {
-    background-image: url('../images/cracow.jpeg');
+    background-image: url('#{$path-img}/cracow.jpeg');
 	@extend %learnlanguage;
 	@extend %flex-centered;
     

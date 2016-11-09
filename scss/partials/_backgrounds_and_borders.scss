@@ -1,11 +1,14 @@
 //sprawdzić czy potrzebne
 
 .bg-about {
-	background-image: url('../images/about.jpeg');
 	@extend %fullpage-bgimage;
+	@include mobile {
+			background-image: url('#{$path-img}/about_mobile.jpg') !important;
+			}
+	//background-image: url('#{$path-img}/about.jpeg');//
 }
 .bg-contact {
-	background-image: url('../images/prague.jpeg');
+	background-image: url('#{$path-img}/prague.jpeg');
 	@extend %fullpage-bgimage;
 }
 
@@ -29,9 +32,12 @@
     width: 600px;
 }
 .bg-green {
-	background-color: rgba(0, 128, 0, 0.7);
 	@extend %flex-centered;
+	background-color: rgba(0, 128, 0, 0.7);
 	height: 20vh;
+	@include mobile {
+		height: 30vh;
+	}
 
 }
 .border-bottom-white {
@@ -128,9 +134,11 @@
 }
 
 .terms_conditions_header {
-    background-image: url('../images/termsandconditions.jpg');
+    background-image: url('#{$path-img}/termsandconditions.jpg');
     margin-bottom: 30px;
     background-position: center;
+	height: 20vh;
+	@extend %flex-centered;
       
     
 }

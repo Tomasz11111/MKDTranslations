@@ -21,7 +21,7 @@
 	margin-right: 0px;
     padding-right: 70px;
 	display: none;
-	background-color: rgba($base-color-2, 0.5);
+	background-color: rgba($base-color-2, 0.7);
 
 }
 .navigation_right {
@@ -30,11 +30,16 @@
         li {
             padding-left: 10px;
             display: inline-block;
+			@include mobile {
+				display: block;
+				background-color: rgba(128, 0, 128, 1);
+        		width: 50vw; /* to nie wiem po co jest*/
+			}
             a {
               color:  white !important; /*tu zmieniam kolor czcionki w menu*/
 	           font-size: 1.2rem;   //
             }
-            a[href="#how_i_teach"], a[href="#process"] {
+            a[href="#how_i_teach"], a[href="#process"], a[href="learnfrench.html"], a[href="learnpolish.html"], a[href="#pricing"],   {
                 font-weight: 300;
             }
         }
@@ -126,24 +131,6 @@
         }
 }
 
-.puopu-r1-sidepages {
-    font-size: 2em;
-    line-height: 56px;
-    margin: 0;
-    
-
-    
-}
-.puopu-r1-sidepages_animated {
-    font-size: 1.5em;
-    
-    -webkit-animation-name: minutarize;
-    -moz-animation-name: minutarize;
-    animation-name: minutarize;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    -moz-animation-duration: 1s;
-}
 
 @media all and (max-width: 440px) {
     .puopu-r1-sidepages {
@@ -161,13 +148,7 @@
 }
 //sidemenu terms and conditions
 
-.terms_conditions_index {
-	list-style: none;
-	line-height: 20px;
-	width:80%;
 
-
-}
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
@@ -201,8 +182,11 @@
 
 	width: 20vw;
 	top: 20vh;
-    
-    
+	@include large-screen {
+		
+		width: 250px;
+		}
+ 
 }
 
 .affix a {

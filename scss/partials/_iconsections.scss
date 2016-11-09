@@ -1,40 +1,56 @@
-.high_standards_and_guidelines_list li {
-    padding: 5px;
-    font-size: $base-font-size;
+.high_standards_and_guidelines_list {
+	padding: 0;
+		li {
+			padding: 5px;
+			font-size: $base-font-size;
+			@include mobile {
+			font-size: $base-font-size-mobile;
+				}
+		}	
+    
 }
 
-.icon_circle {
+.icon {
+	&-circle {
+	@extend %flex-centered;
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
-	@extend %flex-centered;
 	margin: 0 auto;
 	margin-bottom: 2vh;
 	background-color: white;
-}
-.icon_circle_animate {
+	border: 3px solid rgba(0, 126, 126, 0.3);
+		@include mobile {
+			width: 100px;
+			height: 100px;
+		}
+		
+	
+	}
+	&-circle-purple {
+	border: 3px solid rgba(128, 0, 128, 0.3);
+
+	}
+	&-circle-animate {
     -webkit-animation-name: bounceIn;
 	-moz-animation-name: bounceIn;
     animation-name: bounceIn;
     animation-duration: 1s;
     
-}
-.icon_circle_animate_purple {
+	}
+	&-circle-animate-purple {
      -webkit-animation-name: bounceInPurple;
 	-moz-animation-name: bounceInPurple;
     animation-name: bounceInPurple;
     animation-duration: 1s;
-}
-
-
-.icon_circle_teal {
+	}
+	&-circle-teal {
 
 	border: 3px solid rgba(0, 126, 126, 0.3);
+	}
 }
-.icon_circle_purple {
-	border: 3px solid rgba(128, 0, 128, 0.3);
 
-}
+
 .icon_circle_teal span {
 	text-align: center;
 	color: #008000;
@@ -42,14 +58,20 @@
 	font-size: 2.2vh;
 
 }
-.icon_pic {
+.icon-set-width {
 	width: 60px;
 	opacity: 0.7;
+	@include mobile {
+		width: 70%;
+	}
 
 }
-.icon_pic1 {
+.icon-set-height {
 	height: 60px;
 	opacity: 0.7;
+	@include mobile {
+		height: 70%;
+	}
 }
 
 .payments_methods_flex {
