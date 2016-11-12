@@ -1,23 +1,9 @@
-.form-control, input[type="text"], input[type="email"], input[type="tel"] {
+ input[type="text"], input[type="email"], input[type="tel"] {
 	padding: 30px !important;
-	border: none !important;
-    border: 1px solid white !important;
-    box-shadow: none;
-    background-color: purple !important;
-	font-size: 1.8vw;
-	text-align: center;
+	font-size: $base-font-size;
+	display: inline;
 	
-	font-weight: 500;
-	
-	width: 45%;
-	margin: 0 auto;
 	
 }
 
-.form-group {
-	display: flex;
-	justify-content: space-around;
     
-    
-    
-}

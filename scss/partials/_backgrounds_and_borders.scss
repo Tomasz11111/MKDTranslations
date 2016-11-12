@@ -8,8 +8,11 @@
 	//background-image: url('#{$path-img}/about.jpeg');//
 }
 .bg-contact {
-	background-image: url('#{$path-img}/prague.jpeg');
-	@extend %fullpage-bgimage;
+	background-image: url('#{$path-img}/prague2.jpg');
+	
+	background-size: cover;
+	background-attachment: fixed;
+	height: 1200px !important;
 }
 
 
@@ -31,15 +34,22 @@
 .changeWidth {
     width: 600px;
 }
-.bg-green {
+.bg-belt {
 	@extend %flex-centered;
-	background-color: rgba(0, 128, 0, 0.7);
 	height: 20vh;
 	@include mobile {
 		height: 30vh;
 	}
 
+
+	&-green {
+	background-color: rgba(0, 128, 0, 0.7);
+	}
+	&-purple {
+	background-color: rgba(128, 0, 128, 0.7);
+	}
 }
+
 .border-bottom-white {
 	border-bottom: 15px solid white;
 
