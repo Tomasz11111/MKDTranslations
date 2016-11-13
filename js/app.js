@@ -1,4 +1,9 @@
-$(document).ready(function() {
+/* --  Hero video plugin coverr.co  --
+potrzebne drobne poprawki, jest problem z dostowaniem do całości okna, przy niektórych aspect ratios
+
+*/
+
+jQuery(document).ready(function($) {
     
     scaleVideoContainer();
 
@@ -102,6 +107,7 @@ function smoothScroll() {
     };
     smoothScroll();
 /*
+// juz raczej niepotrzebna, ale na razie zostawiam
 
    function spyBgColor() {
         var $trigger = $('#myNavbar').find('a');
@@ -159,23 +165,23 @@ function smoothScroll() {
                 offsetHowiTeach = $howiTeach.offset(),
                 winoffset = $(window).scrollTop();
                 
-        //tutaj sprawdzam, czy jest e ogóle w DOMie ten element, dla innych podstron, żeby nie wywalało błędów
+        //tutaj sprawdzam, czy jest e ogóle w DOMie ten element, dla innych podstron, żeby nie wywalało błędów, być może potrzebne jakieś docelowe bardziej eleganckie rozwiązanie
     if($('.container-fluid').is($services)) {
         if(winoffset > offsetServices.top - 20) {
             console.log('jeje');
            
-           $('.bg-grey .icon_circle').delay(1500).addClass('icon_circle_animate');
-            $('.icon_title_text').delay(1500).addClass('icon_title_text_animation');
-            $('.icon_description_text').delay(1500).addClass('icon_title_text_animation');
+           $('.bg-grey .icon-circle').delay(1500).addClass('icon-circle-animate');
+            $('.icon-headline').delay(1500).addClass('icon-headline-animation');
+            $('.icon-description-text').delay(1500).addClass('icon-headline-animation');
            }
-        else { $('.bg-grey .icon_circle').removeClass('icon_circle_animate');
-              $('.icon_title_text').removeClass('icon_title_text_animation');
-              $('.icon_description_text').removeClass('icon_title_text_animation');
+        else { $('.bg-grey .icon-circle').removeClass('icon-circle-animate');
+              $('.icon-headline').removeClass('icon-headline-animation');
+              $('.icon-description-text').removeClass('icon-headline-animation');
              }
     
             if(winoffset > offsetProcess.top - 20) {
-                $('#process-content .icon_circle').delay(1500).addClass('icon_circle_animate');
-                $('#process-content .icon_title_text').delay(1500).addClass('icon_title_text_animation');
+                $('#process-content .icon-circle').delay(1500).addClass('icon-circle-animate');
+                $('#process-content .icon-headline').delay(1500).addClass('icon-headline-animation');
                 setTimeout(function() {
                     
                 $('.check_empty').addClass('hidden');
@@ -184,8 +190,8 @@ function smoothScroll() {
                //jakąś pętlą to tu zrobić 
         }
             else {
-                $('#process-content .icon_circle').removeClass('icon_circle_animate');
-                 $('#process-content .icon_title_text').removeClass('icon_title_text_animation');
+                $('#process-content .icon-circle').removeClass('icon-circle-animate');
+                 $('#process-content .icon-headline').removeClass('icon-headline-animation');
                 $('.check_empty').removeClass('hidden');
                 $('.check_full').addClass('hidden');
                 }
@@ -193,12 +199,12 @@ function smoothScroll() {
         });
             /*
            if(winoffset > offsetHowiTeach.top - 20) { 
-            $('#how_i_teach_icons  .icon_circle').delay(1500).addClass('icon_circle_animate_purple');
-            $('#how_i_teach_icons .icon_title_text').delay(1500).addClass('icon_title_text_animation');
-            $('#how_i_teach_icons .icon_description_text').delay(1500).addClass('icon_title_text_animation');
+            $('#how_i_teach_icons  .icon-circle').delay(1500).addClass('icon-circle-animate-purple');
+            $('#how_i_teach_icons .icon-headline').delay(1500).addClass('icon-title-text-animation');
+            $('#how_i_teach_icons .icon_description_text').delay(1500).addClass('icon-headline-animation');
            }
-        else { $('#how_i_teach_icons  .icon_circle').removeClass('icon_circle_animate_purple');
-              $('#how_i_teach_icons .icon_title_text');
+        else { $('#how_i_teach_icons  .icon-circle').removeClass('icon-circle-animate-purple');
+              $('#how_i_teach_icons .icon-headline');
               $('#how_i_teach_icons .icon_description_text');
              }*/
     
@@ -210,7 +216,7 @@ function smoothScroll() {
    
     activateIconsAnimation();
     
-    /*function googleMaps() {
+    function googleMaps() {
 
 
         var myCenter = new google.maps.LatLng(50.075881, 14.452943);
@@ -219,7 +225,7 @@ function smoothScroll() {
             var mapProp = {
                 center: myCenter,
                 zoom: 14,
-                scrollwheel: true,
+                scrollwheel: true, //trzeba jeszcze dopisać warunek, że dla mobile nie ma scrollwheel
                 draggable: true,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
@@ -237,17 +243,17 @@ function smoothScroll() {
 
     }
 
-    googleMaps();*/
+    googleMaps();
 
 function pricingShowHide() {
     var $closeBtn = $('.closing'), 
-        $showBtn = $('.process-buttons-pricing'),
+        $showBtn = $('#btn-pricing'),
         $pricingSection = $('#pricing'),
         $processContent = $('#process-content'),
         $process = $('#process');
-    $showBtn.on('click', function() {
-
-        $pricingSection.removeClass('hidden');
+    $showBtn.on('click', function(event) {
+		event.preventDefault();
+		$pricingSection.removeClass('hidden');
         $processContent.addClass('hidden');
         $('html, body').animate({
             scrollTop: $pricingSection.offset().top
@@ -306,7 +312,7 @@ function fullPage() {
 
 }
 
-
+// ta funkcja będzie raczej niepotrzebna, ale na razie zostawiam
     function adjustNavColor() {
         $(window).scroll(function() {
             console.log($(window).scrollTop());
@@ -342,36 +348,36 @@ function fullPage() {
 adjustNavColor();
 */
 function portfolioImgs() {
-    $('.pic_square').on('mouseenter', function() {
+    $('.pic-square').on('mouseenter', function() {
         console.log('ok');
-        $(this).find('.pic_overlaytext').animate({
+        $(this).find('.portfolio-overlay').animate({
             height: "100%"});
 
-        $(this).find('.pic_overlaytext_title').addClass('hidden');
-        $(this).find('.pic_overlaytext_hover').removeClass('hidden');
+        $(this).find('.portfolio-overlay-text').addClass('hidden');
+        $(this).find('.portfolio-overlay-text-hover').removeClass('hidden');
 
     });
-    $('.pic_square').on('mouseleave', function() {
+    $('.pic-square').on('mouseleave', function() {
         console.log('ok');
-        $(this).find('.pic_overlaytext').animate({
+        $(this).find('.portfolio-overlay').animate({
             height: "20%"});
-        $(this).find('.pic_overlaytext_title').removeClass('hidden');
-        $(this).find('.pic_overlaytext_hover').addClass('hidden');
+        $(this).find('.portfolio-overlay-text').removeClass('hidden');
+        $(this).find('.portfolio-overlay-text-hover').addClass('hidden');
 
     });
     }
     function expandPortfolio() {
         $('.morespecialties').find('a').on('click', function() {
-            if($('.pic6').hasClass('hidden')) {
-                $('html, body').animate({ scrollTop:  $('.pic1').offset().top}, 'slow');
+            if($('.portfolio-finance-pic').hasClass('hidden')) {
+                $('html, body').animate({ scrollTop:  $('.portfolio-tourism-pic').offset().top}, 'slow');
             }
             else {
                 $('html, body').animate({ scrollTop:  $('#translation').offset().top }, 'slow');
             }
-            $('.pic6').toggleClass('hidden');
-            $('.pic7').toggleClass('hidden');
-            $('.pic8').toggleClass('hidden');
-            
+            $('.portfolio-technical-pic').toggleClass('hidden');
+            $('.portfolio-law-pic').toggleClass('hidden');
+            $('.portfolio-finance-pic').toggleClass('hidden');
+  //ta funkcja musi być skrócona          
             
 
         });
@@ -387,14 +393,26 @@ expandPortfolio();
     hamburger();
     function menuExpand() {
         $('#nav-icon4').on('click', function() {
-            console.log('ok');
-            $('.navigation_right').toggle(1000);
-            $('.headline_sidepages p').toggleClass('puopu-r1-sidepages_animated');
-            window.setTimeout(function() {
-           $('.headline_sidepages').toggleClass('changeWidth');
-        }, 1000);
-             $('#nav-icon4 span').toggleClass('bg-white');
-});
+			if($('#nav-icon4 span').hasClass('bg-white')) {
+				console.log('tak');
+			   $('#nav-icon4 span').removeClass('bg-white');
+			$('.terms_conditions_header').animate({
+				top: 0,
+				marginBottom: "+=20"
+			}, 1000);
+			$('.navigation_right').fadeOut(1000); }
+			else {
+				 
+					  
+            $('.navigation_right').fadeIn(1000);
+            $('#nav-icon4 span').addClass('bg-white');
+			var height = $('.navigation_right').height();
+			$('.terms_conditions_header').animate({
+				marginTop: height
+			} ,1000);
+};
+		});
+	};
             
            
             //zmienić na css animation
@@ -402,6 +420,6 @@ expandPortfolio();
             
             
 
-    }
+    
     menuExpand();
 });

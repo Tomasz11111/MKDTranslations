@@ -45,6 +45,19 @@
 	}
 }
 
+.btn-grey {
+	@extend .btn-standard;
+	border: 2px solid $nav-and-background-color;
+	a, span {
+		color: $nav-and-background-color;
+		font-size: 1.5rem;
+	}
+	&:hover {
+		background-color: $nav-and-background-color;
+		
+	}
+}
+
 .btn-how-i-teach {
 	@extend .btn-standard;
 		border: 2px solid $base-color-2;
@@ -133,7 +146,7 @@
 
 
 .morespecialties, .pricing-buttons {
-	height: 15vh;
+	height: 10vh !important;
 	@extend %flex-centered;
 	
 }
