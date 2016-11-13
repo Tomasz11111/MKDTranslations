@@ -2,8 +2,6 @@
 
 <div class="homepage-hero-module">
     <div class="video-container">
-
-
         <div class="headline">
             <p class="headline-text-big">Linguistic services <span> by </span> MKDTranslations</p>
             <button class="headline-btn"><a href="#contact">quick quote</a></button>
@@ -24,71 +22,71 @@
     <div class="row">
         <div class="col-lg-5 col-xs-12 about-left">
             <p class="about-title"><span class="hidden-sm hidden-xs"><?php $value = get_field ('title_right');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?>
-				</span></p>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+				</span>
+			</p>
             <p class="about-mobile hidden-md hidden-lg hidden-xl"><span><?php $value = get_field ('title_left');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></span> <?php $value = get_field ('title_right');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></p>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></span> <?php $value = get_field ('title_right');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+			</p>
         </div>
         <div class="col-lg-7 col-xs-12 about-right">
             <p class="about-title-right hidden-sm hidden-xs"> <?php $value = get_field ('title_left');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></p>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+			</p>
             <p class="about-main slideanim"> <?php $value = get_field ('about_main_block');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?><span>English</span>, <span>French</span> and <span>Czech</span></p>
-        <p class="about-secondary slideanim"><?php $value = get_field ('about_secondary_block');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></p>
-            <p class="help hidden-xs hidden-sm"><a href="#services"><span>READ</span> HOW I CAN HELP</a></p>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?><span>English</span>, <span>French</span> and <span>Czech</span></p>
+			<p class="about-secondary slideanim"><?php $value = get_field ('about_secondary_block');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+			</p>
+            <p class="help hidden-xs hidden-sm"><a href="#services"><span>READ</span> HOW I CAN HELP</a>
+			</p>
         </div>
-        
-
+   
     </div>
-    </div>
+</div>
 <div class="container-fluid bg-grey" id="services">
     <div class="row-col">
-        <div class="col-lg-12 col-xs-12"><h1 class ="section-title"><?php $value = get_field ('services_section_title');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></h1>
+        <div class="col-lg-12 col-xs-12"><h1 class ="section-title">
+			</h1>
             <p class="section-title-lead"><?php $value = get_field ('services_section_lead');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></p>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+			</p>
         </div>
     </div>
 </div>
@@ -96,48 +94,66 @@ else {
     <div class="row row-icons">
         <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="icon-circle icon-circle-teal"><img src="<?php $value = get_field ('service1_icon');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?>" class="icon-set-width"></div>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>" class="icon-set-width">
+			</div>
             <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Translation and proofreading</h4></div>
             <div class="description"><p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="icon-circle icon-circle-teal"><img src="<?php $value = get_field ('service2_icon');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?>" class="icon-set-height"></div>
-            <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Revision</h4></div>
-            <div class="icon_description"><p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>" class="icon-set-height"></div>
+            <div class="icon_title">
+				<h4 class="icon-headline icon-headline-animation">Revision
+				</h4>
+			</div>
+            <div class="icon_description">
+				<p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+			</div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="icon-circle icon-circle-teal"><img src="<?php $value = get_field ('service3_icon');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?>" class="icon-set-width"></div>
-            <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Linguistic software testing</h4></div>
-            <div class="icon_description"><p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>" class="icon-set-width">
+			</div>
+            <div class="icon_title">
+				<h4 class="icon-headline icon-headline-animation">Linguistic software testing</h4>
+			</div>
+            <div class="icon_description">
+				<p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+			</div>
         </div>
          
         <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="icon-circle icon-circle-teal"><img src="<?php $value = get_field ('service4_icon');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?>" class="icon-set-height"></div>
-            <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Style guide and glossary creation</h4></div>
-            <div class="icon_description"><p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>" class="icon-set-height">
+			</div>
+            <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Style guide and glossary creation</h4>
+			</div>
+            <div class="icon_description">
+				<p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+			</div>
         </div>
         
         <div class="col-xs-12 col-md-6 col-lg-4">
@@ -147,20 +163,28 @@ if ($value) {
 }
 else {
 	echo 'empty'; }
-?>" class="icon-set-width"></div>
-            <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Language teaching</h4></div>
-            <div class="icon_description"><p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+?>" class="icon-set-width">
+			</div>
+            <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Language teaching</h4>
+			</div>
+            <div class="icon_description">
+				<p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
         </div>
         <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="icon-circle icon-circle-teal"><img src="<?php $value = get_field ('service6_icon');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?>" class="icon-set-height"></div>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>" class="icon-set-height">
+			</div>
             <div class="icon_title"><h4 class="icon-headline icon-headline-animation">Cultural consultancy</h4></div>
-            <div class="icon_description"><p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+            <div class="icon_description">
+				<p class="icon-description-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+			</div>
 
         </div>
     </div>
@@ -169,19 +193,20 @@ else {
 <div class="container-fluid" id="translation">
     <div class="row-col">
         <div class="col-lg-12 col-xs-12"><h1 class="section-title"><?php $value = get_field ('translation_section_title');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></h1>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></h1>
             <p class="section-title-lead"><?php $value = get_field ('translation_section_lead');
-if ($value) {
-	echo $value;
-}
-else {
-	echo 'empty'; }
-?></p>
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+			</p>
         </div>
     </div>
 </div>
@@ -192,15 +217,28 @@ else {
                 Websites and computers</p></div>
 
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-business-pic pic-square"> <div class="portfolio-overlay"><p class="portfolio-overlay-text">Business</p><p class="hidden portfolio-overlay-text-hover">business correspondence, reports, contracts, CVs</p></div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-business-pic pic-square"> <div class="portfolio-overlay">
+			<p class="portfolio-overlay-text">Business
+			</p>
+			<p class="hidden portfolio-overlay-text-hover">business correspondence, reports, contracts, CVs</p>
+			</div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-marketing-pic pic-square"><div class="portfolio-overlay"><p class="portfolio-overlay-text">Marketing</p><p class="hidden portfolio-overlay-text-hover">brochures, promotional material, managerial documents, magazine articles, presentations, catalogues, business plans, user’s guides, product descriptions, tables</p>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-marketing-pic pic-square">		<div class="portfolio-overlay">
+				<p class="portfolio-overlay-text">Marketing
+				</p>
+				<p class="hidden portfolio-overlay-text-hover">brochures, promotional material, managerial documents, magazine articles, presentations, catalogues, business plans, user’s guides, product descriptions, tables
+				</p>
+			</div>
         </div>
-        </div>
-      
-        
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-technical-pic pic-square hidden"><div class="portfolio-overlay"><p class="portfolio-overlay-text" >Technical</p><p class="hidden portfolio-overlay-text-hover">patents, maintenance instructions, description and catalogues of production</p></div>
+            
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-technical-pic pic-square hidden">
+			<div class="portfolio-overlay">
+				<p class="portfolio-overlay-text" >Technical
+				</p>
+				<p class="hidden portfolio-overlay-text-hover">patents, maintenance instructions, description and catalogues of production
+				</p>
+			</div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-law-pic pic-square hidden"><div class="portfolio-overlay"><p class="portfolio-overlay-text">Law</p><p class="hidden portfolio-overlay-text-hover">legislation, contracts</p></div>
         </div>
@@ -643,7 +681,17 @@ else {
 	echo 'empty'; }
 ?></p>
 		</div>
-	</div>
+	
+			 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons">
+			<button class="btn-standard btn-grey"><a>Contact form - quick quoute</a></button>
+        </div>
+			>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			
+					 <div id="googleMap">
+                    </div>
+		</div>
+	
 			</div>
 	<div class="container-fluid">
 			<div class="row">

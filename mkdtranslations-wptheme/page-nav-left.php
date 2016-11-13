@@ -10,14 +10,21 @@
         <div class="row">
                 <div class="col-sm-12 col-lg-3 index_container">
                     <ul class="terms_conditions_index nav nav-pills nav-stacked hidden-xs hidden-xm" data-spy="affix" data-offset-top=150 id="terms_sidebar">
-                        <li></li>
-                        <li></li>
-                        <li>
+                       <li><a href="#article1">Article I: Introductory provisions</a></li>
+                        <li><a href="#article2">Article II: Subject matter of the performance</a></li>
+                        <li><a href="#article3">Article III: Translations and proofreading</a>
+                            <ol>
+                                <li>General provisions</li>
+                                <li>Delivery deadline</li>
+                                <li>Rights and obligations</li>
+                                <li>Complaints</li>
+                                <li>Deadline for complaints</li>
+                            </ol>
                         </li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><a href="#article4">Article IV: Price</a></li>
+                        <li><a href="#article5">Article V: Payment terms</a></li>
+                        <li><a href="#article6">Article VI: Withdrawal from the contract and compensation for damage</a></li>
+                        <li><a href="#article7">Article VII: Final provisions</a></li>
                     </ul>
                 </div>
             <div class="col-sm-12 col-lg-9">

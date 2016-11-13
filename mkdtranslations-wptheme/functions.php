@@ -26,6 +26,8 @@ add_action( 'wp_enqueue_scripts', 'mkd_theme_styles' );
 		
 		wp_enqueue_script(' bootstrap_js', 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), ''. false);
 		wp_enqueue_script('main_js', get_template_directory_uri() . '/js/app.js', array('jquery'), '', false );
+		wp_enqueue_script('googlemap_js',		'http://maps.googleapis.com/maps/api/js?key=AIzaSyCKTWa1GvwK0w-D5Y9ca5Or1ZFnLJDzy_Q&callback=initMap', array('jquery'), '', false);  
+		
 	}
 add_action( 'wp_enqueue_scripts', 'mkd_theme_js' );
 		

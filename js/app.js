@@ -107,32 +107,6 @@ function smoothScroll() {
     };
     smoothScroll();
 /*
-// juz raczej niepotrzebna, ale na razie zostawiam
-
-   function spyBgColor() {
-        var $trigger = $('#myNavbar').find('a');
-        $trigger.on('click', function (e) {
-            $('#myNavbar').find('a').not($(this)).css('backgroundColor', 'white').css('backgroundImage', '').css('color', "#333");
-            var hrefValue = $(this).attr('href');
-            console.log(hrefValue);
-            var scrollTarget = $(hrefValue);
-            console.log(scrollTarget);
-            var targetBgColor = scrollTarget.css('backgroundColor');
-            console.log(targetBgColor);
-            var targetBgImage = scrollTarget.css('backgroundImage');
-            var targetFontColor = scrollTarget.css('color');
-            console.log(targetFontColor);
-            $(this).css('backgroundColor', targetBgColor).css('color', targetFontColor).css('backgroundImage', targetBgImage);
-
-
-            $('nav').css('border', '0');
-
-
-        })
-    };
-
-    spyBgColor();
-
 
 */
     function changeBgColorParis() {
@@ -197,18 +171,7 @@ function smoothScroll() {
                 }
         }
         });
-            /*
-           if(winoffset > offsetHowiTeach.top - 20) { 
-            $('#how_i_teach_icons  .icon-circle').delay(1500).addClass('icon-circle-animate-purple');
-            $('#how_i_teach_icons .icon-headline').delay(1500).addClass('icon-title-text-animation');
-            $('#how_i_teach_icons .icon_description_text').delay(1500).addClass('icon-headline-animation');
-           }
-        else { $('#how_i_teach_icons  .icon-circle').removeClass('icon-circle-animate-purple');
-              $('#how_i_teach_icons .icon-headline');
-              $('#how_i_teach_icons .icon_description_text');
-             }*/
-    
-                
+                         
             
                 
           
@@ -271,81 +234,7 @@ function pricingShowHide() {
     }
 
 pricingShowHide();
-/*
-function termsAndConditionsBtn() {
-var principles = $('#principles');
-    principles.mouseover(function() {
 
-    $('#terms-btn').fadeIn();
-    });
-
-};
-termsAndConditionsBtn();
-
-    function termsAndConditionsShowHide() {
-        var $principles = $('#principles'), $terms_btn = $('#terms-btn'), $terms_conditions = $('#terms_conditions'), $closing = $('.closing');
-        $terms_btn.on('click', function() {
-            $principles.addClass('hidden');
-            $terms_conditions.removeClass('hidden');
-
-
-        });
-        $closing.on('click', function() {
-            $principles.removeClass('hidden');
-            $terms_conditions.addClass('hidden');
-        })
-    }
-    termsAndConditionsShowHide();
-function fullPage() {
-    $('#fullpage').fullpage({
-        navigation: false,
-        scrollBar: true,
-        sectionSelector: '.page',
-        slideSelector: '.horizontal_page',
-        fitToSectionDelay: 700,
-        responsiveWidth: 756,
-
-
-
-
-    });
-
-}
-
-// ta funkcja będzie raczej niepotrzebna, ale na razie zostawiam
-    function adjustNavColor() {
-        $(window).scroll(function() {
-            console.log($(window).scrollTop());
-        var $menu = $('nav a'), viewportHeight = window.innerHeight, scrollPosition = $(window).scrollTop(), offsetPortfolio = $('#portfolio').offset(), offsetTeaching = $('#teaching2').offset(); offsetContact = $('#contact2').offset();
-        console.log(viewportHeight, scrollPosition, $menu);
-        if ((scrollPosition > (2 * viewportHeight)) && (scrollPosition < (3 * viewportHeight))) {
-            console.log('diaala');
-           $menu.addClass('text-teal');
-        }
-            else if
-                (scrollPosition >= offsetPortfolio.top && scrollPosition <= offsetPortfolio.top + viewportHeight) {
-                    $menu.addClass('text-grey');
-                     
-                }
-            
-            else if
-                (scrollPosition >= offsetTeaching.top && scrollPosition <= offsetTeaching.top + viewportHeight) {
-                    $menu.addClass('text-red');
-                }
-            else if 
-                (scrollPosition >= offsetContact.top && scrollPosition <= offsetContact.top + viewportHeight) {
-                    $menu.addClass('text-orange');
-                }
-            
-            else {
-                $menu.removeClass('text-teal');
-                $menu.removeClass('text-grey');
-                $menu.removeClass('text-red');
-                $menu.removeClass('text-orange');
-            }
-    });/można tu funkcję dl portfolio, teaching i contact zrobić
-    };
-adjustNavColor();
 */
 function portfolioImgs() {
     $('.pic-square').on('mouseenter', function() {
