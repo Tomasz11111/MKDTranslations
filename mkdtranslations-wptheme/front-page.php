@@ -18,7 +18,7 @@
         </div>
     </div>
 </div>
-<div class='container-fluid bg-about' style='background-image: url('<?php echo get_template_directory_uri(); ?>/images/about.jpeg')' id='about'>
+<div class='container-fluid bg-about' style='background-image: url(<?php echo get_template_directory_uri(); ?>/images/about.jpeg)' id='about'>
     <div class='row'>
         <div class='col-lg-5 col-xs-12 about-left'>
             <p class='about-title'><span class='hidden-sm hidden-xs'><?php $value = get_field ('title_right');
