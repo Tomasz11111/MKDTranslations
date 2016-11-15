@@ -683,23 +683,29 @@ else {
 		</div>
 	
 			 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons">
-			<button class="btn-standard btn-grey"><a>Contact form - quick quoute</a></button>
+			<button class="btn-standard btn-grey"><a>Contact form - quick quote</a></button>
         </div>
-			>
+	</div>
+</div>
+		<div class="container-fluid hidden" id="form-page">
+			<div class="row">
+		<div class="col-lg-12 col-centered">
+	
+			<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( 119 ); ?>
+        </div>
+	</div>
+</div>
+		<div class="container-fluid">
+	<div class="row">
+				
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 			
 					 <div id="googleMap">
                     </div>
 		</div>
 	
-			</div>
-	<div class="container-fluid">
-			<div class="row">
-							<div class="col-lg-12 col-centered">
-	
-			<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( 119 ); ?>
-        </div>
-		</div>
+			
+	</div>
 </div>
  
 
