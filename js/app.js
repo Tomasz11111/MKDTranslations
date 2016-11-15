@@ -73,7 +73,7 @@ function slidesFromRight() {
 
             var winTop = $(window).scrollTop();
             if (pos < winTop + 600) {
-                console.log("dziala");
+                console.log('dziala');
                 $(this).addClass('slide');
             }
         });
@@ -82,10 +82,10 @@ function slidesFromRight() {
 slidesFromRight();
   // w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 function smoothScroll() {
-        $(".navigation_right a, .help a, button a, .nav-pills a ").on('click', function (event) {
+        $('.navigation_right a, .help a, button a, .nav-pills a ').on('click', function (event) {
 
             // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
+            if (this.hash !== '') {
 
                 // Prevent default anchor click behavior
                 event.preventDefault();
@@ -193,7 +193,7 @@ function smoothScroll() {
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
 
-            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
 
             var marker = new google.maps.Marker({
                 position: myCenter,
@@ -253,7 +253,7 @@ function portfolioImgs() {
     $('.pic-square').on('mouseenter', function() {
         console.log('ok');
         $(this).find('.portfolio-overlay').animate({
-            height: "100%"});
+            height: '100%'});
 
         $(this).find('.portfolio-overlay-text').addClass('hidden');
         $(this).find('.portfolio-overlay-text-hover').removeClass('hidden');
@@ -262,7 +262,7 @@ function portfolioImgs() {
     $('.pic-square').on('mouseleave', function() {
         console.log('ok');
         $(this).find('.portfolio-overlay').animate({
-            height: "20%"});
+            height: '20%'});
         $(this).find('.portfolio-overlay-text').removeClass('hidden');
         $(this).find('.portfolio-overlay-text-hover').addClass('hidden');
 
@@ -300,7 +300,7 @@ function menuExpand() {
 			   $('#nav-icon4 span').removeClass('bg-white');
 			$('.terms_conditions_header').animate({
 				top: 0,
-				marginBottom: "+=20"
+				marginBottom: '+=20'
 			}, 1000);
 			$('.navigation_right').fadeOut(); }
 			else {
