@@ -143,7 +143,7 @@ function smoothScroll() {
     if($('.container-fluid').is($services)) {
         if(winoffset > offsetServices.top - 20) {
             console.log('jeje');
-           
+          //delay nie działa z addClass. Zmienić na setTimeout
            $('.bg-grey .icon-circle').delay(1500).addClass('icon-circle-animate');
             $('.icon-headline').delay(1500).addClass('icon-headline-animation');
             $('.icon-description-text').delay(1500).addClass('icon-headline-animation');
@@ -234,8 +234,21 @@ function pricingShowHide() {
     }
 
 pricingShowHide();
+	
+function formShowHide() {
+	var $formBtn = $('.btn-grey'),
+		$form = $('#form-page');
+	$formBtn.on('click', function() {
+		console.log('tata');
+		$form.toggleClass('hidden');
+	});
+}
+formShowHide();
+	
+	
+					  
 
-*/
+
 function portfolioImgs() {
     $('.pic-square').on('mouseenter', function() {
         console.log('ok');
@@ -279,8 +292,8 @@ expandPortfolio();
             $(this).toggleClass('open');
         });
     };
-    hamburger();
-    function menuExpand() {
+	hamburger();
+function menuExpand() {
         $('#nav-icon4').on('click', function() {
 			if($('#nav-icon4 span').hasClass('bg-white')) {
 				console.log('tak');
@@ -289,7 +302,7 @@ expandPortfolio();
 				top: 0,
 				marginBottom: "+=20"
 			}, 1000);
-			$('.navigation_right').fadeOut(1000); }
+			$('.navigation_right').fadeOut(); }
 			else {
 				 
 					  
