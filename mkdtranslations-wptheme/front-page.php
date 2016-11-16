@@ -21,7 +21,7 @@
 <div class='container-fluid bg-about' style='background-image: url(<?php echo get_template_directory_uri(); ?>/images/about.jpeg)' id='about'>
     <div class='row'>
         <div class='col-lg-5 col-xs-12 about-left'>
-            <p class='about-title'><span class='hidden-sm hidden-xs'><?php $value = get_field ('title_right');
+            <p class='about-title slideanim-left'><span class='hidden-sm hidden-xs'><?php $value = get_field ('title_right');
 			if ($value) {
 				echo $value;
 			}
@@ -46,7 +46,7 @@
 			</p>
         </div>
         <div class='col-lg-7 col-xs-12 about-right'>
-            <p class='about-title-right hidden-sm hidden-xs'> <?php $value = get_field ('title_left');
+            <p class='about-title-right hidden-sm hidden-xs slideanim'> <?php $value = get_field ('title_left');
 			if ($value) {
 				echo $value;
 			}
