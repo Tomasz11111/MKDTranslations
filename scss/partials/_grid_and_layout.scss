@@ -112,6 +112,15 @@
     visibility: visible; 
 }
 
+.slide-left {
+	animation-name: slideLeft;
+	 -webkit-animation-name: slideLeft; 
+    -moz-animation-name: slideLeft;
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    -moz-animation-name: slideLeft;
+}
+
 .confidentiality {
 	font-size: 1.8rem;
 	text-align: center;
