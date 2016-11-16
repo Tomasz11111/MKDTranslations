@@ -93,7 +93,7 @@ function slidesFromLeft() {
     });
 }
 	
-}
+slidesFromLeft();
 slidesFromRight();
   // w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 function smoothScroll() {
