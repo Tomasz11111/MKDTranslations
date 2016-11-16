@@ -383,29 +383,87 @@ else {
              
         <div class='row'>
             
-            <div class='col-lg-12 col-xs-12'><h1 class='section-title'>Pricing</h1>
+            <div class='col-lg-12 col-xs-12'><h1 class='section-title'><?php $value = get_field('pricing_section_title');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h1>
                 <div class='closing'><div>X</div></div>
             </div>
             
             <div class='col-lg-4'>    
     
-            <div class='icon-circle icon-circle-teal'><img src='icons/price-green.jpg' class='icon-set-width'></div>
-            <div class='icon_title'><h4 class='icon-headline'>Transparent pricing policy</h4></div>
-                <div class='description'><p class='icon-description-text'>MKD translations usually charges on a per-word basis. Clients should bear in mind that the cost of translation may be influenced by many factors such as urgency, technicality of the text, total volume, one-time translation or ongoing project, etc.</p></div>
+            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing1_icon');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?>' class='icon-set-width'></div>
+            <div class='icon_title'><h4 class='icon-headline'><?php $value = get_field('pricing_icon_headline_1');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4></div>
+                <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_1');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></p></div>
             </div>
             <div class='col-lg-4'>
-                <div class='icon-circle icon-circle-teal'><img src='icons/surcharges-green.jpg' class='icon-set-width'></div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'>Surcharges</h4></div>
-            <div class='description'><p class='icon-description-text'>MKD translations may add a 10-30 % surcharge for PowerPoint presentations, .htm/html (.php, .xml) files or documents delivered as scanned copies.
-
-                                <br>Proofreading, DTP services or any kind of cross-cultural consultancy are charged additionally.</p></div>
+                <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing2_icon');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?>' class='icon-set-width'></div>
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field('pricing_icon headline_2');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4></div>
+            <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_2');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></p></div>
             </div>
              <div class='col-lg-4'>
-                <div class='icon-circle icon-circle-teal'><img src='icons/payment-green.jpg' class='icon-set-width'></div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'>Various payments methods</h4></div>
-            <div class='description'><p class='icon-description-text'>After the completion of your project, MKD translations issues an invoice due within 14 days net (unless otherwise agreed). The preferred payment methods are either a bank transfer to our Eurozone, Polish or Czech bank accounts or payments via Paypal/ Moneybookers</p></div>
+                <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing3_icon');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?>' class='icon-set-width'></div>
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field('pricing_icon_headline_3');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4></div>
+            <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_3');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></p></div>
                  <div class='payments_methods_flex'>
-                 <img src='icons/PayPal.svg' alt='PayPal logo'><img src='icons/Skrill_small.png' alt='Skrill logo'></div>
+                 <img src='<?php echo get_template_directory_uri()?>/images/PayPal.svg' alt='PayPal logo'><img src='<?php echo get_template_directory_uri()?>/images/Skrill_small.png' alt='Skrill logo'></div>
             </div>
             
             
