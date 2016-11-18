@@ -1,4 +1,4 @@
-//sprawdzić czy potrzebne
+//About Div - Background
 
 .bg-about {
 	@extend %fullpage-bgimage;
@@ -7,6 +7,8 @@
 			}
 	//background-image: url('#{$path-img}/about.jpeg');//
 }
+
+// Contact Div - Background
 .bg-contact {
 	background-image: url('#{$path-img}/prague2.jpg');	
 	background-size: cover;
@@ -15,13 +17,7 @@
 }
 
 
-.bg-teal {
-	background-color: teal;
-}
 
-.bg-white {
-	background-color: white !important;
-}
 .bg-grey {
 	background-color: lighten($nav-and-background-color, 45%);
 	padding-bottom: 50px;
@@ -49,45 +45,7 @@
 	}
 }
 
-.border-bottom-white {
-	border-bottom: 15px solid white;
-
-}
-.border-bottom-blue {
-	border-bottom: 15px solid #ff5d19;
-}
-.border-grey {
-	border-bottom: 15px solid slategrey;
-}
-.border-red {
-	border-bottom: 15px solid #f04150;
-}
-.border-teal {
-	border-bottom: 5px solid teal;
-}
-.border-top-grey {
-	border-top: 5px solid slategrey;
-}
-.border-violet {
-	border-bottom: 15px solid #504cff;
-}
-.border-gainsboro {
-	border-bottom: 15px solid gainsboro;
-}
-.border-top-gainsboro {
-	border-top: 5px solid gainsboro;
-}
-.border-top-red {
-	border-top: 5px solid #f04150;
-}
-.border-top-violet {
-	border-top: 5px solid #504cff;
-
-}
-.border-top-teal {
-	border-top: 5px solid teal;
-}
-
+// Front Page - Teaching
 .outer_border {
     border: 3px solid white;
     width: 80%;
@@ -131,16 +89,8 @@
     cursor: pointer;
 }
 
-//to ew do wyrzucenia
+//
 
-.bg-icons {
-	background-color: #ff5d19;
-	width: 4vw;
-	height: 4vw;
-	border-radius: 50%;
-	@extend %flex-centered;
-
-}
 
 .terms_conditions_header {
     background-image: url('#{$path-img}/termsandconditions.jpg');
