@@ -77,7 +77,13 @@
 </div>
 <div class='container-fluid bg-grey' id='services'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class ='section-title'>
+        <div class='col-lg-12 col-xs-12'><h1 class ='section-title'><?php $value = get_field('services_section_title');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 			</h1>
             <p class='section-title-lead'><?php $value = get_field ('services_section_lead');
 			if ($value) {
@@ -740,7 +746,69 @@ else {
 ?></p>
 		</div>
 	
-			 <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
+			
+		
+	</div>
+</div>
+<div class='containter'>
+	<div class='row'>
+		<div class='col-lg-2 col-md-2 col-sm-4 col-md-offset-3 col-lg-offset-3 flex-center-column'>
+			<div class='icon-circle-small'><img src='<?php $value = get_field('contact_icon_1');
+			if ($value) 
+			{											echo $value; }								else 
+			{											echo 'empty';} ?>' class='icon-set-width-small'> </div>
+			<h4 class='icon-headline'>Address</h4>
+			<ul class="address"> 
+				<li>Řipska 14</li>
+                <li>130 00 Praha 3</li>
+                <li>Czech Republic</li>
+			</ul>
+		</div>
+		<div class='col-lg-2 col-md-2 col-sm-4 flex-center-column'>
+			<div class='icon-circle-small'><img src='<?php $value = get_field('contact_icon_2');
+			if ($value) 
+			{											echo $value; }								else 
+			{											echo 'empty';} ?>' class='icon-set-height-small'> </div>
+			<h4 class='icon-headline'>Phone</h4>
+			<p>+420 773 596 706</p>
+		</div>
+		<div class='col-lg-2 col-md-2 col-sm-4 flex-center-column'>
+			<div class='icon-circle-small'>
+				<img src='<?php $value = get_field('contact_icon_3');
+			if ($value) 
+			{											echo $value; }								else 
+			{											echo 'empty';} ?>' class='icon-set-width-small'></div>
+			<h4 class='icon-headline'>E-mail</h4>
+			<p><a href='mailto:info@mkdtranslations.com'>info@mkdtranslations.com</a>
+			</p>
+		</div>
+	</div>
+	<div class='row'>
+		<div class='col-lg-2 col-xs-12 col-lg-offset-5 flex-center-row-multiple'><div class='icon-circle-smallest'>
+			<img src='<?php $value = get_field('contact_icon_social_1');
+			if ($value) 
+			{											echo $value; }								else 
+			{											echo 'empty';} ?>' class='icon-set-size-smallest'> 
+		</div>
+		<div class='icon-circle-smallest'>
+			<img src='<?php $value = get_field('contact_icon_social_2');
+			if ($value) 
+			{											echo $value; }								else 
+			{											echo 'empty';} ?>' class='icon-set-size-smallest'> 
+		</div>
+	
+	<div class='icon-circle-smallest'>
+			<img src='<?php $value = get_field('contact_icon_social_3');
+			if ($value) 
+			{											echo $value; }								else 
+			{											echo 'empty';} ?>' class='icon-set-size-smallest'> 
+		</div>
+	</div>
+	</div>
+	 
+	 <div class='row'>
+			
+		 <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
 			<button class='btn-standard btn-grey'><a>Contact form - quick quote</a></button>
         </div>
 	</div>
