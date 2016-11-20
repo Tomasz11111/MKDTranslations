@@ -18,7 +18,10 @@
 	padding: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
+	margin-bottom: 5vh !important;
+	margin-top: 5vh !important;
 	min-width: 16vw;
+	
 	background: transparent;	
 		
 	&:hover a, &:hover span  {
@@ -146,7 +149,6 @@
 
 
 .morespecialties, .pricing-buttons {
-	height: 10vh !important;
 	@extend %flex-centered;
 	
 }

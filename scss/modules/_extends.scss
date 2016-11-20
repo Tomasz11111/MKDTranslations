@@ -11,6 +11,14 @@
 	-ms-flex-align: center;
 	align-items: center;
 }
+%flex-column {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	webkit-flex-direction: column;
+}
+
 
 // Pics
 

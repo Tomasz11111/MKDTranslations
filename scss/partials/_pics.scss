@@ -28,14 +28,20 @@
 }
 
 .french {
-    background-image: url('#{$path-img}/paris.jpg');
+    @include mobile {
+		background-image: url('#{$path-img}/paris-mob.jpg');
+	}
+	background-image: url('#{$path-img}/paris.jpg');
 	@extend %learnlanguage;
     @extend %flex-centered;
-    
+	   
 
 }
 .polish {
-    background-image: url('#{$path-img}/cracow.jpeg');
+    @include mobile {
+		background-image: url('#{$path-img}/cracow-mob.jpeg');
+	}
+	background-image: url('#{$path-img}/cracow.jpeg');
 	@extend %learnlanguage;
 	@extend %flex-centered;
     
