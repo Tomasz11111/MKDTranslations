@@ -18,6 +18,7 @@
         </div>
     </div>
 </div>
+
 <div class='container-fluid bg-about' style='background-image: url(<?php echo get_template_directory_uri(); ?>/images/about.jpeg)' id='about'>
     <div class='row'>
         <div class='col-lg-5 col-xs-12 about-left'>
@@ -216,7 +217,7 @@ else {
         </div>
     </div>
 </div>
-<div class='container-fluid' id='photos'>
+<div class='container-fluid hidden-xs' id='photos'>
     <div class='row'>
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-tourism-pic pic-square'>
             <div class='portfolio-overlay'><p class='portfolio-overlay-text'>Tourism &amp; hospitality</p><p class='hidden portfolio-overlay-text-hover'>brochures, catalogues, websites, information for guides, guidebooks
@@ -250,10 +251,62 @@ else {
         </div>
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-finance-pic pic-square hidden'><div class='portfolio-overlay'><p class='portfolio-overlay-text'>Finance</p><p class='hidden portfolio-overlay-text-hover'>financial reports</p></div>
         </div>
+	</div>
+</div>
+<div class='container-fluid'>
+	<div class='row'>
+		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
+			<div class='carousel-inner' role='listbox'>
+			<div class='item active portfolio-tourism-pic pic-square'>
+			<div class='portfolio-overlay'><p class='portfolio-overlay-text'>Tourism &amp; hospitality</p><p class='hidden portfolio-overlay-text-hover'>brochures, catalogues, websites, information for guides, guidebooks
+					Websites and computers</p></div>
+
+			</div>
+	 
+			 <div class='item portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
+					<p class='portfolio-overlay-text'>Business
+					</p>
+					<p class='hidden portfolio-overlay-text-hover'>business correspondence, reports, contracts, CVs</p>
+					</div>
+				</div>
+			 <div class='item portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
+						<p class='portfolio-overlay-text'>Marketing
+						</p>
+						<p class='hidden portfolio-overlay-text-hover'>brochures, promotional material, managerial documents, magazine articles, presentations, catalogues, business plans, user’s guides, product descriptions, tables
+						</p>
+					</div>
+				</div>
+			 <div class='item portfolio-technical-pic pic-square'>
+					<div class='portfolio-overlay'>
+						<p class='portfolio-overlay-text' >Technical
+						</p>
+						<p class='hidden portfolio-overlay-text-hover'>patents, maintenance instructions, description and catalogues of production
+						</p>
+					</div>
+				</div>
+			 <div class='item portfolio-law-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'>Law</p><p class='hidden portfolio-overlay-text-hover'>legislation, contracts</p></div>
+				</div>
+	 
+			 <div class='item portfolio-finance-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'>Finance</p><p class='hidden portfolio-overlay-text-hover'>financial reports</p></div>
+				</div>
+			</div>
+     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		</div>
+		</div>
+		
+  
         
    
         
-<div class='col-lg-12 morespecialties'>
+<div class='col-lg-12 morespecialties hidden-xs'>
    
 	<button class='btn-standard btn-teal'><a><?php $value = get_field ('translation_button');
 if ($value) {
