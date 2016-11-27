@@ -2,8 +2,17 @@
 
 <div class='homepage-hero-module'>
     <div class='video-container'>
-        <div class='headline'>
-            <p class='headline-text-big'>Linguistic services <span> by </span> MKDTranslations</p>
+		<div class='choose-language'>
+			<p>Choose your language</p>
+			<div class='choose-language-languages'>
+				<p><a href='http://mkdtranslations.com/wordpress/cs/domovska/'>cz</a></p>
+				<p><a href='http://mkdtranslations.com/wordpress/en/home/'>en</a></p>
+				<p><a href='http://mkdtranslations.com/wordpress/fr/accueil/'>fr</a></p>
+				<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>
+			</div>
+		</div>
+		<div class='headline'>
+			<p class='headline-text-big'>Linguistic services <span> by </span> MKDTranslations</p>
             <button class='headline-btn'><a href='#contact'>quick quote</a></button>
             <button class='headline-btn'><a href='#about'><span class='btn-text'>about me</span></a></button>
 
@@ -108,7 +117,13 @@
 				echo 'empty'; }
 			?>' class='icon-set-width'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'>Translation and proofreading</h4></div>
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('services_icon_headline');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4></div>
             <div class='description'><p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
@@ -120,7 +135,13 @@
 				echo 'empty'; }
 			?>' class='icon-set-height'></div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation'>Revision
+				<h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service2_icon_headline');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?>
 				</h4>
 			</div>
             <div class='icon_description'>
@@ -138,7 +159,13 @@
 			?>' class='icon-set-width'>
 			</div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation'>Linguistic software testing</h4>
+				<h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service3_icon_headline');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4>
 			</div>
             <div class='icon_description'>
 				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -155,7 +182,13 @@
 				echo 'empty'; }
 			?>' class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'>Style guide and glossary creation</h4>
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service4_icon_headline');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4>
 			</div>
             <div class='icon_description'>
 				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -172,7 +205,13 @@ else {
 	echo 'empty'; }
 ?>' class='icon-set-width'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'>Language teaching</h4>
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service5_icon_headline');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4>
 			</div>
             <div class='icon_description'>
 				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -187,7 +226,13 @@ else {
 				echo 'empty'; }
 			?>' class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'>Cultural consultancy</h4></div>
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service6_icon_headline');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></h4></div>
             <div class='icon_description'>
 				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 				</p>
@@ -220,36 +265,108 @@ else {
 <div class='container-fluid hidden-xs' id='photos'>
     <div class='row'>
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-tourism-pic pic-square'>
-            <div class='portfolio-overlay'><p class='portfolio-overlay-text'>Tourism &amp; hospitality</p><p class='hidden portfolio-overlay-text-hover'>brochures, catalogues, websites, information for guides, guidebooks
-                Websites and computers</p></div>
+            <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_1');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+                </p></div>
 
         </div>
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
-			<p class='portfolio-overlay-text'>Business
+			<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_2');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 			</p>
-			<p class='hidden portfolio-overlay-text-hover'>business correspondence, reports, contracts, CVs</p>
+			<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_2');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p>
 			</div>
         </div>
 
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
-				<p class='portfolio-overlay-text'>Marketing
+				<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 				</p>
-				<p class='hidden portfolio-overlay-text-hover'>brochures, promotional material, managerial documents, magazine articles, presentations, catalogues, business plans, user’s guides, product descriptions, tables
+				<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_3');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 				</p>
 			</div>
         </div>
             
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-technical-pic pic-square hidden'>
 			<div class='portfolio-overlay'>
-				<p class='portfolio-overlay-text' >Technical
+				<p class='portfolio-overlay-text' ><?php $value = get_field ('translation_speciality_4');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 				</p>
-				<p class='hidden portfolio-overlay-text-hover'>patents, maintenance instructions, description and catalogues of production
+				<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_4');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 				</p>
 			</div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-law-pic pic-square hidden'><div class='portfolio-overlay'><p class='portfolio-overlay-text'>Law</p><p class='hidden portfolio-overlay-text-hover'>legislation, contracts</p></div>
+        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-law-pic pic-square hidden'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_5');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p></div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-finance-pic pic-square hidden'><div class='portfolio-overlay'><p class='portfolio-overlay-text'>Finance</p><p class='hidden portfolio-overlay-text-hover'>financial reports</p></div>
+        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-finance-pic pic-square hidden'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_6');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p></div>
         </div>
 	</div>
 </div>
@@ -258,36 +375,108 @@ else {
 		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
 			<div class='carousel-inner' role='listbox'>
 			<div class='item active portfolio-tourism-pic pic-square'>
-			<div class='portfolio-overlay'><p class='portfolio-overlay-text'>Tourism &amp; hospitality</p><p class='hidden portfolio-overlay-text-hover'>brochures, catalogues, websites, information for guides, guidebooks
-					Websites and computers</p></div>
+			<div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_1');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+				</p></div>
 
 			</div>
 	 
 			 <div class='item portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
-					<p class='portfolio-overlay-text'>Business
+					<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_2');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 					</p>
-					<p class='hidden portfolio-overlay-text-hover'>business correspondence, reports, contracts, CVs</p>
+					<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_2');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p>
 					</div>
 				</div>
 			 <div class='item portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
-						<p class='portfolio-overlay-text'>Marketing
+						<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 						</p>
-						<p class='hidden portfolio-overlay-text-hover'>brochures, promotional material, managerial documents, magazine articles, presentations, catalogues, business plans, user’s guides, product descriptions, tables
+						<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_3');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 						</p>
 					</div>
 				</div>
 			 <div class='item portfolio-technical-pic pic-square'>
 					<div class='portfolio-overlay'>
-						<p class='portfolio-overlay-text' >Technical
+						<p class='portfolio-overlay-text' ><?php $value = get_field ('translation_speciality_4');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 						</p>
-						<p class='hidden portfolio-overlay-text-hover'>patents, maintenance instructions, description and catalogues of production
+						<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_4');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 						</p>
 					</div>
 				</div>
-			 <div class='item portfolio-law-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'>Law</p><p class='hidden portfolio-overlay-text-hover'>legislation, contracts</p></div>
+			 <div class='item portfolio-law-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_5');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p></div>
 				</div>
 	 
-			 <div class='item portfolio-finance-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'>Finance</p><p class='hidden portfolio-overlay-text-hover'>financial reports</p></div>
+			 <div class='item portfolio-finance-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_6');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p></div>
 				</div>
 			</div>
      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -299,11 +488,7 @@ else {
     <span class="sr-only">Next</span>
   </a>
 </div>
-		</div>
-		</div>
-		
-  
-        
+	    
    
         
 <div class='col-lg-12 morespecialties hidden-xs'>
@@ -430,8 +615,20 @@ else {
         <div class='col-lg-2'></div>
  
         <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
-			<button class='btn-standard btn-teal' id='btn-pricing'><span>Pricing</span></button>
-            <button class='btn-standard btn-teal'><a href='termsandconditions.html'>Terms &amp; conditions</a></button>
+			<button class='btn-standard btn-teal' id='btn-pricing'><span><?php $value = get_field ('process_button_left');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></span></button>
+            <button class='btn-standard btn-teal'><a href='termsandconditions.html'><?php $value = get_field ('process_button_right');
+if ($value) {
+	echo $value;
+}
+else {
+	echo 'empty'; }
+?></a></button>
         </div>
     </div>
 </div>

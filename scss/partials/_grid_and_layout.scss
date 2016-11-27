@@ -30,23 +30,6 @@
 }
 
 
-//sprawdzić czy się nie powtarzy w typografii
-.headline {
-	text-align:center;
-	color: white;
-	z-index: 1000;
-	position: absolute;
-	top: 35%;
-	width: 100%;
-	@include mobile {
-		
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	
-}
 //sprawdzić czy potrzebne
 #terms_title {
     margin-top: 58px !important;
