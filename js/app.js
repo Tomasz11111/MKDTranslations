@@ -64,39 +64,40 @@ jQuery(document).ready(function($) {
         });
     };
 
-function slidesFromRight() {
+	function slidesFromRight() {
     
 
-    $(window).scroll(function () {
-        $('.slideanim').each(function () {
-            var pos = $(this).offset().top;
+		$(window).scroll(function () {
+			$('.slideanim').each(function () {
+				var pos = $(this).offset().top;
 
-            var winTop = $(window).scrollTop();
-            if (pos < winTop + 600) {
-                console.log('dziala');
-                $(this).addClass('slide');
-            }
-        });
-    });
-}
-function slidesFromLeft() {
-	 $(window).scroll(function () {
-        $('.slideanim-left').each(function () {
-            var pos = $(this).offset().top;
-
-            var winTop = $(window).scrollTop();
-            if (pos < winTop + 600) {
-                console.log('dziala');
-                $(this).addClass('slide-left');
-            }
-        });
-    });
-}
+				var winTop = $(window).scrollTop();
+				if (pos < winTop + 600) {
+					console.log('dziala');
+					$(this).addClass('slide');
+				}
+			});
+		});
+	}
 	
-slidesFromLeft();
-slidesFromRight();
-  // w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
-function smoothScroll() {
+	function slidesFromLeft() {
+		 $(window).scroll(function () {
+			$('.slideanim-left').each(function () {
+				var pos = $(this).offset().top;
+
+				var winTop = $(window).scrollTop();
+				if (pos < winTop + 600) {
+					console.log('dziala');
+					$(this).addClass('slide-left');
+				}
+			});
+		});
+	}
+	
+	slidesFromLeft();
+	slidesFromRight();
+  		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
+	function smoothScroll() {
         $('.navigation_right a, .help a, button a, .nav-pills a ').on('click', function (event) {
 
             // Make sure this.hash has a value before overriding default behavior
@@ -124,17 +125,16 @@ function smoothScroll() {
 	
 /* Swipe for mobile */
 
-$(document).ready(function() {  
-   $("#myCarousel").swiperight(function() {  
-      $("#myCarousel").carousel('prev');  
-    });  
-   $("#myCarousel").swipeleft(function() {  
-      $("#myCarousel").carousel('next');  
-   });  
-});  
-/*
+	function swipe() {
+	   $("#myCarousel").swiperight(function() {  
+		  $("#myCarousel").carousel('prev');  
+		});  
+	   $("#myCarousel").swipeleft(function() {  
+		  $("#myCarousel").carousel('next');  
+	   });  
+	}
+	swipe();  
 
-*/
     function changeBgColorParis() {
         $('.french .inner_border').on('mouseenter', function() {
             $('.french .outer_border').css('background-color', 'rgba(255, 255, 255, 0.1)');
@@ -166,18 +166,18 @@ $(document).ready(function() {
                 winoffset = $(window).scrollTop();
                 
         //tutaj sprawdzam, czy jest e ogóle w DOMie ten element, dla innych podstron, żeby nie wywalało błędów, być może potrzebne jakieś docelowe bardziej eleganckie rozwiązanie
-    if($('.container-fluid').is($services)) {
-        if(winoffset > offsetServices.top - 20) {
-            console.log('jeje');
-          //delay nie działa z addClass. Zmienić na setTimeout
-           $('.bg-grey .icon-circle').delay(1500).addClass('icon-circle-animate');
-            $('.icon-headline').delay(1500).addClass('icon-headline-animation');
-            $('.icon-description-text').delay(1500).addClass('icon-headline-animation');
-           }
-        else { $('.bg-grey .icon-circle').removeClass('icon-circle-animate');
-              $('.icon-headline').removeClass('icon-headline-animation');
-              $('.icon-description-text').removeClass('icon-headline-animation');
-             }
+			if($('.container-fluid').is($services)) {
+				if(winoffset > offsetServices.top - 20) {
+					console.log('jeje');
+				  //delay nie działa z addClass. Zmienić na setTimeout
+				   $('.bg-grey .icon-circle').delay(1500).addClass('icon-circle-animate');
+					$('.icon-headline').delay(1500).addClass('icon-headline-animation');
+					$('.icon-description-text').delay(1500).addClass('icon-headline-animation');
+				   }
+				else { $('.bg-grey .icon-circle').removeClass('icon-circle-animate');
+					  $('.icon-headline').removeClass('icon-headline-animation');
+					  $('.icon-description-text').removeClass('icon-headline-animation');
+					 }
     
             if(winoffset > offsetProcess.top - 20) {
                 $('#process-content .icon-circle').delay(1500).addClass('icon-circle-animate');
@@ -187,21 +187,21 @@ $(document).ready(function() {
                 $('.check_empty').addClass('hidden');
                 $('.check_full').removeClass('hidden');
                 }, 1000);
-               //jakąś pętlą to tu zrobić 
-        }
+               //potrzeba skrócić tę funkcję
+        	}
             else {
                 $('#process-content .icon-circle').removeClass('icon-circle-animate');
                  $('#process-content .icon-headline').removeClass('icon-headline-animation');
                 $('.check_empty').removeClass('hidden');
                 $('.check_full').addClass('hidden');
                 }
-        }
-        });
+        	}
+        	});
                          
             
                 
           
-}
+	}
    
     activateIconsAnimation();
     
@@ -234,66 +234,74 @@ $(document).ready(function() {
 
     googleMaps();
 
-function pricingShowHide() {
-    var $closeBtn = $('.closing'), 
-        $showBtn = $('#btn-pricing'),
-        $pricingSection = $('#pricing'),
-        $processContent = $('#process-content'),
-        $process = $('#process');
-    $showBtn.on('click', function(event) {
-		event.preventDefault();
-		$pricingSection.removeClass('hidden');
-        $processContent.addClass('hidden');
-        $('html, body').animate({
-            scrollTop: $pricingSection.offset().top
-                    }, 900);
-    });
+	function pricingShowHide() {
+		var $closeBtn = $('.closing'), 
+			$showBtn = $('#btn-pricing'),
+			$pricingSection = $('#pricing'),
+			$processContent = $('#process-content'),
+			$process = $('#process');
+		$showBtn.on('click', function(event) {
+			event.preventDefault();
+			$pricingSection.removeClass('hidden');
+			$processContent.addClass('hidden');
+			$('html, body').animate({
+				scrollTop: $pricingSection.offset().top
+						}, 900);
+		});
 
-    $closeBtn.on('click', function() {
-        console.log('ok');
-        $pricingSection.addClass('hidden');
-        $processContent.removeClass('hidden');
-         $('html, body').animate({
-            scrollTop: $process.offset().top
-                    }, 900);
-    });
-    }
+		$closeBtn.on('click', function() {
+			console.log('ok');
+			$pricingSection.addClass('hidden');
+			$processContent.removeClass('hidden');
+			 $('html, body').animate({
+				scrollTop: $process.offset().top
+						}, 900);
+		});
+		}
 
-pricingShowHide();
+	pricingShowHide();
 	
-function formShowHide() {
-	var $formBtn = $('.btn-grey'),
-		$form = $('#form-page');
-	$formBtn.on('click', function() {
-		console.log('tata');
-		$form.toggleClass('hidden');
-	});
-}
-formShowHide();
+	function formShowHide() {
+		var $formBtn = $('.btn-grey'),
+			$form = $('#form-page');
+		$formBtn.on('click', function() {
+			console.log('tata');
+			$form.toggleClass('hidden');
+		});
+	}
+	formShowHide();
 	
+		  
+
+
+	function portfolioImgs() {
+		function showDetails() {
+			$(this).find('.portfolio-overlay').animate({
+				height: '100%'});
+
+			$(this).find('.portfolio-overlay-text').addClass('hidden');
+			$(this).find('.portfolio-overlay-text-hover').removeClass('hidden');
+
+		};
+		function hideDetails() {
+			$(this).find('.portfolio-overlay').animate({
+				height: '20%'});
+			$(this).find('.portfolio-overlay-text').removeClass('hidden');
+			$(this).find('.portfolio-overlay-text-hover').addClass('hidden');
+		}
+		if(window.screen.width < 768) {
+			console.log('hejaaaa');
+
+		/* tu dopisać event na komórki*/
+
+		}
+		else {
+			$('.pic-square').on('mouseenter', showDetails() );
+			$('.pic-square').on('mouseleave', hideDetails() );
+		};
+	}
+	portfolioImgs();
 	
-					  
-
-
-function portfolioImgs() {
-    $('.pic-square').on('mouseenter', function() {
-        console.log('ok');
-        $(this).find('.portfolio-overlay').animate({
-            height: '100%'});
-
-        $(this).find('.portfolio-overlay-text').addClass('hidden');
-        $(this).find('.portfolio-overlay-text-hover').removeClass('hidden');
-
-    });
-    $('.pic-square').on('mouseleave', function() {
-        console.log('ok');
-        $(this).find('.portfolio-overlay').animate({
-            height: '20%'});
-        $(this).find('.portfolio-overlay-text').removeClass('hidden');
-        $(this).find('.portfolio-overlay-text-hover').addClass('hidden');
-
-    });
-    }
     function expandPortfolio() {
         $('.morespecialties').find('a').on('click', function() {
             if($('.portfolio-finance-pic').hasClass('hidden')) {
@@ -305,49 +313,38 @@ function portfolioImgs() {
             $('.portfolio-technical-pic').toggleClass('hidden');
             $('.portfolio-law-pic').toggleClass('hidden');
             $('.portfolio-finance-pic').toggleClass('hidden');
-  //ta funkcja musi być skrócona          
+  			//ta funkcja musi być skrócona          
             
 
         });
     }
 
-portfolioImgs();
-expandPortfolio();
+	expandPortfolio();
+
     function hamburger() {
         $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-            $(this).toggleClass('open');
-        });
-    };
-	hamburger();
-function menuExpand() {
-        $('#nav-icon4').on('click', function() {
-			if($('#nav-icon4 span').hasClass('bg-white')) {
-				console.log('tak');
-			   $('#nav-icon4 span').removeClass('bg-white');
-			$('.terms_conditions_header').animate({
-				top: 0,
-				marginBottom: '+=20'
-			}, 1000);
-			$('.navigation_right').fadeOut(); }
+			$(this).toggleClass('open');
+			$('.navigation_right').fadeToggle(1000);
+			if($(this).hasClass('open')) {
+				var height = $('.navigation_right').height();
+				$('.terms_conditions_header').animate({ marginTop: height}, 1000);
+			
+			}
 			else {
-				 
-					  
-            $('.navigation_right').fadeIn(1000);
-            $('#nav-icon4 span').addClass('bg-white');
-			var height = $('.navigation_right').height();
-			$('.terms_conditions_header').animate({
-				marginTop: height
-			} ,1000);
-};
-		});
-	};
-            
+				$('.terms_conditions_header').animate({ marginTop: 0}, 1000);
+			}
            
-            //zmienić na css animation
+			
+			});
+        };
+    
+	hamburger();
             
+            //ew. zmienić na css animation
             
+       
             
 
     
-    menuExpand();
+   
 });
