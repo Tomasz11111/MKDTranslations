@@ -3,13 +3,24 @@
     Template Name: Left Nav
 */
 ?>
-
-<?php get_header(); ?> 
-
+<?php
+if ( is_home() ) :
+	get_header();
+else :
+	get_header( 'pages' );
+endif;
+?>
+<div class="container-fluid" id="terms_title">
+            <div class="row">
+    <div class="col-lg-12 col-xs-12 terms_conditions_header"><p class="section_title"><span>Terms and conditions</span></p>
+                
+            </div>
+         </div>
+    </div>
  <div class="container-fluid">
         <div class="row">
                 <div class="col-sm-12 col-lg-3 index_container">
-                    <ul class="terms_conditions_index nav nav-pills nav-stacked hidden-xs hidden-xm" data-spy="affix" data-offset-top=150 id="terms_sidebar">
+                    <ul class="terms_conditions_index nav nav-pills nav-stacked hidden-xs hidden-xm" data-spy="affix" data-offset-top=150   id="terms_sidebar">
                        <li><a href="#article1">Article I: Introductory provisions</a></li>
                         <li><a href="#article2">Article II: Subject matter of the performance</a></li>
                         <li><a href="#article3">Article III: Translations and proofreading</a>
