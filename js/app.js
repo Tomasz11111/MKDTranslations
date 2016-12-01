@@ -289,16 +289,16 @@ jQuery(document).ready(function($) {
 			$(this).find('.portfolio-overlay-text').removeClass('hidden');
 			$(this).find('.portfolio-overlay-text-hover').addClass('hidden');
 		}
-		if(window.screen.width < 768) {
+		/*if(window.screen.width < 768) {
 			console.log('hejaaaa');
 
-		/* tu dopisać event na komórki*/
+		 tu dopisać event na komórki
 
 		}
-		else {
+		else */
 			$('.pic-square').on('mouseenter', showDetails() );
 			$('.pic-square').on('mouseleave', hideDetails() );
-		};
+		
 	}
 	portfolioImgs();
 	
@@ -327,11 +327,11 @@ jQuery(document).ready(function($) {
 			$('.navigation_right').fadeToggle(1000);
 			if($(this).hasClass('open')) {
 				var height = $('.navigation_right').height();
-				$('.terms_conditions_header').animate({ marginTop: height}, 1000);
+				$('.subpage-header').animate({ marginTop: height}, 1000);
 			
 			}
 			else {
-				$('.terms_conditions_header').animate({ marginTop: 0}, 1000);
+				$('.subpage-header').animate({ marginTop: 0}, 1000);
 			}
            
 			
