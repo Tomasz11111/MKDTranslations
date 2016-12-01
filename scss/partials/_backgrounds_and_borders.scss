@@ -91,13 +91,16 @@
 
 //
 
+// Subpages header images
 
-.terms_conditions_header {
-    background-image: url('#{$path-img}/termsandconditions.jpg');
+.subpage-header {
+    
     margin-bottom: 30px;
     background-position: center;
 	height: 20vh;
 	@extend %flex-centered;
-      
-    
+  	&-termsconditions {
+		@extend .subpage-header;
+		background-image: url('#{$path-img}/termsandconditions.jpg');
+	}
 }

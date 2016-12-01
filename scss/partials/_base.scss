@@ -35,6 +35,21 @@ ul > li > span {
 	width: 20px;
 	height: 20px;
 }
+
+table {
+  	border-collapse: collapse !important;
+	width: 100%;
+	
+}
+
+
+th, td {
+	border: 1px solid purple !important;
+	padding: 10px;
+	text-align: center !important;
+  	vertical-align: middle !important;
+	width: (100%/3);
+}
 /*
 input[type="text"] {
 	display: inline-block;

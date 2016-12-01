@@ -132,17 +132,15 @@
     height: 260px;
     margin-bottom: 20px;
 }
+// ABOUT and LEARN POLISH, ENGLISH horizontal page dividers //
 
-.about-right {
+%about-wider {
 	
 	height: 100vh;
-	background-color: rgba(255, 255, 255, 0.5);
 	z-index: 100;
-	float:right;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
 	padding: 0 !important;
     position: relative;
 	@include mobile {
@@ -151,7 +149,22 @@
 	}
 
 }
-.about-left {
+.about-right {
+	@extend %about-wider;
+	background-color: rgba(255, 255, 255, 0.5);
+	align-items: flex-start;
+	
+	
+}
+.about-left-learn {
+	@extend %about-wider;
+	background-color: rgba(255, 255, 255, 0.5);
+	align-items: flex-end;
+	
+	
+	
+}
+.about-left, .about-right-learn {
     height: 100vh;
     padding: 0 !important;
 	@include mobile {
@@ -227,5 +240,6 @@
 	}
 	
 }
+
 
 
