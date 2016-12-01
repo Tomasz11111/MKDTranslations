@@ -12,7 +12,7 @@ endif;
 ?>
 <div class="container-fluid" id="terms_title">
             <div class="row">
-    <div class="col-lg-12 col-xs-12 terms_conditions_header"><p class="section_title"><span>Terms and conditions</span></p>
+    <div class="col-lg-12 col-xs-12 subpage-header subpage-header-termsconditions"><p class="section_title"><span>Terms and conditions</span></p>
                 
             </div>
          </div>
