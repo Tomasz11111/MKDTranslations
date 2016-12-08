@@ -178,6 +178,8 @@ jQuery(document).ready(function($) {
 					  $('.icon-headline').removeClass('icon-headline-animation');
 					  $('.icon-description-text').removeClass('icon-headline-animation');
 					 }
+			}
+			if($('.container-fluid').is($process)) {
     
             if(winoffset > offsetProcess.top - 20) {
                 $('#process-content .icon-circle').delay(1500).addClass('icon-circle-animate');
@@ -196,6 +198,7 @@ jQuery(document).ready(function($) {
                 $('.check_full').addClass('hidden');
                 }
         	}
+		
         	});
                          
             
@@ -276,6 +279,7 @@ jQuery(document).ready(function($) {
 
 	function portfolioImgs() {
 		function showDetails() {
+			console.log('hide');
 			$(this).find('.portfolio-overlay').animate({
 				height: '100%'});
 
@@ -284,6 +288,7 @@ jQuery(document).ready(function($) {
 
 		};
 		function hideDetails() {
+			console.log('hidden');
 			$(this).find('.portfolio-overlay').animate({
 				height: '20%'});
 			$(this).find('.portfolio-overlay-text').removeClass('hidden');

@@ -97,10 +97,15 @@
     
     margin-bottom: 30px;
     background-position: center;
-	height: 20vh;
 	@extend %flex-centered;
   	&-termsconditions {
 		@extend .subpage-header;
 		background-image: url('#{$path-img}/termsandconditions.jpg');
+		height: 20vh;
+	}
+	&-translation {
+		@extend .subpage-header;
+		background-image: url('#{$path-img}/translation.jpg');
+		height: 40vh;
 	}
 }
