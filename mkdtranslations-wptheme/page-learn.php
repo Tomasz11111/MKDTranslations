@@ -271,85 +271,36 @@ endif;
 				?></p></div>
 		<div class='col-lg-4'>
 			<h3>Slow-paced</h3>
-			<table>
-				<col>
-				<col>
-				<col>
-				<thead>
-					<tr>
-						<th>No. of lessons per month  </th>
-						<th>Duration</th>
-						<th>Price</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>4-5 x 60 min</td>
-						<td>60 min</td>
-						<td>390 Kc</td>
-					</tr>
-					<tr>
-						<td>2-3</td>
-						<td>90 min</td>
-						<td>560 Kc</td>
-					</tr>
-				</tbody>
-			</table>
-			
+			<?php $value = get_field('table_slow_pace');
+			if($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty';
+			}
+			?>
 			</div>
 		<div class='col-lg-4'>
 		<h3>Standard</h3>
-		<table>
-			<col>
-			<col>
-			<col>
-			<thead>
-				<tr>
-					<th>No. of lessons per month  </th>
-					<th>Duration</th>
-					<th>Price</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>6-10</td>
-					<td>60 min</td>
-					<td>375 Kc</td>
-				</tr>
-				<tr>
-					<td>4-6</td>
-					<td>90 min</td>
-					<td>545 Kc</td>
-				</tr>
-			</tbody>
-		</table>
+		<?php $value = get_field('table_standard');
+			if($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty';
+			}
+			?>
 		</div>
 		<div class='col-lg-4'>
 		<h3>Intensive</h3>
-			<table>
-				<col>
-				<col>
-				<col>
-				<thead>
-					<tr>
-						<th>No. of lessons per month </th>
-						<th>Duration</th>
-						<th>Price</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>> 10</td>
-						<td>60 min</td>
-						<td>360Kc</td>
-					</tr>
-					<tr>
-						<td>> 6</td>
-						<td>90 min</td>
-						<td>530 Kc</td>
-					</tr>
-				</tbody>
-			</table>
+			<?php $value = get_field('table_intensive');
+			if($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty';
+			}
+			?>
 		</div>
 		<div class='col-lg-12'><p class='learn-pricing-section'><?php $value = get_field ('learn_pricing_modes_2');
 				if ($value) {
@@ -360,85 +311,37 @@ endif;
 				?></p></div>
 		<div class='col-lg-4'>
 			<h3>Slow-paced</h3>
-			<table>
-				<col>
-				<col>
-				<col>
-				<thead>
-					<tr>
-						<th>No. of lessons per month  </th>
-						<th>Duration</th>
-						<th>Price</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>4-5 x 60 min</td>
-						<td>60 min</td>
-						<td>600 Kc</td>
-					</tr>
-					<tr>
-						<td>2-3</td>
-						<td>90 min</td>
-						<td>700 Kc</td>
-					</tr>
-				</tbody>
-			</table>
+			<?php $value = get_field('table_2nd_line_slow_pace');
+			if($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty';
+			}
+			?>
 			
 			</div>
 		<div class='col-lg-4'>
 		<h3>Standard</h3>
-		<table>
-			<col>
-			<col>
-			<col>
-			<thead>
-				<tr>
-					<th>No. of lessons per month  </th>
-					<th>Duration</th>
-					<th>Price</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>6-10</td>
-					<td>60 min</td>
-					<td>550 Kc</td>
-				</tr>
-				<tr>
-					<td>4-6</td>
-					<td>90 min</td>
-					<td>675 Kc</td>
-				</tr>
-			</tbody>
-		</table>
+		<?php $value = get_field('table_2nd_line_standard');
+			if($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty';
+			}
+			?>
 		</div>
 		<div class='col-lg-4'>
 		<h3>Intensive</h3>
-			<table>
-				<col>
-				<col>
-				<col>
-				<thead>
-					<tr>
-						<th>No. of lessons per month </th>
-						<th>Duration</th>
-						<th>Price</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>> 10</td>
-						<td>60 min</td>
-						<td>500Kc</td>
-					</tr>
-					<tr>
-						<td>> 6</td>
-						<td>90 min</td>
-						<td>650 Kc</td>
-					</tr>
-				</tbody>
-			</table>
+			<?php $value = get_field('table_2nd_line_intensive');
+			if($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty';
+			}
+			?>
 		</div>
 	</div>
 </div>
