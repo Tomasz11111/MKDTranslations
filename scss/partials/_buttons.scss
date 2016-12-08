@@ -84,6 +84,20 @@
 	}
 }
 
+.btn-teal-bgfullcolor {
+	@extend .btn-standard;
+	border: 2px solid $base-color-1;
+	background-color: $base-color-1;
+	a, span {
+		color: white;
+		font-size: 1.5rem;
+		}
+	&:hover {
+		font-size: 1.5rem;
+	}
+	
+}
+
 .btn-grey {
 	@extend .btn-standard;
 	border: 2px solid $nav-and-background-color;
