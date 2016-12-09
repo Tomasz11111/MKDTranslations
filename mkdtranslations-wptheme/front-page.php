@@ -529,112 +529,23 @@
 				echo 'empty'; }
 			?></a>
 			</button>
-        </div>
-    </div>
- </div>
-  
-
-  <!-- PRICING SECTION -->
-
-<div class='container-fluid hidden' id='pricing'>
-        
-           
-    <div class='row'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title'><?php $value = get_field('pricing_section_title');
+			<button class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('translation_button_2_link');
+				if ($value) {
+					echo $value; }
+				else {
+					echo 'empty'; }?>'><?php $value = get_field ('translation_button_2');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
-			?></h1>
-                <div class='closing'><div>X</div></div>
-            </div>
-          
-        <div class='col-lg-4'>    
-    
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing1_icon');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
-			</div>
-            <div class='icon_title'><h4 class='icon-headline'><?php $value = get_field('pricing_icon_headline_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></h4>
-			</div>
-            <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></p>
-			</div>
-         </div>
-         <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing2_icon');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
-			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field('pricing_icon headline_2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></h4>
-			</div>
-            <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></p>
-			</div>
-       </div>
-       <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing3_icon');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
-		   </div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field('pricing_icon_headline_3');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></h4>
-		   </div>
-           <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_3');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></p>
-		   </div>
-                 <div class='payments_methods_flex'>
-                 	<img src='<?php echo get_template_directory_uri()?>/images/PayPal.svg' alt='PayPal logo'><img src='<?php echo get_template_directory_uri()?>/images/Skrill_small.png' alt='Skrill logo'>
-		   		</div>
-           </div>
-	</div>      
-</div>
+			?></a></button>
+        </div>
+    </div>
+ </div>
   
+
+ 
  <!-- GREEN BELT -->       
 
 <div class='container-fluid'>
