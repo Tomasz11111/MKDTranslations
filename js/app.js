@@ -63,7 +63,7 @@ jQuery(document).ready(function($) {
             $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
         });
     };
-
+	
 	function slidesFromRight() {
     
 
@@ -308,7 +308,7 @@ jQuery(document).ready(function($) {
 	portfolioImgs();
 	
     function expandPortfolio() {
-        $('.morespecialties').find('a').on('click', function() {
+        $('.morespecialties .btn-teal').find('a').on('click', function() {
             if($('.portfolio-finance-pic').hasClass('hidden')) {
                 $('html, body').animate({ scrollTop:  $('.portfolio-tourism-pic').offset().top}, 'slow');
             }
