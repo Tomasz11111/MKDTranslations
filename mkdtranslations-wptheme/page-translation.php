@@ -12,7 +12,7 @@ endif;
 ?>
 <div class="container-fluid" id="terms_title">
             <div class="row">
-    <div class="col-lg-12 col-xs-12 subpage-header subpage-header-translation"><p class="subpage-header-title"><span>Translation services</span></p>
+    <div class="col-lg-12 col-xs-12 subpage-header subpage-header-translation"><p class="subpage-header-title"><span><?php the_title() ?></span></p>
                 
             </div>
          </div>
@@ -520,7 +520,11 @@ endif;
 		   </div>
 		</div>
 		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
-			<button class='btn-teal' id='btn-pricing'><span><a href='<?php echo get_permalink(5);?>'><?php $value = get_field ('process_button_left');
+			<button class='btn-teal' id='btn-pricing'><span><a href='<?php $value = get_field('pricing_button_left_link');
+				if ($value) {
+					echo $value; }
+				else {
+					echo 'empty'; }?>'><?php $value = get_field ('pricing_button_left');
 				if ($value) {
 					echo $value;
 				}
@@ -528,7 +532,11 @@ endif;
 					echo 'empty'; }
 				?></a></span>
 			</button>
-            <button class='btn-teal-bgfullcolor'><a href='<?php echo get_permalink(5);?>'><?php $value = get_field ('process_button_right');
+            <button class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('pricing_button_right_link');
+				if ($value) {
+					echo $value; }
+				else {
+					echo 'empty'; }?>'><?php $value = get_field ('pricing_button_right');
 				if ($value) {
 					echo $value;
 				}
