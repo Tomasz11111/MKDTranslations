@@ -237,32 +237,7 @@ jQuery(document).ready(function($) {
 
     googleMaps();
 
-	function pricingShowHide() {
-		var $closeBtn = $('.closing'), 
-			$showBtn = $('#btn-pricing'),
-			$pricingSection = $('#pricing'),
-			$processContent = $('#process-content'),
-			$process = $('#process');
-		$showBtn.on('click', function(event) {
-			event.preventDefault();
-			$pricingSection.removeClass('hidden');
-			$processContent.addClass('hidden');
-			$('html, body').animate({
-				scrollTop: $pricingSection.offset().top
-						}, 900);
-		});
-
-		$closeBtn.on('click', function() {
-			console.log('ok');
-			$pricingSection.addClass('hidden');
-			$processContent.removeClass('hidden');
-			 $('html, body').animate({
-				scrollTop: $process.offset().top
-						}, 900);
-		});
-		}
-
-	pricingShowHide();
+	
 	
 	function formShowHide() {
 		var $formBtn = $('.btn-grey'),
