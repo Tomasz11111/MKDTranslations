@@ -109,3 +109,15 @@
 		height: 40vh;
 	}
 }
+// Contact form
+#form-page {
+	@include tablet {
+		background-image: url('#{$path-img}/prague2.png');
+		background-size: cover;
+		background-position: fixed;
+	}
+	@include mobile {
+		background-color: $nav-and-background-color;
+	}
+	
+}

@@ -33,6 +33,22 @@
 		}
 	}
 }
+.choose-language-languages-sidepages {
+	@extend .choose-language-languages;
+	right: 10vw !important;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: auto !important;
+	p {
+		line-height: 2.2rem !important;
+		a {
+			padding-top: 0 !important;
+		}
+	}
+	
+	
+}
 
 .headline-btn {
 	background: transparent;
@@ -96,6 +112,41 @@
 		font-size: 1.5rem;
 	}
 	
+}
+
+.btn-purple {
+	@extend .btn-standard;
+	border: 2px solid $base-color-2;
+	a, span {
+	color: $base-color-2;
+		font-size: 1.5rem;
+		
+					
+	}
+	
+	&:hover {
+		background-color: $base-color-2;
+	}
+	@include mobile {
+		margin: 0 auto;
+		display: block;
+	}
+}
+.btn-purple-bgfullcolor {
+	@extend .btn-standard;
+	border: 2px solid $base-color-2;
+	background-color: $base-color-2;
+	a, span {
+		color: white;
+		font-size: 1.5rem;
+		}
+	&:hover {
+		font-size: 1.5rem;
+	}
+	@include mobile {
+		margin: 0 auto;
+		display: block;
+	}
 }
 
 .btn-grey {
