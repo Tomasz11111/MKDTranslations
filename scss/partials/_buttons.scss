@@ -42,12 +42,24 @@
 	line-height: auto !important;
 	p {
 		line-height: 2.2rem !important;
+		&:hover {
+			border: 0.1rem solid $base-color-2;
+		}
 		a {
 			padding-top: 0 !important;
+			&:hover {
+				background-color: white;
+				color: $base-color-2 !important;
+			}
 		}
 	}
 	
 	
+}
+.choose-language-languages-homepage {
+	@extend .choose-language-languages-sidepages;
+		z-index: 1500;
+		
 }
 
 .headline-btn {
