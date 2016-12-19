@@ -217,7 +217,7 @@ jQuery(document).ready(function($) {
             var mapProp = {
                 center: myCenter,
                 zoom: 14,
-                scrollwheel: true, //trzeba jeszcze dopisać warunek, że dla mobile nie ma scrollwheel
+				scrollwheel: true, //trzeba jeszcze dopisać warunek, że dla mobile nie ma scrollwheel
                 draggable: true,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
@@ -239,15 +239,16 @@ jQuery(document).ready(function($) {
 
 	
 	
-	function formShowHide() {
-		var $formBtn = $('.btn-grey'),
-			$form = $('#form-page');
-		$formBtn.on('click', function() {
-			console.log('tata');
-			$form.toggleClass('hidden');
+	function termsShowHide() {
+		var $clickBtn = $('.btn-purple'),
+			$openDiv = $('#learn-terms');
+		$clickBtn.on('click', function(event) {
+			event.preventDefault();
+			
+			$openDiv.toggleClass('hidden');
 		});
 	}
-	formShowHide();
+	termsShowHide();
 	
 		  
 
@@ -276,8 +277,8 @@ jQuery(document).ready(function($) {
 
 		}
 		else */
-			$('.pic-square').on('mouseenter', showDetails() );
-			$('.pic-square').on('mouseleave', hideDetails() );
+			$('.pic-square').on('mouseenter', showDetails );
+			$('.pic-square').on('mouseleave', hideDetails );
 		
 	}
 	portfolioImgs();
@@ -303,16 +304,11 @@ jQuery(document).ready(function($) {
 
     function hamburger() {
         $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+			$('div.navigation-container').toggleClass('navigation-container-bg');
+			$('.headline-text-sidepages').toggleClass('hidden');
 			$(this).toggleClass('open');
-			$('.navigation_right').fadeToggle(1000);
-			if($(this).hasClass('open')) {
-				var height = $('.navigation_right').height();
-				$('.subpage-header').animate({ marginTop: height}, 1000);
+			$('.navigation_right').toggle();
 			
-			}
-			else {
-				$('.subpage-header').animate({ marginTop: 0}, 1000);
-			}
            
 			
 			});
