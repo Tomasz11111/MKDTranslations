@@ -15,11 +15,20 @@
     <div class="navigation-container navigation-container-bg">
         <div class="headline-sidepages">
             <p class="headline-text-sidepages">Linguistic services <span> by </span> MKDTranslations</p>
-             	
-        <div 
-			 class="navigation_container">
+			<div id="nav-icon4">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+            
+            	
+        <div  class="navigation_container">
 			<nav class="navigation_right">
-			
+				<div class='choose-language-languages-sidepages'>
+				<p><a href='http://mkdtranslations.com/wordpress/cs/domovska/'>cz</a></p>
+				<p><a href='http://mkdtranslations.com/wordpress/en/home/'>en</a></p>
+				<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>
+			</div>
 			<?php 
 			
 			$defaults = array(
@@ -27,16 +36,12 @@
 			'theme_location' => 'primary-menu')
 				;
 			wp_nav_menu('defaults');
-			?></nav>
+			?>
+			</nav>
 			          
          
 		
 	
-            <div id="nav-icon4">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
 	</div>
 		</div>
 		</div>

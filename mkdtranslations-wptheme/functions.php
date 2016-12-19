@@ -31,5 +31,7 @@ add_action( 'wp_enqueue_scripts', 'mkd_theme_styles' );
 		
 	}
 add_action( 'wp_enqueue_scripts', 'mkd_theme_js' );
+
+add_filter( 'show_admin_bar', '__return_false' );
 		
 		?>

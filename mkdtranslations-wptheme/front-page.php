@@ -9,7 +9,6 @@
 			<div class='choose-language-languages'>
 				<p><a href='http://mkdtranslations.com/wordpress/cs/domovska/'>cz</a></p>
 				<p><a href='http://mkdtranslations.com/wordpress/en/home/'>en</a></p>
-				<p><a href='http://mkdtranslations.com/wordpress/fr/accueil/'>fr</a></p>
 				<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>
 			</div>
 		</div>
@@ -519,9 +518,9 @@
 <!-- Translation buttons --> 
    
         
-		<div class='col-lg-12 morespecialties hidden-xs'>
+		<div class='col-lg-12 col-md-12 morespecialties'>
    
-			<button class='btn-standard btn-teal'><a><?php $value = get_field ('translation_button');
+			<button class='btn-standard btn-teal hidden-xs'><a><?php $value = get_field ('translation_button');
 			if ($value) {
 				echo $value;
 			}
@@ -588,7 +587,12 @@
         <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 french'>
             <div class='outer_bg'>
         		<div class='outer_border'>
-					<div class='inner_border'><p><a href='http://mkdtranslations.com/wordpress/en/learn-french/'><?php $value = get_field ('teaching_button_left');
+					<div class='inner_border'><p><a href='<?php $value = get_field ('teaching_button_left_link');
+						if ($value) {
+							echo $value;
+								}
+						else {
+							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_left');
 						if ($value) {
 							echo $value;
 						}
@@ -602,7 +606,12 @@
         <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 polish'>
             <div class='outer_bg'>
         		<div class='outer_border'>
-            		<div class='inner_border'><p><a href='http://mkdtranslations.com/wordpress/en/polish/'><?php $value = get_field ('teaching_button_right');
+            		<div class='inner_border'><p><a href='<?php $value = get_field ('teaching_button_right_link');
+						if ($value) {
+							echo $value;
+								}
+						else {
+							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_right');
 						if ($value) {
 							echo $value;
 						}
@@ -632,32 +641,28 @@
 		</div>
 	</div>
 </div>
-<div class='container-fluid' id='contact'>
-    <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title'><?php $value = get_field ('contact_section_title');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></h1>
-            <p class='section-title-lead'><?php $value = get_field ('contact_section_lead');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>
-			</p>
-		</div>
-	</div>
-</div>
+
 
 <!-- CONTACT SECTION -->
 
-<div class='containter'>
+
+
+<div class='container-fluid' id='form-page'>
 	<div class='row'>
-		<div class='col-lg-2 col-md-2 col-sm-4 col-md-offset-3 col-lg-offset-3 flex-center-column'>
+		<div class='col-lg-8'>
+			<p class='contact-form-lead'><?php $value = get_field('contact_section_lead');
+				if($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty';}
+				?>
+			</p>
+			<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form') ); ?>
+        </div>
+		<div class='col-lg-4 contact-form-right'>
+						 
+			<div class='contact-form-right-container'>
 			<div class='icon-circle-small'><img src='<?php $value = get_field('contact_icon_1');
 				if ($value) {
 					echo $value;
@@ -666,14 +671,17 @@
 					echo 'empty';} 
 				?>' class='icon-set-width-small'>
 			</div>
-			<h4 class='icon-headline'>Address</h4>
-			<ul class="address"> 
-				<li>Řipska 14</li>
-                <li>130 00 Praha 3</li>
-                <li>Czech Republic</li>
-			</ul>
-		</div>
-		<div class='col-lg-2 col-md-2 col-sm-4 flex-center-column'>
+				<?php $value = get_field('contact_icon_content1');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty';
+				}
+				?>
+			
+		
+		
 			<div class='icon-circle-small'><img src='<?php $value = get_field('contact_icon_2');
 				if ($value) {
 					echo $value; 
@@ -682,10 +690,16 @@
 					echo 'empty';} 
 					?>' class='icon-set-height-small'> 
 			</div>
-			<h4 class='icon-headline'>Phone</h4>
-			<p>+420 773 596 706</p>
-		</div>
-		<div class='col-lg-2 col-md-2 col-sm-4 flex-center-column'>
+			<?php $value = get_field('contact_icon_content2');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty';
+				}
+				?>
+		
+		
 			<div class='icon-circle-small'>
 				<img src='<?php $value = get_field('contact_icon_3');
 					if ($value) {	
@@ -695,13 +709,16 @@
 						echo 'empty';}
 						?>' class='icon-set-width-small'>
 			</div>
-			<h4 class='icon-headline'>E-mail</h4>
-			<p><a href='mailto:info@mkdtranslations.com'>info@mkdtranslations.com</a>
-			</p>
-		</div>
-	</div>
-	<div class='row'>
-		<div class='col-lg-2 col-xs-12 col-lg-offset-5 flex-center-row-multiple'>
+			<?php $value = get_field('contact_icon_content3');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty';
+				}
+				?>
+				<div class='contact-form-right-container-socialmedia'>
+	
 			<div class='icon-circle-smallest'>
 				<img src='<?php $value = get_field('contact_icon_social_1');
 					if ($value) {
@@ -726,38 +743,25 @@
 					}			
 					 else { 
 						 echo 'empty';} ?>' class='icon-set-size-smallest'> 
+				</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	 <div class='row'>
-			
-		 <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
-			<button class='btn-standard btn-grey'><a>Contact form - quick quote</a></button>
-        </div>
-	</div>
 </div>
 
-<!-- Contact form -->
-
-<div class='container-fluid hidden' id='form-page'>
-	<div class='row'>
-		<div class='col-lg-12 col-centered'>
-	
-			<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form') ); ?>
-        </div>
-	</div>
-</div>
-
-<!-- Google map -->
+<!-- Google Map -->
 
 <div class='container-fluid'>
 	<div class='row'>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-			 <div id='googleMap'>
-             </div>
+		<div class='col-lg-12'>
+			<div id='googleMap'></div>
 		</div>
 	</div>
 </div>
+			
+
+
 	
     
 <?php get_footer();?>

@@ -1,6 +1,6 @@
 <?php 
 /*
-    Template Name: Learn
+    Template Name: French
 */
 ?>
 <?php
@@ -10,7 +10,7 @@ else :
 	get_header( 'pages' );
 endif;
 ?>
-<div class='container-fluid bg-about' style='background-image: url(<?php $value = get_field ('learn_bgimage');
+<div class='container-fluid bg-about' style='background-image: url(<?php $value = get_field ('polish_bgimage');
 	 if ($value) {
 	 echo $value;
 	 }
@@ -26,14 +26,14 @@ endif;
 				echo 'empty'; }
 				?></span>
 			</p>
-            <p class='about-main-learn slideanim'> <?php $value = get_field ('learn_main_block');
+            <p class='about-main-learn slideanim'> <?php $value = get_field ('learn_polish_main_block');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
 			?><span>English</span>, <span>French</span> and <span>Czech</span></p>
-			<p class='about-secondary-learn slideanim'><?php $value = get_field ('learn_secondary_block');
+			<p class='about-secondary-learn slideanim'><?php $value = get_field ('learn_polish_secondary_block');
 			if ($value) {
 				echo $value;
 			}
@@ -262,124 +262,173 @@ endif;
 			<p class='section-title-lead'>Choose a  payment plan that works for you.</p>
 		</div>
 		<div class='col-lg-12'>
-			<p class='learn-pricing-section'><?php $value = get_field ('learn_pricing_modes_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></p></div>
+			<p class='learn-pricing-section'>French lessons in my appartment or via Skype</p></div>
 		<div class='col-lg-4'>
 			<h3>Slow-paced</h3>
-			<?php $value = get_field('table_slow_pace');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
-			</div>
-		<div class='col-lg-4'>
-		<h3>Standard</h3>
-		<?php $value = get_field('table_standard');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
-		</div>
-		<div class='col-lg-4'>
-		<h3>Intensive</h3>
-			<?php $value = get_field('table_intensive');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
-		</div>
-		<div class='col-lg-12'><p class='learn-pricing-section'><?php $value = get_field ('learn_pricing_modes_2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></p></div>
-		<div class='col-lg-4'>
-			<h3>Slow-paced</h3>
-			<?php $value = get_field('table_2nd_line_slow_pace');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
+			<table>
+				<col>
+				<col>
+				<col>
+				<thead>
+					<tr>
+						<th>No. of lessons per month  </th>
+						<th>Duration</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>4-5 x 60 min</td>
+						<td>60 min</td>
+						<td>390 Kc</td>
+					</tr>
+					<tr>
+						<td>2-3</td>
+						<td>90 min</td>
+						<td>560 Kc</td>
+					</tr>
+				</tbody>
+			</table>
 			
 			</div>
 		<div class='col-lg-4'>
 		<h3>Standard</h3>
-		<?php $value = get_field('table_2nd_line_standard');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
+		<table>
+			<col>
+			<col>
+			<col>
+			<thead>
+				<tr>
+					<th>No. of lessons per month  </th>
+					<th>Duration</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>6-10</td>
+					<td>60 min</td>
+					<td>375 Kc</td>
+				</tr>
+				<tr>
+					<td>4-6</td>
+					<td>90 min</td>
+					<td>545 Kc</td>
+				</tr>
+			</tbody>
+		</table>
 		</div>
 		<div class='col-lg-4'>
 		<h3>Intensive</h3>
-			<?php $value = get_field('table_2nd_line_intensive');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
+			<table>
+				<col>
+				<col>
+				<col>
+				<thead>
+					<tr>
+						<th>No. of lessons per month </th>
+						<th>Duration</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>> 10</td>
+						<td>60 min</td>
+						<td>360Kc</td>
+					</tr>
+					<tr>
+						<td>> 6</td>
+						<td>90 min</td>
+						<td>530 Kc</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-	
-
-<div class='col-lg-12 morespecialties'>
-   
-			<button class='btn-purple'><a href=''><?php $value = get_field ('learn_button_1');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></a>
-			</button>
-			<button class='btn-purple-bgfullcolor'><a href='<?php $value = get_field('learn_button_2_link');
-				if ($value) {
-					echo $value; }
-				else {
-					echo 'empty'; }?>'><?php $value = get_field ('learn_button_2');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></a></button>
-        </div>
+		<div class='col-lg-12'><p class='learn-pricing-section'>French lessons in your company/home/cafe in Prague</p></div>
+		<div class='col-lg-4'>
+			<h3>Slow-paced</h3>
+			<table>
+				<col>
+				<col>
+				<col>
+				<thead>
+					<tr>
+						<th>No. of lessons per month  </th>
+						<th>Duration</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>4-5 x 60 min</td>
+						<td>60 min</td>
+						<td>600 Kc</td>
+					</tr>
+					<tr>
+						<td>2-3</td>
+						<td>90 min</td>
+						<td>700 Kc</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			</div>
+		<div class='col-lg-4'>
+		<h3>Standard</h3>
+		<table>
+			<col>
+			<col>
+			<col>
+			<thead>
+				<tr>
+					<th>No. of lessons per month  </th>
+					<th>Duration</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>6-10</td>
+					<td>60 min</td>
+					<td>550 Kc</td>
+				</tr>
+				<tr>
+					<td>4-6</td>
+					<td>90 min</td>
+					<td>675 Kc</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<div class='col-lg-4'>
+		<h3>Intensive</h3>
+			<table>
+				<col>
+				<col>
+				<col>
+				<thead>
+					<tr>
+						<th>No. of lessons per month </th>
+						<th>Duration</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>> 10</td>
+						<td>60 min</td>
+						<td>500Kc</td>
+					</tr>
+					<tr>
+						<td>> 6</td>
+						<td>90 min</td>
+						<td>650 Kc</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
-</div>
-
-<div class='container hidden' id='learn-terms'>
-	<div class='row'>
-		<div class='col-lg-12'>
-			<?php $value = get_field('learn_termsandconditions');
-				if ($value) {
-					echo $value; }
-				else {
-					echo 'empty'; }?>
-				</div>
-		</div>
 </div>
             
 
