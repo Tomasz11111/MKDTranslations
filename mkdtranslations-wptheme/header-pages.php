@@ -24,7 +24,7 @@
             	
         <div  class="navigation_container">
 			<nav class="navigation_right">
-				<div class='choose-language-languages-sidepages'>
+				<div class='choose-language-languages-homepage'>
 				<p><a href='http://mkdtranslations.com/wordpress/cs/domovska/'>cz</a></p>
 				<p><a href='http://mkdtranslations.com/wordpress/en/home/'>en</a></p>
 				<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>

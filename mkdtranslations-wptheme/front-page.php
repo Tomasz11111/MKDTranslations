@@ -4,14 +4,7 @@
 
 <div class='homepage-hero-module'>
     <div class='video-container'>
-		<div class='choose-language'>
-			<p>Choose your language</p>
-			<div class='choose-language-languages'>
-				<p><a href='http://mkdtranslations.com/wordpress/cs/domovska/'>cz</a></p>
-				<p><a href='http://mkdtranslations.com/wordpress/en/home/'>en</a></p>
-				<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>
-			</div>
-		</div>
+		
 		<div class='headline'>
 			<p class='headline-text-big'>Linguistic services <span> by </span> MKDTranslations</p>
             <button class='headline-btn'><a href='#contact'><?php $value = get_field ('hero_btn_left');
