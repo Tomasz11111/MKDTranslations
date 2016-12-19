@@ -63,6 +63,22 @@ jQuery(document).ready(function($) {
             $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
         });
     };
+	function showHideLangBtns() {
+		var $btnsDiv = $('.choose-language-languages-homepage'),
+			windowHeight = $(window).height();
+			
+		$(window).scroll(function() {			
+					if($(window).scrollTop() > windowHeight ) {
+				$btnsDiv.addClass('hidden'); 
+			}
+			else {
+				$btnsDiv.removeClass('hidden');
+			}
+		});
+			
+		
+	};
+	showHideLangBtns();
 	
 	function slidesFromRight() {
     
@@ -72,6 +88,7 @@ jQuery(document).ready(function($) {
 				var pos = $(this).offset().top;
 
 				var winTop = $(window).scrollTop();
+				console.log(winTop);
 				if (pos < winTop + 600) {
 					console.log('dziala');
 					$(this).addClass('slide');
