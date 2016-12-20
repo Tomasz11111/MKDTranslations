@@ -172,7 +172,7 @@ jQuery(document).ready(function($) {
     changeBgcolorCracow();
 
     function activateIconsAnimation() {
-        
+        //funkcja do skrócenia, uogólnienie klas
         $(window).scroll (function() {
              var $services = $('#services'),
                 offsetServices = $services.offset(),
@@ -186,10 +186,10 @@ jQuery(document).ready(function($) {
 			if($('.container-fluid').is($services)) {
 				if(winoffset > offsetServices.top - 20) {
 					console.log('jeje');
-				  //delay nie działa z addClass. Zmienić na setTimeout
-				   $('.bg-grey .icon-circle').delay(1500).addClass('icon-circle-animate');
-					$('.icon-headline').delay(1500).addClass('icon-headline-animation');
-					$('.icon-description-text').delay(1500).addClass('icon-headline-animation');
+				  //dopisać opóźnienie np. setTimeout
+				   $('.bg-grey .icon-circle').addClass('icon-circle-animate');
+					$('.icon-headline').addClass('icon-headline-animation');
+					$('.icon-description-text').addClass('icon-headline-animation');
 				   }
 				else { $('.bg-grey .icon-circle').removeClass('icon-circle-animate');
 					  $('.icon-headline').removeClass('icon-headline-animation');
@@ -199,8 +199,8 @@ jQuery(document).ready(function($) {
 			if($('.container-fluid').is($process)) {
     
             if(winoffset > offsetProcess.top - 20) {
-                $('#process-content .icon-circle').delay(1500).addClass('icon-circle-animate');
-                $('#process-content .icon-headline').delay(1500).addClass('icon-headline-animation');
+                $('#process-content .icon-circle').addClass('icon-circle-animate');
+                $('#process-content .icon-headline').addClass('icon-headline-animation');
                 setTimeout(function() {
                     
                 $('.check_empty').addClass('hidden');
@@ -275,8 +275,7 @@ jQuery(document).ready(function($) {
 			console.log('hide');
 			$(this).find('.portfolio-overlay').animate({
 				height: '100%'});
-
-			$(this).find('.portfolio-overlay-text').addClass('hidden');
+		$(this).find('.portfolio-overlay-text').addClass('hidden');
 			$(this).find('.portfolio-overlay-text-hover').removeClass('hidden');
 
 		};
@@ -308,12 +307,7 @@ jQuery(document).ready(function($) {
             else {
                 $('html, body').animate({ scrollTop:  $('#translation').offset().top }, 'slow');
             }
-            $('.portfolio-technical-pic').toggleClass('hidden');
-            $('.portfolio-law-pic').toggleClass('hidden');
-            $('.portfolio-finance-pic').toggleClass('hidden');
-  			//ta funkcja musi być skrócona          
-            
-
+            $('.portfolio-expandable').toggleClass('hidden');                       
         });
     }
 
