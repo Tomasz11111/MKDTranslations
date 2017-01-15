@@ -9,11 +9,15 @@ you can see progress at www.mkdtranslations.com/wordpress
 Pozostało do zrobienia m.in:
 - crossbrowser compatibility issues (mainly Safari)
 - responsivity issues ( mainly tablet and medium screens)
+- optimize scss( remove unnecessary parts etc.)
 - navigation at home page 
 - loading time issues (add lazy load, optimize images etc.)
 - code optimalization (remove unnecessary parts, rewrite some jquery functions)
 - complete integration with wordrpress (add missing custom fields, add blog theme etc)
 - move to root directory and launch by 31 December
+- rewrite footer.php (integrate with wordpress menus)
+- fill up with content where missing (up to client via wordpress)
+- debuging
 
 
 
