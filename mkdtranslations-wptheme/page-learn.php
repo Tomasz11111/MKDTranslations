@@ -18,7 +18,7 @@ endif;
 	 echo 'empty'; }?>)' id='about'>
     <div class='row'>
 		<div class='col-lg-7 col-xs-12 about-left-learn'>
-            <p class='learn-polish-title-left hidden-sm hidden-xs slideanim'> <span><?php $value = get_field ('title_left');
+            <p class='learn-polish-title-left hidden-sm hidden-xs slideanim-onload'> <span><?php $value = get_field ('title_left');
 			if ($value) {
 				echo $value;
 			}
@@ -33,7 +33,7 @@ endif;
 			else {
 				echo 'empty'; }
 			?><span>English</span>, <span>French</span> and <span>Czech</span></p>
-			<p class='about-secondary-learn slideanim'><?php $value = get_field ('learn_secondary_block');
+			<p class='about-secondary-learn slideanim-onload'><?php $value = get_field ('learn_secondary_block');
 			if ($value) {
 				echo $value;
 			}
@@ -44,7 +44,7 @@ endif;
            </div>
    	
         <div class='col-lg-5 col-xs-12 about-right-learn'>
-            <p class='learn-polish-title slideanim-left'><span class='hidden-sm hidden-xs'><?php $value = get_field ('title_right');
+            <p class='learn-polish-title slideanim-left-onload'><span class='hidden-sm hidden-xs'><?php $value = get_field ('title_right');
 			if ($value) {
 				echo $value;
 			}

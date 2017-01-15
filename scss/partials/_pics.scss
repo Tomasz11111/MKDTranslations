@@ -3,7 +3,7 @@
 @each $theme in tourism, business, marketing, technical, law, finance { .portfolio-#{$theme}-pic { background-image: url('#{$path-img}/#{$theme}.jpg') }; 
 } 
 
-
+// My solutions and services icons 
 
 
 .pic-square {

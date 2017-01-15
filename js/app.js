@@ -80,6 +80,19 @@ jQuery(document).ready(function($) {
 	};
 	showHideLangBtns();
 	
+	function slidesOnLoad() {
+		$('.slideanim-onload').load(setInterval(function() {
+			$(this).addClass('slide');
+		}), 2000);
+		$('.slideanim-left-onload').load(function() {
+			$(this).addClass('slide-left')});
+	}
+										 
+	
+					   
+	slidesOnLoad();					   
+		
+	
 	function slidesFromRight() {
     
 
@@ -113,6 +126,8 @@ jQuery(document).ready(function($) {
 	
 	slidesFromLeft();
 	slidesFromRight();
+	
+	
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 	function smoothScroll() {
         $('.navigation_right a, .help a, button a, .nav-pills a ').on('click', function (event) {
