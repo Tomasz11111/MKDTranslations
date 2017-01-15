@@ -79,7 +79,7 @@
 			}
 			else {
 				echo 'empty'; }
-			?><span>English</span>, <span>French</span> and <span>Czech</span></p>
+			?></p>
 			<p class='about-secondary slideanim'><?php $value = get_field ('about_secondary_block');
 			if ($value) {
 				echo $value;
@@ -120,13 +120,7 @@
 <div class='container-fluid bg-grey' id='services_content'>
     <div class='row row-icons'>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('service1_icon');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/icons-green-translation.png' class='icon-set-width'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('services_icon_headline');
 				if ($value) {
@@ -136,17 +130,17 @@
 					echo 'empty'; }
 				?></h4>
 			</div>
-            <div class='description'><p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class='description'><p class='icon-description-text'><?php $value = get_field ('service1_icon_description');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('service2_icon');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>' class='icon-set-height'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/icons-green-revision.jpg'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service2_icon_headline');
@@ -159,18 +153,18 @@
 				</h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				<p class='icon-description-text'><?php $value = get_field ('service2_icon_description');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
 				</p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('service3_icon');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-width' src= '<?php echo get_template_directory_uri(); ?>/images/icons-green-software.jpg'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service3_icon_headline');
@@ -183,18 +177,18 @@
 				</h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				<p class='icon-description-text'><?php $value = get_field ('service3_icon_description');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
 				</p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('service4_icon');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>' class='icon-set-height'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/icons-green-style.png'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service4_icon_headline');
@@ -207,18 +201,18 @@
 				</h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				<p class='icon-description-text'><?php $value = get_field ('service4_icon_description');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
 				</p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('service5_icon');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-width' src='<?php echo get_template_directory_uri(); ?>/images/icons-green-teaching.jpg'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service5_icon_headline');
 				if ($value) {
@@ -229,17 +223,17 @@
 				?></h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p class='icon-description-text'><?php $value = get_field ('service5_icon_description');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('service6_icon');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>' class='icon-set-height'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src = '<?php echo get_template_directory_uri(); ?>/images/icons-green-consultancy.jpg'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('service6_icon_headline');
 			if ($value) {
@@ -250,7 +244,13 @@
 			?></h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				<p class='icon-description-text'><?php $value = get_field ('service6_icon_description');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
 				</p>
 			</div>
         </div>
