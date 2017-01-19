@@ -92,40 +92,24 @@ jQuery(document).ready(function($) {
 					   
 	slidesOnLoad();					   
 		
-	
-	function slidesFromRight() {
-    
-
+	function slides(elementToSlide, classActivatingSlide) {
+				
 		$(window).scroll(function () {
-			$('.slideanim').each(function () {
+			$(elementToSlide).each(function () {
 				var pos = $(this).offset().top;
 
 				var winTop = $(window).scrollTop();
 				console.log(winTop);
 				if (pos < winTop + 600) {
-					console.log('dziala');
-					$(this).addClass('slide');
+					$(this).addClass(classActivatingSlide);
 				}
 			});
 		});
 	}
+	slides('.slideanim', 'slide' );
+	slides('.slideanim-left', 'slide-left');
+		
 	
-	function slidesFromLeft() {
-		 $(window).scroll(function () {
-			$('.slideanim-left').each(function () {
-				var pos = $(this).offset().top;
-
-				var winTop = $(window).scrollTop();
-				if (pos < winTop + 600) {
-					console.log('dziala');
-					$(this).addClass('slide-left');
-				}
-			});
-		});
-	}
-	
-	slidesFromLeft();
-	slidesFromRight();
 	
 	
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
