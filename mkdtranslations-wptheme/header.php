@@ -37,6 +37,7 @@
             <span></span>
             <span></span>
             <span></span>
+			<p class="menutext_hamburger">MENU</p>
         </div>
             </div>
 </header>
