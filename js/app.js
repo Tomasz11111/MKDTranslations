@@ -1,6 +1,5 @@
 /* --  Hero video plugin coverr.co  --
 potrzebne drobne poprawki, jest problem z dostowaniem do całości okna, przy niektórych aspect ratios
-
 */
 
 jQuery(document).ready(function($) {
@@ -63,7 +62,7 @@ jQuery(document).ready(function($) {
             $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
         });
     };
-	function showHideLangBtns() {
+	/*function showHideLangBtns() {
 		var $btnsDiv = $('.choose-language-languages-homepage'),
 			windowHeight = $(window).height();
 			
@@ -78,7 +77,7 @@ jQuery(document).ready(function($) {
 			
 		
 	};
-	showHideLangBtns();
+	showHideLangBtns();*/
 	
 	function slidesOnLoad() {
 		$('.slideanim-onload').load(setInterval(function() {
@@ -287,9 +286,7 @@ jQuery(document).ready(function($) {
 		}
 		/*if(window.screen.width < 768) {
 			console.log('hejaaaa');
-
 		 tu dopisać event na komórki
-
 		}
 		else */
 			$('.pic-square').on('mouseenter', showDetails );
@@ -313,24 +310,92 @@ jQuery(document).ready(function($) {
 	expandPortfolio();
 
     function hamburger() {
-        $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-			$('div.navigation-container').toggleClass('navigation-container-bg');
-			$('.headline-text-sidepages').toggleClass('hidden');
-			$(this).toggleClass('open');
-			$('.navigation_right').toggle();
-			
-           
-			
+		
+		
+	        $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').on('click', function() {
+				$('.menutext_hamburger').toggle();
+					
+				if( !($(this).hasClass('open') ) ) {
+				$('.choose-language-languages-homepage').removeClass('hidden');
+				$('div.navigation-container').toggleClass('navigation-container-bg');
+		
+				$(this).toggleClass('open');
+				$('.navigation_right').toggle();
+								}
+				else {
+					$('div.navigation-container').removeClass('navigation-container-bg');
+					$('.choose-language-languages-homepage').addClass('hidden');
+				$('.headline-text-sidepages').removeClass('hidden');
+				$(this).removeClass('open');
+				$('.navigation_right').toggle();
+				$('.navigation_right').addClass('flag');// tutaj sprawdzam, czy użytkownik nie wyłączył sam menu, wtedy nie będzie się już automatycznie włączać po wjechaniu na services
+					
+				}
+				
 			});
-        };
-    
+			
+						
+		$(window).scroll(function() {
+			if (!($('.navigation_right').hasClass('flag')) ) {
+				if( ( $(window).scrollTop() > $('#services').offset().top ) && !($('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').hasClass('open')) ) {
+					$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').addClass('open');
+					$('.navigation_right').show();
+					$('.navigation_right').addClass('navigation-container-bg');
+					$('.navigation_right').css('background-color');
+					$('.menutext_hamburger').addClass('hidden');
+
+				}
+			}
+			if( $('.navigation_right').hasClass('open') ) {
+			  if ( $(window).scrollTop() > $('#about').offset().top ) {
+				$('.navigation_right').addClass('navigation-container-bg');
+				}
+			else {
+				$('.navigation_right').removeClass('navigation-container-bg');
+				}	
+			}
+			
+			
+        });
+	}
 	hamburger();
+	/*function hamburgerSidepages() {
+		if( !($('body').is('.page')) ) {
+		$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').on('click', function() {
+				
+				if( !($(this).hasClass('open') ) ) {
+					$('.headline-text-sidepages').addClass('hidden');
+				}
+			else {
+				$('.headline-text-sidepages').removeClass('hidden');
+				$('.navigation_right').addClass('navigation-containter-bg');
+			}
+	});
+		}
+	}
+	hamburgerSidepages();*/
+		
+															
+	function menuBarChangeColor() {
+		$(window).scroll(function() {
+		if( ( $(window).scrollTop() > ($('#about').offset().top ) - 1) ){
+			$('.navigation_right').css('background-color', 'dimgray');
+				}
+		else {
+			$('.navigation_right').css('background-color', 'rgba(128, 0, 128, 0.7)')
+		}
+		})
+	}
+	menuBarChangeColor();
+
+
+
+
+
+
+		
+	
+
             
             //ew. zmienić na css animation
-            
-       
-            
-
-    
-   
 });
