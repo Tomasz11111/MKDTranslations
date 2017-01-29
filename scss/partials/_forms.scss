@@ -1,4 +1,4 @@
-#two-column{
+/*#two-column{
 	width: 550px;
 }
 #two-column #left{
@@ -53,115 +53,8 @@
 	color:#222;
 	border: 1px solid #222;
 }
-
-form p:nth-child(2) {
-	float: left; 
-	display: inline-block;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		
-		
-	}
-}
-form p:nth-child(3) {
-	float: left;
-	display: inline-block;
-	margin-left: 10%;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		margin-left: 0;
-		
-		
-	}
-}
-form p:nth-child(4) {
-	clear: left;
-	float: left;
-	display: inline-block;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		
-	}
-}
-form p:nth-child(5) {
-	float: left;
-	display: inline-block;
-	margin-left: 10%;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		margin-left: 0;
-		
-	}
-}
-form p:nth-child(6) {
-	clear: left;
-	width: 100%;
-	label {
-		width: 100%;
-		float: left;
-		
-	}
-}
-form p:nth-child(7) {
-	float: left;
-	display: inline-block;	
-	width: 25%;
-	@include mobile {
-		width: 40%;
-	}
-}
-form p:nth-child(8) {
-	float: left;
-	display: inline-block;
-	width: 15%;
-	@include mobile {
-		width: 40%;
-	}
-}
-form p:nth-child(9) {
-	float: left;
-	display: inline-block;
-	width: 25%;
-	@include mobile {
-		width: 40%;
-		clear: left;
-		
-	}
-
-}
-
-form p:nth-child(10) {
-	float: left;
-	display: inline-block;
-	width: 15%;
-	@include mobile {
-		width: 40%;
-		
-	}
-}
-form p:nth-child(11) {
-	clear: left;
-}
-input[type='submit'] {
-	border: 2px solid white;
-	background-color: transparent !important;
-	color: white;
-	font-size: 1.5rem;
-	padding: 10px;
-	&:hover {
-		background-color: purple !important;
-		color: white;
-		font-weight: 400;
-	}
-}
+*/
+// Base selectors
 textarea {
 	width: 100%;
 	height: 10em;
@@ -170,7 +63,7 @@ textarea {
 label {
 	font-size: 1.2rem;
 	color: white;
-	font-weight: 400;
+	font-weight: 300;
 	width: 100%;
 }
 input, textarea {
@@ -182,4 +75,246 @@ input, textarea {
 select {
 	color: black !important;
 }
+
+input[type='submit'] {
+	
+	border: 2px solid white;
+	background-color: transparent !important;
+	color: white;
+	font-size: 1.5rem;
+	padding: 10px;
+	&:hover {
+		background-color: purple !important;
+		color: white;
+		font-weight: 400;
+	}
+	
+}
+
+//Form languages
+#wpcf7-f418-o2 p:nth-child(2) {
+	float: left;
+	display: inline-block;	
+	width: 20%;
+	@include mobile {
+		width: 40%;
+	}
+		
+	
+}
+#wpcf7-f418-o2 p:nth-child(3) {
+	float: left;
+	display: inline-block;
+	width: 15%;
+	@include mobile {
+		width: 40%;
+	}
+}
+#wpcf7-f418-o2 p:nth-child(4) {
+	float: left;
+	display: inline-block;
+	width: 20%;
+	input {
+		width: 30%;
+	}
+	@include mobile {
+		width: 100%;
+		display: block;
+		
+	}
+}
+#wpcf7-f418-o2 p:nth-child(5) {
+	float: left;
+	display: inline-block;
+	width: 45%;
+	span {
+		float: right;
+	}
+	@include mobile {
+		width: 100%;
+		display: block;
+		margin-left: 0;
+		
+	}
+}
+#wpcf7-f418-o2 p:nth-child(6) {
+	clear: left;
+	float: left;
+	width: 30%;
+	display: inline-block;
+	input {
+		width: 50%;
+	}
+	@include mobile {
+		width: 100%;
+		float: left;
+		
+	}
+}
+#wpcf7-f418-o2 p:nth-child(7) {
+	float: left;
+	display: inline-block;	
+	width: 30%;
+	input {
+		width: 50%;
+	}
+	@include mobile {
+		width: 100%;
+	}
+}
+#wpcf7-f418-o2 p:nth-child(8) {
+	float: left;
+	display: inline-block;
+	width: 40%;
+	@include mobile {
+		width: 40%;
+	}
+}
+#wpcf7-f418-o2 p:nth-child(9) {
+	clear: left;
+	float: left;
+	display: inline-block;
+	width: 100%;
+	
+}
+
+#wpcf7-f418-o2 p:nth-child(10), #wpcf7-f418-o2 p:nth-child(11)  {
+	float: left;
+	display: inline-block;
+	width: 50%;
+	@include mobile {
+		width: 100%;
+		
+	}
+}
+#wpcf7-f418-o2 p:nth-child(12) {
+	clear: left;
+	float: left;
+	display: inline-block;
+	width: 50%;
+	@include mobile {
+		width: 100%;
+	}
+}
+
+#wpcf7-f418-o2 p:nth-child(13) {
+	float: left;
+	display: inline-block;
+	width: 50%;
+	@include mobile {
+		width: 100%;
+	}
+}
+
+#wpcf7-f418-o2 p:nth-child(14) {
+	clear: left;
+	float: left;
+	display: inline-block;
+	width: 50%;
+	@include mobile {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+// Form translation
+
+#wpcf7-f132-o1 p:nth-child(2) {
+	float: left; 
+	display: inline-block;
+	width: 45%;
+	@include mobile {
+		width: 100%;
+		display: block;
+		
+		
+	}
+}
+#wpcf7-f132-o1 p:nth-child(3) {
+	float: left;
+	display: inline-block;
+	margin-left: 10%;
+	width: 45%;
+	@include mobile {
+		width: 100%;
+		display: block;
+		margin-left: 0;
+		
+		
+	}
+}
+#wpcf7-f132-o1 p:nth-child(4) {
+	clear: left;
+	float: left;
+	display: inline-block;
+	width: 45%;
+	@include mobile {
+		width: 100%;
+		display: block;
+		
+	}
+}
+#wpcf7-f132-o1 p:nth-child(5) {
+	float: left;
+	display: inline-block;
+	margin-left: 10%;
+	width: 45%;
+	@include mobile {
+		width: 100%;
+		display: block;
+		margin-left: 0;
+		
+	}
+}
+#wpcf7-f132-o1 p:nth-child(6) {
+	clear: left;
+	width: 100%;
+	label {
+		width: 100%;
+		float: left;
+		
+	}
+}
+#wpcf7-f132-o1 p:nth-child(7) {
+	float: left;
+	display: inline-block;	
+	width: 25%;
+	@include mobile {
+		width: 40%;
+	}
+}
+#wpcf7-f132-o1 p:nth-child(8) {
+	float: left;
+	display: inline-block;
+	width: 15%;
+	@include mobile {
+		width: 40%;
+	}
+}
+#wpcf7-f132-o1 p:nth-child(9) {
+	float: left;
+	display: inline-block;
+	width: 25%;
+	@include mobile {
+		width: 40%;
+		clear: left;
+		
+	}
+
+}
+
+#wpcf7-f132-o1 p:nth-child(10) {
+	float: left;
+	display: inline-block;
+	width: 15%;
+	@include mobile {
+		width: 40%;
+		
+	}
+}
+#wpcf7-f132-o1 p:nth-child(11) {
+	clear: left;
+}
+
+
 

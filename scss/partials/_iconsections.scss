@@ -21,8 +21,10 @@
 	background-color: white;
 	border: 3px solid rgba(0, 126, 126, 0.3);
 		@include mobile {
-			width: 100px;
-			height: 100px;
+			width: 120px;
+			height: 120px;
+			border: 0 !important;
+			background-color: none !important;
 		}
 		
 	
@@ -63,14 +65,16 @@
 .icon-set-height {
 	max-height: 60px;
 	@include mobile {
-		height: 70%;
+		max-height: 100px;
 	}
+	
 }
 .icon-set-width {
 	max-width: 60px;
 	@include mobile {
-		width: 70%;
+		max-width: 100px;
 	}
+	
 }
 // Small icons in contact section
 .icon-circle-small {
@@ -124,4 +128,7 @@
 .row-icons > div {
     height: 260px;
     margin-bottom: 20px;
+	@include mobile {
+		height: auto !important;
+	}
 }

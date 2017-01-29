@@ -2,9 +2,10 @@
 
 .bg-about {
 	@extend %fullpage-bgimage;
+	background-image: url('#{$path-img}/Warsaw-center.jpg');
 	@include mobile {
-			background-image: url('#{$path-img}/about_mobile.jpg') !important;
-			}
+		background: none;
+	}
 	//background-image: url('#{$path-img}/about.jpeg');//
 }
 
@@ -16,11 +17,18 @@
 	height: 1200px !important;
 }
 
-
+#translation {
+	@include mobile {
+		background-color: teal; 
+	}
+}
 
 .bg-grey {
 	background-color: lighten($nav-and-background-color, 45%);
 	padding-bottom: 50px;
+	@include mobile {
+		background-color: white;
+	}
 }
 .bg-darkgrey {
 	background-color: $nav-and-background-color;

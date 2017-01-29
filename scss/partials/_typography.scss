@@ -119,28 +119,30 @@ h4 {
 			vertical-align: middle;
 			margin: -0.44em 0.1em 0;
 			border: 0.1em solid #fff;
-			background-color: rgba($base-color-2, 0.5);
+			background-color: $base-color-2;
 	}
 }
 
 .section-title {
     width: 100%;
     
-	font-weight: 500;
+	font-weight: 600;
 	text-align: center;
-	height: 10vh; //to może do przerobienia 
-	line-height: 10vh !important; //to do przerobienia
+	line-height: 3rem !important; //to może do przerobienia 
+	margin-top: 7vh;
 	@include mobile {
-		font-size: 4vh;
+		font-size: 1.8rem;
         width: 100%;
 	}
 }
 .section-title-lead {
     font-size: 1.2rem;
+	font-weight: 300;
     text-align: center;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 	@include mobile {
+		font-size: 1.5rem;
 		
         width: 100%;
 	}
@@ -151,11 +153,11 @@ h4 {
 .icon-description-text {
 
 	font-size: $base-font-size;
-	font-weight: 400;
+	font-weight: 300;
 	text-align: center;
     padding-top: 1vh;
 	@include mobile {
-	   font-size: $base-font-size-mobile;
+	   font-size: 1.5rem;
 
 	}
 }
@@ -165,6 +167,9 @@ h4 {
 	font-weight: 600;
 	text-align: center;
     margin-bottom: 2vh;
+	@include mobile {
+		font-size: 1.6rem;
+	}
 	
 }
 
@@ -258,11 +263,14 @@ h4 {
 	color: slategrey !important;
 		}
 	&-teal {
-	color: teal !important;;
+	color: teal !important;
 		}
 	&-gainsboro {
 	color: gainsboro;
 		}
+	&-purple {
+	color: purple !important;
+	}
 }
 
 %about-mains {
@@ -450,6 +458,26 @@ h4 {
 }
 .address {
 	margin: 0 auto;
+}
+
+// Menu text below hamburger
+
+.menutext_hamburger {
+	margin-top: 48px;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    
+}
+.text-mobile-white {
+	@include mobile {
+		color: white !important;
+	}
+}
+.col-translation-mobile {
+	@include mobile {
+		padding-bottom: 5vh;
+	}
 }
 
 

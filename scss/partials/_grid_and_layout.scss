@@ -17,15 +17,11 @@
 	margin:0;
 }
 
-#photos { margin-top: 50px;
-
-}
-
 #pricing {
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
-    
+   
     
 }
 
@@ -124,8 +120,8 @@
 
 
 
-#learn-language {
-    margin-top: 10vh;
+#learn-language, #photos {
+    margin-top: 5vh;
 }
 
 .icons_row > div {
@@ -249,7 +245,7 @@
 
 // Contact Page
 #form-page {
-	padding-top: 5vh;
+	padding-top: 7vh;
 	padding-bottom: 5vh;
 	@include mobile {
 		padding-bottom: 0;
