@@ -1,0 +1,79 @@
+.col-about {
+	@extend %flex-centered;
+	@include large-screen {
+		height: 70vh;
+	}
+	@include mobile {
+		padding: 0 !important;
+	}
+}
+.col-signature {
+	display: flex;
+	justify-content:center;
+	align-items: flex-end;
+	height: 30vh;
+	@include mobile {
+		padding: 0 !important;
+	}
+}
+.signature {
+	font-size: 3.5rem;
+	font-family: $base-font-family;
+	font-weight: 900;
+	color: $base-color-2;
+	@include mobile {
+		font-size: 2.2rem;
+		background-color: rgba(255, 255, 255, .8);
+		margin-top: 69%;
+		padding: 3%;
+	}
+}
+%square {
+	width: 23vw;
+	height: 23vw;
+	@include mobile {
+		width: 100vw;
+		height: 100vw;
+	}
+	
+}
+
+
+.square1 {
+		@extend %square;
+		background-image: url('#{$path-img}/mkd_photo.jpg');
+		background-size: cover;
+		background-position: center;
+				
+	
+}
+.square-text {
+	font-size: 1.1rem;
+	@include mobile {
+		font-size: 1.5rem;
+		}
+	font-weight: 300;
+	color: white;
+	padding: 0 5% 5% 5%;
+}
+.square2 {
+	@extend %square;
+	background-color: $base-color-1;
+}
+.square3 {
+	@extend %square;
+	background-color: $base-color-2;
+}
+.square4 {
+	@extend %square;
+	background-color: #180177;
+}
+
+.square2 h2, .square3 h2, .square4 h2 {
+	color: white;
+	margin-left: 4.5%;
+	margin-top: 5%;
+	font-weight: 600;
+}
+
+    
