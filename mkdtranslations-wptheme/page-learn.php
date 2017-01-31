@@ -10,67 +10,43 @@ else :
 	get_header( 'pages' );
 endif;
 ?>
-<div class='container-fluid bg-about' style='background-image: url(<?php $value = get_field ('learn_bgimage');
-	 if ($value) {
-	 echo $value;
-	 }
-	 else {
-	 echo 'empty'; }?>)' id='about'>
+<div class='container-fluid bg-learn' id='about'>
     <div class='row'>
-		<div class='col-lg-7 col-xs-12 about-left-learn'>
-            <p class='learn-polish-title-left hidden-sm hidden-xs slideanim-onload'> <span><?php $value = get_field ('title_left');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-				?></span>
+		
+		<div class='col-lg-12 col-signature hidden-xs'>
+		<p class='signature slideanim'>Michał K.Dzieńdziura - your Polish teacher 
 			</p>
-            <p class='about-main-learn slideanim'> <?php $value = get_field ('learn_main_block');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?><span>English</span>, <span>French</span> and <span>Czech</span></p>
-			<p class='about-secondary-learn slideanim-onload'><?php $value = get_field ('learn_secondary_block');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>
+		</div>
+        <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+			<div class='square1-learn slideanim'>
+				<p class='signature slideanim hidden-sm hidden-md hidden-lg'>Michał K.Dzieńdziura - your Polish teacher
 			</p>
-           </div>
-   	
-        <div class='col-lg-5 col-xs-12 about-right-learn'>
-            <p class='learn-polish-title slideanim-left-onload'><span class='hidden-sm hidden-xs'><?php $value = get_field ('title_right');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>
-				</span>
-			</p>
-            <p class='about-mobile hidden-md hidden-lg hidden-xl'><span><?php $value = get_field ('title_left');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></span> <?php $value = get_field ('title_right');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>
-			</p>
-			<p class='help-learn hidden-xs hidden-sm'><a href='#how_i_teach'><span>READ</span> HOW I TEACH</a>
-			</p>
-        </div>
-	</div>
+			</div>
+		</div>
+        <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+            <div class='square2 square2-learn slideanim'>
+				<h2>Experience</h2>
+				<p class='square-text square-text-learn'>I have over 8 years of experience in teaching 
+(collaboration with language schools in Poland 
+and in the Czech Republic)</p>
+			</div>
+		</div>
+		 <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+
+			<div class='square3 square3-learn slideanim'>
+				<h2>All levels</h2>
+				<p class='square-text square-text-learn'>I work with all proficiency levels (A1-C2) and focus on business or every day language use</p>
+			</div>
+		</div>
+		<div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+			<div class='square4 square4-learn slideanim'>
+				<h2>Flexibility</h2>
+				<p class='square-text square-text-learn'>Individual approach and various interesting materials are guaranteed</p>
+			</div>
+            
+		</div>
+		
+   	</div>
 </div>
  <div class='container-fluid bg-grey' id='how_i_teach'>
     <div class='row-col'>

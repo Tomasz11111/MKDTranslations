@@ -40,32 +40,80 @@
 <div class='container-fluid bg-about' id='about'>
     <div class='row'>
 		<div class='col-lg-12 col-signature hidden-xs'>
-		<p class='signature slideanim'>Michał K.Dzieńdziura - your teacher and translator
+		<p class='signature slideanim'><?php $value = get_field ('about_title');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 			</p>
 		</div>
         <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 			<div class='square1 slideanim'>
-				<p class='signature slideanim hidden-sm hidden-md hidden-lg'>Michał K.Dzieńdziura - your teacher and translator
+				<p class='signature slideanim hidden-sm hidden-md hidden-lg'><?php $value = get_field ('about_title');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 			</p>
 			</div>
 		</div>
         <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
             <div class='square2 slideanim'>
-				<h2>Lorem ipsum</h2>
-				<p class='square-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+				<h2><?php $value = get_field ('about_left_box_title');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></h2>
+				<p class='square-text'><?php $value = get_field ('about_left_box_content');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p>
 			</div>
 		</div>
 		 <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 
 			<div class='square3 slideanim'>
-				<h2>Lorem ipsum</h2>
-				<p class='square-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+				<h2><?php $value = get_field ('about_middle_box_title');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></h2>
+				<p class='square-text'><?php $value = get_field ('about_middle_box_content');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?> </p>
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 			<div class='square4 slideanim'>
-				<h2>Lorem ipsum</h2>
-				<p class='square-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+				<h2><?php $value = get_field ('about_right_box_title');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></h2>
+				<p class='square-text'><?php $value = get_field ('about_right_box_content');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></p>
 			</div>
             
 		</div>
