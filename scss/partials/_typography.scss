@@ -480,6 +480,25 @@ h4 {
 	}
 }
 
+//new design learn pages
+
+.square2-learn h2, .square3-learn h2, .square4-learn h2 {
+	font-size: 2.2rem !important;
+	font-weight: 600 !important;
+	color: white;
+	@include mobile {
+		font-size: 3rem !important;
+	}
+}
+
+.square-text-learn {
+	font-size: 1.5rem !important;
+	font-weight: 300 !important;
+	@include mobile {
+		font-size: 2rem !important;
+	}
+}
+
 
 
 

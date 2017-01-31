@@ -8,6 +8,13 @@
 	}
 	//background-image: url('#{$path-img}/about.jpeg');//
 }
+.bg-learn {
+	@extend %fullpage-bgimage;
+	background-image: url('#{$path-img}/learn_polish_hero.jpg');
+	@include mobile {
+		background: none;
+	}
+}
 
 // Contact Div - Background
 .bg-contact {

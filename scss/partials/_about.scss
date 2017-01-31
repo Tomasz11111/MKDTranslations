@@ -47,6 +47,12 @@
 				
 	
 }
+.square1-learn {
+	@extend %square;
+	background-image: url('#{$path-img}/Warsaw-center.jpg');
+		background-size: cover;
+		background-position: center;
+}
 .square-text {
 	font-size: 1.1rem;
 	@include mobile {
@@ -74,6 +80,10 @@
 	margin-left: 4.5%;
 	margin-top: 5%;
 	font-weight: 600;
+}
+
+.square4-learn {
+	background-color: #77010c !important;
 }
 
     
