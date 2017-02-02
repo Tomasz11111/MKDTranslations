@@ -39,6 +39,8 @@
 .french {
     @include mobile {
 		background-image: url('#{$path-img}/paris-mob.jpg');
+		width: 100%;
+		height: 100vw;
 	}
 	background-image: url('#{$path-img}/paris.jpg');
 	@extend %learnlanguage;
@@ -49,6 +51,8 @@
 .polish {
     @include mobile {
 		background-image: url('#{$path-img}/cracow-mob.jpeg');
+		width: 100%;
+		height: 100vw;
 	}
 	background-image: url('#{$path-img}/cracow.jpeg');
 	@extend %learnlanguage;

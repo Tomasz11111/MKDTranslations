@@ -64,15 +64,15 @@
 }
 .square2 {
 	@extend %square;
-	background-color: $base-color-1;
+	background-color: $base-color-2;
 }
 .square3 {
 	@extend %square;
-	background-color: $base-color-2;
+	background-color: #180177;
 }
 .square4 {
 	@extend %square;
-	background-color: #180177;
+	background-color: $base-color-1;
 }
 
 .square2 h2, .square3 h2, .square4 h2 {

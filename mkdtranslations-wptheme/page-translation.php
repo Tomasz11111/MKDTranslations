@@ -22,7 +22,7 @@ endif;
             
 				
 
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title'><?php $value = get_field ('translation_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-teal text-mobile-white'><?php $value = get_field ('translation_section_title');
 			if ($value) {
 				echo $value;
 			}
@@ -279,7 +279,7 @@ endif;
 
  <div class='container-fluid bg-grey' id='process'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title'><?php $value = get_field ('process_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-teal text-mobile-white'><?php $value = get_field ('process_section_title');
 			if ($value) {
 				echo $value;
 			}
@@ -309,7 +309,13 @@ endif;
 				?>' class='icon-set-width'>
 			</div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation'>High standards
+				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('process_icon_headline_1');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
 				</h4>
 			</div>
             
@@ -321,7 +327,7 @@ endif;
 					else {
 						echo 'empty'; }
 					?>
-				</li>
+					</li>
 
                 <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_2');
 					if ($value) {
@@ -370,7 +376,13 @@ endif;
 			?>' class='icon-set-height'>
 			</div>
             
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'>Guidelines</h4>
+            <div class='icon_title'><h4 class='icon-headline text-teal icon-headline-animation'><?php $value = get_field('process_icon_headline_2');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></h4>
 			</div>
             <ul class='high_standards_and_guidelines_list'>
                 <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_1');
@@ -427,7 +439,7 @@ endif;
         
            
     <div class='row'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title'><?php $value = get_field('pricing_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-teal'><?php $value = get_field('pricing_section_title');
 			if ($value) {
 				echo $value;
 			}
@@ -447,7 +459,7 @@ endif;
 					echo 'empty'; }
 				?>' class='icon-set-width'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline'><?php $value = get_field('pricing_icon_headline_1');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
@@ -473,7 +485,7 @@ endif;
 					echo 'empty'; }
 				?>' class='icon-set-width'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field('pricing_icon headline_2');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
@@ -499,7 +511,7 @@ endif;
 					echo 'empty'; }
 				?>' class='icon-set-width'>
 		   </div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field('pricing_icon_headline_3');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_3');
 				if ($value) {
 					echo $value;
 				}

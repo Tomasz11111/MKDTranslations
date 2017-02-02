@@ -241,6 +241,7 @@ jQuery(document).ready(function($) {
 
             var marker = new google.maps.Marker({
                 position: myCenter,
+				
             });
 
             marker.setMap(map);
@@ -388,8 +389,30 @@ jQuery(document).ready(function($) {
 	}
 	menuBarChangeColor();
 
-
-
+	function toggleForm() {
+		var $trigger_lessons = $('.contact-form-lead-lesson'),
+			$trigger_translations = $('.contact-form-lead-translation');
+		$trigger_lessons.on('click', function() {
+			if($('#form-lessons').is('.hidden') ){
+			   $('#form-lessons').removeClass('hidden');
+			$('#form-translation').addClass('hidden')
+		}
+		  else {
+			 $('#form-lessons').addClass('hidden');
+			} ;
+		});
+		
+		$trigger_translations.on('click', function() {
+			if($('#form-translation').is('.hidden') ) {
+			$('#form-translation').removeClass('hidden');
+			$('#form-lessons').addClass('hidden')
+		}
+			else {
+				$('#form-translation').addClass('hidden');
+			}
+		});
+	}
+toggleForm();
 
 
 

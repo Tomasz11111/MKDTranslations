@@ -309,5 +309,11 @@
 .glyphicon-chevron-left, .glyphicon-chevron-right {
 	font-size: 3rem;
 	color: $base-color-1;
+	top: 40% !important;
+	background-color: rgba($base-color-1, .8);
+	padding: 8%;
+	border-radius: 50%;
+	color: white;
+	
 }
 

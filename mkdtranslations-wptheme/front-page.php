@@ -669,116 +669,18 @@
 
 <div class='container-fluid' id='form-page'>
 	<div class='row'>
-		<div class='col-lg-8 contact-form-translation hidden'>
-			<p class='contact-form-lead'><?php $value = get_field('contact_section_lead');
-				if($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty';}
-				?>
+		<div class='col-lg-12'>
+			<p class='contact-form-lead slideanim slide'>Book your <span class='contact-form-lead-lesson'>first lesson</span> or request a free quote for <span class='contact-form-lead-translation'>translation</span>
 			</p>
-			<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form') ); ?>
-        </div>
-		<div class='col-lg-8 contact-form-languages'>
-			<p class='contact-form-lead'><?php $value = get_field('contact_section_lead_languages');
-				if($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty';}
-				?>
-			</p>
-			<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form_languages') ); ?>
+			<div id='form-translation' class=' hidden'><?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form') ); ?>
+        	</div>
+			<div id='form-lessons' class= 'hidden'>		
+				<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form_languages') ); ?>
+			</div>
         
 		</div>
-		<div class='col-lg-4 contact-form-right'>
-						 
-			<div class='contact-form-right-container'>
-			<div class='icon-circle-small'><img src='<?php $value = get_field('contact_icon_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty';} 
-				?>' class='icon-set-width-small'>
-			</div>
-				<?php $value = get_field('contact_icon_content1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty';
-				}
-				?>
-			
 		
 		
-			<div class='icon-circle-small'><img src='<?php $value = get_field('contact_icon_2');
-				if ($value) {
-					echo $value; 
-				}	
-				else 	{		
-					echo 'empty';} 
-					?>' class='icon-set-height-small'> 
-			</div>
-			<?php $value = get_field('contact_icon_content2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty';
-				}
-				?>
-		
-		
-			<div class='icon-circle-small'>
-				<img src='<?php $value = get_field('contact_icon_3');
-					if ($value) {	
-						echo $value; 
-					}	
-					else  	{		
-						echo 'empty';}
-						?>' class='icon-set-width-small'>
-			</div>
-			<?php $value = get_field('contact_icon_content3');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty';
-				}
-				?>
-				<div class='contact-form-right-container-socialmedia'>
-	
-			<div class='icon-circle-smallest'>
-				<img src='<?php $value = get_field('contact_icon_social_1');
-					if ($value) {
-						echo $value; 
-					}			
-						 else   {					
-							 echo 'empty';} ?>' class='icon-set-size-smallest'> 
-			</div>
-			<div class='icon-circle-smallest'>
-				<img src='<?php $value = get_field('contact_icon_social_2');
-					if ($value) {			
-						echo $value; 
-					}	
-						 else {
-							 echo 'empty';} ?>' class='icon-set-size-smallest'> 
-			</div>
-	
-			<div class='icon-circle-smallest'>
-				<img src='<?php $value = get_field('contact_icon_social_3');
-					if ($value) {			
-						echo $value; 
-					}			
-					 else { 
-						 echo 'empty';} ?>' class='icon-set-size-smallest'> 
-				</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 
