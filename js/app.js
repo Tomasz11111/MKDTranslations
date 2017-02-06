@@ -9,6 +9,8 @@ jQuery(document).ready(function($) {
     initBannerVideoSize('.video-container .poster img');
     initBannerVideoSize('.video-container .filter');
     initBannerVideoSize('.video-container video');
+	
+	
 
     $(window).on('resize', function () {
         scaleVideoContainer();
@@ -19,12 +21,38 @@ jQuery(document).ready(function($) {
 
 
     function scaleVideoContainer() {
-
-        var height = $(window).height() + 5;
-        var unitHeight = parseInt(height) + 'px';
+		if (window.matchMedia('(max-width: 768px)').matches) {
+		if(!($('.homepage-hero-module').is('.flag')) )
+			{
+		var height = $(window).height() + 5,
+        	unitHeight = parseInt(height) + 'px';
+		
+			
         $('.homepage-hero-module').css('height', unitHeight);
-
-    }
+		$('.homepage-hero-module').addClass('flag');
+			}
+		}
+		else {
+			var height = $(window).height() + 5,
+        	unitHeight = parseInt(height) + 'px';
+		
+			
+        $('.homepage-hero-module').css('height', unitHeight);
+		}
+		
+		
+		
+		
+		/*$(window).on('scroll', function() {
+			
+			 unitHeight = parseInt(($(window).height - navBarHeight)) + 'px';
+			$('.homepage-hero-module').css('height', unitHeight);
+													}*/
+										   
+    	
+	}
+	
+	
 
     function initBannerVideoSize(element) {
 
@@ -285,6 +313,18 @@ jQuery(document).ready(function($) {
 			$(this).find('.portfolio-overlay-text').removeClass('hidden');
 			$(this).find('.portfolio-overlay-text-hover').addClass('hidden');
 		}
+		if (window.matchMedia('(max-width: 768px)').matches) {
+			
+			if($('.portfolio-overlay-text-hover').is('.hidden') )
+				{ $('.pic-square').on('tap', showDetails);
+				}
+			else {
+			$('.pic-square').on('tap', hideDetails);
+			}
+  /* the viewport is at maximum 768 pixels wide */
+} else {
+  /* the viewport is more than 768 pixels wide */
+
 		/*if(window.screen.width < 768) {
 			console.log('hejaaaa');
 		 tu dopisać event na komórki
@@ -292,6 +332,7 @@ jQuery(document).ready(function($) {
 		else */
 			$('.pic-square').on('mouseenter', showDetails );
 			$('.pic-square').on('mouseleave', hideDetails );
+}
 		
 	}
 	portfolioImgs();
@@ -314,7 +355,16 @@ jQuery(document).ready(function($) {
 		
 		
 	        $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').on('click', function() {
+				
+				if (window.matchMedia('(max-width: 768px)').matches) {
+				$(this).toggleClass('open');
 				$('.menutext_hamburger').toggle();
+				$('.choose-language-languages-homepage').toggle();
+				$('div.navigation-container').toggleClass('navigation-container-bg');
+				$('.navigation_right').toggle();
+				}
+				else {
+					
 					
 				if( !($(this).hasClass('open') ) ) {
 				$('.choose-language-languages-homepage').removeClass('hidden');
@@ -333,11 +383,13 @@ jQuery(document).ready(function($) {
 					
 				}
 				
+			}
 			});
 			
 						
 		$(window).scroll(function() {
-			if (!($('.navigation_right').hasClass('flag')) ) {
+			if (window.matchMedia('(min-width: 768px)').matches) //check screen width to disable this function in mobiles
+				{ if (!			($('.navigation_right').hasClass('flag')) ) {
 				if( ( $(window).scrollTop() > $('#services').offset().top ) && !($('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').hasClass('open')) ) {
 					$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').addClass('open');
 					$('.navigation_right').show();
@@ -357,7 +409,8 @@ jQuery(document).ready(function($) {
 			}
 			
 			
-        });
+        }
+		});
 	}
 	hamburger();
 	/*function hamburgerSidepages() {
@@ -378,6 +431,7 @@ jQuery(document).ready(function($) {
 		
 															
 	function menuBarChangeColor() {
+		if((window.matchMedia('(min-width: 768px)').matches)) {
 		$(window).scroll(function() {
 		if( ( $(window).scrollTop() > ($('#about').offset().top ) - 1) ){
 			$('.navigation_right').css('background-color', 'dimgray');
@@ -385,7 +439,15 @@ jQuery(document).ready(function($) {
 		else {
 			$('.navigation_right').css('background-color', 'rgba(128, 0, 128, 0.7)')
 		}
-		})
+		});
+		}
+		else {
+			$(window).scroll(function() {
+		if( ( $(window).scrollTop() > ($('#about').offset().top ) - 100) ){
+			$('.choose-language-languages-homepage').addClass('hidden'); //to dać do innej funkcji
+		}
+	});
+	}
 	}
 	menuBarChangeColor();
 

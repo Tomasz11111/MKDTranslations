@@ -75,7 +75,7 @@ h4 {
 	
 	@include mobile {
 	font-size: 2em;
-	margin-bottom: 10vh;
+	margin-bottom: 15%;
 	
 	}
  		span {
@@ -133,6 +133,7 @@ h4 {
 	@include mobile {
 		font-size: 1.8rem;
         width: 100%;
+		margin-top: 10%;
 	}
 }
 .section-title-lead {
@@ -142,7 +143,7 @@ h4 {
     width: 80%;
     margin: 0 auto;
 	@include mobile {
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 		
         width: 100%;
 	}
@@ -158,6 +159,7 @@ h4 {
     padding-top: 1vh;
 	@include mobile {
 	   font-size: 1.5rem;
+		padding-top: 0;
 
 	}
 }
@@ -169,6 +171,7 @@ h4 {
     margin-bottom: 2vh;
 	@include mobile {
 		font-size: 1.6rem;
+		margin-bottom: 4%;
 	}
 	
 }
@@ -424,9 +427,10 @@ h4 {
 .portfolio-overlay-text {
 	color: white;
 	font-weight: 600;
-
-	font-size: 3vh;
-
+	font-size: 1.8rem;
+	@include mobile {
+	font-size: 2rem;
+	}
 }
 
 // Learn Subpages Pricing
@@ -479,6 +483,7 @@ h4 {
 		width: 90%;
 		font-size: 2.5rem;
 		line-height: auto;
+		margin-bottom: 0;
 	}
 }
 
@@ -493,6 +498,12 @@ h4 {
     color: white;
     font-weight: 300;
     font-size: 20px;
+	@include mobile {
+		margin-top: 28px;
+		font-size: 12px;
+		line-height: 12px;
+		
+	}
     
 }
 .text-mobile-white {
@@ -502,7 +513,7 @@ h4 {
 }
 .col-translation-mobile {
 	@include mobile {
-		padding-bottom: 5vh;
+		padding-bottom: 10%;
 	}
 }
 
@@ -525,6 +536,36 @@ h4 {
 	}
 }
 
+//contact section
+.contact-data-par {
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 4rem;
+	@include mobile {
+		margin: 0;
+		text-align: center;
+	}
+	
+}
+// belts
+.confidentiality {
+	font-size: 1.8rem;
+	text-align: center;
+	color: white;
+	display: inline-block;
+	width: 60%;
+	font-weight: 600;
+	font-style: italic ;
+	@include mobile {
+		width: 100%;
+		padding-top: 5%;
+		padding-bottom: 5%;
+             
+	}
+    
+
+}
 
 
 

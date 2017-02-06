@@ -3,8 +3,10 @@
 .bg-about {
 	@extend %fullpage-bgimage;
 	background-image: url('#{$path-img}/Warsaw-center.jpg');
+	padding: 15px;
 	@include mobile {
 		background: none;
+		padding: 0;
 	}
 	//background-image: url('#{$path-img}/about.jpeg');//
 }
@@ -48,7 +50,7 @@
 	@extend %flex-centered;
 	height: 20vh;
 	@include mobile {
-		height: 30vh;
+		height: auto;
 	}
 
 
@@ -127,5 +129,23 @@
 // Contact form
 #form-page {
 	background-color: $base-color-2;
+	
+}
+// Teaching
+
+.square-polish {
+	@extend %square;
+	background-size: cover;
+	background-position: center;
+	background-image: url('#{$path-img}/cracow-mob.jpeg');
+	padding: 0;
+	
+}
+.square-french {
+	@extend %square ;
+	background-size: cover;
+	background-position: center;
+	background-image: url('#{$path-img}/paris-mob.jpg');
+	padding: 0;
 	
 }

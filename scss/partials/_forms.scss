@@ -57,7 +57,7 @@
 // Base selectors
 textarea {
 	width: 100%;
-	rows: 9;
+	rows: 9 !important;
 	
 	
 }
@@ -372,6 +372,17 @@ form {
 	float:left;
 	width: 12%;
 	display: inline-block;
+	@include mobile {
+		clear: left;
+		width: 40%;
+	}
+}
+#wpcf7-f132-o1 p:nth-child(12) {
+	float: left;
+}
+
+#form-lessons, #form-translation {
+	width: 100%;
 }
 
 

@@ -51,7 +51,7 @@
 		</div>
         <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 			<div class='square1 slideanim'>
-				<p class='signature slideanim hidden-sm hidden-md hidden-lg'><?php $value = get_field ('about_title');
+				<p class='signature hidden-sm hidden-md hidden-lg'><?php $value = get_field ('about_title');
 			if ($value) {
 				echo $value;
 			}
@@ -604,7 +604,7 @@
 </div>
 <div class='container-fluid' id='learn-language'>
     <div class='row'>
-        <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 french'>
+        <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 french hidden-xs'>
             <div class='outer_bg'>
         		<div class='outer_border'>
 					<div class='inner_border'><p><a href='<?php $value = get_field ('teaching_button_left_link');
@@ -623,7 +623,22 @@
             	</div>
         	</div>
         </div>
-        <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 polish'>
+		<div class='col-xs-12 hidden-sm hidden-md hidden-lg square-polish'>
+			<p class='signature signature-teaching'><a href='<?php $value = get_field ('teaching_button_left_link');
+						if ($value) {
+							echo $value;
+								}
+						else {
+							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_left');
+						if ($value) {
+							echo $value;
+						}
+						else {
+							echo 'empty'; }
+				?></a></p>
+			
+		</div>
+        <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 polish hidden-xs'>
             <div class='outer_bg'>
         		<div class='outer_border'>
             		<div class='inner_border'><p><a href='<?php $value = get_field ('teaching_button_right_link');
@@ -642,6 +657,21 @@
 				</div>
 			</div>
     	</div>
+		<div class='col-xs-12 hidden-sm hidden-md hidden-lg square-french'>
+			<p class='signature signature-teaching'><a href='<?php $value = get_field ('teaching_button_right_link');
+						if ($value) {
+							echo $value;
+								}
+						else {
+							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_right');
+						if ($value) {
+							echo $value;
+						}
+						else {
+							echo 'empty'; }
+				?></a></p>
+			
+		</div>
 	</div>
 </div>
 
@@ -672,15 +702,18 @@
 		<div class='col-lg-12'>
 			<p class='contact-form-lead slideanim slide'>Book your <span class='contact-form-lead-lesson'>first lesson</span> or request a free quote for <span class='contact-form-lead-translation'>translation</span>
 			</p>
+		</div>
+		<div class='col-lg-12'>
 			<div id='form-translation' class=' hidden'><?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form') ); ?>
         	</div>
+		</div>
+		<div class='col-lg-12'>
 			<div id='form-lessons' class= 'hidden'>		
 				<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form_languages') ); ?>
 			</div>
-        
 		</div>
 		
-		
+				
 	</div>
 </div>
 
@@ -693,7 +726,19 @@
 		</div>
 	</div>
 </div>
-			
+<div class='container-fluid' id='contact-data'>
+	<div class='row'>
+		<div class='col-lg-4 col-xs-12'>
+			<p class='contact-data-par'>+420 773 596 706</p>
+		</div>
+		<div class='col-lg-4 col-xs-12'>
+			<p class='contact-data-par'>info@mkdtranslations.com</p>
+		</div>
+		<div class='col-lg-4 col-xs-12'>
+			<p class='contact-data-par'>Řipska 14 130 00 Praha 3 Česká Republika</p>
+		</div>
+	</div>
+</div>		
 
 
 	

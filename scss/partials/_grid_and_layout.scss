@@ -80,7 +80,7 @@
     visibility: hidden;
 }
 .slide {
-    
+	@include tablet {
 	animation-name: slideRight;
     -webkit-animation-name: slideRight; 
     -moz-animation-name: slideRight;
@@ -89,6 +89,11 @@
     -moz-animation-name: slideRight;
     
     visibility: visible; 
+	}
+	@include mobile {
+		visibility: visible;
+	}
+	
 }
 
 .slide-left {
@@ -100,27 +105,13 @@
     -moz-animation-name: slideLeft;
 }
 
-.confidentiality {
-	font-size: 1.8rem;
-	text-align: center;
-	color: white;
-	display: inline-block;
-	width: 60%;
-	font-weight: 600;
-	font-style: italic ;
-	@include mobile {
-		
-        width: 100%;
-             
-	}
-    
-
-}
-
 
 
 #learn-language, #photos {
     margin-top: 5vh;
+	@include mobile {
+		margin-top: 10%;
+	}
 }
 
 .icons_row > div {
@@ -201,6 +192,10 @@
 	
     width: 100%;
     height: 50vh;
+	@include mobile {
+		height: 100vw;
+	}
+	
 }
 //sprawdzić po co
 .competence {
@@ -247,7 +242,8 @@
 	padding-top: 7vh;
 	padding-bottom: 5vh;
 	@include mobile {
-		padding-bottom: 0;
+		padding-bottom: 5%;
+		padding-top: 5%;
 	}// background in _backgrounds_and_borders
 }
 .contact-form-right {
@@ -277,6 +273,43 @@
 	align-items: center;
 	justify-content: space-around;
 }
+#contact-data {
+	height: 7vh;
+	background-color: rgba(255, 100, 0, 1);
+	.row {
+		display: flex !important ;
+		justify-content: space-around !important;
+		align-items: center !important;
+		@include mobile {
+			display: block !important;
+		}
+		.col-lg-4 {
+			width: auto !important;
+			@include mobile {
+				width: 100% !important;
+				padding: 0;
+			}
+			
+		}
+		.col-lg-4:nth-child(1) {
+			@include mobile {
+				background-color: $base-color-2;
+			}
+		}
+		.col-lg-4:nth-child(2) {
+			@include mobile {
+				background-color: $base-color-1;
+			}
+		}
+		.col-lg-4:nth-child(3) {
+			@include mobile {
+				background-color: #ff6400;
+			}
+		}
+	}
+}
+
+
 
 
 

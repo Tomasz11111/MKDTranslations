@@ -28,6 +28,15 @@
 		padding: 3%;
 	}
 }
+.signature-teaching {
+	@include mobile {
+		font-size: 3.5rem;
+		text-align: center;
+	}
+	a {
+		color: inherit !important;
+	}
+}
 %square {
 	width: 23vw;
 	height: 23vw;

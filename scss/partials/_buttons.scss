@@ -4,6 +4,9 @@
 	align-items: center;
 	width: 20%;
 	margin: 0 auto;
+	@include mobile {
+		margin-top: 20vh;
+	}
 	p {
 			font-family: $title-font-family;	
 			text-align: center;
@@ -13,6 +16,12 @@
 			border: 0.1rem solid #fff;
 			background-color: transparent;
 			margin: 0;
+			@include mobile {
+			height: 3rem;
+			width: 3rem;
+			margin: 10%;
+			
+			}
 			a {
 				color: white !important;
 				font-size: 1.2rem;
@@ -24,24 +33,34 @@
 				height: 2rem !important;
 				padding-top: 0.3rem;
 				padding-bottom: 0.3rem;
+				@include mobile {
+					height: 3rem !important;
+					width: 3rem !important;
+					font-size: 1.6rem;
+				}
 				
 				
 			}
 			&:hover {
-				background-color: rgba($base-color-2, 0.5);
+				background-color: $base-color-2;
 				
 		}
 	}
 }
 .choose-language-languages-sidepages {
 	@extend .choose-language-languages;
-	right: 10vw !important;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+	@include tablet {
+		right: 10vw !important;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 	line-height: auto !important;
 	p {
 		line-height: 2.2rem !important;
+		@include mobile {
+			line-height: 3rem !important;;
+		}
 		&:hover {
 			border: 0.1rem solid $base-color-2;
 		}
@@ -85,10 +104,8 @@
 	margin-bottom: 5vh !important;
 	margin-top: 5vh !important;
 	min-width: 16vw;
-	
 	background: transparent;	
-		
-	&:hover a, &:hover span  {
+		&:hover a, &:hover span  {
 			color: white;
 		font-weight: 600;
 			
@@ -123,6 +140,8 @@
 	&:hover {
 		font-size: 1.5rem;
 	}
+	margin-bottom: 8% !important;
+	margin-top: 8% !important;
 	
 }
 
@@ -263,6 +282,7 @@
 
 .morespecialties, .pricing-buttons {
 	@extend %flex-centered;
+	
 	
 }
 
