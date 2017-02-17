@@ -371,12 +371,15 @@ jQuery(document).ready(function($) {
 		
 		
 		function toggleHamburger(){
-				var $trigger = $('#services');
+				
+				if(window.matchMedia ('(min-width: 768px)').matches) {
+					var $trigger = $('#services');
 				$(window).on('scroll', function() {
 					if( ($(window).scrollTop() > $trigger.offset().top) && !($hamburger.hasClass('flag')) ) {
 						openHamburger();
 					}
 				});
+				}
 				
 				$hamburger.on('click', function() {
 
