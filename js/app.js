@@ -141,7 +141,7 @@ jQuery(document).ready(function($) {
 	
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 	function smoothScroll() {
-        $('.navigation_right a, .help a, button a, .nav-pills a ').on('click', function (event) {
+        $('.wordpress-menu a, .help a, div a, .nav-pills a ').on('click', function (event) {
 
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== '') {
@@ -253,7 +253,7 @@ jQuery(document).ready(function($) {
     
     function googleMaps() {
 
-
+		if($('body').hasClass('home')) {
         var myCenter = new google.maps.LatLng(50.075881, 14.452943);
 
         function initialize() {
@@ -276,9 +276,10 @@ jQuery(document).ready(function($) {
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);
+		}
 
     }
-
+	
     googleMaps();
 
 	
@@ -350,136 +351,254 @@ jQuery(document).ready(function($) {
     }
 
 	expandPortfolio();
-
-    function hamburger() {
-		
-		
-	        $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').on('click', function() {
-				
-				if (window.matchMedia('(max-width: 768px)').matches) {
-				$(this).toggleClass('open');
-				$('.menutext_hamburger').toggle();
-				$('.choose-language-languages-homepage').toggle();
-				$('div.navigation-container').toggleClass('navigation-container-bg');
-				$('.navigation_right').toggle();
-				}
-				else {
-					
-					
-				if( !($(this).hasClass('open') ) ) {
-				$('.choose-language-languages-homepage').removeClass('hidden');
-				$('div.navigation-container').toggleClass('navigation-container-bg');
-		
-				$(this).toggleClass('open');
-				$('.navigation_right').toggle();
-								}
-				else {
-					$('div.navigation-container').removeClass('navigation-container-bg');
-					$('.choose-language-languages-homepage').addClass('hidden');
-				$('.headline-text-sidepages').removeClass('hidden');
-				$(this).removeClass('open');
-				$('.navigation_right').toggle();
-				$('.navigation_right').addClass('flag');// tutaj sprawdzam, czy użytkownik nie wyłączył sam menu, wtedy nie będzie się już automatycznie włączać po wjechaniu na services
-					
-				}
-				
-			}
-			});
-			
-						
-		$(window).scroll(function() {
-			if (window.matchMedia('(min-width: 768px)').matches) //check screen width to disable this function in mobiles
-				{ if (!			($('.navigation_right').hasClass('flag')) ) {
-				if( ( $(window).scrollTop() > $('#services').offset().top ) && !($('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').hasClass('open')) ) {
-					$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').addClass('open');
-					$('.navigation_right').show();
-					$('.navigation_right').addClass('navigation-container-bg');
-					$('.navigation_right').css('background-color');
-					$('.menutext_hamburger').addClass('hidden');
-
-				}
-			}
-			if( $('.navigation_right').hasClass('open') ) {
-			  if ( $(window).scrollTop() > $('#about').offset().top ) {
-				$('.navigation_right').addClass('navigation-container-bg');
-				}
-			else {
-				$('.navigation_right').removeClass('navigation-container-bg');
-				}	
-			}
-			
-			
-        }
-		});
-	}
 	hamburger();
-	/*function hamburgerSidepages() {
-		if( !($('body').is('.page')) ) {
-		$('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').on('click', function() {
+	//funkcja sterująca paskiem menu i przyciskiem hamburger
+    function hamburger() {
+		var	$container = $('.navigation-container'), 
+			$hamburger = $('.hamburger'),
+			$menutext = $('.menutext_hamburger'),
+			$menu = $('.wordpress-menu'),
+			$switcher = $('.language-switcher'),
+			$menu_link = $('ul.menu li a'),
+			$headline = $('.headline-text-sidepages');
+			
+		toggleHamburger();
+		hideMenuWhenLinked();
+		menuBarChangeColor();
+		highlightActiveLangBtn();
+		hideLanguagesMob();
+		hideLanguagesPC();
+		
+		
+		function toggleHamburger(){
+				var $trigger = $('#services');
+				$(window).on('scroll', function() {
+					if( ($(window).scrollTop() > $trigger.offset().top) && !($hamburger.hasClass('flag')) ) {
+						openHamburger();
+					}
+				});
 				
-				if( !($(this).hasClass('open') ) ) {
-					$('.headline-text-sidepages').addClass('hidden');
-				}
-			else {
-				$('.headline-text-sidepages').removeClass('hidden');
-				$('.navigation_right').addClass('navigation-containter-bg');
+				$hamburger.on('click', function() {
+
+	/* dla komórek */if (window.matchMedia('(max-width: 767px)').matches) { /*strona główna*/
+						if ( $hamburger.hasClass('open') ) {
+							closeHamburgerMobile();
+							console.log('closed');
+						}
+						else {
+							openHamburgerMobile();
+							console.log('opened');
+						}
+					}
+					else {
+						if ( $hamburger.hasClass('open') ) {
+							closeHamburger();
+							$hamburger.addClass('flag');
+							console.log('closed');
+						}
+						else {
+							openHamburger();
+							console.log('opened');
+						}
+					}
+				});
+		  }
+			function openHamburgerMobile() {
+		
+							$hamburger.addClass('open');
+							$menutext.addClass('hidden');
+		/* dla podstron*/	if ($('body').is('#sidepage')) {
+			
+								$menu.removeClass('invisible').addClass('nav100vh').css('background-color', 'transparent');
+								$container.addClass('nav100vh');
+								$headline.addClass('hidden');
+							}
+		/* dla homepage */  else {
+								$menu.removeClass('invisible').addClass('nav100vh');
+								$container.addClass('nav100vh navigation-container-dimgray');
+								$switcher.addClass('hidden');
+							}
+							
 			}
-	});
-		}
-	}
-	hamburgerSidepages();*/
-		
-															
-	function menuBarChangeColor() {
-		if((window.matchMedia('(min-width: 768px)').matches)) {
-		$(window).scroll(function() {
-		if( ( $(window).scrollTop() > ($('#about').offset().top ) - 1) ){
-			$('.navigation_right').css('background-color', 'dimgray');
-				}
-		else {
-			$('.navigation_right').css('background-color', 'rgba(128, 0, 128, 0.7)')
-		}
-		});
-		}
-		else {
-			$(window).scroll(function() {
-		if( ( $(window).scrollTop() > ($('#about').offset().top ) - 100) ){
-			$('.choose-language-languages-homepage').addClass('hidden'); //to dać do innej funkcji
-		}
-	});
-	}
-	}
-	menuBarChangeColor();
-
-	function toggleForm() {
-		var $trigger_lessons = $('.contact-form-lead-lesson'),
-			$trigger_translations = $('.contact-form-lead-translation');
-		$trigger_lessons.on('click', function() {
-			if($('#form-lessons').is('.hidden') ){
-			   $('#form-lessons').removeClass('hidden');
-			$('#form-translation').addClass('hidden')
-		}
-		  else {
-			 $('#form-lessons').addClass('hidden');
-			} ;
-		});
-		
-		$trigger_translations.on('click', function() {
-			if($('#form-translation').is('.hidden') ) {
-			$('#form-translation').removeClass('hidden');
-			$('#form-lessons').addClass('hidden')
-		}
-			else {
-				$('#form-translation').addClass('hidden');
+			function closeHamburgerMobile() {
+							$hamburger.removeClass('open');
+							$menutext.removeClass('hidden');
+							$menu.removeClass('nav100vh').addClass('invisible');
+		/* dla podstron*/	if ($('body').is('#sidepage')) {
+								$container.removeClass('nav100vh');
+								$headline.removeClass('hidden');
+							}
+							
+		/* dla homepage */  else {				
+							$container.removeClass('nav100vh').removeClass('navigation-container-dimgray');
+							$switcher.removeClass('hidden');
+							}
 			}
-		});
-	}
-toggleForm();
-
-
-
+							
+						
+					
+					
+		/* dla PC */	function openHamburger() {
+							$hamburger.addClass('open');
+							$menutext.addClass('hidden');
+		/* dla podstron*/	if ($('body').is('#sidepage')) {
+			
+								$menu.removeClass('hidden');
+								$headline.addClass('hidden');
+								$switcher.removeClass('hidden');
+			
+							}
+		/* dla homepage*/
+						else {
+								$menu.removeClass('invisible'); 
+								$container.addClass('navigation-container-purple');
+								
+							}
+						}
+						function closeHamburger() {
+							$hamburger.removeClass('open');
+							$container.removeClass('navigation-container-purple navigation-container-dimgray');
+							$menutext.removeClass('hidden');
+							if ($('body').is('#sidepage')) {
+			
+								$menu.addClass('hidden');
+								$switcher.addClass('hidden');
+								$headline.removeClass('hidden');
+								
+			
+							}
+							else {
+								$menu.addClass('invisible');
+							}
+							
+							
+							
+						}
 		
+		
+					
+/* dla komórek	*/	function hideMenuWhenLinked() {
+				$menu_link.on('click', function() {
+					if (window.matchMedia('(max-width: 767px)').matches) { 
+						$container.removeClass('nav100vh navigation-container-dimgray');
+						$menu.removeClass('nav100vh').addClass('hidden');
+						$hamburger.removeClass('open');
+					
+					}
+				});
+			}	
+					function menuBarChangeColor() {
+					if((window.matchMedia('(min-width: 768px)').matches)) {
+					$(window).scroll(function() {
+					if( ( $(window).scrollTop() > ($('#services').offset().top ) - 1) ){
+						if($hamburger.hasClass('open') ){
+						$container.removeClass('navigation-container-purple').addClass('navigation-container-dimgray')
+						console.log('szary');
+							}
+						}
+					else {
+						$container.removeClass('navigation-container-dimgray');
+						if($hamburger.hasClass('open')) {
+						$container.addClass('navigation-container-purple');
+						console.log('fioletowy');
+						}
+					}
+					});
+				}
+		
+			};
+		
+
 	
+	function hideLanguagesMob() { 
+		var $switcher = $('.language-switcher-homepage'),
+			$hamburger = $('.hamburger');
+		function hide(){
+			$switcher.addClass('hidden');
+		}
+		function show(){
+			$switcher.removeClass('hidden').css('display', 'flex');
+		}
+				
+		if(window.matchMedia ('(max-width: 767px)').matches) {
+			$(window).scroll(function() {
+				if( $(window).scrollTop() > 10 ){
+					hide();
+				}
+				else if( ($(window).scrollTop() < 10 ) && $hamburger.is('.open') ) {
+					hide();
+				}
+				else {
+					show();
+				}
+			});
+			$hamburger.on('click', function() {//czy to potrzebne?
+				if($hamburger.is('.open')) {
+					hide();
+				}
+				else {
+					show();
+				}
+				
+			});
+		}
+	}
+		function hideLanguagesPC() {
+			var $switcher = $('.language-switcher-homepage'),
+			$hamburger = $('.hamburger');
+		
+			if(window.matchMedia ('(min-width: 768px)').matches) {
+				$(window).scroll(function() {
+					if( ($(window).scrollTop() > 10 ) && !($hamburger.is('.open')) ) {
+					$switcher.addClass('hidden');
+				}
+				else {
+					$switcher.removeClass('hidden')
+				}
+			})
+				$hamburger.on('click', function() {
+					if($hamburger.is('.open')) {
+						$switcher.removeClass('hidden');
+					}
+				});
+				
+				
+		}
+	}
+		
+	function highlightActiveLangBtn() {
+		var language = $('html').attr('lang'),
+		$langBtns = $('.language-switcher-homepage p a');
+		$langBtns.each(function() {
+		langSymbol = $(this).text();
+		
+		if(!(language.indexOf(langSymbol) === -1)) {
+			$(this).css('backgroundColor', 'rgba(76, 19, 59, 0.7)');	
+			}
+			
+		});
+	}
+}
+	//koniec funkcji hamburger
+		
+	   
+		
+	function showHideForm() {
+		var $lesson_btn = $('.contact-form-lead-lesson'),
+			$translate_btn = $('.contact-form-lead-translation'),
+			$form_translations = $('#form-translation'),
+			$form_lessons = $('#form-lessons');
+		
+		$lesson_btn.on('click', function() {
+			$form_lessons.toggleClass('hidden');
+			
+		});
+		$translate_btn.on('click', function() {
+			$form_translations.toggleClass('hidden');
+		});
+	
+	}
+	showHideForm();
 
             
             //ew. zmienić na css animation
