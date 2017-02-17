@@ -7,6 +7,7 @@
 	@include mobile {
 		background: none;
 		padding: 0;
+		height: auto;
 	}
 	//background-image: url('#{$path-img}/about.jpeg');//
 }
@@ -38,6 +39,9 @@
 	@include mobile {
 		background-color: white;
 	}
+}
+.bg-dimgray {
+	background-color: dimgray;
 }
 .bg-darkgrey {
 	background-color: $nav-and-background-color;
@@ -126,8 +130,8 @@
 		height: 40vh;
 	}
 }
-// Contact form
-#form-page {
+// Contact form + Nav Container
+#form-page, .navigation-container-purple  {
 	background-color: $base-color-2;
 	
 }
@@ -149,3 +153,6 @@
 	padding: 0;
 	
 }
+
+
+

@@ -4,33 +4,37 @@
 	height: 7vh;
 	top: 0;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-around;
 	align-items: center;
 	z-index: 1200; 
 	
 	
 }
-.navigation-container-bg {
+
+.navigation-container-dimgray {
 
     background-color: $nav-and-background-color !important;
-	@include mobile {
-		height: 100vh;
-	}
+	
 	
 }
-.navigation_right {
+.wordpress-menu {
+	
 	position: relative;
-	width: 100%;
 	line-height: 7vh;
 	height: 7vh;
 	z-index: 1200;
-	padding-right: 4.3vw;
-	padding-left: 4.3wv;
-	display: none;
-	background-color: rgba($base-color-2, 0.7);
 	@include mobile {
-		height: 100%;
+		width: 100% !important;
+		background-color:  rgba($base-color-2, 0.7);
 	}
+	@include tablet {
+		max-width: 70%;
+	}
+	/*padding-right: 4.3vw; //zobaczyć czy nie trzeba zostawić w komórkowym
+	padding-left: 4.3wv;*/
+	
+	
+	
     ul {
         padding: 0;
 		@include mobile {
@@ -50,7 +54,9 @@
             a {
               color:  white !important; /*tu zmieniam kolor czcionki w menu*/
 	           font-size: 1.2rem; 
-				font-size: 2rem;//
+				@include mobile {
+				font-size: 2rem;
+				}//
             }
             a[href="#how_i_teach"], a[href="#process"], a[href="learnfrench.html"], a[href="learnpolish.html"], a[href="#pricing"],   {
                 font-weight: 300;
@@ -58,10 +64,18 @@
         }
     }
 }
+.nav100vh {
+
+	height: 100vh !important;
+
+	
+}
+
+
         
 
 
-#nav-icon4 {
+.hamburger {
 	width: 60px;
 	height: 45px;
 	 z-index: 10000;
@@ -89,7 +103,7 @@
 	position: absolute;
 	height: 9px;
 	width: 100%;
-	background: rgba(128, 0, 128, 0.5);
+	background: rgba($base-color-2, 0.7);
 	border-radius: 9px;
 	opacity: 1;
 	left: 0;
@@ -133,9 +147,13 @@
 		}
     }
 	}
+	&-sidepages {
+		top:1% !important;
+		right: 2% !important;
+	}
 }
 
-#nav-icon4.open span {
+.hamburger.open span, {
     &:nth-child(1) {
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
