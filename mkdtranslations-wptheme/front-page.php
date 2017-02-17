@@ -7,23 +7,25 @@
 		
 		<div class='headline'>
 			<p class='headline-text-big'>Linguistic services <span> by </span> MKDTranslations</p>
-            <button class='headline-btn'><a href='#contact'><?php $value = get_field ('hero_btn_left');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></a>
-			</button>
-            <button class='headline-btn'><a href='#about'><span class='btn-text'><?php $value = get_field ('hero_btn_right');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></span></a>
-			</button>
-        </div>
+			<div class='headline-btn-container'>
+				<div class='headline-btn'><a href='#form-page'><?php $value = get_field ('hero_btn_left');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></a>
+				</div>
+				<div  class='headline-btn'><a href='#about'><span class='btn-text'><?php $value = get_field ('hero_btn_right');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></span></a>
+				</div>
+        	</div>
+		</div>
         <div class='filter'></div>
         <video autoplay loop class='fillWidth hidden-xs hidden-sm'>
             <source src='<?php echo get_template_directory_uri(); ?>/White-Keyboard/MP4/White-Keyboard.mp4' type='video/mp4' />Your browser does not support the video tag. I suggest you upgrade your browser.
@@ -540,15 +542,15 @@
         
 		<div class='col-lg-12 col-md-12 morespecialties'>
    
-			<button class='btn-standard btn-teal hidden-xs'><a><?php $value = get_field ('translation_button');
+			<div class='btn-standard btn-teal hidden-xs'><a><?php $value = get_field ('translation_button');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
 			?></a>
-			</button>
-			<button class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('translation_button_2_link');
+			</div>
+			<div class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('translation_button_2_link');
 				if ($value) {
 					echo $value; }
 				else {
@@ -558,7 +560,7 @@
 			}
 			else {
 				echo 'empty'; }
-			?></a></button>
+			?></a></div>
         </div>
     </div>
  </div>
@@ -726,19 +728,7 @@
 		</div>
 	</div>
 </div>
-<div class='container-fluid' id='contact-data'>
-	<div class='row'>
-		<div class='col-lg-4 col-xs-12'>
-			<p class='contact-data-par'>+420 773 596 706</p>
-		</div>
-		<div class='col-lg-4 col-xs-12'>
-			<p class='contact-data-par'>info@mkdtranslations.com</p>
-		</div>
-		<div class='col-lg-4 col-xs-12'>
-			<p class='contact-data-par'>Řipska 14 130 00 Praha 3 Česká Republika</p>
-		</div>
-	</div>
-</div>		
+
 
 
 	

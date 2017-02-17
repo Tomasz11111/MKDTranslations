@@ -532,7 +532,7 @@ endif;
 		   </div>
 		</div>
 		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
-			<button class='btn-teal' id='btn-pricing'><span><a href='<?php $value = get_field('pricing_button_left_link');
+			<div class='btn-teal' id='btn-pricing'><span><a href='<?php $value = get_field('pricing_button_left_link');
 				if ($value) {
 					echo $value; }
 				else {
@@ -543,8 +543,8 @@ endif;
 				else {
 					echo 'empty'; }
 				?></a></span>
-			</button>
-            <button class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('pricing_button_right_link');
+			</div>
+            <div class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('pricing_button_right_link');
 				if ($value) {
 					echo $value; }
 				else {
@@ -555,7 +555,7 @@ endif;
 				else {
 					echo 'empty'; }
 				?></a>
-			</button>
+			</div>
        
 					 
 				

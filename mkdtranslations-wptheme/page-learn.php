@@ -75,13 +75,7 @@ and in the Czech Republic)</p>
 <div class='container-fluid bg-grey' id='how_i_teach_icons'>
     <div class='row row-icons'>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src='<?php $value = get_field ('how_i_teach_icon_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/location-purple.jpg' alt=""class='icon-set-width'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_1');
 				if ($value) {
@@ -101,13 +95,7 @@ and in the Czech Republic)</p>
 			</div>
         </div>
     	<div class='col	-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src='<?php $value = get_field ('how_i_teach_icon_2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/individual_group-purple.png' class='icon-set-width'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_2');
 				if ($value) {
@@ -127,13 +115,7 @@ and in the Czech Republic)</p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src='<?php $value = get_field ('how_i_teach_icon_3');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-height'>
+            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/onlinecourses-purple.jpg' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_3');
 				if ($value) {
@@ -153,13 +135,7 @@ and in the Czech Republic)</p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src='<?php $value = get_field ('how_i_teach_icon_4');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-height'>
+            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/onlinetools-purple.jpg' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_4');
 				if ($value) {
@@ -179,13 +155,7 @@ and in the Czech Republic)</p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src='<?php $value = get_field ('how_i_teach_icon_5');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/progress-purple.png' class='icon-set-width'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_5');
 				if ($value) {
@@ -205,13 +175,7 @@ and in the Czech Republic)</p>
 			</div>
         </div>
         <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src='<?php $value = get_field ('how_i_teach_icon_6');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-height'>
+            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/coursebooks-purple.jpg' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_6');
 				if ($value) {
@@ -323,15 +287,15 @@ and in the Czech Republic)</p>
 
 <div class='col-lg-12 morespecialties'>
    
-			<button class='btn-purple'><a href=''><?php $value = get_field ('learn_button_1');
+			<div class='btn-purple'><a href=''><?php $value = get_field ('learn_button_1');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
 			?></a>
-			</button>
-			<button class='btn-purple-bgfullcolor'><a href='<?php $value = get_field('learn_button_2_link');
+			</div>
+			<div class='btn-purple-bgfullcolor'><a href='<?php $value = get_field('learn_button_2_link');
 				if ($value) {
 					echo $value; }
 				else {
@@ -341,7 +305,7 @@ and in the Czech Republic)</p>
 			}
 			else {
 				echo 'empty'; }
-			?></a></button>
+			?></a></div>
         </div>
 	</div>
 </div>
