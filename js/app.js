@@ -372,10 +372,11 @@ jQuery(document).ready(function($) {
 		
 		function toggleHamburger(){
 				
-				if(window.matchMedia ('(min-width: 768px)').matches) {
-					var $trigger = $('#services');
+				if((window.matchMedia ('(min-width: 768px)').matches) && $('body').hasClass('home') ) {
+					var $trigger = $('#services'),
+						offset = $trigger.offset();
 				$(window).on('scroll', function() {
-					if( ($(window).scrollTop() > $trigger.offset().top) && !($hamburger.hasClass('flag')) ) {
+					if( ($(window).scrollTop() > offset.top) && !($hamburger.hasClass('flag')) ) {
 						openHamburger();
 					}
 				});
@@ -491,7 +492,7 @@ jQuery(document).ready(function($) {
 				});
 			}	
 					function menuBarChangeColor() {
-					if((window.matchMedia('(min-width: 768px)').matches)) {
+					if((window.matchMedia('(min-width: 768px)').matches) && $('body').hasClass('home') ) {
 					$(window).scroll(function() {
 					if( ( $(window).scrollTop() > ($('#services').offset().top ) - 1) ){
 						if($hamburger.hasClass('open') ){
