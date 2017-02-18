@@ -107,17 +107,7 @@ jQuery(document).ready(function($) {
 	};
 	showHideLangBtns();*/
 	
-	function slidesOnLoad() {
-		$('.slideanim-onload').load(setInterval(function() {
-			$(this).addClass('slide');
-		}), 2000);
-		$('.slideanim-left-onload').load(function() {
-			$(this).addClass('slide-left')});
-	}
-										 
-	
 					   
-	slidesOnLoad();					   
 		
 	function slides(elementToSlide, classActivatingSlide) {
 				
