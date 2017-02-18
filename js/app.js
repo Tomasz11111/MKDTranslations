@@ -111,17 +111,17 @@ jQuery(document).ready(function($) {
 		
 	function slides(elementToSlide, classActivatingSlide) {
 				
-		$(window).scroll(function () {
-			$(elementToSlide).each(function () {
-				var pos = $(this).offset().top;
+			$(window).scroll(function () {
+				$(elementToSlide).each(function () {
+					var pos = $(this).offset().top;
 
-				var winTop = $(window).scrollTop();
-				console.log(winTop);
-				if (pos < winTop + 600) {
-					$(this).addClass(classActivatingSlide);
-				}
+					var winTop = $(window).scrollTop();
+					console.log(winTop);
+					if (pos < winTop + 600) {
+						$(this).addClass(classActivatingSlide);
+					}
+				});
 			});
-		});
 	}
 	slides('.slideanim', 'slide' );
 	slides('.slideanim-left', 'slide-left');
@@ -410,6 +410,7 @@ jQuery(document).ready(function($) {
 		/* dla homepage */  else {
 								$menu.removeClass('invisible').addClass('nav100vh');
 								$container.addClass('nav100vh navigation-container-dimgray');
+								$container.addClass('nav100vh navigation-container-dimgray');
 								$switcher.addClass('hidden');
 							}
 							
@@ -594,6 +595,32 @@ jQuery(document).ready(function($) {
 	}
 	showHideForm();
 
-            
+	//funkcja do automatycznego ustalania wysokości elementów w zależności od wysokości innych elementów, do których chcemy porównywa
+	
+	function elSetHeight(el1Selector, el2Selector, el3Selector, el4Selector, el5Selector, el6Selector) {
+		var $el1 = $(el1Selector),
+			$el2 = $(el2Selector),
+			$el3 = $(el3Selector),
+			$el4 = $(el4Selector),
+			$el5 = $(el5Selector),
+			$el6 = $(el6Selector),
+			$h2 = $el1.prev();
+			highestEl = findHighestEl() + $h2.outerHeight(true);
+		console.log(highestEl);
+		console.log($h2);
+			
+		function findHighestEl() {
+				
+			return Math.max($el1.outerHeight(), $el2.outerHeight(), $el3.outerHeight());
+		}
+		$el4.height(highestEl);
+		$el5.height(highestEl);
+		$el6.height(highestEl);
+	
+	}
+	
+	if(window.matchMedia ('(max-width: 768px)').matches) { 
+	elSetHeight('.square2 p', '.square3 p', '.square4 p', '.square2', '.square3', '.square4');
+	}
             //ew. zmienić na css animation
 });

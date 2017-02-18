@@ -14,34 +14,62 @@ endif;
     <div class='row'>
 		
 		<div class='col-lg-12 col-signature hidden-xs'>
-		<p class='signature slideanim slide'>Michał K.Dzieńdziura - your Polish teacher 
+		<p class='signature slideanim slide'><?php $value = get_field ('learn_headline');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?> 
 			</p>
 		</div>
         <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 			<div class='square1-learn slideanim slide'>
-				<p class='signature slideanim hidden-sm hidden-md hidden-lg'>Michał K.Dzieńdziura - your Polish teacher
+				<p class='signature hidden-sm hidden-md hidden-lg'><?php $value = get_field ('learn_headline');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
 			</p>
 			</div>
 		</div>
         <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
             <div class='square2 square2-learn slideanim slide'>
 				<h2>Experience</h2>
-				<p class='square-text square-text-learn'>I have over 8 years of experience in teaching 
-(collaboration with language schools in Poland 
-and in the Czech Republic)</p>
+				<p class='square-text square-text-learn'><?php $value = get_field ('learn_left_square');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></p>
 			</div>
 		</div>
 		 <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 
 			<div class='square3 square3-learn slideanim slide'>
 				<h2>All levels</h2>
-				<p class='square-text square-text-learn'>I work with all proficiency levels (A1-C2) and focus on business or every day language use</p>
+				<p class='square-text square-text-learn'><?php $value = get_field ('learn_middle_square');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></p>
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-6 col-xs-12 col-about '>
 			<div class='square4 square4-learn slideanim slide'>
 				<h2>Flexibility</h2>
-				<p class='square-text square-text-learn'>Individual approach and various interesting materials are guaranteed</p>
+				<p class='square-text square-text-learn'><?php $value = get_field ('learn_right_square');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></p>
 			</div>
             
 		</div>

@@ -88,7 +88,7 @@
     -webkit-animation-duration: 1s;
     -moz-animation-name: slideRight;
     
-    visibility: visible; 
+    visibility: visible;
 	}
 	@include mobile {
 		visibility: visible;
@@ -97,12 +97,14 @@
 }
 
 .slide-left {
+	@include tablet {
 	animation-name: slideLeft;
 	 -webkit-animation-name: slideLeft; 
     -moz-animation-name: slideLeft;
     animation-duration: 1s; 
     -webkit-animation-duration: 1s;
     -moz-animation-name: slideLeft;
+	}
 }
 
 
