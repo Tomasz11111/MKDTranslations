@@ -300,13 +300,7 @@ endif;
     <div class='row'>
         <div class='col-lg-2'></div>
         <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('process_icon1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/trophy-green.jpg' class='icon-set-width'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('process_icon_headline_1');
@@ -367,13 +361,7 @@ endif;
             </ul>
         </div>
         <div class='col-lg-4'>
-			<div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field ('process_icon2');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>' class='icon-set-height'>
+			<div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-green.jpg' class='icon-set-height'>
 			</div>
             
             <div class='icon_title'><h4 class='icon-headline text-teal icon-headline-animation'><?php $value = get_field('process_icon_headline_2');
@@ -451,13 +439,7 @@ endif;
           
         <div class='col-lg-4'>    
     
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing1_icon');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/price-green.jpg' class='icon-set-width'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_1');
 				if ($value) {
@@ -477,13 +459,7 @@ endif;
 			</div>
          </div>
          <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing2_icon');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/surcharges-green.jpg' class='icon-set-width'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_2');
 				if ($value) {
@@ -503,13 +479,7 @@ endif;
 			</div>
        </div>
        <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php $value = get_field('pricing3_icon');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-green.jpg' class='icon-set-width'>
 		   </div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_3');
 				if ($value) {
@@ -531,7 +501,7 @@ endif;
                  	<img src='<?php echo get_template_directory_uri()?>/images/PayPal.svg' alt='PayPal logo'><img src='<?php echo get_template_directory_uri()?>/images/Skrill_small.png' alt='Skrill logo'>
 		   </div>
 		</div>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 morespecialties'>
 			<div class='btn-teal' id='btn-pricing'><span><a href='<?php $value = get_field('pricing_button_left_link');
 				if ($value) {
 					echo $value; }

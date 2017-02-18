@@ -537,32 +537,35 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
+	</div>
+</div>
 <!-- Translation buttons --> 
-   
+   <div class='container-fluid'>
+	   <div class='row'>
         
-		<div class='col-lg-12 col-md-12 morespecialties'>
+			<div class='col-lg-12 col-md-12 morespecialties'>
    
-			<div class='btn-standard btn-teal hidden-xs'><a><?php $value = get_field ('translation_button');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></a>
-			</div>
-			<div class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('translation_button_2_link');
+				<div class='btn-standard btn-teal hidden-xs'><a><?php $value = get_field ('translation_button');
 				if ($value) {
-					echo $value; }
+					echo $value;
+				}
 				else {
-					echo 'empty'; }?>'><?php $value = get_field ('translation_button_2');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></a></div>
-        </div>
-    </div>
+					echo 'empty'; }
+				?></a>
+				</div>
+				<div class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('translation_button_2_link');
+					if ($value) {
+						echo $value; }
+					else {
+						echo 'empty'; }?>'><?php $value = get_field ('translation_button_2');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></a></div>
+        	</div>
+    	</div>
  </div>
   
 
