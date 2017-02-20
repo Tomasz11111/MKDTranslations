@@ -107,7 +107,10 @@
 	}
 }
 
-
+#photos {
+	@include tablet {width: 80% !important; }
+	
+}
 
 #learn-language, #photos {
     margin-top: 5vh;

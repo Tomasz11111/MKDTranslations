@@ -300,7 +300,7 @@ endif;
     <div class='row'>
         <div class='col-lg-2'></div>
         <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/trophy-green.jpg' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/trophy-green.jpg' class='icon-set-height'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('process_icon_headline_1');
@@ -439,7 +439,7 @@ endif;
           
         <div class='col-lg-4'>    
     
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/price-green.jpg' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/price-green.jpg' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_1');
 				if ($value) {
@@ -459,7 +459,7 @@ endif;
 			</div>
          </div>
          <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/surcharges-green.jpg' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/surcharges-green.jpg' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_2');
 				if ($value) {
@@ -479,7 +479,7 @@ endif;
 			</div>
        </div>
        <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-green.jpg' class='icon-set-width'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-green.jpg' class='icon-set-height'>
 		   </div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_3');
 				if ($value) {

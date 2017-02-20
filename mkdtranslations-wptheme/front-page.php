@@ -148,8 +148,8 @@
 </div>
 <div class='container-fluid bg-grey' id='services_content'>
     <div class='row row-icons'>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/icons-green-translation.png' class='icon-set-width'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/icons-green-translation.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('services_icon_headline');
 				if ($value) {
@@ -168,8 +168,8 @@
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/icons-green-revision.jpg'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/icons-green-revision-gainsboro.png'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service2_icon_headline');
@@ -192,8 +192,8 @@
 				</p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-width' src= '<?php echo get_template_directory_uri(); ?>/images/icons-green-software.jpg'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/icons-green-software_gainsboro.png'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service3_icon_headline');
@@ -216,7 +216,7 @@
 				</p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/icons-green-style.png'>
 			</div>
             <div class='icon_title'>
@@ -240,8 +240,8 @@
 				</p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-width' src='<?php echo get_template_directory_uri(); ?>/images/icons-green-teaching.jpg'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/icons-green-teaching_gainsboro.png'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service5_icon_headline');
 				if ($value) {
@@ -261,8 +261,8 @@
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src = '<?php echo get_template_directory_uri(); ?>/images/icons-green-consultancy.jpg'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src = '<?php echo get_template_directory_uri(); ?>/images/icons-green-consultancy_gainsboro.png'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service6_icon_headline');
 			if ($value) {

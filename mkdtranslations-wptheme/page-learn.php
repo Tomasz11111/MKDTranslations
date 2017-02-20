@@ -102,8 +102,8 @@ endif;
 </div>
 <div class='container-fluid bg-grey' id='how_i_teach_icons'>
     <div class='row row-icons'>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/location-purple.jpg' alt=""class='icon-set-width'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle'><img src= '<?php echo get_template_directory_uri(); ?>/images/pin.png' alt="" class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_1');
 				if ($value) {
@@ -122,8 +122,8 @@ endif;
 				?></p>
 			</div>
         </div>
-    	<div class='col	-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/individual_group-purple.png' class='icon-set-width'>
+    	<div class='col	-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle'><img src= '<?php echo get_template_directory_uri(); ?>/images/group.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_2');
 				if ($value) {
@@ -142,8 +142,8 @@ endif;
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/onlinecourses-purple.jpg' class='icon-set-height'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle'><img src= '<?php echo get_template_directory_uri(); ?>/images/onlinelesson.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_3');
 				if ($value) {
@@ -162,8 +162,8 @@ endif;
 				?>.</p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/onlinetools-purple.jpg' class='icon-set-height'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle'><img src= '<?php echo get_template_directory_uri(); ?>/images/online.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_4');
 				if ($value) {
@@ -182,8 +182,8 @@ endif;
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/progress-purple.png' class='icon-set-width'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle'><img src= '<?php echo get_template_directory_uri(); ?>/images/progress.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_5');
 				if ($value) {
@@ -202,8 +202,8 @@ endif;
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-6 col-lg-4'>
-            <div class='icon-circle icon-circle-purple'><img src= '<?php echo get_template_directory_uri(); ?>/images/coursebooks-purple.jpg' class='icon-set-height'>
+        <div class='col-xs-12 col-md-4 col-lg-2'>
+            <div class='icon-circle'><img src= '<?php echo get_template_directory_uri(); ?>/images/books.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><?php $value = get_field ('how_i_teach_icon_headline_6');
 				if ($value) {
