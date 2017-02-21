@@ -241,7 +241,7 @@
 			</div>
         </div>
         <div class='col-xs-12 col-md-4 col-lg-2'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/icons-green-teaching_gainsboro.png'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/teaching.png'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service5_icon_headline');
 				if ($value) {

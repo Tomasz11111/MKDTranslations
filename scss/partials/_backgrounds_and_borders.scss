@@ -30,6 +30,7 @@
 #translation {
 	@include mobile {
 		background-color: teal; 
+		padding-bottom: 5%;
 	}
 }
 
@@ -116,7 +117,6 @@
 
 .subpage-header {
     
-    margin-bottom: 30px;
     background-position: center;
 	@extend %flex-centered;
   	&-termsconditions {

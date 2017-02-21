@@ -29,7 +29,7 @@ endif;
 			else {
 				echo 'empty'; }
 			?></h1>
-            <p class='section-title-lead'>
+            <p class='section-title-lead text-mobile-white'>
 				 <?php if ( have_posts() ): while (have_posts() ) : the_post() ;?>
 				<?php $value = get_field ('translation_section_lead');
 			if ($value) {
