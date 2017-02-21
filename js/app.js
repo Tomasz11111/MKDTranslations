@@ -384,7 +384,7 @@ jQuery(document).ready(function($) {
 							console.log('opened');
 						}
 					}
-					else {
+/* dla reg screens */else {
 						if ( $hamburger.hasClass('open') ) {
 							closeHamburger();
 							$hamburger.addClass('flag');
@@ -403,7 +403,7 @@ jQuery(document).ready(function($) {
 							$menutext.addClass('hidden');
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 			
-								$menu.removeClass('invisible').addClass('nav100vh').css('background-color', 'transparent');
+								$menu.removeClass('invisible hidden').addClass('nav100vh').css('background-color', 'transparent');
 								$container.addClass('nav100vh');
 								$headline.addClass('hidden');
 							}
