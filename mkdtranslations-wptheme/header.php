@@ -18,7 +18,10 @@
 	
 <header>
 	<div class="navigation-container">
-
+<!-- Buttons quote and lessons -->
+		<p class='btn-navbar btn-navbar-darkblue hidden-xs'><a href='#form-page'>Request free quote for translation</a></p>
+		<p class='btn-navbar btn-navbar-purple hidden-xs'><a href='#form-page'>Book Polish or French lessson</a></p>
+		
 <!-- Wordpress menu-->
         <nav class="wordpress-menu invisible">
 			<?php 
@@ -38,11 +41,14 @@
 			<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>
 		</div>		
 <!-- Hamburger icon -->
-        <div class='hamburger'>
-            <span></span>
-            <span></span>
-            <span></span>
+		<div class='hamburger-container'>
+			<div class='hamburger'>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
 			<p class="menutext_hamburger">MENU</p>
-        </div>
+			
+		</div>
    </div>
 </header>

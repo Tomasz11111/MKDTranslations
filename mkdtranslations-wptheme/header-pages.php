@@ -17,11 +17,14 @@
 			<p class="headline-text-sidepages">Linguistic services <span> by </span> MKDTranslations</p>
 
 <!-- Hamburger menu -->
-			<div class="hamburger hamburger-sidepages">
-					<span></span>
-					<span></span>
-					<span></span>
-					<p class="menutext_hamburger menutext_hamburger-sidepages">MENU</p>
+			<div class='hamburger-container'>
+					<div class="hamburger hamburger-sidepages">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<p class="menutext_hamburger">MENU
+					</p>
 			</div>
 
 <!-- Inner menu container to display only if hamburger icon is clicked-->

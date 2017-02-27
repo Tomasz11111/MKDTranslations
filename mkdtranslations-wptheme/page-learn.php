@@ -79,7 +79,7 @@ endif;
  <div class='container-fluid bg-grey' id='how_i_teach'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12'>
-			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section-title'><?php $value = get_field ('how_i_teach_section_title');
+			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section-title text-purple'><?php $value = get_field ('how_i_teach_section_title');
 			if ($value) {
 				echo $value;
 			}
@@ -226,7 +226,7 @@ endif;
 </div>
 <div class='container' id='learn-polish-pricing'>
 	<div class='row'>
-		<div class='col-lg-12'><h1 class='section-title'>Pricing</h1>
+		<div class='col-lg-12'><h1 class='section-title text-purple'>Pricing</h1>
 			<p class='section-title-lead'>Choose a  payment plan that works for you.</p>
 		</div>
 		<div class='col-lg-12'>
