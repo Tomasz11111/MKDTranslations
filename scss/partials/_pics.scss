@@ -77,3 +77,12 @@
 #myCarousel {
 	padding: 0 !important;
 }
+.mkd-photo {
+	display:block;
+	margin: 0 auto;
+	width:10%;
+	margin-top: 5vh;
+	@include mobile {
+		width: 50%;
+	}
+}

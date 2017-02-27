@@ -34,13 +34,7 @@
 	}
 }
 
-.bg-grey {
-	background-color: lighten($nav-and-background-color, 45%);
-	padding-bottom: 50px;
-	@include mobile {
-		background-color: white;
-	}
-}
+
 .bg-dimgray {
 	background-color: dimgray;
 }
@@ -60,12 +54,23 @@
 
 
 	&-green {
-	background-color: rgba(0, 128, 0, 0.7);
+	background-color: $base-color-1;
 	}
 	&-purple {
-	background-color: rgba(128, 0, 128, 0.7);
+	background-color: $base-color-2;
 	}
-}
+	&-green1 {
+		@include tablet {
+			background-color: rgb(220,230,220);
+		}
+	}
+	&-green2 {
+		@include tablet {
+				
+			background-color: rgb(220, 240, 220);
+		}
+	}
+} 
 
 // Front Page - Teaching
 .outer_border {
@@ -152,6 +157,12 @@
 	background-image: url('#{$path-img}/paris-mob.jpg');
 	padding: 0;
 	
+}
+
+.border-white {
+	@include tablet {
+		border-right: 2px solid white;
+	}
 }
 
 

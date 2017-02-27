@@ -71,7 +71,7 @@
 
 
 .icon-set-height {
-	max-height: 90px;
+	max-height: 70px;
 	@include mobile {
 		max-height: 100px;
 	}
@@ -137,5 +137,12 @@
      margin-bottom: 20px;
 	@include mobile {
 		height: auto !important;
+		margin-bottom: 0;
 	}
 }
+#how_i_teach_icons {
+	@include tablet {
+		margin-top: 5vh;
+	}
+}
+
