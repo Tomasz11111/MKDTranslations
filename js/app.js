@@ -4,7 +4,13 @@ potrzebne drobne poprawki, jest problem z dostowaniem do całości okna, przy ni
 
 jQuery(document).ready(function($) {
     
-    scaleVideoContainer();
+	
+    $('.my-background-video').bgVideo({
+	fullScreen: true,
+	showPausePlay: true
+	});
+
+    /*scaleVideoContainer();
 
     initBannerVideoSize('.video-container .poster img');
     initBannerVideoSize('.video-container .filter');
@@ -47,7 +53,7 @@ jQuery(document).ready(function($) {
 			
 			 unitHeight = parseInt(($(window).height - navBarHeight)) + 'px';
 			$('.homepage-hero-module').css('height', unitHeight);
-													}*/
+													}
 										   
     	
 	}
@@ -89,7 +95,7 @@ jQuery(document).ready(function($) {
 
             $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
         });
-    };
+    };*/
 	/*function showHideLangBtns() {
 		var $btnsDiv = $('.choose-language-languages-homepage'),
 			windowHeight = $(window).height();
@@ -344,20 +350,22 @@ jQuery(document).ready(function($) {
 	hamburger();
 	//funkcja sterująca paskiem menu i przyciskiem hamburger
     function hamburger() {
-		var	$container = $('.navigation-container'), 
+		var	$container = $('.navigation-container'),
+			$hamburgerContainer = $('.hamburger-container');
 			$hamburger = $('.hamburger'),
 			$menutext = $('.menutext_hamburger'),
 			$menu = $('.wordpress-menu'),
 			$switcher = $('.language-switcher'),
 			$menu_link = $('ul.menu li a'),
 			$headline = $('.headline-text-sidepages');
+			$btnsNavbar = $('.btn-navbar');
 			
 		toggleHamburger();
 		hideMenuWhenLinked();
 		menuBarChangeColor();
 		highlightActiveLangBtn();
-		hideLanguagesMob();
-		hideLanguagesPC();
+		/*hideLanguagesMob();
+		hideLanguagesPC();*/
 		
 		
 		function toggleHamburger(){
@@ -372,7 +380,7 @@ jQuery(document).ready(function($) {
 				});
 				}
 				
-				$hamburger.on('click', function() {
+				$hamburgerContainer.on('click', function() {
 
 	/* dla komórek */if (window.matchMedia('(max-width: 767px)').matches) { /*strona główna*/
 						if ( $hamburger.hasClass('open') ) {
@@ -417,7 +425,7 @@ jQuery(document).ready(function($) {
 			}
 			function closeHamburgerMobile() {
 							$hamburger.removeClass('open');
-							$menutext.removeClass('hidden');
+							/*$menutext.removeClass('hidden');*/
 							$menu.removeClass('nav100vh').addClass('invisible');
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 								$container.removeClass('nav100vh');
@@ -435,25 +443,27 @@ jQuery(document).ready(function($) {
 					
 		/* dla PC */	function openHamburger() {
 							$hamburger.addClass('open');
-							$menutext.addClass('hidden');
+							/*$menutext.addClass('hidden');*/
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 			
 								$menu.removeClass('hidden');
 								$headline.addClass('hidden');
 								$switcher.removeClass('hidden');
+								
 			
 							}
 		/* dla homepage*/
 						else {
 								$menu.removeClass('invisible'); 
 								$container.addClass('navigation-container-purple');
+								$btnsNavbar.addClass('hidden');
 								
 							}
 						}
 						function closeHamburger() {
 							$hamburger.removeClass('open');
 							$container.removeClass('navigation-container-purple navigation-container-dimgray');
-							$menutext.removeClass('hidden');
+							/*$menutext.removeClass('hidden');*/
 							if ($('body').is('#sidepage')) {
 			
 								$menu.addClass('hidden');
@@ -464,6 +474,7 @@ jQuery(document).ready(function($) {
 							}
 							else {
 								$menu.addClass('invisible');
+								$btnsNavbar.removeClass('hidden');
 							}
 							
 							
@@ -505,7 +516,7 @@ jQuery(document).ready(function($) {
 		
 
 	
-	function hideLanguagesMob() { 
+	/*function hideLanguagesMob() { 
 		var $switcher = $('.language-switcher-homepage'),
 			$hamburger = $('.hamburger');
 		function hide(){
@@ -559,7 +570,7 @@ jQuery(document).ready(function($) {
 				
 				
 		}
-	}
+	}*/
 		
 	function highlightActiveLangBtn() {
 		var language = $('html').attr('lang'),
@@ -568,7 +579,8 @@ jQuery(document).ready(function($) {
 		langSymbol = $(this).text();
 		
 		if(!(language.indexOf(langSymbol) === -1)) {
-			$(this).css('backgroundColor', 'rgba(76, 19, 59, 0.7)');	
+			$(this).addClass('language-switcher-active');
+			$(this).parent().addClass('bg-belt-purple');
 			}
 			
 		});
@@ -576,7 +588,25 @@ jQuery(document).ready(function($) {
 }
 	//koniec funkcji hamburger
 		
-	   
+	function linkToForm() {
+		var $triggerTranslation = $('.btn-navbar-darkblue'),
+			$triggerLessons = $('.btn-navbar-purple'),
+			$formTranslations = $('#form-translation'),
+			$formLessons = $('#form-lessons');
+		
+			$triggerTranslation.on('click', function() {
+				$formTranslations.removeClass('hidden');
+				if(!($triggerLessons.hasClass('hidden')) ) {
+				   $formLessons.addClass('hidden')};
+			});
+			$triggerLessons.on('click', function() {
+				$formLessons.removeClass('hidden');
+				if(!($triggerTranslation.hasClass('hidden')) ) {
+				   $formTranslations.addClass('hidden')};
+			});
+	} 
+	
+	linkToForm();
 		
 	function showHideForm() {
 		var $lesson_btn = $('.contact-form-lead-lesson'),
