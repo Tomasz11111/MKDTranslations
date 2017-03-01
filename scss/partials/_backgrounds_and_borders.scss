@@ -1,9 +1,13 @@
 //About Div - Background
 
 .bg-about {
-	@extend %fullpage-bgimage;
-	background-image: url('#{$path-img}/Warsaw-center.jpg');
+	background-position:right;
+	background-attachment:fixed;
+	background-image: url('#{$path-img}/mkd_color_nobg.png');
+	background-repeat: no-repeat;
+	background-color: $adjacent-bg-color-2;
 	padding: 15px;
+	background-size: 35%;
 	@include mobile {
 		background: none;
 		padding: 0;

@@ -14,7 +14,7 @@ endif;
     <div class='row'>
 		
 		<div class='col-lg-12 col-signature hidden-xs'>
-		<p class='signature slideanim slide'><?php $value = get_field ('learn_headline');
+		<p class='signature signature-learn slideanim slide'><?php $value = get_field ('learn_headline');
 				if ($value) {
 					echo $value;
 				}

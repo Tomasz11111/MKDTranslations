@@ -349,6 +349,7 @@
 #services {
 	@include tablet {
 		padding-top:5vh;
+		
 	}
 	.section-title {
 		@include tablet {
@@ -361,6 +362,13 @@
 			box-shadow: 0px 1px 10px 2px lightgrey;
 			line-height: 2.8rem !important;
 		}
+	}
+}
+
+#about {
+	height: 100vh;
+	row {
+		height: 100%;
 	}
 }
 

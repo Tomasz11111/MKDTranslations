@@ -629,16 +629,12 @@
 <div class='container-fluid bg-about' id='about'>
     <div class='row'>
 		<div class='col-lg-12 col-signature hidden-xs'>
-		<p class='signature slideanim'><?php $value = get_field ('about_title');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>
+			<p class='signature slideanim'>Michał K.Dzieńdziura - your teacher and translator
 			</p>
+					
+			
 		</div>
-        <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+        <div class='col-lg-3 col-md-6 col-xs-12 col-about hiden-md hidden-sm hidden-lg'>
 			<div class='square1 slideanim'>
 				<p class='signature hidden-sm hidden-md hidden-lg'><?php $value = get_field ('about_title');
 			if ($value) {
@@ -668,7 +664,7 @@
 			?></p>
 			</div>
 		</div>
-		 <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+		 <div class='col-lg-3 col-md-6 col-xs-12 col-about col-about-middle'>
 
 			<div class='square3 slideanim'>
 				<h2><?php $value = get_field ('about_middle_box_title');
