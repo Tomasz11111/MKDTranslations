@@ -1,6 +1,4 @@
-/* --  Hero video plugin coverr.co  --
-potrzebne drobne poprawki, jest problem z dostowaniem do całości okna, przy niektórych aspect ratios
-*/
+
 
 jQuery(document).ready(function($) {
     
@@ -10,109 +8,7 @@ jQuery(document).ready(function($) {
 	showPausePlay: true
 	});
 
-    /*scaleVideoContainer();
-
-    initBannerVideoSize('.video-container .poster img');
-    initBannerVideoSize('.video-container .filter');
-    initBannerVideoSize('.video-container video');
-	
-	
-
-    $(window).on('resize', function () {
-        scaleVideoContainer();
-        scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
-    });
-
-
-    function scaleVideoContainer() {
-		if (window.matchMedia('(max-width: 768px)').matches) {
-		if(!($('.homepage-hero-module').is('.flag')) )
-			{
-		var height = $(window).height() + 5,
-        	unitHeight = parseInt(height) + 'px';
-		
-			
-        $('.homepage-hero-module').css('height', unitHeight);
-		$('.homepage-hero-module').addClass('flag');
-			}
-		}
-		else {
-			var height = $(window).height() + 5,
-        	unitHeight = parseInt(height) + 'px';
-		
-			
-        $('.homepage-hero-module').css('height', unitHeight);
-		}
-		
-		
-		
-		
-		/*$(window).on('scroll', function() {
-			
-			 unitHeight = parseInt(($(window).height - navBarHeight)) + 'px';
-			$('.homepage-hero-module').css('height', unitHeight);
-													}
-										   
-    	
-	}
-	
-	
-
-    function initBannerVideoSize(element) {
-
-        $(element).each(function () {
-            $(this).data('height', $(this).height());
-            $(this).data('width', $(this).width());
-        });
-
-        scaleBannerVideoSize(element);
-
-    }
-
-    function scaleBannerVideoSize(element) {
-
-        var windowWidth = $(window).width(),
-            windowHeight = $(window).height() + 5,
-            videoWidth,
-            videoHeight;
-
-        console.log(windowHeight);
-
-        $(element).each(function () {
-            var videoAspectRatio = $(this).data('height') / $(this).data('width');
-
-            $(this).width(windowWidth);
-
-            if (windowWidth < 1000) {
-                videoHeight = windowHeight;
-                videoWidth = videoHeight / videoAspectRatio;
-                $(this).css({'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px'});
-
-                $(this).width(videoWidth).height(videoHeight);
-            }
-
-            $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-        });
-    };*/
-	/*function showHideLangBtns() {
-		var $btnsDiv = $('.choose-language-languages-homepage'),
-			windowHeight = $(window).height();
-			
-		$(window).scroll(function() {			
-					if($(window).scrollTop() > windowHeight ) {
-				$btnsDiv.addClass('hidden'); 
-			}
-			else {
-				$btnsDiv.removeClass('hidden');
-			}
-		});
-			
-		
-	};
-	showHideLangBtns();*/
-	
+    
 					   
 		
 	function slides(elementToSlide, classActivatingSlide) {
@@ -174,24 +70,7 @@ jQuery(document).ready(function($) {
 	}
 	swipe();  
 
-    function changeBgColorParis() {
-        $('.french .inner_border').on('mouseenter', function() {
-            $('.french .outer_border').css('background-color', 'rgba(255, 255, 255, 0.1)');
-        });
-         $('.french .inner_border').on('mouseleave', function() {
-            $('.french .outer_border').css('background-color', 'rgba(0, 0, 0, 0.2)');
-        });
-    }
-    function changeBgcolorCracow() {
-        $('.polish .inner_border').on('mouseenter', function() {
-            $('.polish .outer_border').css('background-color', 'rgba(255, 255, 255, 0.1)');
-        });
-         $('.polish .inner_border').on('mouseleave', function() {
-            $('.polish .outer_border').css('background-color', 'rgba(0, 0, 0, 0.2)');
-        });
-    };
-    changeBgColorParis();
-    changeBgcolorCracow();
+    
 
     function activateIconsAnimation() {
         //funkcja do skrócenia, uogólnienie klas
@@ -516,61 +395,6 @@ jQuery(document).ready(function($) {
 		
 
 	
-	/*function hideLanguagesMob() { 
-		var $switcher = $('.language-switcher-homepage'),
-			$hamburger = $('.hamburger');
-		function hide(){
-			$switcher.addClass('hidden');
-		}
-		function show(){
-			$switcher.removeClass('hidden').css('display', 'flex');
-		}
-				
-		if(window.matchMedia ('(max-width: 767px)').matches) {
-			$(window).scroll(function() {
-				if( $(window).scrollTop() > 10 ){
-					hide();
-				}
-				else if( ($(window).scrollTop() < 10 ) && $hamburger.is('.open') ) {
-					hide();
-				}
-				else {
-					show();
-				}
-			});
-			$hamburger.on('click', function() {//czy to potrzebne?
-				if($hamburger.is('.open')) {
-					hide();
-				}
-				else {
-					show();
-				}
-				
-			});
-		}
-	}
-		function hideLanguagesPC() {
-			var $switcher = $('.language-switcher-homepage'),
-			$hamburger = $('.hamburger');
-		
-			if(window.matchMedia ('(min-width: 768px)').matches) {
-				$(window).scroll(function() {
-					if( ($(window).scrollTop() > 10 ) && !($hamburger.is('.open')) ) {
-					$switcher.addClass('hidden');
-				}
-				else {
-					$switcher.removeClass('hidden')
-				}
-			})
-				$hamburger.on('click', function() {
-					if($hamburger.is('.open')) {
-						$switcher.removeClass('hidden');
-					}
-				});
-				
-				
-		}
-	}*/
 		
 	function highlightActiveLangBtn() {
 		var language = $('html').attr('lang'),
@@ -653,4 +477,23 @@ jQuery(document).ready(function($) {
 	elSetHeight('.square2 p', '.square3 p', '.square4 p', '.square2', '.square3', '.square4');
 	}
             //ew. zmienić na css animation
+	function grayToColor () {
+		if(window.matchMedia ('(min-width: 768px)').matches) {
+		$('.square-grayscale').on('mouseenter', function() {
+			$(this).hide();
+		});
+		$('.square-learn p').on('mouseenter', function() {
+			$(this).prev().hide();
+		});
+		$('.square-learn p').on('mouseleave', function() {
+			$('.square-grayscale').show();
+		});
+		$('.square-learn').on('mouseleave', function() {
+			$('.square-grayscale').show();
+		});
+		}
+	}
+	
+	grayToColor();
+	
 });
