@@ -109,15 +109,28 @@
 
 #photos {
 	@include tablet {width: 80% !important; }
-	
+	margin-top: 5vh;
+		@include mobile {
+		margin-top: 10%;
+	}
+		@include tablet {
+		margin-bottom: 5vh;
+	}
 }
-
-#learn-language, #photos {
+	
+#learn-language { 
     margin-top: 5vh;
 	@include mobile {
 		margin-top: 10%;
 	}
+	@include tablet {
+		margin-bottom: 5vh;
+	}
 }
+
+
+
+
 
 .icons_row > div {
     height: 260px;

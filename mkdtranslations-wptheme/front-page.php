@@ -535,73 +535,43 @@
 </div>
 <div class='container-fluid' id='learn-language'>
     <div class='row'>
-        <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 french hidden-xs'>
-            <div class='outer_bg'>
-        		<div class='outer_border'>
-					<div class='inner_border'><p><a href='<?php $value = get_field ('teaching_button_left_link');
-						if ($value) {
-							echo $value;
-								}
-						else {
-							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_left');
-						if ($value) {
-							echo $value;
-						}
-						else {
-							echo 'empty'; }
-						?></a></p>
-					</div>
-            	</div>
-        	</div>
-        </div>
-		<div class='col-xs-12 hidden-sm hidden-md hidden-lg square-polish'>
-			<p class='signature signature-teaching'><a href='<?php $value = get_field ('teaching_button_left_link');
-						if ($value) {
-							echo $value;
-								}
-						else {
-							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_left');
-						if ($value) {
-							echo $value;
-						}
-						else {
-							echo 'empty'; }
-				?></a></p>
-			
-		</div>
-        <div class='col-lg-6 col-md-12 col-sm-12 col-xs-12 polish hidden-xs'>
-            <div class='outer_bg'>
-        		<div class='outer_border'>
-            		<div class='inner_border'><p><a href='<?php $value = get_field ('teaching_button_right_link');
-						if ($value) {
-							echo $value;
-								}
-						else {
-							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_right');
-						if ($value) {
-							echo $value;
-						}
-						else {
-							echo 'empty'; }
-						?></a></p>
-					</div>
-				</div>
+        
+		<div class='col-xs-12 col-lg-3 col-lg-offset-3 square-learn square-polish'>
+			<div class='square-grayscale square-grayscale-polish hidden-xs'>
+				
 			</div>
-    	</div>
-		<div class='col-xs-12 hidden-sm hidden-md hidden-lg square-french'>
-			<p class='signature signature-teaching'><a href='<?php $value = get_field ('teaching_button_right_link');
-						if ($value) {
-							echo $value;
-								}
-						else {
-							echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_right');
-						if ($value) {
-							echo $value;
-						}
-						else {
-							echo 'empty'; }
-				?></a></p>
+			<p class='signature signature-learn'><a href='<?php $value = get_field ('teaching_button_left_link');
+							if ($value) {
+								echo $value;
+									}
+							else {
+								echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_left');
+							if ($value) {
+								echo $value;
+							}
+							else {
+								echo 'empty'; }
+					?></a></p>
+		</div>
 			
+		
+        
+		<div class='col-xs-12 col-lg-3 square-learn square-french'>
+			<div class='square-grayscale square-grayscale-french hidden-xs'>
+							
+			</div>
+			<p class='signature signature-learn'><a href='<?php $value = get_field ('teaching_button_right_link');
+							if ($value) {
+								echo $value;
+									}
+							else {
+								echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_right');
+							if ($value) {
+								echo $value;
+							}
+							else {
+								echo 'empty'; }
+					?></a></p>
 		</div>
 	</div>
 </div>
