@@ -74,9 +74,10 @@
 }
 .square1-learn {
 	@extend %square;
-	background-image: url('#{$path-img}/Warsaw-center.jpg');
+	background-image: url('#{$path-img}/mkd_photo.jpg');
 		background-size: cover;
 		background-position: center;
+		border: 10px dotted $base-color-2;
 }
 .square-text {
 	font-size: 1.1rem;
@@ -117,34 +118,41 @@
 	font-weight: 600;
 }
 .square2 h2 {
-	@include tablet {
-		background-color: $base-color-2;
-	}
-}
-
-.square3 h2 {
-	@include tablet {
-		background-color: $base-color-3;
-	}
-}
-
-.square4 h2 {
-	@include tablet {
-		background-color: $base-color-1;
-	}
-}
-.square2-learn {
 	background-color: $base-color-2;
 }
-
-.square3-learn {
+.square3 h2 {
 	background-color: $base-color-3;
 }
-.square4-learn {
-	background-color: #77010c !important;
+.square4 h2 {
+	background-color: $base-color-1;
 }
-.square4-learn h2 {
-	background-color: transparent;
+
+
+.square2-learn h2, .square3-learn h2, .square4-learn h2 {
+	
+		background-color: transparent !important;
+	
 }
+
+.square2-learn > h2 > span {
+	@include tablet {
+		background-color: $base-color-2;
+		padding: 1%;
+	}
+}
+
+.square3-learn > h2 > span {
+	@include tablet {
+		background-color: $base-color-3;
+		padding: 1%;
+	}
+}
+.square4-learn > h2 > span {
+	@include tablet {
+		background-color: #77010c;
+		padding: 1%;
+	}
+}
+
 
     
