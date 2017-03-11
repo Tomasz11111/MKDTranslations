@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
 	
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 	function smoothScroll() {
-        $('.wordpress-menu a, .help a, div a, .nav-pills a ').on('click', function (event) {
+        $('.wordpress-menu a, .help a, div a, .headline-btn a, .icon-description-text a, .nav-pills a ').on('click', function (event) {
 
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== '') {
