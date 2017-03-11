@@ -10,66 +10,72 @@ else :
 	get_header( 'pages' );
 endif;
 ?>
-<div class='container-fluid bg-learn' id='about'>
+<div class='container-fluid bg-learn' id='about' style='background-image: url(<?php $value = get_field ('learn_bg_image');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>)'>
     <div class='row'>
 		
 		<div class='col-lg-12 col-signature hidden-xs'>
-		<p class='signature signature-learn slideanim slide'><?php $value = get_field ('learn_headline');
+		<p class='signature signature-learn slideanim slide'><span><?php $value = get_field ('learn_headline');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?> 
-			</p>
+			</span></p>
 		</div>
         <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 			<div class='square1-learn slideanim slide'>
-				<p class='signature hidden-sm hidden-md hidden-lg'><?php $value = get_field ('learn_headline');
+				<p class='signature hidden-sm hidden-md hidden-lg'><span><?php $value = get_field ('learn_headline');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?>
-			</p>
+					</span></p>
 			</div>
 		</div>
         <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
             <div class='square2 square2-learn slideanim slide'>
-				<h2>Experience</h2>
-				<p class='square-text square-text-learn'><?php $value = get_field ('learn_left_square');
+				<h2><span>Experience</span></h2>
+				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_left_square');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></p>
+					?></span></p>
 			</div>
 		</div>
 		 <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
 
 			<div class='square3 square3-learn slideanim slide'>
-				<h2>All levels</h2>
-				<p class='square-text square-text-learn'><?php $value = get_field ('learn_middle_square');
+				<h2><span>All levels</span></h2>
+				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_middle_square');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></p>
+					?></span></p>
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-6 col-xs-12 col-about '>
 			<div class='square4 square4-learn slideanim slide'>
-				<h2>Flexibility</h2>
-				<p class='square-text square-text-learn'><?php $value = get_field ('learn_right_square');
+				<h2><span>Flexibility</span></h2>
+				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_right_square');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></p>
+					?></span></p>
 			</div>
             
 		</div>

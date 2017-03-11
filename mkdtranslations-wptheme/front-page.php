@@ -11,26 +11,37 @@
 		</video>
 		<div class='headline'>
 			<p class='headline-text-big'>Linguistic services <span> by </span> MKDTranslations</p>
+			
 			<div class='headline-btn-container'>
-				<div class='headline-btn'><a href='#form-page'><?php $value = get_field ('hero_btn_left');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></a>
+				<div class='headline-btn-subcontainer'>
+					<div class='headline-btn bg-belt-green'><a href='#services'>My solutions and services</a>
+					</div>
+					<div class='triangle bg-belt-green'></div>
 				</div>
-				<div  class='headline-btn'><a href='#about'><span class='btn-text'><?php $value = get_field ('hero_btn_right');
+				<div class='headline-btn-subcontainer'>
+					<div class='triangle bg-belt-green'></div>
+					<div class='headline-btn bg-belt-purple'><a href='#about'>About</a>
+					</div>
+					<div class='triangle bg-belt-purple'></div>
+				</div>
+				
+			</div>
+		</div>
+				
+				
+				
+				<!--<div  class='headline-btn'><a href='#about'><span class='btn-text'><?php $value = get_field ('hero_btn_right');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></a>
-				</div>
-        	</div>
-		</div>
-	</div>
+				</div>-->
+			
+        
+</div>
+
 
 <!-- MY SOLUTIONS AND SERVICES SECTIONS -->
 
@@ -83,7 +94,7 @@
 				else {
 					echo 'empty'; }
 				?></p>
-				<p class='icon-description-text text-white'><a>Read more</a></p>
+				<p class='icon-description-text text-white'><a href='#translation'>Read more</a></p>
 			</div>
         </div>
 		    
@@ -110,7 +121,7 @@
 					echo 'empty'; }
 				?>
 				</p>
-				<p class='icon-description-text text-white'><a>Read more</a></p>
+				<p class='icon-description-text text-white'><a href='#teaching'>Read more</a></p>
 			</div>
         </div>
 		<!-- Additional services -->
@@ -537,9 +548,7 @@
     <div class='row'>
         
 		<div class='col-xs-12 col-lg-3 col-lg-offset-3 square-learn square-polish'>
-			<div class='square-grayscale square-grayscale-polish hidden-xs'>
-				
-			</div>
+			
 			<p class='signature signature-learn'><a href='<?php $value = get_field ('teaching_button_left_link');
 							if ($value) {
 								echo $value;
@@ -552,14 +561,12 @@
 							else {
 								echo 'empty'; }
 					?></a></p>
-		</div>
+		
 			
 		
-        
+		</div>
 		<div class='col-xs-12 col-lg-3 square-learn square-french'>
-			<div class='square-grayscale square-grayscale-french hidden-xs'>
-							
-			</div>
+			
 			<p class='signature signature-learn'><a href='<?php $value = get_field ('teaching_button_right_link');
 							if ($value) {
 								echo $value;
