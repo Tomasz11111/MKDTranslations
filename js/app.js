@@ -16,10 +16,10 @@ jQuery(document).ready(function($) {
 			$(window).scroll(function () {
 				$(elementToSlide).each(function () {
 					var pos = $(this).offset().top;
-
-					var winTop = $(window).scrollTop();
+						winHeight = window.innerHeight,
+					 	winTop = $(window).scrollTop();
 					console.log(winTop);
-					if (pos < winTop + 600) {
+					if (pos < (winTop + winHeight)) {
 						$(this).addClass(classActivatingSlide);
 					}
 				});
