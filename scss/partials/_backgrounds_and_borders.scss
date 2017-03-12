@@ -73,7 +73,10 @@
 		}
 	}
 } 
-
+.bg-belt-learn {
+	border-bottom: 10px dotted white;
+	border-top: 10px dotted white;
+}
 
 // Subpages header images
 
@@ -149,6 +152,17 @@
 	background-image: url('#{$path-img}/paris-mob-gray.jpeg');
 	background-size: cover;
 	background-position: center;
+}
+
+// Learn
+
+.triangle-learn {
+	width: 40px;
+	height: 40px;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 70%;
+	
 }
 
 

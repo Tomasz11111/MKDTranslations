@@ -385,6 +385,15 @@
 	}
 }
 
+.col-learn {
+	@extend %flex-centered;
+	@include tablet {
+		height: 60vh;
+	}
+	@include mobile {
+		padding: 0 !important;
+	}
+}
 
 
 

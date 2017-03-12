@@ -564,7 +564,7 @@ h4 {
 .square2-learn > p > span {
 	font-weight: 300;
 	@include tablet {
-		background-color: $base-color-2;
+		
 		padding: 1%;
 		font-size: 1.8rem !important;
 	}
@@ -575,7 +575,7 @@ h4 {
 .square3-learn > p > span {
 	font-weight: 300;
 	@include tablet {
-		background-color: $base-color-3;
+		
 		padding: 1%;
 		font-size: 1.8rem !important;
 	}
@@ -586,7 +586,7 @@ h4 {
 .square4-learn > p > span {
 	font-weight: 300;
 	@include tablet {
-		background-color: #77010c;
+		
 		padding: 1%;
 		font-size: 1.8rem !important;
 	}
@@ -699,6 +699,12 @@ h4 {
 	a {
 	color: $base-color-2 !important;
 		
+	}
+}
+.icon-headline-learn {
+	span {
+		line-height: 1.7rem;
+		padding: 1%;
 	}
 }
 

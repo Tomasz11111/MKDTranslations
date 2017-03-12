@@ -14,14 +14,14 @@
 	<header>
 		<div class="navigation-container bg-dimgray">
 <!--MKD Translations headline to display on page load -->
-			<p class="headline-text-sidepages">Linguistic services <span> by </span> MKDTranslations</p>
+			<p class="headline-text-sidepages">Linguistic services <span style='background-color:<?php the_field('color'); ?> !important'> by </span> MKDTranslations</p>
 
 <!-- Hamburger menu -->
 			<div class='hamburger-container'>
 					<div class="hamburger hamburger-sidepages">
-						<span></span>
-						<span></span>
-						<span></span>
+						<span style='background-color:<?php the_field('color'); ?> !important'></span>
+						<span style='background-color:<?php the_field('color'); ?> !important'></span>
+						<span style='background-color:<?php the_field('color'); ?> !important'></span>
 					</div>
 					<p class="menutext_hamburger">MENU
 					</p>

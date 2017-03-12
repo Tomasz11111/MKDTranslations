@@ -77,7 +77,8 @@
 	background-image: url('#{$path-img}/mkd_photo.jpg');
 		background-size: cover;
 		background-position: center;
-		border: 10px dotted $base-color-2;
+		border-width: 10px;
+		border-style: dotted;
 }
 .square-text {
 	font-size: 1.1rem;
