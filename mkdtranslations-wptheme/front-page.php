@@ -19,7 +19,7 @@
 					<div class='triangle bg-belt-green'></div>
 				</div>
 				<div class='headline-btn-subcontainer'>
-					<div class='triangle bg-belt-green'></div>
+					
 					<div class='headline-btn bg-belt-purple'><a href='#about'>About</a>
 					</div>
 					<div class='triangle bg-belt-purple'></div>
@@ -75,7 +75,7 @@
 		<div class='col-lg-8 hidden-xs'>
 			<h2 class='services-headlines text-teal'>ADDITIONAL SERVICES</h2>
 		</div>
-		<!-- Core services -->
+<!-- Core services -->
         <div class='col-xs-12 col-md-6 col-lg-2 bg-belt-green border-white'>
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height'>
 			</div>
@@ -124,22 +124,22 @@
 				<p class='icon-description-text text-white'><a href='#teaching'>Read more</a></p>
 			</div>
         </div>
-		<!-- Additional services -->
+<!-- Additional services -->
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg'>
 			<h2 class='services-headlines text-teal'>ADDITIONAL SERVICES</h2>
 		</div>
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-green1'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/icons-green-software_gainsboro.png'>
+        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue1'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
 			</div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service3_icon_headline');
+				<h4 class='icon-headline icon-headline-animation'><span class='bg-headline-home1'><?php $value = get_field ('service3_icon_headline');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?>
-				</h4>
+					</span></h4>
 			</div>
             <div class='icon_description'>
 				<p class='icon-description-text'><?php $value = get_field ('service3_icon_description');
@@ -153,18 +153,18 @@
 			</div>
         </div>
 		
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-green2'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/icons-green-style.png'>
+        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue2'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'>
 			</div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service4_icon_headline');
+				<h4 class='icon-headline icon-headline-animation'><span class='bg-headline-home1'><?php $value = get_field ('service4_icon_headline');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
 			?>
-				</h4>
+					</span></h4>
 			</div>
             <div class='icon_description'>
 				<p class='icon-description-text'><?php $value = get_field ('service4_icon_description');
@@ -177,16 +177,16 @@
 				</p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-green1'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/revision.png'>
+        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue1'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service5_icon_headline');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='bg-headline-home1'><?php $value = get_field ('service5_icon_headline');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></h4>
+				?></span></h4>
 			</div>
             <div class='icon_description'>
 				<p class='icon-description-text'><?php $value = get_field ('service5_icon_description');
@@ -198,16 +198,16 @@
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-green2'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src = '<?php echo get_template_directory_uri(); ?>/images/culturalconsultancy.png'>
+        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue2'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field ('service6_icon_headline');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='bg-headline-home1'><?php $value = get_field ('service6_icon_headline');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
-			?></h4>
+				?></span></h4>
 			</div>
             <div class='icon_description'>
 				<p class='icon-description-text'><?php $value = get_field ('service6_icon_description');
@@ -227,13 +227,13 @@
 
 <div class='container-fluid' id='translation'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12 col-translation-mobile'><h1 class='section-title text-teal text-mobile-white'><?php $value = get_field ('translation_section_title');
+        <div class='col-lg-12 col-xs-12 col-translation-mobile'><h1 class='section-title'><span class='bg-headline-home1'><?php $value = get_field ('translation_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
-			?></h1>
+			?></span></h1>
             <p class='section-title-lead text-mobile-white'><?php $value = get_field ('translation_section_lead');
 			if ($value) {
 				echo $value;
@@ -248,7 +248,7 @@
 <div class='container-fluid hidden-xs' id='photos'>
     <div class='row'>
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-tourism-pic pic-square'>
-            <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
+            <div class='portfolio-overlay'><p class='portfolio-overlay-text bg-belt-green'><?php $value = get_field ('translation_speciality_1');
 			if ($value) {
 				echo $value;
 			}
@@ -265,7 +265,7 @@
 
         </div>
         <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
-			<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_2');
+			<p class='portfolio-overlay-text '><?php $value = get_field ('translation_speciality_2');
 			if ($value) {
 				echo $value;
 			}
@@ -283,7 +283,7 @@
 			</div>
         </div>
 
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
+        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay '>
 				<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
 			if ($value) {
 				echo $value;
@@ -482,7 +482,7 @@
         
 			<div class='col-lg-12 col-md-12 morespecialties'>
    
-				<div class='btn-standard btn-teal hidden-xs'><a><?php $value = get_field ('translation_button');
+				<div class='btn-standard btn-blue hidden-xs'><a><?php $value = get_field ('translation_button');
 				if ($value) {
 					echo $value;
 				}
@@ -490,7 +490,7 @@
 					echo 'empty'; }
 				?></a>
 				</div>
-				<div class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('translation_button_2_link');
+				<div class='btn-blue-bgfullcolor'><a href='<?php $value = get_field('translation_button_2_link');
 					if ($value) {
 						echo $value; }
 					else {
@@ -526,13 +526,13 @@
 
 <div class='container-fluid' id='teaching'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-purple'><?php $value = get_field ('teaching_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-purple'><span class='bg-headline-home2'><?php $value = get_field ('teaching_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
-			?></h1>
+			?><span></h1>
             <p class='section-title-lead'><?php $value = get_field ('teaching_section_lead');
 				if ($value) {
 					echo $value;
