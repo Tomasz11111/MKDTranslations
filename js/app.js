@@ -290,14 +290,13 @@ jQuery(document).ready(function($) {
 							$menutext.addClass('hidden');
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 			
-								$menu.removeClass('invisible hidden').addClass('nav100vh').css('background-color', 'transparent');
+								$menu.removeClass('invisible hidden').addClass('nav100vh');
 								$container.addClass('nav100vh');
 								$headline.addClass('hidden');
 							}
 		/* dla homepage */  else {
 								$menu.removeClass('invisible').addClass('nav100vh');
-								$container.addClass('nav100vh navigation-container-dimgray');
-								$container.addClass('nav100vh navigation-container-dimgray');
+								$container.addClass('nav100vh');
 								$switcher.addClass('hidden');
 							}
 							
@@ -473,27 +472,26 @@ jQuery(document).ready(function($) {
 	
 	}
 	
-	if(window.matchMedia ('(max-width: 768px)').matches) { 
+	if(window.matchMedia ('(max-width: 767px)').matches) { 
 	elSetHeight('.square2 p', '.square3 p', '.square4 p', '.square2', '.square3', '.square4');
 	}
             //ew. zmienić na css animation
-	function grayToColor () {
-		if(window.matchMedia ('(min-width: 768px)').matches) {
-		$('.square-grayscale').on('mouseenter', function() {
-			$(this).hide();
-		});
-		$('.square-learn p').on('mouseenter', function() {
-			$(this).prev().hide();
-		});
-		$('.square-learn p').on('mouseleave', function() {
-			$('.square-grayscale').show();
-		});
-		$('.square-learn').on('mouseleave', function() {
-			$('.square-grayscale').show();
-		});
-		}
-	}
 	
-	grayToColor();
+	
+	
+	function squareLearnMobile() {
+		
+		if(window.matchMedia ('(max-width: 767px)').matches) {
+			var $square = $('.square-learn');
+			$square.each(function() {
+				var color = $(this).find('span').css('backgroundColor');
+				$(this).css('background-color', color);
+			}); 
+				
+		}
+	} //dodać resize?
+	squareLearnMobile();
+	$(window).on('resize', squareLearnMobile());
+					   
 	
 });
