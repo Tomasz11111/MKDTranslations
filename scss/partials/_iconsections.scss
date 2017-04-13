@@ -140,9 +140,27 @@
 		margin-bottom: 0;
 	}
 }
+
+.row-icons {
+	display: flex;
+	flex-wrap: wrap;
+}
 #how_i_teach_icons {
 	@include tablet {
 		margin-top: 5vh;
+	}
+}
+
+//icons in mobile versions
+
+.icon-core1 {
+	@include mobile {
+		src: '#{$path-img}/translation-blue.png';
+	}
+}
+.icon-core2 {
+	@include mobile {
+		src: '#{$path-img}/teaching-blue.png';
 	}
 }
 

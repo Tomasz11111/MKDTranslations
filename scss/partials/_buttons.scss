@@ -420,10 +420,10 @@
 	font-size: 3rem;
 	color: $base-color-1;
 	top: 40% !important;
-	background-color: rgba($base-color-1, .8);
 	padding: 8%;
 	border-radius: 50%;
 	color: white;
+	
 	
 }
 
@@ -448,7 +448,9 @@
 	height: 40px;
 	transform: rotate(45deg);
 	position: absolute;
-	top: 90%;
+	@include tablet {
+		top: 90%;
+	}
 	margin: 0 auto;
 	animation-name: buttonTriangle;
 	animation-duration: 2s;
@@ -456,15 +458,16 @@
 	
 
 }
-.triangle bg-belt-green {
+
+.triangle-mobile-purple {
 	@include mobile {
-			top: 59%;
-		}
+		top: 83% !important;
 	}
-.triangle bg-belt-purple {
-	@include mobile{
-				top: 82%;
-			}
+}
+.triangle-mobile-blue {
+	@include mobile {
+		top: 60% !important;
+	}
 }
 
 // Learn

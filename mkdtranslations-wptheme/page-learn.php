@@ -19,32 +19,34 @@ endif;
 				?>)'>
     <div class='row'>
 		
-		<div class='col-lg-12 col-signature hidden-xs'>
-		<p class='signature signature-learn slideanim slide'><span style='background-color:<?php the_field('color'); ?> !important'><?php $value = get_field ('learn_headline');
+		<div class='col-lg-12 col-xs-12 col-signature col-signature-learn '>
+		<p class='hidden-lg hidden-sm hidden-md signature-learn slideanim slide'><span class='hidden-lg hidden-sm hidden-md' style='background-color:<?php the_field('color'); ?> !important'><?php $value = get_field ('learn_headline');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?> </span>
+			</p>
+			<p class='hidden-xs signature signature-learn slideanim slide' style='color:<?php the_field('color'); ?> !important'><?php $value = get_field ('learn_headline');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?> 
-			</span></p>
+			</p>
 		</div>
-        <div class='col-lg-3 col-md-6 col-sm-6 col-xs-12 col-learn'>
-			<div class='square1-learn slideanim slide' style='border-color:<?php the_field('color'); ?>'>
-				<p class='signature hidden-sm hidden-md hidden-lg'><span><?php $value = get_field ('learn_headline');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>
+        <div class='col-lg-3 col-md-3 col-sm-6 hidden-xs col-learn col-learn-left'>
+			<div class='square1-learn slideanim slide'>
+				<p class='signature-photomkd'><span style='background-color:<?php the_field('color'); ?>'>Michał K.Dzieńdziura
 					</span></p>
 			</div>
 		</div>
-        <div class='col-lg-3 col-md-6 col-sm-6 col-xs-12 col-learn'>
-            <div class='square2 square2-learn slideanim slide'>
-				<h2><span style='background-color:<?php the_field('color'); ?>'>Experience</span></h2>
-				<p class='square-text square-text-learn'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_left_square');
+        <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-left-middle'>
+            <div class='square2 square-learn square2-learn slideanim slide' style='background-color:<?php the_field('color'); ?>'>
+				<h2><span>Experience</span></h2>
+				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_left_square');
 				if ($value) {
 					echo $value;
 				}
@@ -53,11 +55,11 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-		 <div class='col-lg-3 col-md-6 col-sm-6 col-xs-12 col-learn'>
+		 <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right-middle'>
 
-			<div class='square3 square3-learn slideanim slide'>
-				<h2><span style='background-color:<?php the_field('color_adjacent1'); ?>'>All levels</span></h2>
-				<p class='square-text square-text-learn'><span style='background-color:<?php the_field('color_adjacent1'); ?>'><?php $value = get_field ('learn_middle_square');
+			<div class='square3 square-learn square3-learn slideanim slide' style='background-color:<?php the_field('color_adjacent1'); ?>'>
+				<h2><span>All levels</span></h2>
+				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_middle_square');
 				if ($value) {
 					echo $value;
 				}
@@ -66,10 +68,10 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-		<div class='col-lg-3 col-md-6 col-sm-6 col-xs-12 col-learn '>
-			<div class='square4 square4-learn slideanim slide'>
-				<h2><span style='background-color:<?php the_field('color_adjacent2'); ?>'>Flexibility</span></h2>
-				<p class='square-text square-text-learn'><span style='background-color:<?php the_field('color_adjacent2'); ?>'><?php $value = get_field ('learn_right_square');
+		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right '>
+			<div class='square4 square-learn square4-learn slideanim slide' style='background-color:<?php the_field('color_adjacent2'); ?>'>
+				<h2><span>Flexibility</span></h2>
+				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_right_square');
 				if ($value) {
 					echo $value;
 				}
@@ -93,7 +95,7 @@ endif;
  <div class='container-fluid bg-grey' id='how_i_teach'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12'>
-			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section-title text-white'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_section_title');
+			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_section_title');
 			if ($value) {
 				echo $value;
 			}
@@ -294,7 +296,7 @@ endif;
 
 <div class='container' id='learn-polish-pricing'>
 	<div class='row'>
-		<div class='col-lg-12'><h1 class='section-title text-white'><span style='background-color:<?php the_field('color'); ?>'>Pricing</span></h1>
+		<div class='col-lg-12'><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'>Pricing</span></h1>
 			<p class='section-title-lead'>Choose a  payment plan that works for you.</p>
 		</div>
 		<div class='col-lg-12'>

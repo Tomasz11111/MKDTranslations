@@ -28,7 +28,17 @@ h3 {
 	margin-top: 0;
 } */
 h4 {
-    font-size: 1.2rem;
+	
+	@include tablet-only {
+		font-size: 1.6rem;
+	}
+	@include medium-device {
+		font-size: 1.4rem;
+	}
+	@include large {
+		font-size: 1.2rem;
+	}
+	
 }
 .choose-language {
 	text-align: center;
@@ -140,9 +150,14 @@ h4 {
 	line-height: 3rem !important; //to może do przerobienia 
 	margin-top: 7vh;
 	@include mobile {
-		font-size: 1.8rem;
+		font-size: 2.2rem;
         width: 100%;
 		margin-top: 10%;
+	}
+}
+.section-title-pricing {
+	@include tablet {
+		margin-bottom: 5vh;
 	}
 }
 .section-title-lead {
@@ -163,8 +178,16 @@ h4 {
 
 .icon-description-text {
 
-	font-size: $base-font-size;
-	
+	font-size: 1.1rem;
+	@include medium-device {
+		font-size: 1.2rem;
+	}
+	@include tablet-only {
+		font-size: 1.5rem;
+	}
+	@include large{
+		font-size: 1.1rem;
+	}
 	text-align: center;
     padding-top: 1vh;
 	padding-bottom: 3vh;
@@ -196,6 +219,7 @@ h4 {
 .icon_title {
 	height:3rem;
 }
+
 
 .icon-headline-animation {
     -webkit-animation-name: emerge;
@@ -263,7 +287,7 @@ h4 {
 .subpage-header-title {
 	border: 3px solid white !important;
 	color: white !important;
-	background-color: rgba($base-color-1, .7) !important;
+	opacity: .7;
 	padding: 5px;
 	font-size: 600;
 	font-size: 1.8rem;
@@ -470,9 +494,7 @@ h4 {
 	text-align: center;
 	margin-top: 5vh;
 	@include mobile {
-		font-size: 1.1rem;
-		height: 1.5rem;
-		line-height: 1.5rem;
+		height: auto;
 	}
 		
 }
@@ -658,7 +680,7 @@ h4 {
 //Services
 
 .services-headlines {
-	text-align: center;
+	text-align: center !important;
 	font-size:1.3rem;
 	font-weight: 900;
 	@include mobile {
@@ -679,6 +701,9 @@ h4 {
 		background-color: $base-color-2 !important;	
 		padding-left:1%;
 		padding-right:1%;
+			@include mobile {
+				padding: 0.8%;
+			}
 	}
 	
 }
@@ -707,15 +732,6 @@ h4 {
 		padding: 1%;
 	}
 }
-
-
-
-
-
-
-
-
-
 
 
 

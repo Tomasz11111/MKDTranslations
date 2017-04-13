@@ -17,7 +17,7 @@
 .bg-learn {
 	@extend %fullpage-bgimage;
 	@include mobile {
-		background: none;
+		background-size: 100% 57% !important;
 	}
 }
 
@@ -31,7 +31,6 @@
 
 #translation {
 	@include mobile {
-		background-color: teal; 
 		padding-bottom: 5%;
 	}
 }
@@ -168,14 +167,13 @@
 .bg-headline-home1 {
 	color:white;
 	background-color: $base-color-3;
-	padding: 1%;
+	padding: 0.5%;
 }
 .bg-headline-home2 {
 	color: white;
 	background-color: $base-color-2;
-	padding: 1%;
+	padding: 0.5%;
 }
-
 
    
 

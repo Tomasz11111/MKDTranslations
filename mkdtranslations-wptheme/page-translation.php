@@ -12,7 +12,7 @@ endif;
 ?>
 <div class="container-fluid" id="terms_title">
             <div class="row">
-    <div class="col-lg-12 col-xs-12 subpage-header subpage-header-translation"><p class="subpage-header-title"><span><?php the_title() ?></span></p>
+    <div class="col-lg-12 col-xs-12 subpage-header subpage-header-translation"><p class="subpage-header-title" style='background-color:<?php the_field('color');?>'><span><?php the_title() ?></span></p>
                 
             </div>
          </div>
@@ -22,14 +22,14 @@ endif;
             
 				
 
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-teal text-mobile-white'><?php $value = get_field ('translation_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('translation_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
-			?></h1>
-            <p class='section-title-lead text-mobile-white'>
+			?></span></h1>
+            <p class='section-title-lead'>
 				 <?php if ( have_posts() ): while (have_posts() ) : the_post() ;?>
 				<?php $value = get_field ('translation_section_lead');
 			if ($value) {
@@ -263,11 +263,11 @@ endif;
 				</div>
 			</div>
 			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style='background-color:<?php the_field('color'); ?>'></span>
 				<span class="sr-only">Previous</span>
 		  	</a>
 			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style='background-color:<?php the_field('color'); ?>'></span>
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
@@ -279,13 +279,13 @@ endif;
 
  <div class='container-fluid bg-grey' id='process'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-teal text-mobile-white'><?php $value = get_field ('process_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('process_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
-			?></h1>
+			?></span></h1>
             <p class='section-title-lead'><?php $value = get_field ('process_section_lead');
 				if ($value) {
 					echo $value;
@@ -300,21 +300,21 @@ endif;
     <div class='row'>
         <div class='col-lg-2'></div>
         <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/trophy-green.jpg' class='icon-set-height'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('process_icon_headline_1');
+				<h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?>
-				</h4>
+					</span></h4>
 			</div>
             
             <ul class='high_standards_and_guidelines_list'>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_1');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_1');
 					if ($value) {
 						echo $value;
 					}
@@ -323,7 +323,7 @@ endif;
 					?>
 					</li>
 
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_2');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_2');
 					if ($value) {
 						echo $value;
 					}
@@ -332,7 +332,7 @@ endif;
 					?>
 				</li>
 
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_3');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_3');
 					if ($value) {
 						echo $value;
 					}
@@ -341,7 +341,7 @@ endif;
 					?>
 				</li>
 
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_4');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_4');
 					if ($value) {
 						echo $value;
 					}
@@ -350,7 +350,7 @@ endif;
 					?>
 				</li>
 
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_5');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_5');
 					if ($value) {
 						echo $value;
 					}
@@ -361,19 +361,19 @@ endif;
             </ul>
         </div>
         <div class='col-lg-4'>
-			<div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-green.jpg' class='icon-set-height'>
+			<div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height'>
 			</div>
             
-            <div class='icon_title'><h4 class='icon-headline text-teal icon-headline-animation'><?php $value = get_field('process_icon_headline_2');
+            <div class='icon_title'><h4 class='icon-headline text-white icon-headline-animation'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></h4>
+				?></span></h4>
 			</div>
             <ul class='high_standards_and_guidelines_list'>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_1');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_1');
 					if ($value) {
 						echo $value;
 					}
@@ -381,7 +381,7 @@ endif;
 						echo 'empty'; }
 					?>
 				</li>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='hidden check_full'><img src='<?php echo get_template_directory_uri()?>/images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_2');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='hidden check_full'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_2');
 					if ($value) {
 						echo $value;
 					}
@@ -389,7 +389,7 @@ endif;
 						echo 'empty'; }
 					?>
 				</li>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-green.png' class='hidden check_full'><img src='<?php echo get_template_directory_uri()?>.images/check-green-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_3');
+                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='hidden check_full'><img src='<?php echo get_template_directory_uri()?>.images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_3');
 					if ($value) {
 						echo $value;
 					}
@@ -427,27 +427,27 @@ endif;
         
            
     <div class='row'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-teal'><?php $value = get_field('pricing_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section-title section-title-pricing text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
-			?></h1>
+			?></span></h1>
                 
             </div>
           
         <div class='col-lg-4'>    
     
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/price-green.jpg' class='icon-set-height'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_1');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></h4>
+				?></span></h4>
 			</div>
             <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_1');
 				if ($value) {
@@ -459,15 +459,15 @@ endif;
 			</div>
          </div>
          <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/surcharges-green.jpg' class='icon-set-height'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_2');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></h4>
+				?></span></h4>
 			</div>
             <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_2');
 				if ($value) {
@@ -479,15 +479,15 @@ endif;
 			</div>
        </div>
        <div class='col-lg-4'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-green.jpg' class='icon-set-height'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height'>
 		   </div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-teal'><?php $value = get_field('pricing_icon_headline_3');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_3');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></h4>
+				?></span></h4>
 		   </div>
            <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_3');
 				if ($value) {
@@ -502,19 +502,19 @@ endif;
 		   </div>
 		</div>
 		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 morespecialties'>
-			<div class='btn-teal' id='btn-pricing'><span><a href='<?php $value = get_field('pricing_button_left_link');
+			<div class='btn-learn' style='border-color:<?php the_field('color');?>'><a href='<?php $value = get_field('pricing_button_left_link');
 				if ($value) {
 					echo $value; }
 				else {
-					echo 'empty'; }?>'><?php $value = get_field ('pricing_button_left');
+					echo 'empty'; }?>' style='color:<?php the_field('color');?>'><?php $value = get_field ('pricing_button_left');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></a></span>
+				?></a>
 			</div>
-            <div class='btn-teal-bgfullcolor'><a href='<?php $value = get_field('pricing_button_right_link');
+            <div class='btn-learn-bgfullcolor' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php $value = get_field('pricing_button_right_link');
 				if ($value) {
 					echo $value; }
 				else {

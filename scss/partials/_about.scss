@@ -53,6 +53,29 @@
 		color: inherit !important;
 	}
 }
+.signature-learn {
+	@include mobile {
+		font-size: 2.5rem;
+		margin-top: 8vh;
+		background-color: transparent;
+		font-weight: 900;
+	}
+}
+.col-signature-learn {
+	@include mobile {
+		justify-content: center !important;
+		align-items: center !important;
+		height: 100vw;
+	}
+}
+.signature-photomkd {
+	span {
+		color: white;
+		text-decoration: none !important;
+		font-size: 1.6rem;
+		font-weight: 900;
+	}
+}
 %square {
 	width: 23vw;
 	height: 23vw;
@@ -77,8 +100,9 @@
 	background-image: url('#{$path-img}/mkd_photo.jpg');
 		background-size: cover;
 		background-position: center;
-		border-width: 10px;
-		border-style: dotted;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
 }
 .square-text {
 	font-size: 1.1rem;
@@ -91,25 +115,15 @@
 }
 .square2 {
 	@extend %square;
-	background-color: $base-color-2;
-	@include tablet {
-		background-color: transparent;
-	}
+	
 }
 .square3 {
 	@extend %square;
-	background-color: rgb(0, 63, 128);
-	@include tablet {
-		background-color: transparent;
-		
-	}
+	
 }
 .square4 {
 	@extend %square;
-	background-color: $base-color-1;
-	@include tablet {
-		background-color: transparent;
-	}
+	
 }
 
 .square2 h2, .square3 h2, .square4 h2 {
@@ -118,39 +132,27 @@
 	margin-top: 5%;
 	font-weight: 600;
 }
-.square2 h2 {
-	background-color: $base-color-2;
-}
-.square3 h2 {
-	background-color: $base-color-3;
-}
-.square4 h2 {
-	background-color: $base-color-1;
-}
 
 
-.square2-learn h2, .square3-learn h2, .square4-learn h2 {
-	
-		background-color: transparent !important;
-	
-}
+
+
 
 .square2-learn > h2 > span {
 	@include tablet {
-		background-color: $base-color-2;
+		
 		padding: 1%;
 	}
 }
 
 .square3-learn > h2 > span {
 	@include tablet {
-		background-color: $base-color-3;
+		
 		padding: 1%;
 	}
 }
 .square4-learn > h2 > span {
 	@include tablet {
-		background-color: #77010c;
+		
 		padding: 1%;
 	}
 }
