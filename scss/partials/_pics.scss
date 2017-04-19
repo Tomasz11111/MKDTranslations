@@ -18,6 +18,12 @@
 		position: relative;
 		height: 100vw;
 	}
+	@include medium-device {
+		height: 33.33vw;
+	}
+	@include large {
+		height: 40vh;
+	}
 }
 
 

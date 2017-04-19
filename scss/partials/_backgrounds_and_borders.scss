@@ -12,6 +12,7 @@
 		padding: 0;
 		height: auto;
 	}
+	
 	//background-image: url('#{$path-img}/about.jpeg');//
 }
 .bg-learn {
@@ -51,6 +52,9 @@
 	height: 20vh;
 	@include mobile {
 		height: auto;
+	}
+	@include medium-device-portrait {
+		height: 10vh;
 	}
 
 

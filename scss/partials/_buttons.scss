@@ -148,6 +148,10 @@
 			
 			
 		}
+	@include medium-device {
+		margin-bottom: 0 !important;
+		margin-top: 0 !important;
+	}
 	
 	
 }
@@ -208,6 +212,10 @@
 	}
 	margin-bottom: 8% !important;
 	margin-top: 8% !important;
+	@include medium-device {
+		margin-bottom: 4% !important;
+		margin-top: 4% !important;
+	}
 }
 
 .btn-learn {
@@ -372,6 +380,9 @@
 
 .morespecialties, .pricing-buttons {
 	@extend %flex-centered;
+	@include medium-device {
+		height: auto;
+	}
 	
 	
 }

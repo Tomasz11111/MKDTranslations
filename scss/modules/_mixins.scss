@@ -22,6 +22,11 @@
 		@content;
 	}
 }
+@mixin medium-device-portrait {
+	@media all and (min-width:#{$medium}) and (orientation: portrait) {
+		@content;
+	}
+}
 @mixin large {
 	@media all and (min-width: #{$large}) {
 		@content;

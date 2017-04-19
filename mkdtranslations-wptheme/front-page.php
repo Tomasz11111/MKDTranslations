@@ -69,10 +69,10 @@
 </div>
 <div class='container-fluid' id='services_content'>
     <div class='row row-icons row-icons-services'>
-		<div class='col-lg-4 col-xs-12'>
+		<div class='col-lg-4 col-md-12 col-xs-12'>
 			<h2 class='services-headlines text-teal'>CORE SERVICES</h2>
 		</div>
-		<div class='col-lg-8 hidden-xs'>
+		<div class='col-lg-8 hidden-md hidden-xs'>
 			<h2 class='services-headlines text-teal'>ADDITIONAL SERVICES</h2>
 		</div>
 <!-- Core services -->
@@ -358,7 +358,7 @@
 
 <div class='container-fluid'>
 	<div class='row'>
-		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
+		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-md hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
 			<div class='carousel-inner' role='listbox'>
 			<div class='item active portfolio-tourism-pic pic-square'>
 			<div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
@@ -547,7 +547,7 @@
 <div class='container-fluid' id='learn-language'>
     <div class='row'>
         
-		<div class='col-xs-12 col-lg-3 col-lg-offset-3 square-learn square-polish'>
+		<div class='col-xs-12 col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-3 square-learn square-polish'>
 			
 			<p class='signature signature-learn'><a href='<?php $value = get_field ('teaching_button_left_link');
 							if ($value) {
@@ -605,13 +605,13 @@
 
 <div class='container-fluid bg-about' id='about'>
     <div class='row'>
-		<div class='col-lg-12 col-signature hidden-xs'>
+		<div class='col-lg-12 col-md-12 col-signature col-signature-about hidden-xs'>
 			<p class='signature slideanim'>Michał K.Dzieńdziura - your teacher and translator
 			</p>
 					
 			
 		</div>
-        <div class='col-lg-3 col-md-6 col-xs-12 col-about hiden-md hidden-sm hidden-lg'>
+        <div class='col-lg-3 col-xs-12 col-about hidden-md hidden-sm hidden-lg'>
 			<div class='square1 slideanim'>
 				<p class='signature hidden-sm hidden-md hidden-lg'><?php $value = get_field ('about_title');
 			if ($value) {
@@ -623,7 +623,7 @@
 			</p>
 			</div>
 		</div>
-        <div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+        <div class='col-lg-3 col-md-3 col-xs-12 col-about'>
             <div class='square2 slideanim'>
 				<h2 style='background-color:<?php the_field('color')?>'><?php $value = get_field ('about_left_box_title');
 			if ($value) {
@@ -641,7 +641,7 @@
 			?></p>
 			</div>
 		</div>
-		 <div class='col-lg-3 col-md-6 col-xs-12 col-about col-about-middle'>
+		 <div class='col-lg-3 col-md-3 col-xs-12 col-about col-about-middle'>
 
 			<div class='square3 slideanim'>
 				<h2 style='background-color:<?php the_field('color_adjacent1')?>'><?php $value = get_field ('about_middle_box_title');
@@ -660,7 +660,7 @@
 			?> </p>
 			</div>
 		</div>
-		<div class='col-lg-3 col-md-6 col-xs-12 col-about'>
+		<div class='col-lg-3 col-md-3 col-xs-12 col-about'>
 			<div class='square4 slideanim'>
 				<h2 style='background-color:<?php the_field('color_adjacent2')?>'><?php $value = get_field ('about_right_box_title');
 			if ($value) {

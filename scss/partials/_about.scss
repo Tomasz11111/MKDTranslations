@@ -6,6 +6,9 @@
 	@include mobile {
 		padding: 0 !important;
 	}
+	@include medium-device-portrait {
+		height: 30vh;
+	}
 }
 
 .col-about-middle {
@@ -25,6 +28,11 @@
 	}
 	@include mobile {
 		padding: 0 !important;
+	}
+}
+.col-signature-about {
+	@include medium-device-portrait {
+		height: auto;
 	}
 }
 .signature {
