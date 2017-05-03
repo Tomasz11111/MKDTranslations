@@ -386,6 +386,11 @@
 	
 	
 }
+.pricing-buttons {
+	@include medium-device {
+		margin-top: 5vh;
+	}
+}
 
 
 

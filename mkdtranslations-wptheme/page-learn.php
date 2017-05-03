@@ -384,7 +384,7 @@ endif;
 	
 <!-- BUTTONS -->
 		
-<div class='col-lg-12 morespecialties'>
+<div class='col-lg-12 pricing-buttons'>
    
 			<div class='btn-learn' style='border-color:<?php the_field('color');?>'><a href=''><?php $value = get_field ('learn_button_1');
 			if ($value) {

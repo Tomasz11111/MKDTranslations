@@ -501,7 +501,7 @@ endif;
                  	<img src='<?php echo get_template_directory_uri()?>/images/PayPal.svg' alt='PayPal logo'><img src='<?php echo get_template_directory_uri()?>/images/Skrill_small.png' alt='Skrill logo'>
 		   </div>
 		</div>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 morespecialties'>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
 			<div class='btn-learn' style='border-color:<?php the_field('color');?>'><a href='<?php $value = get_field('pricing_button_left_link');
 				if ($value) {
 					echo $value; }

@@ -133,6 +133,13 @@
 		margin-bottom: 4vh;
 		margin-top: 2vh;
 	}
+	.row {
+		@include tablet-only {
+			display: flex;
+			justify-content:center;
+			align-items: center;
+		}
+	}
 }
 
 
@@ -259,7 +266,9 @@
 // LEARN subpage - pricing table div
 
 #learn-polish-pricing {
+	@include medium-device {
 	margin-bottom: 5vh;
+	}
 }
 
 // Contact Page

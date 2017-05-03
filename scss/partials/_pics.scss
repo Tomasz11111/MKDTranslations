@@ -18,7 +18,7 @@
 		position: relative;
 		height: 100vw;
 	}
-	@include medium-device {
+	@include tablet {
 		height: 33.33vw;
 	}
 	@include large {

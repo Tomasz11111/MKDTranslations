@@ -146,7 +146,13 @@
 	flex-wrap: wrap;
 }
 #how_i_teach_icons {
-	@include tablet {
+	@include tablet-only {
+		margin-top: 2vh;
+	}
+	@include medium-device {
+		margin-top: 2vh;
+	}
+	@include large {
 		margin-top: 5vh;
 	}
 }

@@ -69,14 +69,14 @@
 </div>
 <div class='container-fluid' id='services_content'>
     <div class='row row-icons row-icons-services'>
-		<div class='col-lg-4 col-md-12 col-xs-12'>
+		<div class='col-lg-4 col-md-12 col-sm-12  col-xs-12'>
 			<h2 class='services-headlines text-teal'>CORE SERVICES</h2>
 		</div>
-		<div class='col-lg-8 hidden-md hidden-xs'>
+		<div class='col-lg-8 hidden-md hidden-sm hidden-xs'>
 			<h2 class='services-headlines text-teal'>ADDITIONAL SERVICES</h2>
 		</div>
 <!-- Core services -->
-        <div class='col-xs-12 col-md-6 col-lg-2 bg-belt-green border-white'>
+        <div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 bg-belt-green border-white'>
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height hidden-xs'><img class='icon-set-height icon-core1 hidden-sm hidden-md hidden-lg'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><?php $value = get_field ('services_icon_headline');
@@ -99,7 +99,7 @@
         </div>
 		    
 		
-		<div class='col-xs-12 col-md-6 col-lg-2 bg-belt-green'>
+		<div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 bg-belt-green'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-white.png'>
 			</div>
             <div class='icon_title'>
@@ -128,7 +128,7 @@
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg'>
 			<h2 class='services-headlines text-teal'>ADDITIONAL SERVICES</h2>
 		</div>
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue1'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue1'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
 			</div>
             <div class='icon_title'>
@@ -153,7 +153,7 @@
 			</div>
         </div>
 		
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue2'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue2'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'>
 			</div>
             <div class='icon_title'>
@@ -177,7 +177,7 @@
 				</p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue1'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue1'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='text-teal'><?php $value = get_field ('service5_icon_headline');
@@ -198,7 +198,7 @@
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-md-3 col-lg-2 bg-belt-blue2'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue2'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='text-teal'><?php $value = get_field ('service6_icon_headline');
@@ -247,7 +247,7 @@
 </div>
 <div class='container-fluid hidden-xs' id='photos'>
     <div class='row'>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-tourism-pic pic-square'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-tourism-pic pic-square'>
             <div class='portfolio-overlay'><p class='portfolio-overlay-text bg-belt-green'><?php $value = get_field ('translation_speciality_1');
 			if ($value) {
 				echo $value;
@@ -264,7 +264,7 @@
                 </p></div>
 
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
 			<p class='portfolio-overlay-text '><?php $value = get_field ('translation_speciality_2');
 			if ($value) {
 				echo $value;
@@ -283,7 +283,7 @@
 			</div>
         </div>
 
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay '>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay '>
 				<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
 			if ($value) {
 				echo $value;
@@ -547,7 +547,7 @@
 <div class='container-fluid' id='learn-language'>
     <div class='row'>
         
-		<div class='col-xs-12 col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-3 square-learn square-polish'>
+		<div class='col-xs-12 col-sm-4 col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-3 square-learn square-polish'>
 			
 			<p class='signature signature-learn'><a href='<?php $value = get_field ('teaching_button_left_link');
 							if ($value) {
@@ -565,7 +565,7 @@
 			
 		
 		</div>
-		<div class='col-xs-12 col-lg-3 square-learn square-french'>
+		<div class='col-xs-12 col-sm-4 col-lg-3 square-learn square-french'>
 			
 			<p class='signature signature-learn'><a href='<?php $value = get_field ('teaching_button_right_link');
 							if ($value) {
