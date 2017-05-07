@@ -641,6 +641,9 @@ h4 {
 	width: 60%;
 	font-weight: 600;
 	font-style: italic ;
+	@include tablet-only {
+		font-size: 2rem;
+	}
 	@include mobile {
 		width: 100%;
 		padding-top: 5%;
@@ -734,6 +737,17 @@ h4 {
 	span {
 		line-height: 1.7rem;
 		padding: 1%;
+	}
+}
+.about-headlines {
+	color: white;
+	font-weight: 600;
+	@include tablet-only {
+		font-size: 2rem;
+	}
+	@include mobile {
+		font-size: 2rem;
+		padding: 5% 5% 5% 5%;
 	}
 }
 

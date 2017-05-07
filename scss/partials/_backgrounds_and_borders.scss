@@ -7,6 +7,9 @@
 	background-color: $adjacent-bg-color-2;
 	padding: 15px;
 	background-size: 35%;
+	@include tablet-only {
+		background-size: 60%;
+	}
 	@include mobile {
 		background: none;
 		padding: 0;
@@ -50,11 +53,15 @@
 .bg-belt {
 	@extend %flex-centered;
 	height: 20vh;
-	@include mobile {
-		height: auto;
-	}
+	
 	@include medium-device-portrait {
 		height: 10vh;
+	}
+	@include tablet-only {
+		height: 10vh;
+	}
+	@include mobile {
+		height: auto;
 	}
 
 

@@ -1,13 +1,16 @@
 .col-about {
 	@extend %flex-centered;
-	@include tablet {
+	@include medium-device {
 		height: 70vh;
-	}
-	@include mobile {
-		padding: 0 !important;
 	}
 	@include medium-device-portrait {
 		height: 30vh;
+	}
+	@include tablet-only {
+		height: auto;
+	}
+	@include mobile {
+		padding: 0 !important;
 	}
 }
 
@@ -33,6 +36,9 @@
 .col-signature-about {
 	@include medium-device-portrait {
 		height: auto;
+	}
+	@include tablet-only {
+		height: 18vh !important;
 	}
 }
 .signature {
@@ -64,8 +70,6 @@
 .signature-learn {
 	@include mobile {
 		font-size: 2.5rem;
-		margin-top: 8vh;
-		background-color: transparent;
 		font-weight: 900;
 	}
 }
@@ -94,7 +98,19 @@
 	
 }
 
-
+.square-about {
+	height: 23vw;
+	width: 23vw;
+	@include tablet-only {
+		width: 30vw;
+		height: auto;
+	}
+	@include mobile {
+		width: 100vw;
+		height: 100vw;
+		background-color: $adjacent-bg-color-2;
+	}
+}
 .square1 {
 		@extend %square;
 		background-image: url('#{$path-img}/mkd_color.jpg');
@@ -114,9 +130,12 @@
 }
 .square-text {
 	font-size: 1.1rem;
+	@include tablet-only {
+		font-size: 1.5rem;
+	}
 	@include mobile {
 		font-size: 1.5rem;
-		}
+	}
 	font-weight: 300;
 	color: white;
 	padding: 0 5% 5% 5%;

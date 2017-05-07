@@ -248,7 +248,7 @@
 <div class='container-fluid hidden-xs' id='photos'>
     <div class='row'>
         <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-tourism-pic pic-square'>
-            <div class='portfolio-overlay'><p class='portfolio-overlay-text bg-belt-green'><?php $value = get_field ('translation_speciality_1');
+            <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
 			if ($value) {
 				echo $value;
 			}
@@ -623,9 +623,9 @@
 			</p>
 			</div>
 		</div>
-        <div class='col-lg-3 col-md-3 col-xs-12 col-about'>
-            <div class='square2 slideanim'>
-				<h2 style='background-color:<?php the_field('color')?>'><?php $value = get_field ('about_left_box_title');
+        <div class='col-lg-3 col-md-3 col-sm-9 col-xs-12 col-about'>
+            <div class='square-about slideanim'>
+				<h2 class='about-headlines' style='background-color:<?php the_field('color')?>'><?php $value = get_field ('about_left_box_title');
 			if ($value) {
 				echo $value;
 			}
@@ -641,10 +641,10 @@
 			?></p>
 			</div>
 		</div>
-		 <div class='col-lg-3 col-md-3 col-xs-12 col-about col-about-middle'>
+		 <div class='col-lg-3 col-md-3 col-sm-8 col-offset-sm-1 col-xs-12 col-about col-about-middle'>
 
-			<div class='square3 slideanim'>
-				<h2 style='background-color:<?php the_field('color_adjacent1')?>'><?php $value = get_field ('about_middle_box_title');
+			<div class='square-about slideanim'>
+				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent1')?>'><?php $value = get_field ('about_middle_box_title');
 			if ($value) {
 				echo $value;
 			}
@@ -660,9 +660,9 @@
 			?> </p>
 			</div>
 		</div>
-		<div class='col-lg-3 col-md-3 col-xs-12 col-about'>
-			<div class='square4 slideanim'>
-				<h2 style='background-color:<?php the_field('color_adjacent2')?>'><?php $value = get_field ('about_right_box_title');
+		<div class='col-lg-3 col-md-3 col-sm-7 col-xs-12 col-about'>
+			<div class='square-about slideanim'>
+				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent2')?>'><?php $value = get_field ('about_right_box_title');
 			if ($value) {
 				echo $value;
 			}
