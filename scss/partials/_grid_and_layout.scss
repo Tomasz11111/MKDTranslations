@@ -238,6 +238,20 @@
 	float: none;
 	margin: 0 auto;
 }
+.col-services {
+	border: 10px solid white;
+	padding-left: 0;
+	padding-right: 0;
+	@include large {
+		-webkit-transition: border-top 0.5s; /* Safari */
+    	transition: border-top 0.5s;
+	}
+}
+.col-services:hover {
+	@include large {
+	border-top: 5px solid white;
+	}
+}
 
 
 

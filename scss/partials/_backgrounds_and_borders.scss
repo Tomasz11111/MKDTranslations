@@ -74,7 +74,7 @@
 	}
 	&-blue1 {
 		@include tablet {
-			background-color: #c7deea;
+			background-color: $adjacent-bg-color-3;
 		}
 	}
 	&-blue2 {
@@ -148,11 +148,7 @@
 	
 }
 
-.border-white {
-	@include tablet {
-		border-right: 2px solid white;
-	}
-}
+
 .square-grayscale {
 	width: 100%;
 	height: 23vw;
@@ -186,12 +182,17 @@
 .bg-headline-home1 {
 	color:white;
 	background-color: $base-color-3;
-	padding: 0.5%;
+	padding: .5rem;
 }
 .bg-headline-home2 {
 	color: white;
 	background-color: $base-color-2;
-	padding: 0.5%;
+	padding: .5rem;
+}
+.bg-headline-home3 {
+	color: $base-color-3;
+	background-color: $adjacent-bg-color-3;
+	padding: .5rem;
 }
 
    
