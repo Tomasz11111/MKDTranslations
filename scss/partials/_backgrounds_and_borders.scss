@@ -114,20 +114,17 @@
 // Teaching
 
 .square-polish {
-	@extend %square;
+	height: 23vw;
+	@include mobile {
+		height: 60vw;
+	}
+	@extend %flex-centered;
 	background-size: cover;
 	background-position: center;
-	background-image: url('#{$path-img}/cracow-mob.jpeg');
+	background-image: url('#{$path-img}/learn-polish-tatry.jpg');
 	padding: 0;
-	@include tablet {
-		
-		margin-right: 15px;
-		box-shadow: 3px 3px 8px 0 $nav-and-background-color;
-	}
-	@include tablet-only {
-		width: 33.33vw !important;
-		height: 33.33vw !important;
-	}
+	
+	
 	
 }
 .square-french {

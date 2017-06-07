@@ -719,18 +719,8 @@ h4 {
 	
 }
 
-.square-polish p, .square-french p {
-	@include tablet {
-		padding: 3%;
-		margin-top: 65% !important;
-		font-size: 2.5rem !important;
-		background-color: rgba(255, 255, 255, 0.7);
-		&:hover {
-			background-color: white !important;
-		}
-		
-	}
-}
+
+
 .square-learn {
 	a {
 	color: $base-color-2 !important;
@@ -752,6 +742,23 @@ h4 {
 	@include mobile {
 		font-size: 2rem;
 		padding: 5% 5% 5% 5%;
+	}
+}
+.square-polish {
+	p {
+		font-size: 3.5rem;
+		font-weight: 600;
+		a {
+			color: white !important;
+			border: 3px solid white;
+			padding: 0.5%;
+			&:hover {
+				color: $base-color-2 !important;
+				text-decoration:none !important;
+				border: 3px solid $base-color-2;
+				font-weighy: 600 !important;
+			}
+		}
 	}
 }
 

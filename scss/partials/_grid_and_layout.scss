@@ -126,11 +126,8 @@
 	@include mobile {
 		margin-top: 10%;
 	}
-	@include tablet-only {
-		margin-bottom: 5vh;
-	}
 	@include medium-device {
-		margin-bottom: 4vh;
+		
 		margin-top: 2vh;
 	}
 	.row {
