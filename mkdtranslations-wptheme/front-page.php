@@ -14,13 +14,25 @@
 			
 			<div class='headline-btn-container'>
 				<div class='headline-btn-subcontainer'>
-					<div class='headline-btn bg-belt-green'><a href='#services'>My solutions and services</a>
+					<div class='headline-btn bg-belt-green'><a href='#services'><?php $value = get_field ('hero_btn_left');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></a>
 					</div>
 					<div class='triangle triangle-mobile-blue bg-belt-green'></div>
 				</div>
 				<div class='headline-btn-subcontainer'>
 					
-					<div class='headline-btn bg-belt-purple'><a href='#about'>About</a>
+					<div class='headline-btn bg-belt-purple'><a href='#about'><?php $value = get_field ('hero_btn_right');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></a>
 					</div>
 					<div class='triangle triangle-mobile-purple bg-belt-purple'></div>
 				</div>
@@ -29,15 +41,6 @@
 		</div>
 				
 				
-				
-				<!--<div  class='headline-btn'><a href='#about'><span class='btn-text'><?php $value = get_field ('hero_btn_right');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?></span></a>
-				</div>-->
 			
         
 </div>
@@ -70,13 +73,19 @@
 <div class='container-fluid' id='services_content'>
     <div class='row row-icons row-icons-services'>
 		<div class='col-lg-4 col-md-12 col-sm-12  col-xs-12'>
-			<h2 class='services-headlines'><span class='bg-headline-home1'>Core services</span></h2>
+			<h2 class='services-headlines'><span class='bg-headline-home1'><?php $value = get_field('2_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
 		<div class='col-lg-8 hidden-md hidden-sm hidden-xs'>
-			<h2 class='services-headlines'><span class='bg-headline-home3'>Additional services</span></h2>
+			<h2 class='services-headlines'><span class='bg-headline-home3'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
 <!-- Core services -->
-        <div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 bg-belt-green col-services slideanim-left'>
+        <div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 bg-belt-green col-services slideanim-left'><a href='<?php $value = get_field ('service1_link');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>'>
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height hidden-xs'><img class='icon-set-height icon-core1 hidden-sm hidden-md hidden-lg'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><?php $value = get_field ('services_icon_headline');
@@ -94,12 +103,19 @@
 				else {
 					echo 'empty'; }
 				?></p>
-				<p class='icon-description-text text-white'><a href='#translation'>Read more</a></p>
-			</div>
+				<!--<p class='icon-description-text text-white'><a href='#translation'>Read more</a></p>-->
+			</div></a>
         </div>
 		    
 		
 		<div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 bg-belt-green col-services slideanim-left'>
+			<a href='<?php $value = get_field ('service2_link');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-white.png'>
 			</div>
             <div class='icon_title'>
@@ -121,9 +137,9 @@
 					echo 'empty'; }
 				?>
 				</p>
-				<p class='icon-description-text text-white'><a href='#teaching'>Read more</a></p>
+				<!--<p class='icon-description-text text-white'><a href='#teaching'>Read more</a></p>-->
 			</div>
-        </div>
+			</a></div>
 <!-- Additional services -->
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg slideanim'>
 			<h2 class='services-headlines text-teal'>ADDITIONAL SERVICES</h2>
@@ -547,14 +563,14 @@
 <div class='container-fluid' id='learn-language'>
     <div class='row'>
         
-		<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 square-learn square-polish'>
+		<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 learn-polish'>
 			
-			<p><a href='<?php $value = get_field ('teaching_button_left_link');
+			<p><a href='<?php $value = get_field ('teaching_button_link');
 							if ($value) {
 								echo $value;
 									}
 							else {
-								echo 'empty'; } ?>'><?php $value = get_field ('teaching_button_left');
+								echo 'empty'; } ?>'><?php $value = get_field ('teaching_button');
 							if ($value) {
 								echo $value;
 							}
@@ -591,7 +607,13 @@
 <div class='container-fluid bg-about' id='about'>
     <div class='row'>
 		<div class='col-lg-12 col-md-12 col-signature col-signature-about hidden-xs'>
-			<p class='signature slideanim'>Michał K.Dzieńdziura - your teacher and translator
+			<p class='signature slideanim'><?php $value = get_field ('about_title');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
 			</p>
 					
 			
@@ -676,7 +698,32 @@
 <div class='container-fluid' id='form-page'>
 	<div class='row'>
 		<div class='col-lg-12'>
-			<p class='contact-form-lead slideanim slide'>Book your <span class='contact-form-lead-lesson'>first lesson</span> or request a free quote for <span class='contact-form-lead-translation'>translation</span>
+			<p class='contact-form-lead slideanim slide'><?php $value = get_field ('contact_headline_1st_part');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>
+			<a  class='contact-form-lead-lesson'><?php $value = get_field ('contact_headline_1st_link');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></a> <?php $value = get_field ('contact_headline_2nd_part');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?>  <a  class='contact-form-lead-translation'><?php $value = get_field ('contact_headline_2nd_link');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></a>
 			</p>
 		</div>
 		<div class='col-lg-12'>

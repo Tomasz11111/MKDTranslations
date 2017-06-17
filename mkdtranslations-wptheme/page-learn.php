@@ -105,7 +105,13 @@ endif;
             
 		</div>
 		<div class='col-lg-12 learn-btn-container hidden-xs'>
-			<div class='headline-btn headline-btn-learn' style='background-color:<?php the_field('color'); ?>'><a href='#how_i_teach'>Read more</a>
+			<div class='headline-btn headline-btn-learn' style='background-color:<?php the_field('color'); ?>'><a href='#how_i_teach'><?php $value = get_field ('read_more');
+			if ($value) {
+				echo $value;
+			}
+			else {
+				echo 'empty'; }
+			?></a>
 			</div>
 			<div class='triangle-learn' style='background-color:<?php the_field('color'); ?>'></div>
 		</div>
@@ -304,7 +310,7 @@ endif;
 
 <div class='container-fluid'>
     <div class='row'>
-        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt bg-belt-learn' style='background-color:<?php the_field('color'); ?>'><p class='confidentiality slideanim'><?php $value = get_field ('belt_purple');
+        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt' style='background-color:<?php the_field('color'); ?>'><p class='confidentiality slideanim'><?php $value = get_field ('belt_purple');
 			if ($value) {
 				echo $value;
 			}
@@ -319,72 +325,40 @@ endif;
 
 <div class='container' id='learn-polish-pricing'>
 	<div class='row'>
-		<div class='col-lg-12'><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'>Pricing</span></h1>
-			<p class='section-title-lead'>Choose a  payment plan that works for you.</p>
-		</div>
-		<div class='col-lg-12'>
-			<p class='learn-pricing-section' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
+		<div class='col-lg-12'><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_title');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></p></div>
-		<div class='col-lg-4'>
-			<h3>Slow-paced</h3>
-			<?php $value = get_field('table_slow_pace');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
-			</div>
-		<div class='col-lg-4'>
-		<h3>Standard</h3>
-		<?php $value = get_field('table_standard');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
-		</div>
-		<div class='col-lg-4'>
-		<h3>Intensive</h3>
-			<?php $value = get_field('table_intensive');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
-		</div>
-		<div class='col-lg-12'><p class='learn-pricing-section' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_2');
+				?></span></h1>
+			<p class='section-title-lead'><?php $value = get_field ('learn_pricing_headline');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></p></div>
-		<div class='col-lg-4'>
-			<h3>Slow-paced</h3>
-			<?php $value = get_field('table_2nd_line_slow_pace');
-			if($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty';
-			}
-			?>
-			
+				?></p>
+		</div>
+		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6 learn-pricing-modes'>
+            <div class='icon-circle'><img src= '<?php $value = get_field ('learn_pricing_icon_1');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>' alt="" class='icon-set-height'>
 			</div>
-		<div class='col-lg-4'>
-		<h3>Standard</h3>
-		<?php $value = get_field('table_2nd_line_standard');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></span></h4>
+			</div>
+            
+			<?php $value = get_field('learn_pricing_table_left');
 			if($value) {
 				echo $value;
 			}
@@ -392,10 +366,26 @@ endif;
 				echo 'empty';
 			}
 			?>
-		</div>
-		<div class='col-lg-4'>
-		<h3>Intensive</h3>
-			<?php $value = get_field('table_2nd_line_intensive');
+        </div>
+		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6 learn-pricing-modes'>
+            <div class='icon-circle'><img src= '<?php $value = get_field ('learn_pricing_icon_2');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>' alt="" class='icon-set-height'>
+			</div>
+            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_2');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></span></h4>
+			</div>
+            
+			<?php $value = get_field('learn_pricing_table_right');
 			if($value) {
 				echo $value;
 			}
@@ -403,13 +393,21 @@ endif;
 				echo 'empty';
 			}
 			?>
-		</div>
+        </div>
+		
+
+
+		
 	
 <!-- BUTTONS -->
 		
 <div class='col-lg-12 pricing-buttons'>
    
-			<div class='btn-learn' style='border-color:<?php the_field('color');?>'><a href=''><?php $value = get_field ('learn_button_1');
+			<div class='btn-learn' style='border-color:<?php the_field('color');?>'><a href='<?php $value = get_field('learn_button_1_link');
+				if ($value) {
+					echo $value; }
+				else {
+					echo 'empty'; }?>'><?php $value = get_field ('learn_button_1');
 			if ($value) {
 				echo $value;
 			}

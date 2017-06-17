@@ -148,7 +148,7 @@ h4 {
 	font-weight: 600;
 	text-align: center;
 	line-height: 3rem !important; //to może do przerobienia 
-	margin-top: 7vh;
+	margin-top: 8vh;
 	@include mobile {
 		font-size: 2.2rem;
         width: 100%;
@@ -195,8 +195,7 @@ h4 {
 		font-size: 1rem;
 	}
 	text-align: center;
-    padding-top: 1vh;
-	padding-bottom: 3vh;
+    padding-bottom: 3vh;
 	padding-left: 5%;
 	padding-right: 5%;
 	@include mobile {
@@ -223,8 +222,8 @@ h4 {
 	
 }
 .icon_title {
-	height:3rem;
-	width:85%;
+	min-height: 3rem;
+	width:90%;
 	margin: 0 auto;
 }
 
@@ -475,6 +474,7 @@ h4 {
 	font-size: 3vh;
 	padding: 10px;
 	margin: 0;
+	text-align: center;
 	@extend %flex-centered;
 }
 
@@ -523,6 +523,10 @@ h4 {
 		&:hover {
 			font-weight: 900;
 			text-decoration: underline;
+			color: rgb(255, 120, 0) !important;
+		}
+		&:active {
+			text-decoration: underline;
 		}
 	}
 	&-translation {
@@ -530,6 +534,10 @@ h4 {
 		font-weight: 700;
 		&:hover {
 			font-weight: 900;
+			text-decoration: underline;
+			color: $base-color-1 !important;
+		}
+		&:active {
 			text-decoration: underline;
 		}
 	}
@@ -596,7 +604,7 @@ h4 {
 	@include tablet {
 		
 		padding: 1%;
-		font-size: 1.8rem !important;
+		font-size: 1.7rem !important;
 	}
 	@include mobile {
 		font-size: 2rem !important;
@@ -607,7 +615,7 @@ h4 {
 	@include tablet {
 		
 		padding: 1%;
-		font-size: 1.8rem !important;
+		font-size: 1.7rem !important;
 	}
 	@include mobile {
 		font-size: 2rem !important;
@@ -618,7 +626,7 @@ h4 {
 	@include tablet {
 		
 		padding: 1%;
-		font-size: 1.8rem !important;
+		font-size: 1.7rem !important;
 	}
 	@include mobile {
 		font-size: 2rem !important;
@@ -728,6 +736,7 @@ h4 {
 	}
 }
 .icon-headline-learn {
+	
 	span {
 		line-height: 1.7rem;
 		padding: 1%;
@@ -736,6 +745,7 @@ h4 {
 .about-headlines {
 	color: white;
 	font-weight: 600;
+	padding-left: 4%;
 	@include tablet-only {
 		font-size: 2rem;
 	}
@@ -744,10 +754,12 @@ h4 {
 		padding: 5% 5% 5% 5%;
 	}
 }
-.square-polish {
+.learn-polish {
 	p {
 		font-size: 3.5rem;
 		font-weight: 600;
+		@extend %flex-centered;
+		width: 100%;
 		a {
 			color: white !important;
 			border: 3px solid white;
@@ -760,6 +772,9 @@ h4 {
 			}
 		}
 	}
+}
+.underline {
+	text-decoration: underline !important;
 }
 
 

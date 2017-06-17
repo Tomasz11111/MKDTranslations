@@ -312,94 +312,37 @@ endif;
 				?>
 					</span></h4>
 			</div>
-            
-            <ul class='high_standards_and_guidelines_list'>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_1');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-					</li>
-
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_2');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-				</li>
-
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_3');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-				</li>
-
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_4');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-				</li>
-
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_left_5');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-				</li>
-            </ul>
-        </div>
-        <div class='col-lg-4'>
-			<div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height'>
-			</div>
-            
-            <div class='icon_title'><h4 class='icon-headline text-white icon-headline-animation'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_2');
+            <?php $value = get_field('test1001');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?></span></h4>
-			</div>
-            <ul class='high_standards_and_guidelines_list'>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='check_full hidden'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_1');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-				</li>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='hidden check_full'><img src='<?php echo get_template_directory_uri()?>/images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_2');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-				</li>
-                <li><img src='<?php echo get_template_directory_uri()?>/images/check-blue.png' class='hidden check_full'><img src='<?php echo get_template_directory_uri()?>.images/check-blue-empty.png' class='check_empty'><?php $value = get_field ('process_bullets_right_3');
-					if ($value) {
-						echo $value;
-					}
-					else {
-						echo 'empty'; }
-					?>
-				</li>
-            </ul>
-
+			?>
+            
         </div>
+		<div class='col-lg-4'>
+			<div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height'>
+			</div>
+            <div class='icon_title'>
+				<h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_2');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
+					</span></h4>
+			</div>
+			<?php $value = get_field('test1000');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
+		</div>
+        
         <div class='col-lg-2'></div>
         
     </div>

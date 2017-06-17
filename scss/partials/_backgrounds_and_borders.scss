@@ -84,10 +84,7 @@
 		}
 	}
 } 
-.bg-belt-learn {
-	border-bottom: 10px dotted white;
-	border-top: 10px dotted white;
-}
+
 
 // Subpages header images
 
@@ -113,20 +110,19 @@
 }
 // Teaching
 
-.square-polish {
-	height: 23vw;
-	@include mobile {
-		height: 60vw;
-	}
-	@extend %flex-centered;
-	background-size: cover;
-	background-position: center;
-	background-image: url('#{$path-img}/learn-polish-tatry.jpg');
-	padding: 0;
-	
-	
-	
+.learn-polish{
+		
+		height: 23vw;
+		@include mobile {
+			height: 60vw;
+		}
+		@extend %flex-centered;
+		background-size: cover;
+		background-position: center;
+		background-image: url('#{$path-img}/learn-polish-tatry.jpg');
+		padding: 0;
 }
+
 .square-french {
 	@extend %square ;
 	background-size: cover;
@@ -190,6 +186,15 @@
 	color: $base-color-3;
 	background-color: $adjacent-bg-color-3;
 	padding: .5rem;
+}
+
+.learn-pricing-modes table {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 2vh;
+	td {
+		border: 1px solid $adjacent-bg-color-4;
+	}
 }
 
    

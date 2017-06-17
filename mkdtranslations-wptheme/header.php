@@ -19,8 +19,10 @@
 <header>
 	<div class="navigation-container">
 <!-- Buttons quote and lessons -->
-		<p class='btn-navbar btn-navbar-darkblue hidden-xs'><a href='#form-page'>Request free quote for translation</a></p>
-		<p class='btn-navbar btn-navbar-purple hidden-xs'><a href='#form-page'>Book Polish or French lessson</a></p>
+		<p class='btn-navbar btn-navbar-darkblue hidden-xs'><a href='#form-page'><?php $value = get_field('menu_btn_1'); if ($value) {
+	echo $value; } else {echo 'empty';} ?></a></p>
+		<p class='btn-navbar btn-navbar-purple hidden-xs'><a href='#form-page'><?php $value = get_field('menu_btn_2'); if ($value) {
+	echo $value; } else {echo 'empty';} ?></a></p>
 		
 <!-- Wordpress menu-->
         <nav class="wordpress-menu invisible">
@@ -36,9 +38,20 @@
         </nav>
 <!-- language switchers -->
 		<div class='language-switcher language-switcher-homepage'>
-			<p><a href='http://mkdtranslations.com/wordpress/cs/domovska/'>cs</a></p>
-			<p><a href='http://mkdtranslations.com/wordpress/en/home/'>en</a></p>
-			<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>
+			<p><a href='<?php $value = get_field ('language_switcher_link_cs');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>'>cs</a></p>
+			<p><a href='<?php $value = get_field ('language_switcher_link_en');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>'>en</a></p>
 		</div>		
 <!-- Hamburger icon -->
 		<div class='hamburger-container'>

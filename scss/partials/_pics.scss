@@ -87,8 +87,11 @@
 	display:block;
 	margin: 0 auto;
 	width:13%;
-	margin-top: 4vh;
+	margin-top: 6vh;
 	@include mobile {
 		width: 50%;
+	}
+	@include medium-device-portrait {
+		margin-top: 7.5vh;
 	}
 }

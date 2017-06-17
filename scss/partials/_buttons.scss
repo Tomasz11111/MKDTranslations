@@ -11,7 +11,7 @@
 			height: 2.2rem;
 			width: 2.2rem;
 			display: inline-block;
-			border: 0.1rem solid $base-color-2;
+			border: 0.1rem solid;
 			margin: 0;
 			@include mobile {
 				height: 3rem;
@@ -40,21 +40,21 @@
 				
 				
 				&:hover {
-					background-color: $base-color-2;
+					//background-color: $base-color-2;
 					color: white !important;
 				
 				}
 			}
 		&:hover {
-			background-color: $base-color-2;
+			//background-color: $base-color-2;
 		}
 
 	}
 }
 .language-switcher-active {
-	background-color: $base-color-2;
 	color: white !important;
 	font-family: $title-font-family;
+	
 }
 .language-switcher-sidepages {
 	@extend .language-switcher;
@@ -68,10 +68,10 @@
 	p {
 		line-height: 2.2rem !important;
 		@include mobile {
-			line-height: 3rem !important;;
+			line-height: 3rem !important;
 		}
 		&:hover {
-			border: 0.1rem solid $base-color-2;
+			border: 0.1rem solid;
 		}
 		a {
 			padding-top: 0 !important;
@@ -87,6 +87,9 @@
 .language-switcher-homepage {
 	
 		z-index: 1500;
+	p {
+		border: 0.1rem solid $base-color-2;
+	}
 		
 }
 
@@ -223,14 +226,14 @@
 	border-width: 2px;
 	border-style: solid;
 	a, span {
-	color: $base-color-2;
+	color: $adjacent-bg-color-4;
 		font-size: 1.5rem;
 		
 					
 	}
 	
 	&:hover {
-		background-color: $base-color-2;
+		background-color: $adjacent-bg-color-4;
 	}
 	@include mobile {
 		margin: 0 auto;

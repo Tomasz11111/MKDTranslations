@@ -57,7 +57,7 @@
 // Base selectors
 textarea {
 	width: 100%;
-	rows: 9 !important;
+	
 	
 	
 }
@@ -65,7 +65,7 @@ label {
 	font-size: 1.2rem;
 	color: white;
 	font-weight: 300;
-	width: 100%;
+	width: 100% !important;
 }
 input, textarea {
 	color: black;
@@ -102,7 +102,7 @@ form {
 }
 
 //Form languages
-#wpcf7-f418-o2 p:nth-child(2) {
+#wpcf7-f418-o2 p:nth-child(2), #wpcf7-f667-o2 p:nth-child(2) {
 	float: left;
 	display: inline-block;	
 	width: 17%;
@@ -112,7 +112,7 @@ form {
 		
 	
 }
-#wpcf7-f418-o2 p:nth-child(3) {
+#wpcf7-f418-o2 p:nth-child(3), #wpcf7-f667-o2 p:nth-child(3) {
 	float: left;
 	display: inline-block;
 	width: 15%;
@@ -120,7 +120,7 @@ form {
 		width: 40%;
 	}
 }
-#wpcf7-f418-o2 p:nth-child(4) {
+#wpcf7-f418-o2 p:nth-child(4), #wpcf7-f667-o2 p:nth-child(4) {
 	float: left;
 	display: inline-block;
 	width: 20%;
@@ -133,7 +133,7 @@ form {
 		
 	}
 }
-#wpcf7-f418-o2 p:nth-child(5) {
+#wpcf7-f418-o2 p:nth-child(5), #wpcf7-f667-o2 p:nth-child(5) {
 	float: left;
 	display: inline-block;
 	width: 45%;
@@ -151,7 +151,7 @@ form {
 		}
 	}
 }
-#wpcf7-f418-o2 p:nth-child(6) {
+#wpcf7-f418-o2 p:nth-child(6), #wpcf7-f667-o2 p:nth-child(6) {
 	clear: left;
 	float: left;
 	width: 25%;
@@ -165,7 +165,7 @@ form {
 		
 	}
 }
-#wpcf7-f418-o2 p:nth-child(7) {
+#wpcf7-f418-o2 p:nth-child(7), #wpcf7-f667-o2 p:nth-child(7) {
 	float: left;
 	display: inline-block;	
 	width: 25%;
@@ -176,7 +176,7 @@ form {
 		width: 100%;
 	}
 }
-#wpcf7-f418-o2 p:nth-child(8) {
+#wpcf7-f418-o2 p:nth-child(8), #wpcf7-f667-o2 p:nth-child(8) {
 	float: left;
 	display: inline-block;
 	width: 50%;
@@ -191,7 +191,7 @@ form {
 		}
 	}
 }
-#wpcf7-f418-o2 p:nth-child(9) {
+#wpcf7-f418-o2 p:nth-child(9), #wpcf7-f667-o2 p:nth-child(9) {
 	clear: left;
 	float: left;
 	display: inline-block;
@@ -204,7 +204,7 @@ form {
 	}
 }
 
-#wpcf7-f418-o2 p:nth-child(10), #wpcf7-f418-o2 p:nth-child(11)  {
+#wpcf7-f418-o2 p:nth-child(10), #wpcf7-f418-o2 p:nth-child(11), #wpcf7-f667-o2 p:nth-child(10), #wpcf7-f667-o2 p:nth-child(11)  {
 	float: left;
 	display: inline-block;
 	width: 50%;
@@ -224,7 +224,7 @@ form {
 		
 	}
 }
-#wpcf7-f418-o2 p:nth-child(12) {
+#wpcf7-f418-o2 p:nth-child(12), #wpcf7-f667-o2 p:nth-child(12) {
 	
 	float: left;
 	display: inline-block;
@@ -243,7 +243,7 @@ form {
 	}
 }
 
-#wpcf7-f418-o2 p:nth-child(13) {
+#wpcf7-f418-o2 p:nth-child(13), #wpcf7-f667-o2 p:nth-child(13) {
 	float: left;
 	display: inline-block;
 	width: 50%;
@@ -261,7 +261,7 @@ form {
 	}
 }
 
-#wpcf7-f418-o2 p:nth-child(14) {
+#wpcf7-f418-o2 p:nth-child(14), #wpcf7-f667-o2 p:nth-child(14) {
 	clear: left;
 	float: left;
 	display: inline-block;
@@ -275,7 +275,7 @@ form {
 
 // Form translation
 
-#wpcf7-f132-o1 p:nth-child(2) {
+#wpcf7-f132-o1 p:nth-child(2), #wpcf7-f663-o1 p:nth-child(2) {
 	float: left; 
 	display: inline-block;
 	width: 45%;
@@ -286,7 +286,7 @@ form {
 		
 	}
 }
-#wpcf7-f132-o1 p:nth-child(3) {
+#wpcf7-f132-o1 p:nth-child(3), #wpcf7-f663-o1 p:nth-child(3){
 	float: left;
 	display: inline-block;
 	margin-left: 10%;
@@ -299,7 +299,7 @@ form {
 		
 	}
 }
-#wpcf7-f132-o1 p:nth-child(4) {
+#wpcf7-f132-o1 p:nth-child(4), #wpcf7-f663-o1 p:nth-child(4) {
 	clear: left;
 	float: left;
 	display: inline-block;
@@ -310,7 +310,7 @@ form {
 		
 	}
 }
-#wpcf7-f132-o1 p:nth-child(5) {
+#wpcf7-f132-o1 p:nth-child(5), #wpcf7-f663-o1 p:nth-child(5){
 	float: left;
 	display: inline-block;
 	margin-left: 10%;
@@ -322,16 +322,16 @@ form {
 		
 	}
 }
-#wpcf7-f132-o1 p:nth-child(6) {
+#wpcf7-f132-o1 p:nth-child(6), #wpcf7-f663-o1 p:nth-child(6) {
 	clear: left;
-	width: 90%;
+	
 	label {
 		width: 100%;
 		float: left;
 		
 	}
 }
-#wpcf7-f132-o1 p:nth-child(7) {
+#wpcf7-f132-o1 p:nth-child(7), #wpcf7-f663-o1 p:nth-child(7) {
 	float: left;
 	display: inline-block;	
 	width: 20%;
@@ -339,7 +339,7 @@ form {
 		width: 40%;
 	}
 }
-#wpcf7-f132-o1 p:nth-child(8) {
+#wpcf7-f132-o1 p:nth-child(8), #wpcf7-f663-o1 p:nth-child(8){
 	float: left;
 	display: inline-block;
 	width: 12%;
@@ -347,7 +347,7 @@ form {
 		width: 40%;
 	}
 }
-#wpcf7-f132-o1 p:nth-child(9) {
+#wpcf7-f132-o1 p:nth-child(9), #wpcf7-f663-o1 p:nth-child(9){
 	float: left;
 	display: inline-block;
 	width: 20%;
@@ -359,7 +359,7 @@ form {
 
 }
 
-#wpcf7-f132-o1 p:nth-child(10) {
+#wpcf7-f132-o1 p:nth-child(10), #wpcf7-f663-o1 p:nth-child(10) {
 	float: left;
 	display: inline-block;
 	width: 12%;
@@ -368,7 +368,7 @@ form {
 		
 	}
 }
-#wpcf7-f132-o1 p:nth-child(11) {
+#wpcf7-f132-o1 p:nth-child(11), #wpcf7-f663-o1 p:nth-child(11) {
 	float:left;
 	width: 12%;
 	display: inline-block;
@@ -377,12 +377,17 @@ form {
 		width: 40%;
 	}
 }
-#wpcf7-f132-o1 p:nth-child(12) {
+#wpcf7-f132-o1 p:nth-child(12), #wpcf7-f663-o1 p:nth-child(12){
 	float: left;
 }
 
 #form-lessons, #form-translation {
 	width: 100%;
+}
+#wpcf7-f132-o1 input[type='text'], #wpcf7-f132-o1 input[type='email'], #wpcf7-f132-o1 [type='tel'], #wpcf7-f663-o1 input[type='text'], #wpcf7-f663-o1 input[type='email'], #wpcf7-f663-o1 input[type='tel'] {
+	 
+	width: 100%;
+	
 }
 
 

@@ -36,14 +36,25 @@
 					$defaults = array(
 					'container' => false,
 					'theme_location' => 'sidepage-menu');
-					wp_nav_menu('defaults');
+					wp_nav_menu('defaults')
 					?>
 			</nav>	
 	<!-- Language switchers -->
 					<div class='language-switcher hidden'>
-						<p><a href='http://mkdtranslations.com/wordpress/cs/domovska/'>cz</a></p>
-						<p><a href='http://mkdtranslations.com/wordpress/en/home/'>en</a></p>
-						<p><a href='http://mkdtranslations.com/wordpress/pl/glowna/'>pl</a></p>
+						<p style='border-color:<?php the_field('color')?>'><a style='color:<?php the_field('color')?>' href='<?php $value = get_field ('language_switcher_link_cs');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>'>cs</a></p>
+						<p style='border-color:<?php the_field('color')?>'><a style='color:<?php the_field('color')?>' href='<?php $value = get_field ('language_switcher_link_en');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>'>en</a></p>
 					</div>		
 		</div>
 	
