@@ -33,7 +33,8 @@ jQuery(document).ready(function($) {
 	
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 	function smoothScroll() {
-        $('.wordpress-menu a, .help a, div a, .headline-btn a, .icon-description-text a, .nav-pills a ').on('click', function (event) {
+        if($('body').is('.home')) {
+			$('.wordpress-menu a, .help a, div a, .headline-btn a, .icon-description-text a, .nav-pills a').on('click', function (event) {
 
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== '') {
@@ -55,8 +56,10 @@ jQuery(document).ready(function($) {
                 });
             } // End if
         });
-    };
+    }
+	};
     smoothScroll();
+	
 	
 /* Swipe for mobile */
 
@@ -214,7 +217,7 @@ jQuery(document).ready(function($) {
 	portfolioImgs();
 	
     function expandPortfolio() {
-        $('.morespecialties .btn-teal').find('a').on('click', function() {
+        $('.morespecialties .btn-blue').find('a').on('click', function() {
             if($('.portfolio-finance-pic').hasClass('hidden')) {
                 $('html, body').animate({ scrollTop:  $('.portfolio-tourism-pic').offset().top}, 'slow');
             }
@@ -397,14 +400,25 @@ jQuery(document).ready(function($) {
 		
 	function highlightActiveLangBtn() {
 		var language = $('html').attr('lang'),
-		$langBtns = $('.language-switcher-homepage p a');
+		$langBtns = $('.language-switcher p a'),
+		pickColor = $('.hamburger span').css('backgroundColor');
+		console.log(pickColor);
 		$langBtns.each(function() {
 		langSymbol = $(this).text();
 		
 		if(!(language.indexOf(langSymbol) === -1)) {
 			$(this).addClass('language-switcher-active');
-			$(this).parent().addClass('bg-belt-purple');
+			$(this).parent().css('backgroundColor', pickColor);
 			}
+		$langBtns.on('mouseenter', function() {
+			$(this).parent().css('backgroundColor', pickColor);
+		});
+		$langBtns.on('mouseleave', function() {
+			if(!($(this).hasClass('language-switcher-active') ) ) {
+				$(this).parent().css('backgroundColor', '');
+			};
+		});
+		
 			
 		});
 	}
@@ -435,16 +449,41 @@ jQuery(document).ready(function($) {
 		var $lesson_btn = $('.contact-form-lead-lesson'),
 			$translate_btn = $('.contact-form-lead-translation'),
 			$form_translations = $('#form-translation'),
-			$form_lessons = $('#form-lessons');
+			$form_lessons = $('#form-lessons'),
+			$this; 
+			
+		function underlineWhenActive(el1, el2) {
+				if(!(el1.hasClass('hidden') ) ) {
+				$this.addClass('underline');
+				el2.removeClass('underline');
+					
+			}
+			else 
+				{
+					$this.removeClass('underline');
+				}
+					
+		}
+		function showHideForms(formToShow, formToHide) {
+			if(formToShow.hasClass('hidden') ) {
+			   formToShow.removeClass('hidden');
+				formToHide.addClass('hidden');
+			   }
+			else {
+				formToShow.addClass('hidden');
+			}
+			
+		}
 		
 		$lesson_btn.on('click', function() {
-			$form_lessons.toggleClass('hidden');
-			
-		});
+			showHideForms($form_lessons, $form_translations);
+			$this = $(this);
+			underlineWhenActive($form_lessons, $translate_btn)});
+		
 		$translate_btn.on('click', function() {
-			$form_translations.toggleClass('hidden');
-		});
-	
+			showHideForms($form_translations, $form_lessons);
+			$this = $(this);
+			underlineWhenActive($form_translations, $lesson_btn)});
 	}
 	showHideForm();
 
