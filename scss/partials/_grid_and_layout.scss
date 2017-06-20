@@ -1,3 +1,16 @@
+/*.container:before, .container:after, container-fluid:after, container-fluid:before, row:after, row:before {
+	width: 0;
+} */
+.row {
+    &:before {
+        content: none;
+    }
+
+    &:after {
+        content: '';
+    }
+} 
+
 .container-fluid {
 	width: 100% !important;
    	padding: 0;

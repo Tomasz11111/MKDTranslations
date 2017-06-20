@@ -12,7 +12,7 @@ endif;
 ?>
 <div class="container-fluid" id="terms_title">
             <div class="row">
-    <div class="col-lg-12 col-xs-12 subpage-header subpage-header-translation"><p class="subpage-header-title" style='background-color:<?php the_field('color');?>'><span><?php the_title() ?></span></p>
+    <div class="col-lg-12 col-xs-12 subpage-header subpage-header-translation"><p class="subpage-header-title"><span><?php the_title() ?></span></p>
                 
             </div>
          </div>
@@ -445,11 +445,11 @@ endif;
 		   </div>
 		</div>
 		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
-			<div class='btn-learn' style='border-color:<?php the_field('color');?>'><a href='<?php $value = get_field('pricing_button_left_link');
+			<div class='btn-standard btn-blue'><a href='<?php $value = get_field('pricing_button_left_link');
 				if ($value) {
 					echo $value; }
 				else {
-					echo 'empty'; }?>' style='color:<?php the_field('color');?>'><?php $value = get_field ('pricing_button_left');
+					echo 'empty'; }?>'><?php $value = get_field ('pricing_button_left');
 				if ($value) {
 					echo $value;
 				}

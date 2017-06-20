@@ -245,21 +245,36 @@
 }
 
 .terms_conditions_index {
+	margin-top: 5vh;
 	list-style: none;
 	line-height: 20px;
-	width:80%;
+	@include tablet {
+		width: 100%;
+	}
+	@include large {
+		width: 80%;
+	}
+	
 
 
 }
 
 .affix {
-
-	width: 20vw;
-	top: 10vh;
+	@include tablet {
+		width: 30vw;
+		top: 10vh;
+		
+	}
+	@include large {
+		width: 20vw;
+	}
 	@include large-screen {
 		
 		width: 250px;
-		}
+	}
+	
+		
+	
  
 }
 

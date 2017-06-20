@@ -112,14 +112,17 @@
 
 .learn-polish{
 		
-		height: 23vw;
+		height: 72vh;
 		@include mobile {
 			height: 60vw;
 		}
-		@extend %flex-centered;
+		@extend %flex-column;
+		align-items: center;
+		justify-content: space-around;
 		background-size: cover;
-		background-position: center;
-		background-image: url('#{$path-img}/learn-polish-tatry.jpg');
+		background-position: center top;
+		background-attachment: fixed;
+		background-image: url('#{$path-img}/warsaw_old_town_2.jpg');
 		padding: 0;
 }
 

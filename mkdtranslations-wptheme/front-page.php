@@ -542,14 +542,14 @@
 
 <div class='container-fluid' id='teaching'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section-title text-purple'><span class='bg-headline-home2'><?php $value = get_field ('teaching_section_title');
+        <div class='col-lg-12 col-xs-12 learn-polish'><h1 class='section-title section-title-teaching text-purple'><span class='bg-headline-home2'><?php $value = get_field ('teaching_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
 			?></span></h1>
-            <p class='section-title-lead'><?php $value = get_field ('teaching_section_lead');
+            <p class='section-title-lead section-title-lead-teaching'><?php $value = get_field ('teaching_section_lead');
 				if ($value) {
 					echo $value;
 				}
@@ -557,15 +557,8 @@
 					echo 'empty'; }
 				?>
 			</p>
-        </div>
-    </div>
-</div>
-<div class='container-fluid' id='learn-language'>
-    <div class='row'>
-        
-		<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 learn-polish'>
-			
-			<p><a href='<?php $value = get_field ('teaching_button_link');
+              			
+			<p class='button-teaching'><a href='<?php $value = get_field ('teaching_button_link');
 							if ($value) {
 								echo $value;
 									}
@@ -576,7 +569,8 @@
 							}
 							else {
 								echo 'empty'; }
-					?></a></p>
+					?></a>
+			</p>
 		
 			
 		

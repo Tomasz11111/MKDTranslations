@@ -178,6 +178,9 @@
 	a, span {
 	color: $base-color-3;
 		font-size: 1.5rem;
+		&:hover {
+			color: white !important;
+		}
 		
 					
 	}

@@ -160,6 +160,9 @@ h4 {
 		margin-bottom: 5vh;
 	}
 }
+.section-title-teaching {
+	margin-top: 15vh !important;
+}
 .section-title-lead {
     font-size: 1.5rem;
 	font-weight: 300;
@@ -175,6 +178,11 @@ h4 {
 	@include tablet-only {
 		font-size: 1.8rem;
 	}
+}
+
+.section-title-lead-teaching {
+	color: white !important;
+	//zmienić do mobilu
 }
 
 
@@ -280,24 +288,17 @@ h4 {
 
 // Sidepage Terms and conditions
 
-.subpage-header  {
-	
-	p {
 
-		border: 3px solid rgba($base-color-2, .7);
-		color: rgba($base-color-2, .7);
-		padding: 5px;
-		font-weight: 600;
-		font-size: 1.8rem;
-	}
-}
 .subpage-header-title {
 	border: 3px solid white !important;
 	color: white !important;
-	opacity: .7;
 	padding: 5px;
 	font-size: 600;
-	font-size: 1.8rem;
+	font-size: 3rem;
+	@include mobile {
+		font-size: 2.2rem;
+		
+	}
 		
 }
 
@@ -754,12 +755,12 @@ h4 {
 		padding: 5% 5% 5% 5%;
 	}
 }
-.learn-polish {
-	p {
-		font-size: 3.5rem;
-		font-weight: 600;
-		@extend %flex-centered;
-		width: 100%;
+.button-teaching {
+	font-size: 3.5rem;
+	font-weight: 600;
+	margin-bottom: 10vh;
+	@extend %flex-centered;
+	width: 100%;
 		a {
 			color: white !important;
 			border: 3px solid white;
@@ -771,7 +772,7 @@ h4 {
 				font-weighy: 600 !important;
 			}
 		}
-	}
+	
 }
 .underline {
 	text-decoration: underline !important;
