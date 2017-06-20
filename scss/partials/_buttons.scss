@@ -386,8 +386,9 @@
 
 .morespecialties, .pricing-buttons {
 	@extend %flex-centered;
+	
 	@include medium-device {
-		height: auto;
+		max-height: 25vh;
 	}
 	
 	
