@@ -76,6 +76,41 @@
 
 	
 }
+.nav-footer {
+	ul {
+		
+		text-align: left;
+		float:none !important;
+		display:flex;
+		justify-content: space-around;
+	
+		li {
+			width: auto !important;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			text-align: center !important;
+
+			a {
+				padding-left: 0;
+				font-size: 1rem !important;
+				color: white !important;
+				font-weight: 600 !important;
+				&:hover {
+					color: $footer-color !important;
+					font-size: 1rem !important;
+					font-weight: 600 !important;
+					background: none !important;
+
+				}
+
+			}
+		
+		
+
+		}
+	}
+	
+}
 
 
         

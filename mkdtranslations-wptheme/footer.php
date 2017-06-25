@@ -48,28 +48,17 @@
 			<a href='https://www.linkedin.com/in/mdziendziura'><img src='<?php echo get_template_directory_uri(); ?>/images/linkedin.png'/></a>
 		</div>
 		<div class='col-xs-12 col-lg-12 footer-copy'>
-			<nav class="navbar hidden-xs">
+			<nav class="nav-footer hidden-xs">
 
-			  <ul class="nav navbar-nav footer-nav-horizontal">
-				<li>
-					<a href="#">Home </a>
-				</li>
-				<li >
-				  <a href="#about">About me</a></li>
-				<li>
-				  <a href="#services">My solutions &amp; services</a></li>
-				  <li><a href="#translation">Translation &amp; Localisation</a>
-				</li>
-				  <li>
-				  <a href="#teaching">Learn Polish</a>
-				</li>
-				  <li>
-				  <a href="#teaching">Learn French</a>
-				</li>
-				<li>
-				 <a  href="#contact">Contact</a>
-				 </li>
-				</ul>
+			  <?php 
+			
+					$defaults = array(
+					'container' => false,
+					'theme_location' => 'primary-menu')
+						;
+					wp_nav_menu('defaults');
+				?>
+				
 			</nav>	
 			<p>&copy; 2012-2017 MKD Translations - Polish language services
 			</p>

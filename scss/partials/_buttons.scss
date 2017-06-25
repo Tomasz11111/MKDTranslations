@@ -459,12 +459,12 @@
 	transform: rotate(45deg);
 	position: absolute;
 	@include tablet {
-		top: 90%;
+		bottom:15px;
 	}
-	margin: 0 auto;
-	animation-name: buttonTriangle;
+	
+	/*animation-name: buttonTriangle;
 	animation-duration: 2s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite;*/
 	
 
 }

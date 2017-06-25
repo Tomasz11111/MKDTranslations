@@ -533,4 +533,5 @@ jQuery(document).ready(function($) {
 	$(window).on('resize', squareLearnMobile());
 					   
 	
+	
 });

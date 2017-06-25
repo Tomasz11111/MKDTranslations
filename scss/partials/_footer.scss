@@ -36,38 +36,10 @@ footer {
 	}
 }
 
-ul.footer-nav-horizontal {
-		
-	text-align: left;
-	float:none !important;
-	display:flex;
-	justify-content: space-around;
-	
-	li {
-		width: auto !important;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		text-align: center !important;
-		
-		a {
-			padding-left: 0;
-			font-size: 1rem !important;
-			color: white !important;
-			font-weight: 600 !important;
-			&:hover {
-				color: $base-color-2 !important;
-				font-size: 1rem !important;
-				font-weight: 600 !important;
-				background: none !important;
-				
-			}
-			
-		}
-		
-		
-
+.footer-copy {
+	@include tablet {
+		margin-top: 2vh;
 	}
-}
-		
+}	
 
 
