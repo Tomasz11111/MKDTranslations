@@ -122,7 +122,7 @@
 .headline-btn {
 	z-index: 1001;
 	padding: 10px;
-	animation-name: closing;
+	animation-name: buttonTrianglebutton;
 	animation-duration: 2s;
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
@@ -131,6 +131,9 @@
 		margin: 3vw;
 	}
 	margin-bottom: 20px;
+	&:hover {
+		padding: 20px;
+	}
 	
 	
 }
@@ -462,9 +465,9 @@
 		bottom:15px;
 	}
 	
-	/*animation-name: buttonTriangle;
+	animation-name: buttonTriangle;
 	animation-duration: 2s;
-	animation-iteration-count: infinite;*/
+	animation-iteration-count: infinite;
 	
 
 }

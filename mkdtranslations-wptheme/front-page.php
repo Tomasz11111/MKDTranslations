@@ -86,7 +86,7 @@
 				else {
 					echo 'empty'; }
 				?>'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height hidden-xs'><img class='icon-set-height icon-core1 hidden-sm hidden-md hidden-lg'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height'><img class='icon-set-height icon-core1 hidden-sm hidden-md hidden-lg'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><?php $value = get_field ('services_icon_headline');
 				if ($value) {
@@ -142,7 +142,7 @@
 			</a></div>
 <!-- Additional services -->
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg slideanim'>
-			<h2 class='services-headlines text-teal'>ADDITIONAL SERVICES</h2>
+			<h2 class='services-headlines text-teal'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></h2>
 		</div>
         <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue1 col-services slideanim'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>

@@ -182,6 +182,9 @@ h4 {
 
 .section-title-lead-teaching {
 	color: white !important;
+	@include mobile {
+		width: 80%;
+	}
 	//zmienić do mobilu
 }
 
@@ -705,6 +708,7 @@ h4 {
 	font-weight: 900;
 	@include mobile {
 		margin-top: 7%;
+		font-size: 1.6rem;
 	}
 	
 }
