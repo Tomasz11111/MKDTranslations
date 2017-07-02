@@ -86,8 +86,9 @@
 .mkd-photo {
 	display:block;
 	margin: 0 auto;
-	width:13%;
-	margin-top: 6vh;
+	width:10%;
+	margin-top: 10vh;
+	border-radius: 50%;
 	@include mobile {
 		width: 50%;
 	}

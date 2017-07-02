@@ -85,12 +85,16 @@
 	
 }
 .language-switcher-homepage {
-	
-		z-index: 1500;
 	p {
 		border: 0.1rem solid $base-color-2;
 	}
 		
+}
+.language-switcher-mob {
+	top: 8vh;
+	left:0;
+	right:0;
+	position: absolute;
 }
 
 .headline-btn-container {
@@ -495,6 +499,16 @@
 }
 .headline-btn-learn {
 	margin-bottom: 0 !important;
+	z-index: 1001;
+	padding: 10px;
+	@include mobile {
+		min-width: 50vw;
+		margin: 3vw;
+	}
+	
+	&:hover {
+		padding: 20px;
+	}
 	
 }
 	

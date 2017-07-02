@@ -233,13 +233,13 @@ jQuery(document).ready(function($) {
 	//funkcja sterująca paskiem menu i przyciskiem hamburger
     function hamburger() {
 		var	$container = $('.navigation-container'),
-			$hamburgerContainer = $('.hamburger-container');
+			$hamburgerContainer = $('.hamburger-container'),
 			$hamburger = $('.hamburger'),
 			$menutext = $('.menutext_hamburger'),
 			$menu = $('.wordpress-menu'),
 			$switcher = $('.language-switcher'),
 			$menu_link = $('ul.menu li a'),
-			$headline = $('.headline-text-sidepages');
+			$headline = $('.headline-text-sidepages'),
 			$btnsNavbar = $('.btn-navbar');
 			
 		toggleHamburger();
@@ -291,23 +291,30 @@ jQuery(document).ready(function($) {
 		
 							$hamburger.addClass('open');
 							$menutext.addClass('hidden');
+							$hamburger.find('span').addClass('bg-white');
+							$hamburgerContainer.removeClass('flex-center-column');
+							
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 			
 								$menu.removeClass('invisible hidden').addClass('nav100vh');
 								$container.addClass('nav100vh');
 								$headline.addClass('hidden');
+								
 							}
 		/* dla homepage */  else {
 								$menu.removeClass('invisible').addClass('nav100vh');
 								$container.addClass('nav100vh');
-								$switcher.addClass('hidden');
+								$switcher.addClass('language-switcher-mob');
+								
 							}
 							
 			}
 			function closeHamburgerMobile() {
 							$hamburger.removeClass('open');
-							/*$menutext.removeClass('hidden');*/
+							$menutext.removeClass('hidden');
 							$menu.removeClass('nav100vh').addClass('invisible');
+							$hamburger.find('span').removeClass('bg-white');
+							$hamburgerContainer.addClass('flex-center-column');
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 								$container.removeClass('nav100vh');
 								$headline.removeClass('hidden');
@@ -315,7 +322,7 @@ jQuery(document).ready(function($) {
 							
 		/* dla homepage */  else {				
 							$container.removeClass('nav100vh').removeClass('navigation-container-dimgray');
-							$switcher.removeClass('hidden');
+							$switcher.removeClass('language-switcher-mob');
 							}
 			}
 							
@@ -513,25 +520,14 @@ jQuery(document).ready(function($) {
 	
 	if(window.matchMedia ('(max-width: 767px)').matches) { 
 	elSetHeight('.square2 p', '.square3 p', '.square4 p', '.square2', '.square3', '.square4');
+	elSetHeight('.square2-about p', '.square3-about p', '.square4-about p', '.square2-about', '.square3-about', '.square4-about')
 	}
             //ew. zmienić na css animation
 	
 	
 	
-	function squareLearnMobile() {
-		
-		if(window.matchMedia ('(max-width: 767px)').matches) {
-			var $square = $('.square-learn');
-			$square.each(function() {
-				var color = $(this).find('span').css('backgroundColor');
-				$(this).css('background-color', color);
-			}); 
-				
-		}
-	} //dodać resize?
-	squareLearnMobile();
-	$(window).on('resize', squareLearnMobile());
-					   
+
+							   
 	
 	
 });

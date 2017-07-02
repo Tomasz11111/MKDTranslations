@@ -10,13 +10,7 @@ else :
 	get_header( 'pages' );
 endif;
 ?>
-<div class='container-fluid bg-learn' id='about' style='background-image: url(<?php $value = get_field ('learn_bg_image');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-				?>)'>
+<div class='container-fluid bg-learn' id='about'>
     <div class='row'>
 		
 		<div class='col-lg-12 col-xs-12 col-signature col-signature-learn '>
@@ -105,7 +99,7 @@ endif;
             
 		</div>
 		<div class='col-lg-12 learn-btn-container hidden-xs'>
-			<div class='headline-btn headline-btn-learn' style='background-color:<?php the_field('color'); ?>'><a href='#how_i_teach'><?php $value = get_field ('read_more');
+			<div class='headline-btn-learn' style='background-color:<?php the_field('color'); ?>'><a href='#how_i_teach'><?php $value = get_field ('read_more');
 			if ($value) {
 				echo $value;
 			}

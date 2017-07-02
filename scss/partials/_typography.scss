@@ -155,13 +155,17 @@ h4 {
 		margin-top: 10%;
 	}
 }
+
 .section-title-pricing {
 	@include tablet {
 		margin-bottom: 5vh;
 	}
 }
 .section-title-teaching {
-	margin-top: 15vh !important;
+	margin-top: 15vh;
+	@include mobile {
+		margin-top: 15vw;
+	}
 }
 .section-title-lead {
     font-size: 1.5rem;
@@ -186,6 +190,14 @@ h4 {
 		width: 80%;
 	}
 	//zmienić do mobilu
+}
+.section-title-lead-services {
+	background-color: rgba(83,78,75,0.5);
+	margin-bottom: 4vh;
+	line-height: 4rem;
+	width: 100% !important;
+	color: white;
+	padding-bottom: 0 !important;
 }
 
 
@@ -231,6 +243,7 @@ h4 {
 		margin-bottom: 4%;
 	}
 	
+	
 }
 .icon_title {
 	min-height: 3rem;
@@ -250,9 +263,8 @@ h4 {
 //sprawdzić czy potrzebne
 
 
-.headline-btn a, {
+.headline-btn a, .headline-btn-learn a {
 	font-size: 1.5em;
-	
 	color: white;
 }
 
@@ -571,7 +583,7 @@ h4 {
 	
 	@include mobile {
 		
-		margin-top: 2px;
+		
 		font-size: 14px;
 		line-height: 14px;
 		height: 14px;
@@ -745,6 +757,10 @@ h4 {
 	span {
 		line-height: 1.7rem;
 		padding: 1%;
+		@include mobile {
+			line-height: 2.5rem;
+			padding-bottom: 0.1rem;
+		}
 	}
 }
 .about-headlines {
@@ -776,6 +792,10 @@ h4 {
 				font-weighy: 600 !important;
 			}
 		}
+	@include mobile {
+		margin-bottom: 10vw;
+		margin-top: 10vw;
+	}
 	
 }
 .underline {

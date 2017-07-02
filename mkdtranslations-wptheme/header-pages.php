@@ -17,14 +17,18 @@
 			<p class="headline-text-sidepages">Linguistic services <span style='background-color:<?php the_field('color'); ?> !important'> by </span> MKDTranslations</p>
 
 <!-- Hamburger menu -->
-			<div class='hamburger-container'>
-					<div class="hamburger hamburger-sidepages">
-						<span style='background-color:<?php the_field('color'); ?> !important'></span>
-						<span style='background-color:<?php the_field('color'); ?> !important'></span>
-						<span style='background-color:<?php the_field('color'); ?> !important'></span>
-					</div>
-					<p class="menutext_hamburger">MENU
-					</p>
+			<div class='hamburger-container flex-center-column'>
+					<div class='hamburger-subcontainer'>
+						<div class="hamburger hamburger-sidepages">
+						
+							
+							<span style='background-color:<?php the_field('color'); ?> !important'></span>
+							<span style='background-color:<?php the_field('color'); ?> !important'></span>
+							<span style='background-color:<?php the_field('color'); ?> !important'></span>
+						</div>
+						<p class="menutext_hamburger">MENU
+						</p>
+				</div>
 			</div>
 
 <!-- Inner menu container to display only if hamburger icon is clicked-->

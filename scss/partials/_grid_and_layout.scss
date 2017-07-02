@@ -249,9 +249,10 @@
 	margin: 0 auto;
 }
 .col-services {
-	border: 10px solid white;
+	border: 10px solid transparent;
 	padding-left: 0;
 	padding-right: 0;
+	padding-top: 1vh;
 	@include mobile {
 		height: 100vw !important;
 	}
@@ -403,17 +404,22 @@
 }
 
 #services {
-	
+	padding: 0;
+	div {
+		padding: 0;
+	}
 	.section-title {
 		@include tablet {
-			margin-top: 0 !important;
+			margin-top: 3vh !important;
 			margin: 0 auto;
-			margin-bottom: 1vh;
+			margin-bottom: 3vh;
 			display: block;
 			border: 3px solid #dce6dc;
 			width: 47%;
 			box-shadow: 0px 1px 10px 2px lightgrey;
 			line-height: 2.8rem !important;
+			background-color: $base-color-3;
+			color: white !important;
 		}
 	}
 }

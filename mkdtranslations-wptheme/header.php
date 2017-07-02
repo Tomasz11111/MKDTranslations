@@ -54,13 +54,15 @@
 				?>'>en</a></p>
 		</div>		
 <!-- Hamburger icon -->
-		<div class='hamburger-container'>
-			<div class='hamburger'>
-				<span></span>
-				<span></span>
-				<span></span>
+		<div class='hamburger-container flex-center-column'>
+			<div class='hamburger-subcontainer'>
+				<div class='hamburger'>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<p class="menutext_hamburger">MENU</p>
 			</div>
-			<p class="menutext_hamburger">MENU</p>
 			
 		</div>
    </div>

@@ -77,7 +77,10 @@
 	@include mobile {
 		justify-content: center !important;
 		align-items: center !important;
+		background-size: cover;
 		height: 100vw;
+		background-image: url('#{$path-img}/Warsaw-center-mob.jpg');
+		margin-top: 7vh;
 	}
 }
 .signature-photomkd {

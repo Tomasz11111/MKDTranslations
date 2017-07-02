@@ -20,8 +20,9 @@
 }
 .bg-learn {
 	@extend %fullpage-bgimage;
+	background-image: url('#{$path-img}/Warsaw-center.jpg');
 	@include mobile {
-		background-size: 100% 57% !important;
+		background: none;
 	}
 }
 
@@ -40,11 +41,16 @@
 }
 
 
-.bg-dimgray {
-	background-color: dimgray;
-}
-.bg-darkgrey {
-	background-color: $nav-and-background-color;
+.bg {
+	&-dimgray {
+		background-color: dimgray;
+	}
+	&-darkgrey {
+		background-color: $nav-and-background-color;
+	}
+	&-white {
+		background-color: white !important;
+	}
 }
 
 .changeWidth {
@@ -83,6 +89,7 @@
 			background-color: #e1e5e8;
 		}
 	}
+	
 } 
 
 
@@ -184,17 +191,23 @@
 .bg-headline-home1 {
 	color:white;
 	background-color: $base-color-3;
-	padding: .5rem;
+	text-transform: uppercase;
+	padding: .3rem;
+	font-weight: 600;
 }
 .bg-headline-home2 {
 	color: white;
 	background-color: $base-color-2;
 	padding: .5rem;
+	
 }
 .bg-headline-home3 {
-	color: $base-color-3;
-	background-color: $adjacent-bg-color-3;
-	padding: .5rem;
+	color: white;
+	background-color: $base-color-3;
+	padding: .3rem;
+	text-transform: uppercase;
+	font-weight:600;
+		
 }
 
 .learn-pricing-modes table {
@@ -206,6 +219,13 @@
 	}
 	
 	
+}
+#solutions-services {
+	@extend %fullpage-bgimage;
+	background-image: url('#{$path-img}/office_services_min.jpg');
+}
+#services_content {
+	background-color: rgba(83,78,75, 0.5);
 }
 
    

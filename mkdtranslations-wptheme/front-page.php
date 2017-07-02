@@ -48,10 +48,12 @@
 
 <!-- MY SOLUTIONS AND SERVICES SECTIONS -->
 
-<div class='container-fluid' id='services'>
-    <div class='row-col'>
+<div class='container-fluid' id='solutions-services'>
+	<div class='row'>
+		<div class=	'col-lg-12 row-col' id='services'>
+    	
 		<img src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo'>
-        <div class='col-lg-12 col-xs-12'><h1 class ='section-title text-teal'><?php $value = get_field('services_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class ='section-title section-title-services'><?php $value = get_field('services_section_title');
 			if ($value) {
 				echo $value;
 			}
@@ -59,7 +61,7 @@
 				echo 'empty'; }
 			?>
 			</h1>
-            <p class='section-title-lead'><?php $value = get_field ('services_section_lead');
+            <p class='section-title-lead section-title-lead-services'><?php $value = get_field ('services_section_lead');
 			if ($value) {
 				echo $value;
 			}
@@ -70,8 +72,8 @@
         </div>
     </div>
 </div>
-<div class='container-fluid' id='services_content'>
-    <div class='row row-icons row-icons-services'>
+<div class='col-lg-12' id='services_content'>
+    
 		<div class='col-lg-4 col-md-12 col-sm-12  col-xs-12'>
 			<h2 class='services-headlines'><span class='bg-headline-home1'><?php $value = get_field('2_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
@@ -79,14 +81,14 @@
 			<h2 class='services-headlines'><span class='bg-headline-home3'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
 <!-- Core services -->
-        <div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 bg-belt-green col-services slideanim-left'><a href='<?php $value = get_field ('service1_link');
+        <div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'><a href='<?php $value = get_field ('service1_link');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?>'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height'><img class='icon-set-height icon-core1 hidden-sm hidden-md hidden-lg'>
+            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height-services'><img class='icon-set-height icon-core1 hidden-sm hidden-md hidden-lg'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><?php $value = get_field ('services_icon_headline');
 				if ($value) {
@@ -108,7 +110,7 @@
         </div>
 		    
 		
-		<div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 bg-belt-green col-services slideanim-left'>
+		<div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
 			<a href='<?php $value = get_field ('service2_link');
 				if ($value) {
 					echo $value;
@@ -116,7 +118,7 @@
 				else {
 					echo 'empty'; }
 				?>'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-white.png'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height-services' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-white.png'>
 			</div>
             <div class='icon_title'>
 				<h4 class='icon-headline icon-headline-animation text-white'><?php $value = get_field ('service2_icon_headline');
@@ -142,13 +144,13 @@
 			</a></div>
 <!-- Additional services -->
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg slideanim'>
-			<h2 class='services-headlines text-teal'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></h2>
+			<h2 class='services-headlines text-teal'><span class='bg-headline-home1'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue1 col-services slideanim'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src= '<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height-services' src= '<?php echo get_template_directory_uri(); ?>/images/software-white.png'>
 			</div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation'><span class='text-teal'><?php $value = get_field ('service3_icon_headline');
+				<h4 class='icon-headline icon-headline-animation'><span class='text-white'><?php $value = get_field ('service3_icon_headline');
 				if ($value) {
 					echo $value;
 				}
@@ -158,7 +160,7 @@
 					</span></h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'><?php $value = get_field ('service3_icon_description');
+				<p class='icon-description-text text-white'><?php $value = get_field ('service3_icon_description');
 				if ($value) {
 				echo $value;
 				}
@@ -169,11 +171,11 @@
 			</div>
         </div>
 		
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue1 col-services slideanim'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height-services' src='<?php echo get_template_directory_uri(); ?>/images/glossary-white.png'>
 			</div>
             <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation'><span class='text-teal'><?php $value = get_field ('service4_icon_headline');
+				<h4 class='icon-headline icon-headline-animation'><span class='text-white'><?php $value = get_field ('service4_icon_headline');
 			if ($value) {
 				echo $value;
 			}
@@ -183,7 +185,7 @@
 					</span></h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'><?php $value = get_field ('service4_icon_description');
+				<p class='icon-description-text text-white'><?php $value = get_field ('service4_icon_description');
 				if ($value) {
 				echo $value;
 				}
@@ -193,10 +195,10 @@
 				</p>
 			</div>
         </div>
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue1 col-services slideanim'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height-services' src='<?php echo get_template_directory_uri(); ?>/images/revision-white.png'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='text-teal'><?php $value = get_field ('service5_icon_headline');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='text-white'><?php $value = get_field ('service5_icon_headline');
 				if ($value) {
 					echo $value;
 				}
@@ -205,7 +207,7 @@
 				?></span></h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'><?php $value = get_field ('service5_icon_description');
+				<p class='icon-description-text text-white'><?php $value = get_field ('service5_icon_description');
 				if ($value) {
 				echo $value;
 				}
@@ -214,10 +216,10 @@
 				?></p>
 			</div>
         </div>
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 bg-belt-blue1 col-services slideanim'>
-            <div class='icon-circle icon-circle-teal'><img class='icon-set-height' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'>
+        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='icon-circle icon-circle-teal'><img class='icon-set-height-services' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-white.png'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='text-teal'><?php $value = get_field ('service6_icon_headline');
+            <div class='icon_title'><h4 class='icon-headline icon-headline-animation'><span class='text-white'><?php $value = get_field ('service6_icon_headline');
 			if ($value) {
 				echo $value;
 			}
@@ -226,7 +228,7 @@
 				?></span></h4>
 			</div>
             <div class='icon_description'>
-				<p class='icon-description-text'><?php $value = get_field ('service6_icon_description');
+				<p class='icon-description-text text-white'><?php $value = get_field ('service6_icon_description');
 				if ($value) {
 				echo $value;
 				}
@@ -237,6 +239,7 @@
 			</div>
         </div>
     </div>
+
 </div>
 
 <!-- TRANSLATION SECTION -->
@@ -625,7 +628,7 @@
 			</div>
 		</div>
         <div class='col-lg-3 col-md-3 col-sm-9 col-xs-12 col-about'>
-            <div class='square-about slideanim'>
+            <div class='square2-about square-about slideanim'>
 				<h2 class='about-headlines' style='background-color:<?php the_field('color')?>'><?php $value = get_field ('about_left_box_title');
 			if ($value) {
 				echo $value;
@@ -644,7 +647,7 @@
 		</div>
 		 <div class='col-lg-3 col-md-3 col-sm-8 col-offset-sm-1 col-xs-12 col-about col-about-middle'>
 
-			<div class='square-about slideanim'>
+			<div class='square3-about square-about slideanim'>
 				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent1')?>'><?php $value = get_field ('about_middle_box_title');
 			if ($value) {
 				echo $value;
@@ -662,7 +665,7 @@
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-3 col-sm-7 col-xs-12 col-about'>
-			<div class='square-about slideanim'>
+			<div class='square4-about square-about slideanim'>
 				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent2')?>'><?php $value = get_field ('about_right_box_title');
 			if ($value) {
 				echo $value;

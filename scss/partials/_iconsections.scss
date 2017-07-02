@@ -77,6 +77,13 @@
 	}
 	
 }
+
+.icon-set-height-services {
+	max-height: 50px;
+	@include mobile {
+		max-height: 100px;
+	}
+}
 /*.icon-set-width {
 	max-width: 90px;
 	@include mobile {
