@@ -155,7 +155,12 @@ h4 {
 		margin-top: 10%;
 	}
 }
-
+.section-title-services {
+	@include mobile {
+		background: none;
+		color: $base-color-3;
+	}
+}
 .section-title-pricing {
 	@include tablet {
 		margin-bottom: 5vh;
@@ -192,12 +197,15 @@ h4 {
 	//zmienić do mobilu
 }
 .section-title-lead-services {
-	background-color: rgba(83,78,75,0.5);
+	
+	@include tablet {
+		line-height: 4rem;
+		background-color: rgba(83, 78, 75, 0.5);
+		color: white;
+	}
 	margin-bottom: 4vh;
-	line-height: 4rem;
-	width: 100% !important;
-	color: white;
-	padding-bottom: 0 !important;
+	width:100%;
+	padding: 0;
 }
 
 
@@ -223,7 +231,8 @@ h4 {
 	padding-right: 5%;
 	@include mobile {
 	   font-size: 1.5rem;
-		padding-top: 0;
+		
+		
 
 	}
 	a {
@@ -231,23 +240,42 @@ h4 {
 		text-decoration: underline;
 		font-size: 0.9em;
 	}
+	&-services {
+		@include tablet {
+			color: white;
+		}
+	}
 }
 
 .icon-headline {
     
 	font-weight: 600;
-	text-align: center;
+	text-align: center;	
     margin-bottom: 2vh;
 	@include mobile {
 		font-size: 1.6rem;
 		margin-bottom: 4%;
+		
+	}
+	&-services {
+		@include mobile {
+			color: $base-color-3; 
+		}
+		@include tablet {
+			color: white !important;
+		}
 	}
 	
 	
 }
 .icon_title {
 	min-height: 3rem;
-	width:90%;
+	@include mobile {
+		width: 75vw;
+	}
+	@include tablet {
+		width:90%;
+	}
 	margin: 0 auto;
 }
 
@@ -718,9 +746,11 @@ h4 {
 	text-align: center !important;
 	font-size:1.3rem;
 	font-weight: 900;
+	margin-top: 1vh !important;
 	@include mobile {
 		margin-top: 7%;
 		font-size: 1.6rem;
+		
 	}
 	
 }

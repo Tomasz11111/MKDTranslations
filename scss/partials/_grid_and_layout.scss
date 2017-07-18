@@ -249,21 +249,19 @@
 	margin: 0 auto;
 }
 .col-services {
-	border: 10px solid transparent;
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 1vh;
-	@include mobile {
-		height: 100vw !important;
+	@include tablet {
+		padding-bottom: 9999px; // łącznie z overflow hidden na containerze rodzica zapewnia równą wysokość wszystkich kolumn
+		margin-bottom: -9999px; // j.w.
+		border: 10px solid transparent;
 	}
-	@include large {
-		-webkit-transition: border-top 0.5s; /* Safari */
-    	transition: border-top 0.5s;
-	}
+	
 }
 .col-services:hover {
 	@include large {
-	border-top: 5px solid white;
+	background-color: rgb(83, 78, 75);
 	}
 }
 
@@ -485,6 +483,15 @@
 	padding:0;
 	margin:0;
 	float: left;
+}
+#services_content {
+	@include mobile {
+			padding-right: 0 !important;
+			padding-left: 0 !important;
+		
+		
+	}
+	
 }
 
 
