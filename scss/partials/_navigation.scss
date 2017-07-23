@@ -8,7 +8,7 @@
 	align-items: center;
 	z-index: 1200; 
 	background-color: white !important;
-	border-bottom: 1px solid $nav-and-background-color;
+	box-shadow: 0px 5px 6px -1px rgba(0,0,0,0.3);
 	@include mobile {
 		justify-content: flex-start;
 	}

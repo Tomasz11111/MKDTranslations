@@ -134,6 +134,9 @@
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg slideanim'>
 			<h2 class='services-headlines text-teal'><span class='bg-headline-home1'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
+	<div class='hidden-xs hidden-lg col-md-12 col-sm-12 '>
+			<h2 class='services-headlines'><span class='bg-headline-home1'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
+		</div>
         <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height-services hidden-xs' src= '<?php echo get_template_directory_uri(); ?>/images/software-white.png'><img class='hidden-sm hidden-md hidden-lg icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
 			</div>

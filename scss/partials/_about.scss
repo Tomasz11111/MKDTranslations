@@ -98,6 +98,15 @@
 		width: 100vw;
 		height: 100vw;
 	}
+	@include tablet-only {
+		width:40vw;
+		height:40vw
+	}
+	@include medium-device-portrait {
+		width:40vw;
+		height: 40vw;
+	}
+	
 	
 }
 

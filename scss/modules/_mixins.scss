@@ -22,6 +22,11 @@
 		@content;
 	}
 }
+@mixin medium-only {
+	@media all and(min-width: #{$medium}) and (max-width: (#{$large} -1)) {
+		@content;
+	}
+}
 @mixin medium-device-portrait {
 	@media all and (min-width:#{$medium}) and (orientation: portrait) {
 		@content;

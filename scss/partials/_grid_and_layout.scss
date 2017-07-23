@@ -441,9 +441,16 @@
 	@include tablet {
 		height: 30vh;
 	}
-	
+	@include tablet-only {
+		padding: 0 !important;
+	}
+		
 	@include medium-device {
 		height: 60vh;
+	}
+	@include medium-device-portrait {
+		height: auto;
+		padding: 0 !important;
 	}
 	
 }
@@ -452,11 +459,17 @@
 	@include tablet-only {
 		justify-content: flex-end !important;
 	}
+	@include medium-device-portrait {
+		justify-content: flex-end !important;
+	}
 		
 }
 .col-learn-right, .col-learn-left-middle {
 	@include tablet-only {
 	justify-content: flex-start !important;
+	}
+	@include medium-device-portrait {
+		justify-content: flex-start !important;
 	}
 }
 // services {
@@ -491,7 +504,22 @@
 		
 		
 	}
+	@include tablet-only {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	
+	@include medium-only {
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+	
+}
+.col-md-3-to-md-6 {
+	@include medium-device-portrait {
+		width: 50% !important;
+	}
 }
 
 

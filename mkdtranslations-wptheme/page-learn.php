@@ -31,7 +31,7 @@ endif;
 				?> 
 			</p>
 		</div>
-        <div class='col-lg-3 col-md-3 col-sm-6 hidden-xs col-learn col-learn-left'>
+        <div class='col-lg-3 col-md-3 col-sm-6 hidden-xs col-learn col-learn-left col-md-3-to-md-6'>
 			<div class='square1-learn slideanim slide'>
 				<p class='signature-photomkd'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_photo_text');
 				if ($value) {
@@ -42,7 +42,7 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-        <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-left-middle'>
+        <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-left-middle col-md-3-to-md-6'>
             <div class='square2 square-learn square2-learn slideanim slide' style='background-color:<?php the_field('color'); ?>'>
 				<h2><span><?php $value = get_field ('learn_left_square_title');
 				if ($value) {
@@ -60,7 +60,7 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-		 <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right-middle'>
+		 <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right-middle col-md-3-to-md-6'>
 
 			<div class='square3 square-learn square3-learn slideanim slide' style='background-color:<?php the_field('color_adjacent1'); ?>'>
 				<h2><span><?php $value = get_field ('learn_middle_square_title');
@@ -79,7 +79,7 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right '>
+		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right col-md-3-to-md-6 '>
 			<div class='square4 square-learn square4-learn slideanim slide' style='background-color:<?php the_field('color_adjacent2'); ?>'>
 				<h2><span><?php $value = get_field ('learn_right_square_title');
 				if ($value) {

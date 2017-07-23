@@ -44,7 +44,7 @@ endif;
 </div>
 <div class='container-fluid hidden-xs' id='photos'>
     <div class='row'>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-tourism-pic pic-square'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-tourism-pic pic-square'>
             <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
 			if ($value) {
 				echo $value;
@@ -61,7 +61,7 @@ endif;
                 </p></div>
 
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
 			<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_2');
 			if ($value) {
 				echo $value;
@@ -80,7 +80,7 @@ endif;
 			</div>
         </div>
 
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
 				<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
 			if ($value) {
 				echo $value;
@@ -100,7 +100,7 @@ endif;
 			</div>
         </div>
             
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-technical-pic pic-square'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-technical-pic pic-square'>
 			<div class='portfolio-overlay'>
 				<p class='portfolio-overlay-text' ><?php $value = get_field ('translation_speciality_4');
 			if ($value) {
@@ -120,7 +120,7 @@ endif;
 				</p>
 			</div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-law-pic pic-square '><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-law-pic pic-square '><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
 			if ($value) {
 				echo $value;
 			}
@@ -134,7 +134,7 @@ endif;
 				echo 'empty'; }
 			?></p></div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-finance-pic pic-square '><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-finance-pic pic-square '><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
 			if ($value) {
 				echo $value;
 			}
@@ -155,7 +155,7 @@ endif;
 
 <div class='container-fluid'>
 	<div class='row'>
-		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
+		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-md hidden-lg' data-ride='carousel' data-interval='false'>
 			<div class='carousel-inner' role='listbox'>
 			<div class='item active portfolio-tourism-pic pic-square'>
 			<div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
@@ -299,7 +299,7 @@ endif;
 <div class='container-fluid bg-grey padding' id='process-content'>
     <div class='row'>
         <div class='col-lg-2'></div>
-        <div class='col-lg-4'>
+        <div class='col-lg-4 col-md-6 col-sm-6'>
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'>
@@ -321,7 +321,7 @@ endif;
 			?>
             
         </div>
-		<div class='col-lg-4'>
+		<div class='col-lg-4 col-md-6 col-sm-6'>
 			<div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'>
@@ -380,7 +380,7 @@ endif;
                 
             </div>
           
-        <div class='col-lg-4'>    
+        <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>    
     
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height'>
 			</div>
@@ -401,7 +401,7 @@ endif;
 				?></p>
 			</div>
          </div>
-         <div class='col-lg-4'>
+         <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_2');
@@ -421,7 +421,7 @@ endif;
 				?></p>
 			</div>
        </div>
-       <div class='col-lg-4'>
+       <div class='col-lg-4 col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-xs-12'>
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height'>
 		   </div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_3');
@@ -444,6 +444,7 @@ endif;
                  	<img src='<?php echo get_template_directory_uri()?>/images/PayPal.svg' alt='PayPal logo'><img src='<?php echo get_template_directory_uri()?>/images/Skrill_small.png' alt='Skrill logo'>
 		   </div>
 		</div>
+		
 		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
 			<div class='btn-standard btn-blue'><a href='<?php $value = get_field('pricing_button_left_link');
 				if ($value) {

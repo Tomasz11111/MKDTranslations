@@ -110,7 +110,7 @@ h4 {
 }
 
 .headline-text-sidepages {
-	font-size: 2rem;
+	
 	line-height: 7vh;
     font-family: $title-font-family;
 	text-align: center;
@@ -139,6 +139,12 @@ h4 {
 			border: 0.1em solid #fff;
 			background-color: $base-color-2;
 			color: white !important;
+	}
+	@include tablet {
+		font-size: 3rem;
+	}
+	@include large {
+		font-size: 2rem;
 	}
 }
 
@@ -640,40 +646,64 @@ h4 {
 	@include mobile {
 		font-size: 3rem !important;
 	}
+	@include tablet-only {
+		font-size: 3rem !important;
+	}
+	@include medium-device-portrait {
+		font-size: 3rem !important;
+	}
 }
 
 
 .square2-learn > p > span {
 	font-weight: 300;
-	@include tablet {
-		
-		padding: 1%;
-		font-size: 1.7rem !important;
-	}
 	@include mobile {
 		font-size: 2rem !important;
+	}
+	@include tablet-only {
+		
+		padding: 1%;
+		font-size: 2.5rem !important;
+	}
+	@include medium-device {
+		font-size: 1.7rem !important;
+	}
+	@include medium-device-portrait {
+		font-size: 2.5rem !important;
 	}
 }
 .square3-learn > p > span {
 	font-weight: 300;
-	@include tablet {
-		
-		padding: 1%;
-		font-size: 1.7rem !important;
-	}
+	
 	@include mobile {
 		font-size: 2rem !important;
+	}
+	@include tablet-only {
+		
+		padding: 1%;
+		font-size: 2.5rem !important;
+	}
+	@include medium-device {
+		font-size: 1.7rem !important;
+	}
+	@include medium-device-portrait {
+		font-size: 2.5rem !important;
 	}
 }
 .square4-learn > p > span {
-	font-weight: 300;
-	@include tablet {
-		
-		padding: 1%;
-		font-size: 1.7rem !important;
-	}
 	@include mobile {
 		font-size: 2rem !important;
+	}
+	@include tablet-only {
+		
+		padding: 1%;
+		font-size: 2.5rem !important;
+	}
+	@include medium-device {
+		font-size: 1.7rem;
+	}
+	@include medium-device-portrait {
+		font-size: 2.5rem;
 	}
 }
 //contact section
@@ -761,7 +791,13 @@ h4 {
 	width: 100% !important;
 	text-decoration: none !important;
 	text-align: center;
+	@include tablet-only {
+				padding-bottom: 5vh;
+	}
 	
+	@include medium-device-portrait {
+			padding-bottom: 5vh;
+	}
 		span {
 		color:white !important;	
 		background-color: $base-color-2 !important;	
@@ -770,6 +806,7 @@ h4 {
 			@include mobile {
 				padding: 0.8%;
 			}
+			
 	}
 	
 }

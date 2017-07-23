@@ -107,7 +107,12 @@
 	&-translation {
 		@extend .subpage-header;
 		background-image: url('#{$path-img}/translation.jpg');
-		height: 40vh;
+		height: 30vh;
+		
+		@include medium-device-portrait {
+			height: 15vh;
+		}
+		
 	}
 }
 // Contact form + Nav Container
