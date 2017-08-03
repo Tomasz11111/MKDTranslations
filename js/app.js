@@ -32,10 +32,10 @@ jQuery(document).ready(function($) {
 	
 	
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
-	function smoothScroll() {
-        if($('body').is('.home')) {
-			$('.wordpress-menu a, .help a, div a, .headline-btn a, .icon-description-text a, .nav-pills a').on('click', function (event) {
-
+	function smoothScroll(elements) {
+        //if($('body').is('.home')) {
+			$(elements).on('click', function (event) {
+				
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== '') {
 
@@ -56,9 +56,17 @@ jQuery(document).ready(function($) {
                 });
             } // End if
         });
-    }
-	};
-    smoothScroll();
+	}
+   function runSmoothScroll() {
+	    if($('body').is('.home')) {
+			smoothScroll('.wordpress-menu a, .help a, div a, .headline-btn a, .icon-description-text a') //strony z linkami do id w menu
+		}
+		else {
+			smoothScroll('.headline-btn-learn a, .nav-pills a');// strony bez linków do id w menu
+		}
+   }
+		runSmoothScroll();
+   
 	
 	
 /* Swipe for mobile */
@@ -246,10 +254,13 @@ jQuery(document).ready(function($) {
 		hideMenuWhenLinked();
 		menuBarChangeColor();
 		highlightActiveLangBtn();
+		
 		/*hideLanguagesMob();
 		hideLanguagesPC();*/
 		
-		
+		function setNavBgMobile() {
+			
+		}
 		function toggleHamburger(){
 				
 				if((window.matchMedia ('(min-width: 768px)').matches) && $('body').hasClass('home') ) {
@@ -295,10 +306,15 @@ jQuery(document).ready(function($) {
 							$hamburgerContainer.removeClass('flex-center-column');
 							
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
+								
+							var $elementToPickColorFrom = $('.headline-text-sidepages span'),
+								newNavBgColor = $elementToPickColorFrom.attr('style');
 			
 								$menu.removeClass('invisible hidden').addClass('nav100vh');
+								$menu.attr('style', newNavBgColor);
 								$container.addClass('nav100vh');
 								$headline.addClass('hidden');
+								$hamburger.find('span').attr('style', '');
 								
 							}
 		/* dla homepage */  else {
@@ -316,8 +332,12 @@ jQuery(document).ready(function($) {
 							$hamburger.find('span').removeClass('bg-white');
 							$hamburgerContainer.addClass('flex-center-column');
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
+								var $elementToPickColorFrom = $('.headline-text-sidepages span'),
+								newNavBgColor = $elementToPickColorFrom.attr('style');
+			
 								$container.removeClass('nav100vh');
 								$headline.removeClass('hidden');
+								$hamburger.find('span').attr('style', newNavBgColor);
 							}
 							
 		/* dla homepage */  else {				
@@ -333,7 +353,7 @@ jQuery(document).ready(function($) {
 							$hamburger.addClass('open');
 							/*$menutext.addClass('hidden');*/
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
-			
+														
 								$menu.removeClass('hidden');
 								$headline.addClass('hidden');
 								$switcher.removeClass('hidden');
