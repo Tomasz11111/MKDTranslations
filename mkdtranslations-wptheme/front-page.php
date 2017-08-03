@@ -82,6 +82,7 @@
 		</div>
 <!-- Core services -->
         <div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
+			<a href='#translation'>
             <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='icon-set-height-services hidden-xs'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-blue.png' class='icon-set-height hidden-sm hidden-md hidden-lg'>
 			</div>
             <div class='icon_title'><h4 class='icon-headline icon-headline-services icon-headline-animation'><?php $value = get_field ('services_icon_headline');
@@ -101,11 +102,12 @@
 				?></p>
 				<!--<p class='icon-description-text text-white'><a href='#translation'>Read more</a></p>-->
 			</div>
+			</a>
         </div>
 		    
 		
 		<div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
-			
+			<a href='#teaching'>
             <div class='icon-circle icon-circle-teal'><img class='icon-set-height-services hidden-xs' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-white.png'><img class='hidden-sm hidden-md hidden-lg icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/teaching-blue.png'>
 			</div>
             <div class='icon_title'>
@@ -129,6 +131,7 @@
 				</p>
 				<!--<p class='icon-description-text text-white'><a href='#teaching'>Read more</a></p>-->
 			</div>
+			</a>
 		</div>
 <!-- Additional services -->
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg slideanim'>
