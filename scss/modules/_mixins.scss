@@ -44,3 +44,16 @@
 		@content;
 			}
 }
+
+//Background images src 
+
+@mixin bg-img($image) {
+	background-image: url('#{$path-img}/#{$image}');
+	background-repeat: no-repeat;
+}
+
+// font sizes
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}

@@ -29,7 +29,7 @@
 	z-index: 1200;
 	@include mobile {
 		width: 100% !important;
-		background-color:  rgba($base-color-2, 0.7);
+		background-color:  rgba($clr-secondary, 0.7);
 	}
 	@include tablet {
 		max-width: 70%;
@@ -57,15 +57,15 @@
 				padding: 1%;
 						}
             a {
-              color:  $nav-and-background-color !important; /*tu zmieniam kolor czcionki w menu*/
-	           font-size: 1rem; 
+              color:  $clr-adjacent-5 !important; /*tu zmieniam kolor czcionki w menu*/
+	           font-size: type-scale(0); 
 				@include mobile {
 				font-size: 2.3rem;
 				 color:  white !important;	
 				}//
             }
             a[href="#how_i_teach"], a[href="#process"], a[href="learnfrench.html"], a[href="learnpolish.html"], a[href="#pricing"],   {
-                font-weight: 300;
+                font-weight: $thin;
             }
         }
     }
@@ -92,13 +92,13 @@
 
 			a {
 				padding-left: 0;
-				font-size: 1rem !important;
+				font-size: type-scale(0) !important;
 				color: white !important;
-				font-weight: 600 !important;
+				font-weight: $bold !important;
 				&:hover {
-					color: $footer-color !important;
-					font-size: 1rem !important;
-					font-weight: 600 !important;
+					color: $clr-adjacent-2 !important;
+					font-size: type-scale(0) !important;
+					font-weight: $bold !important;
 					background: none !important;
 
 				}
@@ -159,7 +159,7 @@
 	position: absolute;
 	height: 3px;
 	width: 100%;
-	background: $base-color-2;
+	background: $clr-primary;
 	border-radius: 9px;
 	opacity: 1;
 	left: 0;
@@ -263,7 +263,7 @@
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff !important;
-  background-color: rgba($base-color-2, 0.5) !important;
+  background-color: rgba($clr-secondary, 0.5) !important;
 }
 .nav-pills {
     ul {

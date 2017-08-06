@@ -42,10 +42,10 @@
 	}
 }
 .signature {
-	font-size: 3.5rem;
+	font-size: type-scale(+5);
 	font-family: $base-font-family;
-	font-weight: 900;
-	color: $base-color-2;
+	font-weight: $ultra-bold;
+	color: $clr-primary;
 	@include tablet {
 		display: block;
 		width: 80%;
@@ -70,7 +70,7 @@
 .signature-learn {
 	@include mobile {
 		font-size: 2.5rem;
-		font-weight: 900;
+		font-weight: $ultra-bold;
 	}
 }
 .col-signature-learn {
@@ -79,7 +79,7 @@
 		align-items: center !important;
 		background-size: cover;
 		height: 100vw;
-		background-image: url('#{$path-img}/Warsaw-center-mob.jpg');
+		@include bg-img('Warsaw-center-mob.jpg');
 		margin-top: 7vh;
 	}
 }
@@ -87,8 +87,8 @@
 	span {
 		color: white;
 		text-decoration: none !important;
-		font-size: 1.6rem;
-		font-weight: 900;
+		font-size: type-scale(+3);
+		font-weight: $ultra-bold;
 	}
 }
 %square {
@@ -120,12 +120,12 @@
 	@include mobile {
 		width: 100vw;
 		height: 100vw;
-		background-color: $adjacent-bg-color-2;
+		background-color: $clr-adjacent-3;
 	}
 }
 .square1 {
 		@extend %square;
-		background-image: url('#{$path-img}/mkd_color.jpg');
+		@include bg-img('mkd_color.jpg');
 		background-size: cover;
 		background-position: center;
 				
@@ -133,7 +133,7 @@
 }
 .square1-learn {
 	@extend %square;
-	background-image: url('#{$path-img}/mkd_photo.jpg');
+	@include bg-img('mkd_photo.jpg');
 		background-size: cover;
 		background-position: center;
 		display: flex;
@@ -141,14 +141,14 @@
 		align-items: flex-end;
 }
 .square-text {
-	font-size: 1.1rem;
+	font-size: type-scale(+1);
 	@include tablet-only {
 		font-size: 1.5rem;
 	}
 	@include mobile {
 		font-size: 1.5rem;
 	}
-	font-weight: 300;
+	font-weight: $thin;
 	color: white;
 	padding: 0 5% 5% 5%;
 }
@@ -169,7 +169,7 @@
 	color: white;
 	margin-left: 4.5%;
 	margin-top: 5%;
-	font-weight: 600;
+	font-weight: $bold;
 }
 
 

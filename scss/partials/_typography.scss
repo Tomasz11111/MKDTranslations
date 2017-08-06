@@ -12,7 +12,7 @@ html {
 
 
 h1 {
-    font-size: 1.8rem;
+    font-size: type-scale(+4);
 }
 
 h2 {
@@ -80,7 +80,7 @@ h4 {
 }
 .headline-text-big {
     padding-top: 8vh;
-	font-size: 4rem;
+	font-size: type-scale(max);
     font-family: $title-font-family;
 	margin: 0;
 	height: 20vh;
@@ -103,7 +103,7 @@ h4 {
 			vertical-align: middle;
 			margin: -0.44em 0.1em 0;
 			border: 0.1em solid #fff;
-			background-color: rgba($base-color-2, 1);
+			background-color: rgba($clr-primary, 1);
 			
 	}
 			
@@ -137,7 +137,7 @@ h4 {
 			vertical-align: middle;
 			margin: -0.44em 0.1em 0;
 			border: 0.1em solid #fff;
-			background-color: $base-color-2;
+			background-color: $clr-primary;
 			color: white !important;
 	}
 	@include tablet {
@@ -164,7 +164,7 @@ h4 {
 .section-title-services {
 	@include mobile {
 		background: none;
-		color: $base-color-3;
+		color: $clr-secondary;
 	}
 }
 .section-title-pricing {
@@ -179,7 +179,7 @@ h4 {
 	}
 }
 .section-title-lead {
-    font-size: 1.5rem;
+    font-size: type-scale(+3);
 	font-weight: 300;
 	padding-bottom: 1vh;
     text-align: center;
@@ -218,7 +218,7 @@ h4 {
 
 .icon-description-text {
 
-	font-size: 1rem;
+	font-size: type-scale(0);
 	color: black;
 	font-weight: 300;
 	@include medium-device {
@@ -265,7 +265,7 @@ h4 {
 	}
 	&-services {
 		@include mobile {
-			color: $base-color-3; 
+			color: $clr-secondary; 
 		}
 		@include tablet {
 			color: white !important;
@@ -304,38 +304,6 @@ h4 {
 }
 
 
-.big-title {
-	font-size: 3.5em;
-	color: white;
-	border: 0;
-	text-decoration: overline;
-
-}
-//sprawdzić po co te headers titles
-.headers-titles {
-	border: 2px solid white;
-	border-radius: 8px;
-	padding: 5px;
-	color: #0E365C;
-	background-color: white;
-
-}
-
-
-.headers-titles-grey {
-	border: 1px solid white;
-	padding: 5px;
-	background-color: #4A4E52;
-	border-radius: 8px;
-	color: white;
-}
-.header-title {;
-
-	background-color: #0E365C;
-	
-	color: white;
-}
-
 // Sidepage Terms and conditions
 
 
@@ -344,7 +312,7 @@ h4 {
 	color: white !important;
 	padding: 5px;
 	font-size: 600;
-	font-size: 3rem;
+	font-size: type-scale(+5);
 	@include mobile {
 		font-size: 2.2rem;
 		
@@ -369,149 +337,19 @@ h4 {
 	color: slategrey !important;
 		}
 	&-teal {
-	color: $base-color-3 !important;
+	color: $clr-secondary !important;
 		}
 	&-gainsboro {
 	color: gainsboro;
 		}
 	&-purple {
-	color: $base-color-2 !important;
+	color: $clr-primary !important;
 	}
 	&-white {
 		color: white !important;
 	}
 }
 
-%about-mains {
-	font-size: 1.4rem;
-	line-height: 1.7rem;
-	width: 80%;
-    margin-top: 100px;
-	padding: 20px;
-	font-weight: 500;
-	color: white;
-	@include mobile {
-		margin: 0 auto !important;
-		text-align: center;
-				
-	}
-
-}
-.about-main {
-	@extend %about-mains;
-	background-color: rgba(0, 128, 128, 0.7);
-}
-
-.about-main-learn {
-	@extend %about-mains;
-	background-color: rgba(128, 0, 128, 0.7);
-	text-align: right;
-	
-}
-%about-secondarys {
-	font-size: 2.2vh;
-	margin-top: 50px;
-	width: 70%;
-	padding: 20px;
-	color: white;
-	@include mobile {
-		width: 100% !important;
-		margin-top: 20px;
-	}
-
-}
-.about-secondary {
-	@extend %about-secondarys;
-	background-color: rgba(0, 128, 128, 0.7);
-	
-}
-
-.about-secondary-learn {
-	@extend %about-secondarys;
-	background-color: rgba(128, 0, 128, 0.7);
-	text-align: right;
-	
-}
-
-
-.about-main span {
-
-	background-color: rgba(255, 255, 255, 0.8);
-
-	color: teal;
-}
-.about-title, .about-mobile {
-    font-size: 5vh;
-    background-color: rgba(255, 255, 255, 0.5);
-    
-    margin-top: 10vh;
-    float: right;
-    
-    
-    
-}
-
-.learn-polish-title span {
-	color: $base-color-2;
-    height: 100%;
-    padding: 5px;
-    padding-left: 0;
-    margin-left: 0;
-    display: inline-block;
-}
-.learn-polish-title {
-	font-size: 5vh;
-	background-color: rgba(255, 255, 255, 0.5);
-	margin-top: 10vh;
-    float: left;
-	border: 3px solid rgba(128, 0, 128, 0.7);
-	border-left: 0;
-}
-
-.learn-polish-title-left {
-	font-size: 5vh;
-    background-color: rgba(128, 0, 128, 0.5);
-    border: 3px solid rgba(128, 0, 128, 0.3);
-    border-right: 0;
-    position: absolute;
-    top: 10vh;
-    right: 0;
-    padding: 0;
-}
-.learn-polish-title-left span {
-
-	color: white;
-	height: 100%;
-	padding: 5px;
-	margin-right: 0;
-	display: inline-block;
-}
-.about-mobile {
-    float: left;
-	margin-top: 5vh !important;
-}
-.about-title span, .about-mobile span {
-    background-color: rgba(0, 128, 128, 0.5);
-    color: white;
-    height: 100%;
-    padding: 5px;
-    padding-right: 0;
-    margin-right: 0;
-    display: inline-block;
-}
-
-
-.about-title-right {
-    font-size: 5vh;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 3px solid rgba(0, 128, 128, 0.5);
-    border-left: 0;
-    color: teal;
-    position: absolute;
-    top: 10vh;
-    left: 0;
-    padding: 3px;
-}
 
 
 // Portfolio section 
@@ -519,10 +357,10 @@ h4 {
 	z-index: 10;
 	width: 100%;
 	height: 100%;
-	background-color: rgba($base-color-3, 0.5);
+	background-color: rgba($clr-secondary, 0.5);
 	color: white;
 	font-weight: 600;
-	font-size: 3vh;
+	font-size: type-scale(+3);
 	padding: 10px;
 	margin: 0;
 	text-align: center;
@@ -533,60 +371,42 @@ h4 {
 
 .portfolio-overlay-text {
 	color: white;
-	font-weight: 600;
-	font-size: 1.8rem;
+	font-weight: $bold;
+	font-size: type-scale(+3);
 	@include mobile {
 	font-size: 2rem;
 	}
 }
 
-// Learn Subpages Pricing
-
-.learn-pricing-section {
-	font-size: 1.8rem;
-	width: 100%;
-	display: inline-block;
-	color: white;
-	background-color: $base-color-2;
-	height: 2.5rem;
-	line-height: 2.5rem;
-	text-align: center;
-	margin-top: 5vh;
-	@include mobile {
-		height: auto;
-	}
-		
-}
-
 // Contact form
 
 .contact-form-lead {
-	font-size: 3.5rem;
+	font-size: type-scale(+5);
 	color: white;
-	font-weight: 400;
+	font-weight: $regular;
 	width: 75%;
 	margin: 0 auto;
 	line-height: 4.2rem;
 	margin-bottom: 2vh;
 	&-lesson {
-		color: rgb(255, 120, 0);
-		font-weight: 700;
+		color: $clr-adjacent-2;
+		font-weight: $ultra-bold;
 		&:hover {
-			font-weight: 900;
+			font-weight: $ultra-bold;
 			text-decoration: underline;
-			color: rgb(255, 120, 0) !important;
+			color: $clr-adjacent-2 !important;
 		}
 		&:active {
 			text-decoration: underline;
 		}
 	}
 	&-translation {
-		color: $base-color-1;
-		font-weight: 700;
+		color: $clr-adjacent-1;
+		font-weight: $ultra-bold;
 		&:hover {
-			font-weight: 900;
+			font-weight: $ultra-bold;
 			text-decoration: underline;
-			color: $base-color-1 !important;
+			color: $clr-adjacent-1 !important;
 		}
 		&:active {
 			text-decoration: underline;
@@ -610,11 +430,11 @@ h4 {
 	color: black;
 	margin: 0 auto;
 	font-weight: 600;
-    font-size: 0.8rem;
+    font-size: type-scale(-1);
 	display: block;
 	text-align: center;
 	width: 100%;
-	height: 0.8rem;
+	height: type-scale(-1);
 	
 	@include mobile {
 		
@@ -641,8 +461,8 @@ h4 {
 //new design learn pages
 
 .square2-learn h2, .square3-learn h2, .square4-learn h2 {
-	font-size: 2.2rem !important;
-	font-weight: 600 !important;
+	font-size: type-scale(+4) !important;
+	font-weight: $bold !important;
 	color: white;
 	@include mobile {
 		font-size: 3rem !important;
@@ -657,7 +477,7 @@ h4 {
 
 
 .square2-learn > p > span {
-	font-weight: 300;
+	font-weight: $thin;
 	@include mobile {
 		font-size: 2rem !important;
 	}
@@ -667,14 +487,14 @@ h4 {
 		font-size: 2.5rem !important;
 	}
 	@include medium-device {
-		font-size: 1.7rem !important;
+		font-size: type-scale(+3) !important;
 	}
 	@include medium-device-portrait {
 		font-size: 2.5rem !important;
 	}
 }
 .square3-learn > p > span {
-	font-weight: 300;
+	font-weight: $thin;
 	
 	@include mobile {
 		font-size: 2rem !important;
@@ -685,7 +505,7 @@ h4 {
 		font-size: 2.5rem !important;
 	}
 	@include medium-device {
-		font-size: 1.7rem !important;
+		font-size: type-scale(+3) !important;
 	}
 	@include medium-device-portrait {
 		font-size: 2.5rem !important;
@@ -698,7 +518,7 @@ h4 {
 	@include tablet-only {
 		
 		padding: 1%;
-		font-size: 2.5rem !important;
+		font-size: type-scale(+3) !important;
 	}
 	@include medium-device {
 		font-size: 1.7rem;
@@ -710,8 +530,8 @@ h4 {
 //contact section
 .contact-data-par {
 	color: white;
-	font-size: 1.3rem;
-	font-weight: 600;
+	font-size: type-scale(+2);
+	font-weight: $bold;
 	line-height: 4rem;
 	margin: 0;
 	@include mobile {
@@ -721,12 +541,12 @@ h4 {
 }
 // belts
 .confidentiality {
-	font-size: 1.8rem;
+	font-size: type-scale(+4);
 	text-align: center;
 	color: white;
 	display: inline-block;
 	width: 60%;
-	font-weight: 600;
+	font-weight: $bold;
 	font-style: italic ;
 	@include tablet-only {
 		font-size: 2rem;
@@ -749,7 +569,7 @@ h4 {
 		p:nth-child(2) {
 			text-align:center;
 			
-			font-size: 1rem;
+			font-size: type-scale(0);
 			@include mobile {
 				font-size: 1.3rem;
 			}
@@ -762,7 +582,7 @@ h4 {
 			text-align:center;
 			
 			color: white;
-			font-size:1rem;
+			font-size: type-scale(0);
 			@include mobile {
 				font-size: 1.2rem;
 			}
@@ -775,8 +595,8 @@ h4 {
 
 .services-headlines {
 	text-align: center !important;
-	font-size:1.3rem;
-	font-weight: 900;
+	font-size: type-scale(+2);
+	font-weight: $bold;
 	margin-top: 1vh !important;
 	@include mobile {
 		margin-top: 7%;
@@ -801,7 +621,7 @@ h4 {
 	}
 		span {
 		color:white !important;	
-		background-color: $base-color-2 !important;	
+		background-color: $clr-primary !important;	
 		padding-left:1%;
 		padding-right:1%;
 			@include mobile {
@@ -816,7 +636,7 @@ h4 {
 
 .square-learn {
 	a {
-	color: $base-color-2 !important;
+	color: $clr-primary !important;
 		
 	}
 }
@@ -833,7 +653,7 @@ h4 {
 }
 .about-headlines {
 	color: white;
-	font-weight: 600;
+	font-weight: $bold;
 	padding-left: 4%;
 	@include tablet-only {
 		font-size: 2rem;
@@ -844,8 +664,8 @@ h4 {
 	}
 }
 .button-teaching {
-	font-size: 3.5rem;
-	font-weight: 600;
+	font-size: type-scale(+5);
+	font-weight: $bold;
 	margin-bottom: 10vh;
 	@extend %flex-centered;
 	width: 100%;
@@ -854,10 +674,10 @@ h4 {
 			border: 3px solid white;
 			padding: 0.5%;
 			&:hover {
-				color: $base-color-2 !important;
+				color: $clr-primary !important;
 				text-decoration:none !important;
-				border: 3px solid $base-color-2;
-				font-weighy: 600 !important;
+				border: 3px solid $clr-primary;
+				font-weight: $bold !important;
 			}
 		}
 	@include mobile {

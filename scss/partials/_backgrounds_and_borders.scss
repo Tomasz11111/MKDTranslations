@@ -1,10 +1,9 @@
 //About Div - Background
 
 .bg-about {
-	background-position:right;
-	background-image: url('#{$path-img}/mkd_color_nobg.png');
-	background-repeat: no-repeat;
-	background-color: $adjacent-bg-color-2;
+	@include bg-img('mkd_color_nobg.png');
+	background-position: right;
+	background-color: $clr-adjacent-3;
 	padding: 15px;
 	background-size: 35%;
 	@include tablet-only {
@@ -20,7 +19,7 @@
 }
 .bg-learn {
 	@extend %fullpage-bgimage;
-	background-image: url('#{$path-img}/Warsaw-center.jpg');
+	@include bg-img('Warsaw-center.jpg');
 	@include mobile {
 		background: none;
 	}
@@ -28,7 +27,7 @@
 
 // Contact Div - Background
 .bg-contact {
-	background-image: url('#{$path-img}/prague2.jpg');	
+	@include bg-img('prague2.jpg');	
 	background-size: cover;
 	background-attachment: fixed;
 	height: 1200px !important;
@@ -46,7 +45,7 @@
 		background-color: dimgray;
 	}
 	&-darkgrey {
-		background-color: $nav-and-background-color;
+		background-color: $clr-adjacent-5;
 	}
 	&-white {
 		background-color: white !important;
@@ -72,15 +71,15 @@
 
 
 	&-green {
-	background-color: $base-color-3;
+	background-color: $clr-secondary;
 	}
 	
 	&-purple {
-	background-color: $base-color-2;
+	background-color: $clr-primary;
 	}
 	&-blue1 {
 		@include tablet {
-			background-color: $adjacent-bg-color-3;
+			background-color: $clr-adjacent-3;
 		}
 	}
 	&-blue2 {
@@ -101,12 +100,12 @@
 	@extend %flex-centered;
   	&-termsconditions {
 		@extend .subpage-header;
-		background-image: url('#{$path-img}/termsandconditions.jpg');
+		@include bg-img('termsandconditions.jpg');
 		height: 20vh;
 	}
 	&-translation {
 		@extend .subpage-header;
-		background-image: url('#{$path-img}/translation.jpg');
+		@include bg-img('translation.jpg');
 		height: 30vh;
 		
 		@include medium-device-portrait {
@@ -117,7 +116,7 @@
 }
 // Contact form + Nav Container
 #form-page, .navigation-container-purple  {
-	background-color: $base-color-2;
+	background-color: $clr-primary;
 	
 }
 // Teaching
@@ -135,10 +134,10 @@
 		background-position: center top;
 		background-attachment: fixed;
 		@include mobile {
-			background-image: url('#{$path-img}/warsaw_old_town_mob.jpg');
+			@include bg-img('warsaw_old_town_mob.jpg');
 		}
 		@include tablet {
-			background-image: url('#{$path-img}/warsaw_old_town_2.jpg');
+			@include bg-img('warsaw_old_town_2.jpg');
 		}
 		
 		padding: 0;
@@ -148,39 +147,18 @@
 	@extend %square ;
 	background-size: cover;
 	background-position: center;
-	background-image: url('#{$path-img}/paris-mob.jpg');
+	@include bg-img('paris-mob.jpg');
 	padding: 0;
 	@include tablet {
 		
 		margin-left: 15px;
-		box-shadow: 3px 3px 8px 0 $nav-and-background-color;
+		box-shadow: 3px 3px 8px 0 $clr-adjacent-5;
 	}
 	@include tablet-only {
 		width: 33.33vw !important;
 		height: 33.33vw !important;
 	}
 	
-}
-
-
-.square-grayscale {
-	width: 100%;
-	height: 23vw;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 100;
-}
-.square-grayscale-polish {
-	 background-image: url('#{$path-img}/cracow-mob-gray.jpeg');
-	background-size: cover;
-	background-position: center;
-         
-     }
-.square-grayscale-french {
-	background-image: url('#{$path-img}/paris-mob-gray.jpeg');
-	background-size: cover;
-	background-position: center;
 }
 
 // Learn
@@ -196,14 +174,14 @@
 .bg-headline-home1 {
 	color:white;
 	padding: .3rem;
-	font-weight: 600;
-	background-color: $base-color-3;
+	font-weight: $bold;
+	background-color: $clr-secondary;
 	
 }
 .bg-headline-home2 {
 	color: white;
 	padding: .5rem;
-	background-color: $base-color-2;
+	background-color: $clr-primary;
 	
 	
 }
@@ -213,7 +191,7 @@
 	margin: 0 auto;
 	margin-top: 2vh;
 	td, th{
-		border: 1px solid $adjacent-bg-color-4 !important;
+		border: 1px solid $clr-tertiary !important;
 	}
 	
 	
@@ -226,7 +204,7 @@
 		width: 100%;
 		height: 100vh;
 		background-attachment: fixed;
-		background-image: url('#{$path-img}/office_services_min.jpg');
+		@include bg-img('office_services_min.jpg');
 	}
 	
 	

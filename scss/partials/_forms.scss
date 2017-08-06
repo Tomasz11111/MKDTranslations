@@ -62,9 +62,9 @@ textarea {
 	
 }
 label {
-	font-size: 1.2rem;
+	font-size: type-scale(+1);
 	color: white;
-	font-weight: 300;
+	font-weight: $thin;
 	width: 100% !important;
 }
 input, textarea {
@@ -84,12 +84,12 @@ input[type='submit'] {
 	border: 2px solid white;
 	background-color: transparent !important;
 	color: white;
-	font-size: 1.5rem;
+	font-size: type-scale(+2);
 	padding: 10px;
 	&:hover {
 		background-color: purple !important;
 		color: white;
-		font-weight: 400;
+		font-weight: $regular;
 	}
 	
 }

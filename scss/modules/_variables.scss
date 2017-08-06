@@ -2,24 +2,58 @@
 
 $base-font-size: 1.1vw;
 $base-font-size-mobile: $base-font-size * 3; 
-$base-font-weight: 400;
 $base-font-family: 'Nunito', sans-serif;
 $title-font-family: 'Droid Serif', sans-serif;
 
+//Font weights
 
-// Colors
+$thin: 300;
+$regular: 400;
+$bold: 600;
+$ultra-bold: 900;
 
-$base-color-1: teal;
-$base-color-2: #4c133b;
-$base-color-3: rgb(0, 63, 128);
-$adjacent-bg-color: rgb(0, 128, 0);
-$adjacent-bg-color-2: #999b9a;
-$adjacent-bg-color-3: #c7deea;
-$adjacent-bg-color-4: #77010c;
-$nav-and-background-color: rgba(105, 105, 105, 1);
-$menu-color: $base-color-2 + #696969;
-$footer-color: #ff6400;
+$base-font-weight: $regular;
 
+//Font sizes
+
+$type-scale: (
+  -1: 0.75rem,  // small text
+  0: 1rem,      // body text
+  +1: 1.15rem,
+  +2: 1.333rem,  // large text
+  +3: 1.5rem,
+  +4: 1.777rem,   // main heading
+  +5: 3.158rem,
+  max: 4rem // hero headline
+	
+);
+
+// Descriptive color names
+
+$wine-berry: #4c133b;
+$congress-blue: #003f80;
+$pewter: #999b9a;
+$jagged-ice: #c7deea;
+$japanese-maple: #77010c;
+$dove-gray: #696969;
+$blaze-orange: #ff6400;
+
+
+// Colors as used in stylesheet
+
+	//colors used for main backgrounds and icons in front page and sidepages
+$clr-primary: $wine-berry;
+$clr-secondary: $congress-blue;
+$clr-tertiary: $japanese-maple;
+
+	//colors used less frequently
+$clr-adjacent-1: teal;
+$clr-adjacent-2: $blaze-orange;
+$clr-adjacent-3: $pewter;
+$clr-adjacent-4: $jagged-ice;
+$clr-adjacent-5: $dove-gray;
+
+$menu-color: $clr-primary + #696969;
 
 	
 //Assets paths

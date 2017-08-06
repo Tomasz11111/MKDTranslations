@@ -3,7 +3,7 @@
 		li {
 			padding: 5px;
 			font-size: $base-font-size;
-			font-weight: 300;
+			font-weight: $thin;
 			@include mobile {
 			font-size: 1.5rem;
 				}
@@ -57,10 +57,10 @@
 }
 
 
-.icon_circle_teal span {
+.icon_circle_$clr-adjacent-1 span {
 	text-align: center;
 	color: #008000;
-	font-weight: 600;
+	font-weight: $bold;
 	font-size: 2.2vh;
 
 }
@@ -159,16 +159,7 @@
 
 //icons in mobile versions
 
-.icon-core1 {
-	@include mobile {
-		src: '#{$path-img}/translation-blue.png';
-	}
-}
-.icon-core2 {
-	@include mobile {
-		src: '#{$path-img}/teaching-blue.png';
-	}
-}
+
 .learn-pricing-modes > div > h4 {
 	width: 80%;
 	margin: 0 auto;
