@@ -1,7 +1,7 @@
 // Fonts
 
 $base-font-size: 1.1vw;
-$base-font-size-mobile: $base-font-size * 3; 
+$base-font-size-mobile: calc(13px + 1.15vw);
 $base-font-family: 'Nunito', sans-serif;
 $title-font-family: 'Droid Serif', sans-serif;
 
@@ -17,16 +17,27 @@ $base-font-weight: $regular;
 //Font sizes
 
 $type-scale: (
-  -1: 0.75rem,  // small text
+  -1: 0.80rem,  // small text
   0: 1rem,      // body text
-  +1: 1.15rem,
+  +1: 1.25rem,
   +2: 1.333rem,  // large text
   +3: 1.5rem,
   +4: 1.777rem,   // main heading
-  +5: 3.158rem,
+  +5: 3.157rem,
   max: 4rem // hero headline
 	
 );
+$type-scale--mobile: (
+	-1: 0.889rem,
+	 0: 1rem,
+	+1: 1.125rem,
+	+2: 1.266rem,
+	+3: 1.424rem,
+	+4: 1.602rem,
+	+5: 1.802rem,
+	max: 2.027rem,
+);
+
 
 // Descriptive color names
 

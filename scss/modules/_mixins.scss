@@ -57,3 +57,16 @@
 @function type-scale($level) {
   @return map-get($type-scale, $level);
 }
+@function type-scale--mobile($level) {
+	@return map-get($type-scale--mobile, $level);
+}
+
+@mixin font-size($level) {
+	@include mobile {
+		font-size: type-scale--mobile($level);
+	}
+	@include large {
+		font-size: type-scale($level);
+	}
+}
+

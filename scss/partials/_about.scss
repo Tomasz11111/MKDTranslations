@@ -41,38 +41,7 @@
 		height: 18vh !important;
 	}
 }
-.signature {
-	font-size: type-scale(+5);
-	font-family: $base-font-family;
-	font-weight: $ultra-bold;
-	color: $clr-primary;
-	@include tablet {
-		display: block;
-		width: 80%;
-		text-decoration:underline;
-	}
-	@include mobile {
-		font-size: 2.2rem;
-		margin-top: 69%;
-		padding: 3%;
-		background-color: rgba(255, 255, 255, 0.8);
-	}
-}
-.signature-teaching {
-	@include mobile {
-		font-size: 3.5rem;
-		text-align: center;
-	}
-	a {
-		color: inherit !important;
-	}
-}
-.signature-learn {
-	@include mobile {
-		font-size: 2.5rem;
-		font-weight: $ultra-bold;
-	}
-}
+
 .col-signature-learn {
 	@include mobile {
 		justify-content: center !important;
@@ -141,13 +110,11 @@
 		align-items: flex-end;
 }
 .square-text {
-	font-size: type-scale(+1);
+	@include font-size(+1);
 	@include tablet-only {
 		font-size: 1.5rem;
 	}
-	@include mobile {
-		font-size: 1.5rem;
-	}
+	
 	font-weight: $thin;
 	color: white;
 	padding: 0 5% 5% 5%;

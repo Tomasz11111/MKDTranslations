@@ -51,7 +51,7 @@ endif;
 				else {
 					echo 'empty'; }
 					?></span></h2>
-				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_left_square');
+				<p class='square-text square-text-learn'><span  class='square-learn--inner-text'><?php $value = get_field ('learn_left_square');
 				if ($value) {
 					echo $value;
 				}
@@ -70,7 +70,7 @@ endif;
 				else {
 					echo 'empty'; }
 					?></span></h2>
-				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_middle_square');
+				<p class='square-text square-text-learn'><span  class='square-learn--inner-text'><?php $value = get_field ('learn_middle_square');
 				if ($value) {
 					echo $value;
 				}
@@ -88,7 +88,7 @@ endif;
 				else {
 					echo 'empty'; }
 					?></span></h2>
-				<p class='square-text square-text-learn'><span><?php $value = get_field ('learn_right_square');
+				<p class='square-text square-text-learn'><span  class='square-learn--inner-text'><?php $value = get_field ('learn_right_square');
 				if ($value) {
 					echo $value;
 				}

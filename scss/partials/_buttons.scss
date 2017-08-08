@@ -22,7 +22,7 @@
 			a {
 				font-family: $title-font-family;
 				color: $clr-primary;
-				font-size: type-scale(+1);
+				@include font-size(+1);
 				font-weight: $thin; /* tu może jeszcze zmienną dać*/
 				font-style: italic;
 				text-transform: lowercase;
@@ -34,7 +34,7 @@
 				@include mobile {
 					height: 3rem !important;
 					width: 3rem !important;
-					font-size: 1.6rem;
+					
 					
 				}
 				

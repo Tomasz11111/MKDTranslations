@@ -80,14 +80,13 @@ h4 {
 }
 .headline-text-big {
     padding-top: 8vh;
-	font-size: type-scale(max);
+	@include font-size(max);
     font-family: $title-font-family;
 	margin: 0;
 	height: 20vh;
 	color: white;
 	
 	@include mobile {
-	font-size: 2em;
 	margin-bottom: 15%;
 	
 	}
@@ -112,6 +111,7 @@ h4 {
 .headline-text-sidepages {
 	
 	line-height: 7vh;
+	font-size: type-scale(+4);
     font-family: $title-font-family;
 	text-align: center;
 	color: black;
@@ -119,9 +119,9 @@ h4 {
 	width: 100%;
 	margin: 0;
 	@include mobile {
+		font-size: type-scale--mobile(-1);
 		display: inline-block;
 		width:88%;
-		font-size: 1.35rem;
 		margin: 0;
 		
 			}
@@ -140,24 +140,19 @@ h4 {
 			background-color: $clr-primary;
 			color: white !important;
 	}
-	@include tablet {
-		font-size: 3rem;
-	}
-	@include large {
-		font-size: 2rem;
-	}
+	
+	
 }
 
 .section-title {
     width: 100%;
-    
+    @include font-size(+4);
 	font-weight: 600;
 	text-align: center;
 	line-height: 3rem !important; //to może do przerobienia 
 	margin-top: 8vh;
 	@include mobile {
-		font-size: 2.2rem;
-        width: 100%;
+		width: 100%;
 		margin-top: 10%;
 	}
 }
@@ -179,14 +174,13 @@ h4 {
 	}
 }
 .section-title-lead {
-    font-size: type-scale(+3);
+    @include font-size(+3);
 	font-weight: 300;
 	padding-bottom: 1vh;
     text-align: center;
     width: 70%;
     margin: 0 auto;
 	@include mobile {
-		font-size: 1.8rem;
 		padding-bottom: 0;
         width: 100%;
 	}
@@ -218,7 +212,7 @@ h4 {
 
 .icon-description-text {
 
-	font-size: type-scale(0);
+	@include font-size(0);
 	color: black;
 	font-weight: 300;
 	@include medium-device {
@@ -228,19 +222,12 @@ h4 {
 	@include tablet-only {
 		font-size: 1.5rem;
 	}
-	@include large{
-		font-size: 1rem;
-	}
+	@include font-size(0);
 	text-align: center;
     padding-bottom: 3vh;
 	padding-left: 5%;
 	padding-right: 5%;
-	@include mobile {
-	   font-size: 1.5rem;
-		
-		
-
-	}
+	
 	a {
 		color: white !important;
 		text-decoration: underline;
@@ -255,11 +242,11 @@ h4 {
 
 .icon-headline {
     
+	@include font-size(+1);
 	font-weight: 600;
 	text-align: center;	
     margin-bottom: 2vh;
 	@include mobile {
-		font-size: 1.6rem;
 		margin-bottom: 4%;
 		
 	}
@@ -312,11 +299,8 @@ h4 {
 	color: white !important;
 	padding: 5px;
 	font-size: 600;
-	font-size: type-scale(+5);
-	@include mobile {
-		font-size: 2.2rem;
-		
-	}
+	@include font-size(+4);
+	
 		
 }
 
@@ -360,7 +344,7 @@ h4 {
 	background-color: rgba($clr-secondary, 0.5);
 	color: white;
 	font-weight: 600;
-	font-size: type-scale(+3);
+	@include font-size(+3);
 	padding: 10px;
 	margin: 0;
 	text-align: center;
@@ -371,17 +355,15 @@ h4 {
 
 .portfolio-overlay-text {
 	color: white;
-	font-weight: $bold;
-	font-size: type-scale(+3);
-	@include mobile {
-	font-size: 2rem;
-	}
+	font-weight: $bold;		
+	@include font-size(+3);
+	
 }
 
 // Contact form
 
 .contact-form-lead {
-	font-size: type-scale(+5);
+	@include font-size(+5)
 	color: white;
 	font-weight: $regular;
 	width: 75%;
@@ -430,7 +412,7 @@ h4 {
 	color: black;
 	margin: 0 auto;
 	font-weight: 600;
-    font-size: type-scale(-1);
+	font-size: type-scale(-1); //tutaj bym raczej zostawił
 	display: block;
 	text-align: center;
 	width: 100%;
@@ -461,44 +443,20 @@ h4 {
 //new design learn pages
 
 .square2-learn h2, .square3-learn h2, .square4-learn h2 {
-	font-size: type-scale(+4) !important;
+	@include font-size(+4);
 	font-weight: $bold !important;
 	color: white;
-	@include mobile {
-		font-size: 3rem !important;
-	}
-	@include tablet-only {
-		font-size: 3rem !important;
-	}
-	@include medium-device-portrait {
-		font-size: 3rem !important;
-	}
-}
-
-
-.square2-learn > p > span {
-	font-weight: $thin;
-	@include mobile {
-		font-size: 2rem !important;
-	}
-	@include tablet-only {
-		
-		padding: 1%;
-		font-size: 2.5rem !important;
-	}
-	@include medium-device {
-		font-size: type-scale(+3) !important;
-	}
-	@include medium-device-portrait {
-		font-size: 2.5rem !important;
-	}
-}
-.square3-learn > p > span {
-	font-weight: $thin;
 	
-	@include mobile {
-		font-size: 2rem !important;
+	@include tablet-only {
+		font-size: 3rem !important;
 	}
+	@include medium-device-portrait {
+		font-size: 3rem !important;
+	}
+}
+.square-learn--inner-text {
+	font-weight: $thin;
+	@include font-size(+3);
 	@include tablet-only {
 		
 		padding: 1%;
@@ -511,37 +469,26 @@ h4 {
 		font-size: 2.5rem !important;
 	}
 }
-.square4-learn > p > span {
-	@include mobile {
-		font-size: 2rem !important;
-	}
-	@include tablet-only {
-		
-		padding: 1%;
-		font-size: type-scale(+3) !important;
-	}
-	@include medium-device {
-		font-size: 1.7rem;
-	}
-	@include medium-device-portrait {
-		font-size: 2.5rem;
-	}
-}
+
+
+
 //contact section
 .contact-data-par {
 	color: white;
-	font-size: type-scale(+2);
+	font-size: type-scale(+3);
 	font-weight: $bold;
 	line-height: 4rem;
 	margin: 0;
 	@include mobile {
 		text-align: center;
+		font-size: type-scale--mobile(0);
+		line-height: 3rem;
 	}
 	
 }
 // belts
 .confidentiality {
-	font-size: type-scale(+4);
+	@include font-size(+4);
 	text-align: center;
 	color: white;
 	display: inline-block;
@@ -612,6 +559,10 @@ h4 {
 	width: 100% !important;
 	text-decoration: none !important;
 	text-align: center;
+	@include mobile {
+		font-size: 2.5rem;
+		font-weight: $ultra-bold;
+	}
 	@include tablet-only {
 				padding-bottom: 5vh;
 	}
@@ -632,6 +583,31 @@ h4 {
 	
 }
 
+.signature {
+	@include font-size(+5);
+	font-family: $base-font-family;
+	font-weight: $ultra-bold;
+	color: $clr-primary;
+	@include tablet {
+		display: block;
+		width: 80%;
+		text-decoration:underline;
+	}
+	@include mobile {
+		margin-top: 69%;
+		padding: 3%;
+		background-color: rgba(255, 255, 255, 0.8);
+	}
+}
+.signature-teaching {
+	@include mobile {
+		font-size: type-scale--mobile(+5);
+		text-align: center;
+	}
+	a {
+		color: inherit !important;
+	}
+}
 
 
 .square-learn {
@@ -655,11 +631,11 @@ h4 {
 	color: white;
 	font-weight: $bold;
 	padding-left: 4%;
+	@include font-size(+2);
 	@include tablet-only {
 		font-size: 2rem;
 	}
 	@include mobile {
-		font-size: 2rem;
 		padding: 5% 5% 5% 5%;
 	}
 }
