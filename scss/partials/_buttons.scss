@@ -14,8 +14,8 @@
 			border: 0.1rem solid;
 			margin: 0;
 			@include mobile {
-				height: 3rem;
-				width: 3rem;
+				height: 2.5rem;
+				width: 2.5rem;
 				margin: 10%;
 			
 			}
@@ -32,8 +32,8 @@
 				padding-top: 0.3rem;
 				padding-bottom: 0.3rem;
 				@include mobile {
-					height: 3rem !important;
-					width: 3rem !important;
+					height: 2.5rem !important;
+					width: 2.5rem !important;
 					
 					
 				}
@@ -148,7 +148,6 @@
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-bottom: 5vh !important;
-	margin-top: 5vh !important;
 	min-width: 16vw;
 	text-align:center;
 	background: transparent;	
@@ -162,6 +161,11 @@
 		margin-bottom: 0 !important;
 		margin-top: 0 !important;
 	}
+	@include mobile {
+		margin-top: 0 !important;
+		width: 90%;
+	}
+	
 	
 	
 }
@@ -221,6 +225,9 @@
 	@include mobile {
 		margin: 0 auto;
 		display: block;
+		margin-top: 0;
+		width: 90%;
+	
 	}
 }
 .btn-learn-bgfullcolor {
@@ -241,75 +248,14 @@
 	}
 }
 
-.btn-grey {
-	@extend .btn-standard;
-	border: 2px solid $clr-adjacent-5;
-	a, span {
-		color: $clr-adjacent-5;
-		font-size: 1.5rem;
-	}
-	&:hover {
-		background-color: $clr-adjacent-5;
-		
-	}
-}
 
-.btn-how-i-teach {
-	@extend .btn-standard;
-		border: 2px solid $clr-primary;
-		a, span {
-	color: $clr-primary;
-		font-size: 1.5rem;
-							
-	}
-	&:hover {
-		background-color: $clr-primary;
-	}
-}
-     
-
-
-
-
+  
 .btn-quote:hover {
 	border: 4px white solid;
 	background-color: #0E365C;
 	text-decoration: none;
 	color: white;
 }
-
-.help:hover {
-	background-color: rgba(255, 255, 255, 1);
-	font-weight: 700;
-}
-.help:hover + .help span {
-	background-color: rgba(0, 128, 128, 1);
-	font-weight: 700;
-}
-
-.help span {
-    background-color: rgba(0, 128, 128, 0.5);
-    color: white;
-	height: 100%;
-	display: inline-block;
-	padding: 5px;
-}
-
-// to do poprawienia
-
-.btn-submit {
-
-
-	width: 15% !important;
-	background-color: slategray;
-	border-color: slategray;
-	border-radius: 0;
-	font-size: 1.8vw;
-	padding: 15px;
-	color: white;
-
-}
-
 
 
 // Navbar buttons
@@ -344,52 +290,19 @@
 	@include medium-device {
 		max-height: 25vh;
 	}
+		@include mobile {
+			flex-direction:column !important;
+		}
+	}
 	
 	
-}
+
 .pricing-buttons {
 	@include medium-device {
 		margin-top: 5vh;
 	}
 }
 
-
-
-.help {
-	font-size: 4vh;
-	background-color: rgba(255, 255, 255, 0.5);
-	border: 3px solid rgba(0, 128, 128, 0.5);
-	color: teal;
-	
-	left: -89px;
-	top: 90vh;
-	position: absolute;
-	padding-right: 5px;
-}
-.help-learn {
-	font-size: 4vh;
-	background-color: rgba(255, 255, 255, 0.5);
-	border: 3px solid rgba(128, 0, 128, 0.5);
-	color: $clr-primary;
-	left: -89px;
-	top: 90vh;
-	position: absolute;
-	padding-right: 5px;
-}
-
-.help a {
-    color: $clr-adjacent-1;
-	
-}
-.help-learn a {
-	color: $clr-primary;
-}
-.inner_border p a {
-	color: white !important;
-}
-.inner_border p a:hover {
-	color: white !important;
-}
 
 // Carousel left right buttons - Translations (mobile only)
 

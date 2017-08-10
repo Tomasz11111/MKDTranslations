@@ -42,42 +42,6 @@
 
 }
 
-.french {
-    @include mobile {
-		@include bg-img('paris-mob.jpg');
-		width: 100%;
-		height: 100vw;
-	}
-	@include bg-img('paris.jpg');
-	@extend %learnlanguage;
-    @extend %flex-centered;
-	   
-
-}
-.polish {
-    @include mobile {
-		@include bg-img('cracow-mob.jpeg');
-		width: 100%;
-		height: 100vw;
-	}
-	@include bg-img('cracow.jpeg');
-	@extend %learnlanguage;
-	@extend %flex-centered;
-    
-}
-
-.logo {
-
-	height: 38px;
-	margin-left: 10px;
-}
-
-//nie wiem do czego to
-
-.photo {
-	min-width: 40%;
-	max-width: 60%;
-}
 
 // carousel - Translation (mobile only)
 #myCarousel {

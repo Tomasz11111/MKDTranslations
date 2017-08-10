@@ -10,7 +10,7 @@ else :
 	get_header( 'pages' );
 endif;
 ?>
-<div class='container-fluid bg-learn' id='about'>
+<div class='container-fluid bg-fullpage bg-fullpage--page-learn' id='about'>
     <div class='row'>
 		
 		<div class='col-lg-12 col-xs-12 col-signature col-signature-learn '>
@@ -118,14 +118,14 @@ endif;
  <div class='container-fluid bg-grey' id='how_i_teach'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12'>
-			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_section_title');
+			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section__title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
 			?></span></h1>
-            <p class='section-title-lead'><?php $value = get_field ('how_i_teach_section_lead');
+            <p class='section__lead'><?php $value = get_field ('how_i_teach_section_lead');
 				if ($value) {
 					echo $value;
 				}
@@ -319,14 +319,14 @@ endif;
 
 <div class='container' id='learn-polish-pricing'>
 	<div class='row'>
-		<div class='col-lg-12'><h1 class='section-title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_title');
+		<div class='col-lg-12'><h1 class='section__title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_title');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h1>
-			<p class='section-title-lead'><?php $value = get_field ('learn_pricing_headline');
+			<p class='section__lead'><?php $value = get_field ('learn_pricing_headline');
 				if ($value) {
 					echo $value;
 				}

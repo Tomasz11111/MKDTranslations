@@ -19,6 +19,7 @@ $base-font-weight: $regular;
 $type-scale: (
   -1: 0.80rem,  // small text
   0: 1rem,      // body text
+  +0.5: 1.1rem,
   +1: 1.25rem,
   +2: 1.333rem,  // large text
   +3: 1.5rem,
@@ -30,6 +31,7 @@ $type-scale: (
 $type-scale--mobile: (
 	-1: 0.889rem,
 	 0: 1rem,
+	+0.5: 1.075rem,
 	+1: 1.125rem,
 	+2: 1.266rem,
 	+3: 1.424rem,
@@ -48,6 +50,7 @@ $jagged-ice: #c7deea;
 $japanese-maple: #77010c;
 $dove-gray: #696969;
 $blaze-orange: #ff6400;
+$gray-nurse: #dce6dc;
 
 
 // Colors as used in stylesheet
@@ -63,6 +66,7 @@ $clr-adjacent-2: $blaze-orange;
 $clr-adjacent-3: $pewter;
 $clr-adjacent-4: $jagged-ice;
 $clr-adjacent-5: $dove-gray;
+$clr-adjacent-6: $gray-nurse;
 
 $menu-color: $clr-primary + #696969;
 

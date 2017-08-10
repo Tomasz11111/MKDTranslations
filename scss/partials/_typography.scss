@@ -40,21 +40,8 @@ h4 {
 	}
 	
 }
-.choose-language {
-	text-align: center;
-	color: white;
-	z-index: 1000;
-	position: absolute;
-	top: 7%;
-	width: 100%;
-	p {
-		font-family: $title-font-family;
-		font-size: 1.5rem;
-	}
-	
-}
 
-.headline {
+.container-headline {
 	text-align:center;
 	color: white;
 	z-index: 1000;
@@ -64,37 +51,27 @@ h4 {
 	width: 100%;
 	@include mobile {
 		
-		display: -webkit-box;
-		display: -ms-flexbox;
+			
 		display: flex;
 		flex-direction: column;
-		webkit-flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
+	@include e('text-big') {
+		padding-top: 8vh;
+		@include font-size(max);
+		font-family: $title-font-family;
+		margin: 0;
+		height: 20vh;
+		color: white;
 	
-}
-.headline-sidepages {
-	width: 100%;
-	height: 7vh;
-}
-.headline-text-big {
-    padding-top: 8vh;
-	@include font-size(max);
-    font-family: $title-font-family;
-	margin: 0;
-	height: 20vh;
-	color: white;
-	
-	@include mobile {
-	margin-bottom: 15%;
-	
-	}
- 		span {
+		@include mobile {
+		margin-bottom: 15%;
+		}
+		span {
 			height: 2em;
 			width: 2em;
 			font-size: 0.4em;
-					
 			font-style: italic;
 			line-height: 1.9em;
 			text-transform: lowercase;
@@ -102,13 +79,14 @@ h4 {
 			vertical-align: middle;
 			margin: -0.44em 0.1em 0;
 			border: 0.1em solid #fff;
-			background-color: rgba($clr-primary, 1);
+			background-color: $clr-primary;
+			
+		}
 			
 	}
-			
 }
 
-.headline-text-sidepages {
+.navigation-container__headline-text-sidepages {
 	
 	line-height: 7vh;
 	font-size: type-scale(+4);
@@ -138,77 +116,85 @@ h4 {
 			margin: -0.44em 0.1em 0;
 			border: 0.1em solid #fff;
 			background-color: $clr-primary;
-			color: white !important;
+			color: #fff !important;
 	}
 	
 	
 }
-
-.section-title {
-    width: 100%;
-    @include font-size(+4);
-	font-weight: 600;
-	text-align: center;
-	line-height: 3rem !important; //to może do przerobienia 
-	margin-top: 8vh;
-	@include mobile {
+.section {
+	@include e('title') {
 		width: 100%;
-		margin-top: 10%;
+		@include font-size(+4);
+		font-weight: $bold;
+		text-align: center;
+		line-height: 3rem !important; //to może do przerobienia 
+		margin-top: 8vh;
+		@include mobile {
+			width: 100%;
+			margin-top: 10%;
+		}
+		@include m('front-page-services') {
+			@include mobile {
+				background: none;
+				color: $clr-secondary;
+			}
+			@include tablet {
+				margin-top: 3vh !important;
+				margin: 0 auto;
+				margin-bottom: 3vh;
+				display: block;
+				border: 3px solid $clr-adjacent-6;
+				width: 47%;
+				box-shadow: 0px 1px 10px 2px lightgrey;
+				line-height: 2.8rem !important;
+				background-color: $clr-secondary;
+				color: white !important;
+		}
 	}
-}
-.section-title-services {
-	@include mobile {
-		background: none;
-		color: $clr-secondary;
-	}
-}
-.section-title-pricing {
-	@include tablet {
-		margin-bottom: 5vh;
-	}
-}
-.section-title-teaching {
-	margin-top: 15vh;
-	@include mobile {
-		margin-top: 15vw;
-	}
-}
-.section-title-lead {
-    @include font-size(+3);
-	font-weight: 300;
-	padding-bottom: 1vh;
-    text-align: center;
-    width: 70%;
-    margin: 0 auto;
-	@include mobile {
-		padding-bottom: 0;
-        width: 100%;
-	}
-	@include tablet-only {
-		font-size: 1.8rem;
-	}
-}
-
-.section-title-lead-teaching {
-	color: white !important;
-	@include mobile {
-		width: 80%;
-	}
-	//zmienić do mobilu
-}
-.section-title-lead-services {
+		}
+		@include m('translations-pricing') {
+			@include tablet {
+				margin-bottom: 5vh;
+			}
+		}
+		
 	
-	@include tablet {
-		line-height: 4rem;
-		background-color: rgba(83, 78, 75, 0.5);
-		color: white;
+	@include e('lead') {
+		@include font-size(+3);
+		font-weight: $thin;
+		padding-bottom: 1vh;
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+		@include mobile {
+			padding-bottom: 0;
+			width: 100%;
+		}
+		@include tablet-only {
+			font-size: 1.8rem;
+		}
+		@include mobile {
+		margin-top: 15vw;
+		}
+		@include m('front-page-services') {
+			@include tablet {
+				line-height: 4rem;
+				background-color: rgba(83, 78, 75, 0.5);
+				color: white;
+			}		
+			margin-bottom: 4vh;
+			width:100%;
+			padding: 0;
+		}
+		@include m('front-page-teaching') {
+			color: white !important;
+			@include mobile {
+				width: 80%;
+			}
+		}
+		
 	}
-	margin-bottom: 4vh;
-	width:100%;
-	padding: 0;
 }
-
-
 
 .icon-description-text {
 
@@ -242,7 +228,7 @@ h4 {
 
 .icon-headline {
     
-	@include font-size(+1);
+	@include font-size(+0.5);
 	font-weight: 600;
 	text-align: center;	
     margin-bottom: 2vh;
@@ -286,7 +272,7 @@ h4 {
 
 
 .headline-btn a, .headline-btn-learn a {
-	font-size: 1.5em;
+	@include font-size(+3);
 	color: white;
 }
 
@@ -363,7 +349,8 @@ h4 {
 // Contact form
 
 .contact-form-lead {
-	@include font-size(+5)
+	
+	font-size: type-scale(+5);
 	color: white;
 	font-weight: $regular;
 	width: 75%;
@@ -396,10 +383,11 @@ h4 {
 	}
 	@include mobile {
 		width: 90%;
-		font-size: 2.5rem;
-		line-height: auto;
+		font-size: type-scale--mobile(+3);
+		line-height: 2.5rem;
 		margin-bottom: 0;
 	}
+	
 }
 
 .address {
@@ -515,11 +503,6 @@ h4 {
 	}
 		p:nth-child(2) {
 			text-align:center;
-			
-			font-size: type-scale(0);
-			@include mobile {
-				font-size: 1.3rem;
-			}
 			color: white;
 				a {
 					color:inherit;
@@ -529,11 +512,7 @@ h4 {
 			text-align:center;
 			
 			color: white;
-			font-size: type-scale(0);
-			@include mobile {
-				font-size: 1.2rem;
-			}
-			a {
+				a {
 					color:inherit;
 					}
 			}
@@ -542,12 +521,12 @@ h4 {
 
 .services-headlines {
 	text-align: center !important;
-	font-size: type-scale(+2);
+	@include font-size(+2);
 	font-weight: $bold;
 	margin-top: 1vh !important;
 	@include mobile {
 		margin-top: 7%;
-		font-size: 1.6rem;
+		
 		
 	}
 	
@@ -584,7 +563,7 @@ h4 {
 }
 
 .signature {
-	@include font-size(+5);
+	font-size: type-scale(+5);
 	font-family: $base-font-family;
 	font-weight: $ultra-bold;
 	color: $clr-primary;
@@ -594,9 +573,11 @@ h4 {
 		text-decoration:underline;
 	}
 	@include mobile {
-		margin-top: 69%;
+		position: absolute;
+		bottom: 0;
 		padding: 3%;
 		background-color: rgba(255, 255, 255, 0.8);
+		font-size:type-scale--mobile(+3);
 	}
 }
 .signature-teaching {
@@ -664,6 +645,10 @@ h4 {
 }
 .underline {
 	text-decoration: underline !important;
+}
+footer {
+	@include font-size(-1);
+	font-weight:$thin;
 }
 
 

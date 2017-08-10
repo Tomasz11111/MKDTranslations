@@ -29,7 +29,7 @@
 	z-index: 1200;
 	@include mobile {
 		width: 100% !important;
-		background-color:  rgba($clr-secondary, 0.7);
+		background-color:  rgba($clr-primary, 0.7);
 	}
 	@include tablet {
 		max-width: 70%;
@@ -60,7 +60,7 @@
               color:  $clr-adjacent-5 !important; /*tu zmieniam kolor czcionki w menu*/
 	           font-size: type-scale(0); 
 				@include mobile {
-				font-size: 2.3rem;
+				font-size: type-scale(+3);
 				 color:  white !important;	
 				}//
             }
@@ -237,24 +237,13 @@
 			top: 24px;
 			left: 6px;
 		}
-        }
+	}
 }
 
 
-@media all and (max-width: 440px) {
-    .puopu-r1-sidepages {
-        font-size: 1.0em;
-        line-height: 5vh;
-    }
-}
-@media all and (min-width: 441px) and (max-width: 636px) {
-    .puopu-r1-sidepages {
-    font-size: 1.4em;
-    line-height: 5vh;
-    }
+  
     
-    
-}
+
 //sidemenu terms and conditions
 
 

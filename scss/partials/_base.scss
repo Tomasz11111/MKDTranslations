@@ -27,14 +27,6 @@ a:hover {
 ul > li {
 	list-style: none;
 }
-/*ul > li > span {
-	border: 2px solid teal;
-	border-radius: 50%;
-	background: white;
-	color: teal;
-	width: 20px;
-	height: 20px;
-}*/
 
 table {
   	border-collapse: collapse !important;
@@ -50,74 +42,4 @@ th, td {
   	vertical-align: middle !important;
 	width: (100%/3);
 }
-/*
-input[type="text"] {
-	display: inline-block;
-	width: 50vw;
-}
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
-    box-shadow: none !important;
-}
-input[type="text"], input[type="email"], input[type="tel"] {
-	display: inline-block !important;
-	
-}
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-	color: white !important;
-    
-}
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-	color: black !important;
-}
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-	color: black !important;
-}
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-	color: black !important;
-}
-input[type="text"] {
-	display: inline-block;
-	width: 30%;
-}
-
-select:required:invalid {
-	color: #ff5d19;
-}
-select option[disabled]:first-child {
-	display: none;
-}
-option {
-	color: #800080;
-	text-align:center !important;
-}
-select.empty {
-
-	display: inline-block;
-	color: #800080;
-	background-color: transparent;
-	
-	font-size: 1.8vw;
-	margin: 0;
-	border:0;
-    padding: 10px;
-	
-}
-textarea {
-	width: 100% !important;
-    
-    
-}
-
-form {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}*/

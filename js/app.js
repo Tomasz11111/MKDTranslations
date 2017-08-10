@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
 	}
    function runSmoothScroll() {
 	    if($('body').is('.home')) {
-			smoothScroll('.wordpress-menu a, .help a, div a, .headline-btn a, .icon-description-text a') //strony z linkami do id w menu
+			smoothScroll('.wordpress-menu a, div a, .headline-btn a, .icon-description-text a') //strony z linkami do id w menu
 		}
 		else {
 			smoothScroll('.headline-btn-learn a, .nav-pills a');// strony bez linków do id w menu
@@ -247,7 +247,7 @@ jQuery(document).ready(function($) {
 			$menu = $('.wordpress-menu'),
 			$switcher = $('.language-switcher'),
 			$menu_link = $('ul.menu li a'),
-			$headline = $('.headline-text-sidepages'),
+			$headline = $('.navigation-container__headline-text-sidepages'),
 			$btnsNavbar = $('.btn-navbar');
 			
 		toggleHamburger();
@@ -307,7 +307,7 @@ jQuery(document).ready(function($) {
 							
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 								
-							var $elementToPickColorFrom = $('.headline-text-sidepages span'),
+							var $elementToPickColorFrom = $('.navigation-container__headline-text-sidepages span'),
 								newNavBgColor = $elementToPickColorFrom.attr('style');
 			
 								$menu.removeClass('invisible hidden').addClass('nav100vh');

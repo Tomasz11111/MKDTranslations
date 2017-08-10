@@ -70,3 +70,21 @@
 	}
 }
 
+// BEM mixins
+
+@mixin e($element) {
+	&__#{$element} {
+        @content;
+    }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+
