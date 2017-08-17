@@ -154,7 +154,7 @@ h4 {
 		}
 		@include m('translations-pricing') {
 			@include tablet {
-				margin-bottom: 5vh;
+				margin-bottom: 5vh !important;
 			}
 		}
 		
@@ -173,15 +173,16 @@ h4 {
 		@include tablet-only {
 			font-size: 1.8rem;
 		}
-		@include mobile {
-		margin-top: 15vw;
-		}
+		
 		@include m('front-page-services') {
 			@include tablet {
 				line-height: 4rem;
 				background-color: rgba(83, 78, 75, 0.5);
 				color: white;
-			}		
+			}
+			@include mobile {
+				width: 95%;
+			}
 			margin-bottom: 4vh;
 			width:100%;
 			padding: 0;
@@ -196,79 +197,60 @@ h4 {
 	}
 }
 
-.icon-description-text {
+.subsection {
+	// jeszcze trzeba napisać container-icon
+	@include e('headline') {
+		@include font-size(+0.5);
+		font-weight: 600;
+		text-align: center;	
+		margin-bottom: 2vh;
+		margin: 0 auto;
+		min-height: 3rem;
+		margin-top: 2vh;
+		@include mobile {
+			margin-bottom: 1rem;
+			width:75vw;
+			min-height: 2rem;
+		}
+		@include tablet {
+		width:90%;
+		}
+		@include m('front-page-services') {
+			@include mobile {
+				color: $clr-secondary; 
+			}
+			@include tablet {
+				color: white !important;
+			}
+		}
+	}
+	@include e('text') {
+		@include font-size(0);
+		color: black;
+		font-weight: 300;
+		text-align: center;
+		padding-bottom: 3vh;
+		padding-left: 5%;
+		padding-right: 5%;
+		@include m('front-page-services') {
+			@include tablet {
+				color: white;
+			}	
+		}
+	}
 
-	@include font-size(0);
-	color: black;
-	font-weight: 300;
-	@include medium-device {
-		font-size: 1.2rem;
-		padding-bottom: 0;
-	}
-	@include tablet-only {
-		font-size: 1.5rem;
-	}
-	@include font-size(0);
-	text-align: center;
-    padding-bottom: 3vh;
-	padding-left: 5%;
-	padding-right: 5%;
-	
-	a {
+	@include e('link') {
 		color: white !important;
 		text-decoration: underline;
 		font-size: 0.9em;
 	}
-	&-services {
-		@include tablet {
-			color: white;
-		}
-	}
-}
-
-.icon-headline {
-    
-	@include font-size(+0.5);
-	font-weight: 600;
-	text-align: center;	
-    margin-bottom: 2vh;
-	@include mobile {
-		margin-bottom: 4%;
-		
-	}
-	&-services {
-		@include mobile {
-			color: $clr-secondary; 
-		}
-		@include tablet {
-			color: white !important;
-		}
-	}
 	
 	
 }
-.icon_title {
-	min-height: 3rem;
-	@include mobile {
-		width: 75vw;
-	}
-	@include tablet {
-		width:90%;
-	}
-	margin: 0 auto;
-	margin-top: 2vh;
-}
 
 
-.icon-headline-animation {
-    -webkit-animation-name: emerge;
-    -moz-animation-name: emerge;
-    animation-name: emerge;
-    animation-duration: 1s;
 
-
-}
-//sprawdzić czy potrzebne
+//sprrawdzić czy potrzebne
 
 
 .headline-btn a, .headline-btn-learn a {
@@ -640,6 +622,7 @@ h4 {
 	@include mobile {
 		margin-bottom: 10vw;
 		margin-top: 10vw;
+		font-size:type-scale--mobile(max);
 	}
 	
 }

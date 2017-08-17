@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
 	}
    function runSmoothScroll() {
 	    if($('body').is('.home')) {
-			smoothScroll('.wordpress-menu a, div a, .headline-btn a, .icon-description-text a') //strony z linkami do id w menu
+			smoothScroll('.wordpress-menu a, div a, .headline-btn a, .subsection__text a') //strony z linkami do id w menu
 		}
 		else {
 			smoothScroll('.headline-btn-learn a, .nav-pills a');// strony bez linków do id w menu
@@ -99,20 +99,18 @@ jQuery(document).ready(function($) {
 				if(winoffset > offsetServices.top - 20) {
 					console.log('jeje');
 				  //dopisać opóźnienie np. setTimeout
-				   $('.bg-grey .icon-circle').addClass('icon-circle-animate');
-					$('.icon-headline').addClass('icon-headline-animation');
-					$('.icon-description-text').addClass('icon-headline-animation');
+				   $('.bg-grey .subsection__container-icon').addClass('subsection__container-icon-animate');
+					
 				   }
-				else { $('.bg-grey .icon-circle').removeClass('icon-circle-animate');
-					  $('.icon-headline').removeClass('icon-headline-animation');
-					  $('.icon-description-text').removeClass('icon-headline-animation');
+				else { $('.bg-grey .subsection__container-icon').removeClass('subsection__container-icon-animate');
+					  
 					 }
 			}
 			if($('.container-fluid').is($process)) {
     
             if(winoffset > offsetProcess.top - 20) {
-                $('#process-content .icon-circle').addClass('icon-circle-animate');
-                $('#process-content .icon-headline').addClass('icon-headline-animation');
+                $('#process-content .subsection__container-icon').addClass('subsection__container-icon-animate');
+                $('#process-content .subsection__headline').addClass('subsection__headline-animation');
                 setTimeout(function() {
                     
                 $('.check_empty').addClass('hidden');
@@ -121,8 +119,8 @@ jQuery(document).ready(function($) {
                //potrzeba skrócić tę funkcję
         	}
             else {
-                $('#process-content .icon-circle').removeClass('icon-circle-animate');
-                 $('#process-content .icon-headline').removeClass('icon-headline-animation');
+                $('#process-content .subsection__container-icon').removeClass('subsection__container-icon-animate');
+                 $('#process-content .subsection__headline').removeClass('subsection__headline-animation');
                 $('.check_empty').removeClass('hidden');
                 $('.check_full').addClass('hidden');
                 }

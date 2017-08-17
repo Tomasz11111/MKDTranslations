@@ -126,12 +126,8 @@
 .headline-btn {
 	z-index: 1001;
 	padding: 10px;
-	animation-name: buttonTrianglebutton;
-	animation-duration: 2s;
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite;
 	@include mobile {
-		min-width: 50vw;
+		min-width: 60vw;
 		margin: 3vw;
 	}
 	margin-bottom: 20px;
@@ -214,7 +210,10 @@
 	border-style: solid;
 	a, span {
 	color: $clr-tertiary;
-		font-size: 1.5rem;
+		font-size: type-scale(+3);
+		@include mobile {
+			font-size: type-scale--mobile(+2);
+		}
 		
 					
 	}
@@ -329,9 +328,7 @@
 		bottom:15px;
 	}
 	
-	animation-name: buttonTriangle;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
+	
 	
 
 }

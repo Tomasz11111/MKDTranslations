@@ -14,54 +14,49 @@
 
 
 
-
-.icon {
-	&-circle {
+.subsection {
+	@include e('container-icon') {
+			
 	@extend %flex-centered;
-	/*width: 120px;
-	height: 120px;
-	border-radius: 50%;*/
-	@include tablet {
-		margin: 0 auto;
-		}
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 0 auto;
 	margin-bottom: 2vh;
 	/*background-color: white;*/
 	/*border: 3px solid rgba(0, 126, 126, 0.3);*/
+		@include m('bg-primary') {
+			@include tablet {
+				background-color:$clr-primary;
+			}
+		}
 		
+		@include m('bg-secondary') {
+			@include tablet {
+			background-color: $clr-secondary;
+			}
+		}
 		
 	
 	}
-	&-circle-purple {
-	border: 3px solid rgba(128, 0, 128, 0.3);
-
-	}
-	&-circle-animate {
+}
+	
+	icon-circle-animate {
     -webkit-animation-name: bounceIn;
 	-moz-animation-name: bounceIn;
     animation-name: bounceIn;
     animation-duration: 1s;
     
 	}
-	&-circle-animate-purple {
+	icon-circle-animate-purple {
      -webkit-animation-name: bounceInPurple;
 	-moz-animation-name: bounceInPurple;
     animation-name: bounceInPurple;
     animation-duration: 1s;
 	}
-	&-circle-teal {
-
-	/*border: 3px solid rgba(0, 126, 126, 0.3);*/
-	}
-}
 
 
-.icon_circle_$clr-adjacent-1 span {
-	text-align: center;
-	color: #008000;
-	font-weight: $bold;
-	font-size: 2.2vh;
 
-}
 
 
 .icon-set-height {
@@ -124,7 +119,8 @@
 
 // Pricing small icons
 .payments_methods_flex {
-    @extend %flex-centered
+    @extend %flex-centered;
+	@include mobile {padding-bottom: 2rem};
 }
 .payments_methods_flex img {
     margin-left: 1vw;

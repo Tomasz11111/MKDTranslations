@@ -8,17 +8,7 @@
 	to{border-bottom: 15px solid rgba(255,255,255,1);}
 }
 
-@keyframes closing {
-   0% {
-		bottom: 7%
-	}
-	50% {
-		bottom: 8%;
-	}
-	100% {
-		bottom: 7%;
-	}
-}
+
 @keyframes buttonTriangle {
 	0% {
 		bottom: 15px;

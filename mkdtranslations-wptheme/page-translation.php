@@ -300,10 +300,10 @@ endif;
     <div class='row'>
         <div class='col-lg-2'></div>
         <div class='col-lg-4 col-md-6 col-sm-6'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height'>
+            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height'>
 			</div>
-            <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_1');
+            
+				<h4 class='subsection__headline text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
@@ -311,7 +311,7 @@ endif;
 					echo 'empty'; }
 				?>
 					</span></h4>
-			</div>
+			
             <?php $value = get_field('test1001');
 				if ($value) {
 					echo $value;
@@ -322,10 +322,9 @@ endif;
             
         </div>
 		<div class='col-lg-4 col-md-6 col-sm-6'>
-			<div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height'>
+			<div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height'>
 			</div>
-            <div class='icon_title'>
-				<h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_2');
+            <h4 class='subsection__headline text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
@@ -333,7 +332,7 @@ endif;
 					echo 'empty'; }
 				?>
 					</span></h4>
-			</div>
+			
 			<?php $value = get_field('test1000');
 				if ($value) {
 					echo $value;
@@ -382,9 +381,9 @@ endif;
           
         <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>    
     
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height'>
+            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_1');
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
@@ -392,7 +391,7 @@ endif;
 					echo 'empty'; }
 				?></span></h4>
 			</div>
-            <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_1');
+            <div class='description'><p class='subsection__text'><?php $value = get_field('pricing_icon_text_1');
 				if ($value) {
 					echo $value;
 				}
@@ -402,9 +401,9 @@ endif;
 			</div>
          </div>
          <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height'>
+            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_2');
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
@@ -412,7 +411,7 @@ endif;
 					echo 'empty'; }
 				?></span></h4>
 			</div>
-            <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_2');
+            <div class='description'><p class='subsection__text'><?php $value = get_field('pricing_icon_text_2');
 				if ($value) {
 					echo $value;
 				}
@@ -422,9 +421,9 @@ endif;
 			</div>
        </div>
        <div class='col-lg-4 col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-xs-12'>
-            <div class='icon-circle icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height'>
+            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height'>
 		   </div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_3');
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline-animation text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_3');
 				if ($value) {
 					echo $value;
 				}
@@ -432,7 +431,7 @@ endif;
 					echo 'empty'; }
 				?></span></h4>
 		   </div>
-           <div class='description'><p class='icon-description-text'><?php $value = get_field('pricing_icon_text_3');
+           <div class='description'><p class='subsection__text'><?php $value = get_field('pricing_icon_text_3');
 				if ($value) {
 					echo $value;
 				}

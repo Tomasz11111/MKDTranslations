@@ -142,7 +142,7 @@ endif;
 <div class='container-fluid bg-grey' id='how_i_teach_icons'>
     <div class='row row-icons'>
         <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('how_i_teach_icon1');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon1');
 				if ($value) {
 					echo $value;
 				}
@@ -150,25 +150,24 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_1');
+            <h4 class='subsection__headline text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			</div>
-            <div class='description'><p class='icon-description-text'><?php $value = get_field ('how_i_teach_icon_description_1');
+			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_1');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></p>
-			</div>
+			
         </div>
     	<div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('how_i_teach_icon2');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon2');
 				if ($value) {
 					echo $value;
 				}
@@ -176,25 +175,24 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_2');
+            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			</div>
-            <div class='description'><p class='icon-description-text'><?php $value = get_field ('how_i_teach_icon_description_2');
+			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_2');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></p>
-			</div>
+			
         </div>
         <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('how_i_teach_icon3');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon3');
 				if ($value) {
 					echo $value;
 				}
@@ -202,25 +200,24 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_3');
+            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_3');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			</div>
-            <div class='icon_description'><p class='icon-description-text'><?php $value = get_field ('how_i_teach_icon_description_3');
+			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_3');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?>.</p>
-			</div>
+			
         </div>
         <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('how_i_teach_icon4');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon4');
 				if ($value) {
 					echo $value;
 				}
@@ -228,25 +225,24 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_4');
+            <h4 class='subsection__headline subsection__headline-learn text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_4');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			</div>
-            <div class='icon_description'><p class='icon-description-text'><?php $value = get_field ('how_i_teach_icon_description_4');
+			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_4');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></p>
-			</div>
+			
         </div>
         <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('how_i_teach_icon5');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon5');
 				if ($value) {
 					echo $value;
 				}
@@ -254,25 +250,25 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_5');
+            <h4 class='subsection__headline subsection__headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_5');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			</div>
-            <div class='description'><p class='icon-description-text'><?php $value = get_field ('how_i_teach_icon_description_5');
+			
+           <p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_5');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></p>
-			</div>
+			
         </div>
         <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('how_i_teach_icon6');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon6');
 				if ($value) {
 					echo $value;
 				}
@@ -280,22 +276,21 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_6');
+            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_6');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			</div>
-            <div class='icon_description'><p class='icon-description-text'><?php $value = get_field ('how_i_teach_icon_description_6');
+			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_6');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></p>
-			</div>
+			
         </div>
 	</div>
 </div>
@@ -335,7 +330,7 @@ endif;
 				?></p>
 		</div>
 		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6 learn-pricing-modes'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('learn_pricing_icon_1');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('learn_pricing_icon_1');
 				if ($value) {
 					echo $value;
 				}
@@ -343,7 +338,7 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-learn text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
 				if ($value) {
 					echo $value;
 				}
@@ -362,7 +357,7 @@ endif;
 			?>
         </div>
 		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6 learn-pricing-modes'>
-            <div class='icon-circle'><img src= '<?php $value = get_field ('learn_pricing_icon_2');
+            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('learn_pricing_icon_2');
 				if ($value) {
 					echo $value;
 				}
@@ -370,7 +365,7 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <div class='icon_title'><h4 class='icon-headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_2');
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline-learn text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_2');
 				if ($value) {
 					echo $value;
 				}
