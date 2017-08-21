@@ -37,7 +37,28 @@
 			}
 		}
 		
-	
+		@include m('section-services') {
+			width: 7vw;
+			height: 7vw;
+			
+			@include mobile {
+				height: 15vw;
+				width: 15vw;
+			}
+			@include medium-device {
+				width: 4vw;
+				height: 4vw;
+			}
+			@include medium-device-portrait {
+				width: 5.5vw;
+				height: 5.5vw;
+			}
+		}
+	}
+	@include e('icon') {
+		@include m('section-services') {
+			max-width: 50%;
+		}
 	}
 }
 	
@@ -65,11 +86,7 @@
 	
 }
 
-.icon-set-height-services {
-	max-height: 50px;
-	
-	
-}
+
 /*.icon-set-width {
 	max-width: 90px;
 	@include mobile {

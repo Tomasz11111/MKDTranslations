@@ -60,9 +60,15 @@
 @function type-scale--mobile($level) {
 	@return map-get($type-scale--mobile, $level);
 }
+@function type-scale--tablet-only($level) {
+	@return map-get($type-scale--mobile, $level);
+}
 
 @mixin font-size($level) {
 	@include mobile {
+		font-size: type-scale--mobile($level);
+	}
+	@include tablet-only {
 		font-size: type-scale--mobile($level);
 	}
 	@include large {

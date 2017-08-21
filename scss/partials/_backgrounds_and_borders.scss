@@ -156,7 +156,7 @@
 }
 .bg-headline-home2 {
 	color: white;
-	padding: .5rem;
+	padding: .3rem;
 	background-color: $clr-primary;
 	
 	
@@ -179,6 +179,9 @@
 	@extend %fullpage-bgimage;
 	@include m(solutions-and-services) {
 		@include bg-img('office_services_min.jpg');
+		@include tablet-only {
+			height: auto;
+		}
 	}
 	@include m(page-learn) {
 		@include bg-img('Warsaw-center.jpg');

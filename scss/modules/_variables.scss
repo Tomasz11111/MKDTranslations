@@ -2,6 +2,7 @@
 
 $base-font-size: 1.1vw;
 $base-font-size-mobile: calc(13px + 1.15vw);
+$base-font-size-smalls: 2vw;
 $base-font-family: 'Nunito', sans-serif;
 $title-font-family: 'Droid Serif', sans-serif;
 
@@ -39,6 +40,8 @@ $type-scale--mobile: (
 	+5: 1.802rem,
 	max: 2.027rem,
 );
+
+
 
 
 // Descriptive color names

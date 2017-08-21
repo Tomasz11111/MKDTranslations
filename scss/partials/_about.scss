@@ -83,7 +83,7 @@
 	height: 23vw;
 	width: 23vw;
 	@include tablet-only {
-		width: 30vw;
+		width: 35vw;
 		height: auto;
 	}
 	@include mobile {
@@ -111,13 +111,12 @@
 }
 .square-text {
 	@include font-size(+0.5);
-	@include tablet-only {
-		font-size: 1.5rem;
-	}
-	
 	font-weight: $thin;
 	color: white;
 	padding: 0 5% 5% 5%;
+	@include tablet-only {
+		font-size: type-scale--mobile(0);
+	}
 }
 .square2 {
 	@extend %square;
