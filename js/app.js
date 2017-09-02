@@ -1,7 +1,10 @@
 
 
 jQuery(document).ready(function($) {
-    
+    // Scroll reveal
+	 window.sr = ScrollReveal();
+		sr.reveal('.sr'); 
+		
 	
     $('.my-background-video').bgVideo({
 	fullScreen: true,
@@ -248,6 +251,7 @@ jQuery(document).ready(function($) {
 			$headline = $('.navigation-container__headline-text-sidepages'),
 			$btnsNavbar = $('.btn-navbar');
 			
+			
 		toggleHamburger();
 		hideMenuWhenLinked();
 		menuBarChangeColor();
@@ -256,12 +260,10 @@ jQuery(document).ready(function($) {
 		/*hideLanguagesMob();
 		hideLanguagesPC();*/
 		
-		function setNavBgMobile() {
-			
-		}
+		
 		function toggleHamburger(){
 				
-				if((window.matchMedia ('(min-width: 768px)').matches) && $('body').hasClass('home') ) {
+				if((window.matchMedia ('(min-width: 992px)').matches) && $('body').hasClass('home') ) {
 					var $trigger = $('#services'),
 						offset = $trigger.offset();
 				$(window).on('scroll', function() {
@@ -273,7 +275,7 @@ jQuery(document).ready(function($) {
 				
 				$hamburgerContainer.on('click', function() {
 
-	/* dla komórek */if (window.matchMedia('(max-width: 767px)').matches) { /*strona główna*/
+	/* dla komórek i małych tabletów */if (window.matchMedia('(max-width: 991px)').matches) { /*strona główna*/
 						if ( $hamburger.hasClass('open') ) {
 							closeHamburgerMobile();
 							console.log('closed');
@@ -319,6 +321,8 @@ jQuery(document).ready(function($) {
 								$menu.removeClass('invisible').addClass('nav100vh');
 								$container.addClass('nav100vh');
 								$switcher.addClass('language-switcher-mob');
+								$btnsNavbar.addClass('hidden');
+								
 								
 							}
 							
@@ -341,6 +345,7 @@ jQuery(document).ready(function($) {
 		/* dla homepage */  else {				
 							$container.removeClass('nav100vh').removeClass('navigation-container-dimgray');
 							$switcher.removeClass('language-switcher-mob');
+							$btnsNavbar.removeClass('hidden');
 							}
 			}
 							
@@ -389,9 +394,9 @@ jQuery(document).ready(function($) {
 		
 		
 					
-/* dla komórek	*/	function hideMenuWhenLinked() {
+/* dla komórek i małych tabletów	*/	function hideMenuWhenLinked() {
 				$menu_link.on('click', function() {
-					if (window.matchMedia('(max-width: 767px)').matches) { 
+					if (window.matchMedia('(max-width: 991px)').matches) { 
 						$container.removeClass('nav100vh navigation-container-dimgray');
 						$menu.removeClass('nav100vh').addClass('hidden');
 						$hamburger.removeClass('open');
@@ -400,7 +405,7 @@ jQuery(document).ready(function($) {
 				});
 			}	
 					function menuBarChangeColor() {
-					if((window.matchMedia('(min-width: 768px)').matches) && $('body').hasClass('home') ) {
+					if((window.matchMedia('(min-width: 992px)').matches) && $('body').hasClass('home') ) {
 					$(window).scroll(function() {
 					if( ( $(window).scrollTop() > ($('#services').offset().top ) - 1) ){
 						if($hamburger.hasClass('open') ){
@@ -421,7 +426,20 @@ jQuery(document).ready(function($) {
 			};
 		
 
+	function reduceFont(el) {
+		 	var $el = $(el)
+		$el.each( function() {
+			var elText = $(this).text();
+		 if(elText.length > 34) {
+				$el.addClass('reduce-font');
+			}
+		console.log(elText.length);
+		});
+		
+	}
 	
+		
+	reduceFont('.btn-navbar a');
 		
 	function highlightActiveLangBtn() {
 		var language = $('html').attr('lang'),

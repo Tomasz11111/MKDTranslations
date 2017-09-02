@@ -118,14 +118,14 @@ endif;
  <div class='container-fluid bg-grey' id='how_i_teach'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12'>
-			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section__title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_section_title');
+			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section__title text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_section_title');
 			if ($value) {
 				echo $value;
 			}
 			else {
 				echo 'empty'; }
 			?></span></h1>
-            <p class='section__lead'><?php $value = get_field ('how_i_teach_section_lead');
+            <p class='section__lead sr'><?php $value = get_field ('how_i_teach_section_lead');
 				if ($value) {
 					echo $value;
 				}
@@ -148,16 +148,16 @@ endif;
 				}
 				else {
 					echo 'empty'; }
-				?>' alt="" class='icon-set-height'>
+				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_1');
+            <h4 class='subsection__headline text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_1');
+			<p class='subsection__text sr'><?php $value = get_field ('how_i_teach_icon_description_1');
 				if ($value) {
 					echo $value;
 				}
@@ -167,22 +167,22 @@ endif;
 			
         </div>
     	<div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
-            <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon2');
+            <div class='subsection__container-icon sr'><img src= '<?php $value = get_field ('how_i_teach_icon2');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
-				?>' alt="" class='icon-set-height'>
+				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_2');
+            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_2');
+			<p class='subsection__text sr'><?php $value = get_field ('how_i_teach_icon_description_2');
 				if ($value) {
 					echo $value;
 				}
@@ -198,16 +198,16 @@ endif;
 				}
 				else {
 					echo 'empty'; }
-				?>' alt="" class='icon-set-height'>
+				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_3');
+            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_3');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_3');
+			<p class='subsection__text sr'><?php $value = get_field ('how_i_teach_icon_description_3');
 				if ($value) {
 					echo $value;
 				}
@@ -223,16 +223,16 @@ endif;
 				}
 				else {
 					echo 'empty'; }
-				?>' alt="" class='icon-set-height'>
+				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline subsection__headline-learn text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_4');
+            <h4 class='subsection__headline subsection__headline-learn text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_4');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_4');
+			<p class='subsection__text sr'><?php $value = get_field ('how_i_teach_icon_description_4');
 				if ($value) {
 					echo $value;
 				}
@@ -248,9 +248,9 @@ endif;
 				}
 				else {
 					echo 'empty'; }
-				?>' alt="" class='icon-set-height'>
+				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline subsection__headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_5');
+            <h4 class='subsection__headline subsection__headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_5');
 				if ($value) {
 					echo $value;
 				}
@@ -258,7 +258,7 @@ endif;
 					echo 'empty'; }
 				?></span></h4>
 			
-           <p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_5');
+           <p class='subsection__text sr'><?php $value = get_field ('how_i_teach_icon_description_5');
 				if ($value) {
 					echo $value;
 				}
@@ -276,14 +276,14 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_6');
+            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_6');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h4>
-			<p class='subsection__text'><?php $value = get_field ('how_i_teach_icon_description_6');
+			<p class='subsection__text sr'><?php $value = get_field ('how_i_teach_icon_description_6');
 				if ($value) {
 					echo $value;
 				}
@@ -314,14 +314,14 @@ endif;
 
 <div class='container' id='learn-polish-pricing'>
 	<div class='row'>
-		<div class='col-lg-12'><h1 class='section__title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_title');
+		<div class='col-lg-12'><h1 class='section__title text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_title');
 				if ($value) {
 					echo $value;
 				}
 				else {
 					echo 'empty'; }
 				?></span></h1>
-			<p class='section__lead'><?php $value = get_field ('learn_pricing_headline');
+			<p class='section__lead sr'><?php $value = get_field ('learn_pricing_headline');
 				if ($value) {
 					echo $value;
 				}
@@ -336,9 +336,9 @@ endif;
 				}
 				else {
 					echo 'empty'; }
-				?>' alt="" class='icon-set-height'>
+				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline icon-headline-learn text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-learn text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
 				if ($value) {
 					echo $value;
 				}
@@ -363,9 +363,9 @@ endif;
 				}
 				else {
 					echo 'empty'; }
-				?>' alt="" class='icon-set-height'>
+				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline subsection__headline-learn text-white subsection__headline-animation'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_2');
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline-learn text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_2');
 				if ($value) {
 					echo $value;
 				}
@@ -392,7 +392,7 @@ endif;
 		
 <div class='col-lg-12 pricing-buttons'>
    
-			<div class='btn-learn' style='border-color:<?php the_field('color');?>'><a href='<?php $value = get_field('learn_button_1_link');
+			<div class='btn-learn sr' style='border-color:<?php the_field('color');?>'><a href='<?php $value = get_field('learn_button_1_link');
 				if ($value) {
 					echo $value; }
 				else {
@@ -404,7 +404,7 @@ endif;
 				echo 'empty'; }
 			?></a>
 			</div>
-			<div class='btn-learn-bgfullcolor' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php $value = get_field('learn_button_2_link');
+			<div class='btn-learn-bgfullcolor sr' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php $value = get_field('learn_button_2_link');
 				if ($value) {
 					echo $value; }
 				else {

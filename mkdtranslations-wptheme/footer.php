@@ -1,7 +1,7 @@
 <div class='container-fluid' id='contact-data'>
 	<div class='row'>
 		<div class='col-lg-4 col-xs-12'>
-			<p class='contact-data-par'><?php $value = get_field ('footer_phone_number');
+			<p class='contact-data-par sr'><?php $value = get_field ('footer_phone_number');
 			if ($value) {
 				echo $value;
 			}
@@ -10,7 +10,7 @@
 			?></p>
 		</div>
 		<div class='col-lg-4 col-xs-12'>
-			<p class='contact-data-par'><?php $value = get_field ('footer_email');
+			<p class='contact-data-par sr'><?php $value = get_field ('footer_email');
 			if ($value) {
 				echo $value;
 			}
@@ -19,7 +19,7 @@
 			?></p>
 		</div>
 		<div class='col-lg-4 col-xs-12'>
-			<p class='contact-data-par'><?php $value = get_field ('footer_address');
+			<p class='contact-data-par sr'><?php $value = get_field ('footer_address');
 			if ($value) {
 				echo $value;
 			}
@@ -39,16 +39,16 @@
 			}
 			else {
 				echo 'empty'; }
-			   ?>'><img src='<?php echo get_template_directory_uri(); ?>/images/proZ.png'/></a>
+			   ?>'><img src='<?php echo get_template_directory_uri(); ?>/images/proZ.png' class='sr' /></a>
 		</div>
 		<div class='col-xs-6 col-lg-6 footer-facebook'>
-			<a href='https://www.facebook.com/mkdtranslations/'><img src='<?php echo get_template_directory_uri(); ?>/images/facebook.png'/></a>
+			<a href='https://www.facebook.com/mkdtranslations/'><img src='<?php echo get_template_directory_uri(); ?>/images/facebook.png' class='sr' /></a>
 		</div>
 		<div class='col-xs-6 col-lg-6 footer-linkedin'>
-			<a href='https://www.linkedin.com/in/mdziendziura'><img src='<?php echo get_template_directory_uri(); ?>/images/linkedin.png'/></a>
+			<a href='https://www.linkedin.com/in/mdziendziura'><img src='<?php echo get_template_directory_uri(); ?>/images/linkedin.png'/ class='sr'></a>
 		</div>
 		<div class='col-xs-12 col-lg-12 footer-copy'>
-			<nav class="nav-footer hidden-xs">
+			<nav class="nav-footer hidden-xs sr">
 
 			  <?php 
 			
@@ -60,11 +60,11 @@
 				?>
 				
 			</nav>	
-			<p>&copy; 2012-2017 MKD Translations - Polish language services
+			<p class='sr'>&copy; 2012-2017 MKD Translations - Polish language services
 			</p>
-			<p>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+			<p class='sr'>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
 			</p>
-			<p>Hero video by <a href='http://www.coverr.co/'>coverr</a>
+			<p class='sr'>Hero video by <a href='http://www.coverr.co/'>coverr</a>
 			</p>
 		</div>
 			
