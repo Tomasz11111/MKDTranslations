@@ -428,9 +428,6 @@ h4 {
 	font-weight: $bold !important;
 	color: white;
 	
-	@include tablet-only {
-		font-size: 3rem !important;
-	}
 	@include medium-device-portrait {
 		font-size: 3rem !important;
 	}
@@ -441,7 +438,7 @@ h4 {
 	@include tablet-only {
 		
 		padding: 1%;
-		font-size: 2.5rem !important;
+		
 	}
 	@include medium-device {
 		font-size: type-scale(+3) !important;
@@ -465,6 +462,9 @@ h4 {
 		font-size: type-scale--mobile(0);
 		line-height: 3rem;
 	}
+	@include tablet-only {
+		font-size: type-scale--mobile(0);
+	}
 	
 }
 // belts
@@ -481,6 +481,11 @@ h4 {
 		padding-top: 5%;
 		padding-bottom: 5%;
              
+	
+	}
+	@include tablet-only {
+		width: auto;
+		font-size: type-scale--mobile(+2) !important;
 	}
     
 
@@ -533,7 +538,8 @@ h4 {
 		font-weight: $ultra-bold;
 	}
 	@include tablet-only {
-				padding-bottom: 5vh;
+		padding-bottom: 5vh;
+		font-size: type-scale--mobile(+4);
 	}
 	
 	@include medium-device-portrait {
@@ -640,6 +646,11 @@ h4 {
 footer {
 	@include font-size(-1);
 	font-weight:$thin;
+}
+.reduce-font {
+	@include tablet-only {
+		font-size: type-scale--mobile(-1);
+	}
 }
 
 

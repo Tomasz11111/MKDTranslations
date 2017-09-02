@@ -31,7 +31,11 @@
 		width: 100% !important;
 		background-color:  $clr-primary;
 	}
-	@include tablet {
+	@include tablet-only {
+		width: 100% !important;
+		background-color:  $clr-primary;
+	}
+	@include medium-device {
 		max-width: 70%;
 		margin-left:50px;
 	}
@@ -47,6 +51,11 @@
 			margin-bottom: 0;
 			margin-top: 0;
 		}
+		@include tablet-only {
+			transform: translateY(50%);
+			margin-bottom: 0;
+			margin-top: 0;
+		}
         li {
             padding-left: 10px;
             display: inline-block;
@@ -55,15 +64,24 @@
 				width: 100vw; /* to nie wiem po co jest*/
 				text-align: center;
 				padding: 1%;
-						}
+			}
+			@include tablet-only {
+				display: block;
+				text-align: center;
+				padding: 1%;
+			}
             a {
               color:  $clr-adjacent-5 !important; /*tu zmieniam kolor czcionki w menu*/
 	           font-size: type-scale(0); 
 				@include mobile {
 				font-size: type-scale(+3);
 				 color:  white !important;	
-				}//
-            }
+				}
+				@include tablet-only {
+					font-size: type-scale(+5);
+					 color:  white !important;//
+            	}
+			}
             a[href="#how_i_teach"], a[href="#process"], a[href="learnfrench.html"], a[href="learnpolish.html"], a[href="#pricing"],   {
                 font-weight: $thin;
             }
@@ -125,6 +143,9 @@
 	
 	@include mobile {
 		width: 55px;
+		right: 0;
+	}
+	@include tablet-only {
 		right: 0;
 	}
 }

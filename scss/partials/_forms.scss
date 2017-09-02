@@ -191,7 +191,7 @@ form {
 		}
 	}
 }
-#wpcf7-f418-o2 p:nth-child(9), #wpcf7-f667-o2 p:nth-child(9) {
+#wpcf7-f667-o2 p:nth-child(9), #wpcf7-f418-o2 p:nth-child(9), #wpcf7-f667-o2 p:nth-child(11), #wpcf7-f418-o2 p:nth-child(11),  {
 	clear: left;
 	float: left;
 	display: inline-block;
@@ -204,7 +204,11 @@ form {
 	}
 }
 
-#wpcf7-f418-o2 p:nth-child(10), #wpcf7-f418-o2 p:nth-child(11), #wpcf7-f667-o2 p:nth-child(10), #wpcf7-f667-o2 p:nth-child(11)  {
+
+
+#wpcf7-f418-o2 p:nth-child(10), #wpcf7-f418-o2 p:nth-child(12),
+#wpcf7-f667-o2 p:nth-child(10), #wpcf7-f667-o2 p:nth-child(12),{
+	
 	float: left;
 	display: inline-block;
 	width: 50%;
@@ -224,42 +228,29 @@ form {
 		
 	}
 }
-#wpcf7-f418-o2 p:nth-child(12), #wpcf7-f667-o2 p:nth-child(12) {
-	
-	float: left;
-	display: inline-block;
-	width: 50%;
-	@include mobile {
-		width: 100%;
-	}
-	label {
-		width: 95% !important;
-		float: right;
-		margin-left: 10%;
-		@include mobile {
-			margin-left: 0;
-			float: left;
-		}
-	}
-}
 
-#wpcf7-f418-o2 p:nth-child(13), #wpcf7-f667-o2 p:nth-child(13) {
+
+.form--element__full-width {
 	float: left;
-	display: inline-block;
-	width: 50%;
-	@include mobile {
-		width: 100%;
-	}
+	display: block;
+	width: 100%;
 	label {
 		width: 95% !important;
-		float: right;
-		margin-left: 10%;
-		@include mobile {
-			margin-left: 0;
-			float: left;
-		}
+		float: left;
+		margin-left: 0;
 	}
 }
+ #wpcf7-f418-o2 p:nth-child(13), #wpcf7-f667-o2 p:nth-child(13) {
+	float: left;
+	display: block;
+	width: 100%;
+	label {
+		width: 95% !important;
+		float: left;
+		margin-left: 0;
+	}
+}
+	
 
 #wpcf7-f418-o2 p:nth-child(14), #wpcf7-f667-o2 p:nth-child(14) {
 	clear: left;
@@ -322,7 +313,7 @@ form {
 		
 	}
 }
-#wpcf7-f132-o1 p:nth-child(6), #wpcf7-f663-o1 p:nth-child(6) {
+/*#wpcf7-f132-o1 p:nth-child(6), #wpcf7-f663-o1 p:nth-child(6) {
 	clear: left;
 	
 	label {
@@ -331,6 +322,7 @@ form {
 		
 	}
 }
+*/
 #wpcf7-f132-o1 p:nth-child(7), #wpcf7-f663-o1 p:nth-child(7) {
 	float: left;
 	display: inline-block;	

@@ -4,7 +4,11 @@
 	align-items: center;
 	width: 20%;
 	margin: 0 auto;
-	
+	@include tablet-only {
+		display: inline-block;
+		margin: 0;
+		width: 25%;
+	}
 	p {
 			
 			text-align: center;
@@ -196,8 +200,14 @@
 	&:hover {
 		font-size: 1.5rem;
 	}
-	margin-bottom: 8% !important;
-	margin-top: 8% !important;
+	@include mobile {
+		margin-bottom: 8% !important;
+		margin-top: 8% !important;
+	}
+	@include tablet {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 	@include medium-device {
 		margin-bottom: 4% !important;
 		margin-top: 4% !important;
@@ -265,6 +275,9 @@
 	padding: 10px;
 	margin-bottom: 0;
 	font-weight: $ultra-bold;
+	@include tablet-only {
+		margin-left: 0;
+	}
 	&-purple {
 		color: $clr-primary;
 		border: 2px solid $clr-primary;
