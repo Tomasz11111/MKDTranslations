@@ -551,13 +551,24 @@ jQuery(document).ready(function($) {
 		$el4.height(highestEl);
 		$el5.height(highestEl);
 		$el6.height(highestEl);
-	
 	}
 	
-	if(window.matchMedia ('(max-width: 767px)').matches) { 
-	elSetHeight('.square2 p', '.square3 p', '.square4 p', '.square2', '.square3', '.square4');
-	elSetHeight('.square2-about p', '.square3-about p', '.square4-about p', '.square2-about', '.square3-about', '.square4-about')
-	}
+		function screenIsMobile() {
+			var mq = window.matchMedia('(max-width: 767px)');
+			return mq.matches;
+		}
+		function screenIsPortrait() {
+			return window.innerHeight > window.innerWidth;
+		}
+
+		
+		if(screenIsMobile() && screenIsPortrait() ){
+				elSetHeight('.square2 p', '.square3 p', '.square4 p', '.square2', '.square3', '.square4');
+				elSetHeight('.square2-about p', '.square3-about p', '.square4-about p', '.square2-about', '.square3-about', '.square4-about')
+		}
+	
+
+});
             //ew. zmienić na css animation
 	
 	
@@ -566,4 +577,3 @@ jQuery(document).ready(function($) {
 							   
 	
 	
-});

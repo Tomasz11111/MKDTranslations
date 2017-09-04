@@ -18,6 +18,9 @@
 		position: relative;
 		
 	}
+	@include mobile-landscape {
+		height: 35vw;
+	}
 	@include tablet {
 		height: 33.33vw;
 	}
@@ -55,6 +58,10 @@
 	border-radius: 50%;
 	@include mobile {
 		width: 50%;
+	}
+	@include mobile-landscape {
+		width: 25%;
+		
 	}
 	@include medium-device-portrait {
 		margin-top: 7.5vh;

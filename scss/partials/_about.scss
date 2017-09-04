@@ -32,8 +32,16 @@
 	@include mobile {
 		padding: 0 !important;
 	}
+	@include mobile-landscape {
+		height: auto;
+		justify-content: center;
+		align-items: center;
+	}
 }
 .col-signature-about {
+	@include mobile-landscape {
+		background-color: $clr-adjacent-3;
+	}
 	@include medium-device-portrait {
 		height: auto;
 	}
@@ -91,12 +99,20 @@
 		height: 100vw;
 		background-color: $clr-adjacent-3;
 	}
+	@include mobile-landscape {
+		height: 15rem;
+		width: 100%
+	}
 }
 .square1 {
 		@extend %square;
 		@include bg-img('mkd_color.jpg');
 		background-size: cover;
 		background-position: center;
+		@include mobile-landscape {
+			height: 15rem;
+			width: 100%;
+		}
 				
 	
 }
@@ -117,6 +133,9 @@
 	@include tablet-only {
 		font-size: type-scale--mobile(0);
 	}
+	@include mobile-landscape {
+		font-size: type-scale--mobile(-2);
+	}
 }
 .square2 {
 	@extend %square;
@@ -129,6 +148,11 @@
 .square4 {
 	@extend %square;
 	
+}
+.square2-about, .square4-about {
+	@include mobile-landscape {
+		border-left: 1px solid white;
+	}
 }
 
 .square2 h2, .square3 h2, .square4 h2 {

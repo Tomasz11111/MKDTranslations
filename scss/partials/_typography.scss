@@ -60,6 +60,12 @@ h4 {
 		justify-content: center;
 		align-items: center;
 	}
+	@include mobile-landscape {
+		justify-content: flex-end;
+		top:0;
+		height: 100vh;
+		width: 100%;
+	}
 	@include e('text-big') {
 		padding-top: 8vh;
 		@include font-size(max);
@@ -70,6 +76,14 @@ h4 {
 	
 		@include mobile {
 		margin-bottom: 15%;
+		}
+		@include mobile-landscape {
+			padding: 0;
+			font-size: type-scale--mobile(+4);
+			margin-bottom: 0;
+		}
+		@include iphone5-landscape {
+			font-size: type-scale--mobile(+3);
 		}
 		span {
 			height: 2em;
@@ -125,7 +139,7 @@ h4 {
 	
 }
 .section {
-	@include e('title') {
+	@include e('title'){
 		width: 100%;
 		@include font-size(+4);
 		font-weight: $bold;
@@ -136,10 +150,16 @@ h4 {
 			width: 100%;
 			margin-top: 10%;
 		}
+		@include mobile-landscape {
+			margin-top: 5vh;
+		}
 		@include m('front-page-services') {
 			@include mobile {
 				background: none;
 				color: $clr-secondary;
+			}
+			@include mobile-landscape {
+				font-size: type-scale--mobile(+3);
 			}
 			@include tablet {
 				margin-top: 3vh !important;
@@ -156,13 +176,19 @@ h4 {
 			@include tablet-only {
 				width: 100%;
 			}
+		}
+		
+	@include m('front-page-teaching') {
+		@include mobile-landscape {
+			margin: 0 !important;
+		}
 	}
+	@include m('translations-pricing') {
+		@include tablet {
+			margin-bottom: 5vh !important;
 		}
-		@include m('translations-pricing') {
-			@include tablet {
-				margin-bottom: 5vh !important;
-			}
-		}
+	}
+	}
 		
 	
 	@include e('lead') {
@@ -175,6 +201,9 @@ h4 {
 		@include mobile {
 			padding-bottom: 0;
 			width: 100%;
+		}
+		@include mobile-landscape {
+			font-size: type-scale--mobile(+2);
 		}
 		@include tablet-only {
 			width: 80%;
@@ -203,10 +232,14 @@ h4 {
 			@include mobile {
 				width: 80%;
 			}
+			@include mobile-landscape {
+				margin: 0 !important;
+			}
 		}
 		
 	}
 }
+
 
 .subsection {
 	// jeszcze trzeba napisać container-icon
@@ -219,9 +252,13 @@ h4 {
 		min-height: 3rem;
 		margin-top: 2vh;
 		@include mobile {
-			margin-bottom: 1rem;
+			margin-bottom: 0;
 			width:75vw;
 			min-height: 2rem;
+		}
+		@include mobile-landscape {
+			margin-bottom: 0;
+			width: auto;
 		}
 		@include tablet {
 		width:90%;
@@ -267,6 +304,12 @@ h4 {
 .headline-btn a, .headline-btn-learn a {
 	@include font-size(+3);
 	color: white;
+	@include mobile-landscape {
+		font-size: type-scale--mobile(0);
+	}
+	@include iphone5-landscape {
+		font-size: type-scale--mobile(-1);
+	}
 }
 
 
@@ -328,6 +371,9 @@ h4 {
 	margin: 0;
 	text-align: center;
 	@extend %flex-centered;
+	@include mobile-landscape {
+		font-size: type-scale--mobile(-1);
+	}
 }
 
 
@@ -336,6 +382,9 @@ h4 {
 	color: white;
 	font-weight: $bold;		
 	@include font-size(+3);
+	@include mobile-landscape {
+		font-size: type-scale--mobile(+0.5);
+	}
 	
 }
 
@@ -419,6 +468,9 @@ h4 {
 	@include mobile {
 		padding-bottom: 10%;
 	}
+	@include mobile-landscape {
+		padding: 0;
+	}
 }
 
 //new design learn pages
@@ -483,6 +535,9 @@ h4 {
              
 	
 	}
+	@include mobile-landscape {
+		font-size: type-scale--mobile(+0.5);
+	}
 	@include tablet-only {
 		width: auto;
 		font-size: type-scale--mobile(+2) !important;
@@ -520,9 +575,11 @@ h4 {
 	font-weight: $bold;
 	margin-top: 1vh !important;
 	@include mobile {
-		margin-top: 7%;
+		margin-top: 7% !important;
 		
-		
+	}
+	@include mobile-landscape {
+		margin-top: 5% !important;
 	}
 	
 }
@@ -578,6 +635,15 @@ h4 {
 		background-color: rgba(255, 255, 255, 0.8);
 		font-size:type-scale--mobile(+3);
 	}
+	@include mobile-landscape {
+		margin: 0;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		background-color: inherit;
+		position: relative;
+		font-size: type-scale--mobile(+0.5);
+		text-align:center;
+	}
 }
 .signature-teaching {
 	@include mobile {
@@ -615,6 +681,10 @@ h4 {
 	@include mobile {
 		padding: 5% 5% 5% 5%;
 	}
+	@include mobile-landscape {
+		padding: 3% 3% 3% 5%;
+		font-size: type-scale--mobile(-2);
+	}
 }
 .button-teaching {
 	font-size: type-scale(+5);
@@ -636,7 +706,10 @@ h4 {
 	@include mobile {
 		margin-bottom: 10vw;
 		margin-top: 10vw;
-		font-size:type-scale--mobile(max);
+		font-size:type-scale--mobile(5);
+	}
+	@include mobile-landscape {
+		margin: 0 !important;
 	}
 	
 }

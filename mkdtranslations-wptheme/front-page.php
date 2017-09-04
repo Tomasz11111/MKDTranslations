@@ -81,9 +81,9 @@
 			<h2 class='services-headlines sr'><span class='bg-headline-home1'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
 <!-- Core services -->
-        <div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
+        <div class='col-xs-12 col-xs-lscape-6 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
 			<a href='#translation'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='subsection__icon--section-services hidden-xs sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-blue.png' class='icon-set-height hidden-sm hidden-md hidden-lg'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='subsection__icon--section-services hidden-xs sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-blue.png' class='subsection__icon--section-services hidden-sm hidden-md hidden-lg'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services sr'><?php $value = get_field ('services_icon_headline');
 				if ($value) {
@@ -106,7 +106,7 @@
         </div>
 		    
 		
-		<div class='col-xs-12 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
+		<div class='col-xs-12 col-xs-lscape-6 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
 			<a href='#teaching'>
             <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img class='subsection__icon--section-services hidden-xs' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-white.png' class='sr'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/teaching-blue.png'>
 			</div>
@@ -136,8 +136,8 @@
 	<div class='hidden-xs hidden-lg col-md-12 col-sm-12 '>
 			<h2 class='services-headlines sr'><span class='bg-headline-home1'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src= '<?php echo get_template_directory_uri(); ?>/images/software-white.png'><img class='hidden-sm hidden-md hidden-lg icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src= '<?php echo get_template_directory_uri(); ?>/images/software-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services subsection__headline-animation sr'><span><?php $value = get_field ('service3_icon_headline');
 				if ($value) {
@@ -159,8 +159,8 @@
 		
         </div>
 		
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs' src='<?php echo get_template_directory_uri(); ?>/images/glossary-white.png'><img class='hidden-sm hidden-md hidden-lg icon-set-height sr' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs' src='<?php echo get_template_directory_uri(); ?>/images/glossary-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services sr' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services icon-headline-animation sr'><span><?php $value = get_field ('service4_icon_headline');
 			if ($value) {
@@ -180,8 +180,8 @@
 				?>
 				</p>
 			</div>
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src='<?php echo get_template_directory_uri(); ?>/images/revision-white.png'><img class='hidden-sm hidden-md hidden-lg icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src='<?php echo get_template_directory_uri(); ?>/images/revision-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services icon-headline-animation sr'><span><?php $value = get_field ('service5_icon_headline');
 				if ($value) {
@@ -200,8 +200,8 @@
 				?></p>
 		
         </div>
-        <div class='col-xs-12 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-white.png'><img class='hidden-sm hidden-md hidden-lg icon-set-height' src='<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services sr'><span><?php $value = get_field ('service6_icon_headline');
 			if ($value) {
@@ -247,9 +247,9 @@
         </div>
     </div>
 </div>
-<div class='container-fluid hidden-xs sr' id='photos'>
+<div class='container-fluid hidden-xs active-xs-lscape sr' id='photos'>
     <div class='row'>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-tourism-pic pic-square'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-lscape-4 portfolio-tourism-pic pic-square'>
             <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
 			if ($value) {
 				echo $value;
@@ -266,7 +266,7 @@
                 </p></div>
 
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-lscape-4 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
 			<p class='portfolio-overlay-text '><?php $value = get_field ('translation_speciality_2');
 			if ($value) {
 				echo $value;
@@ -285,7 +285,7 @@
 			</div>
         </div>
 
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay '>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-lscape-4 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay '>
 				<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
 			if ($value) {
 				echo $value;
@@ -305,7 +305,7 @@
 			</div>
         </div>
             
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-technical-pic pic-square hidden portfolio-expandable'>
+        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-lscape-4 portfolio-technical-pic pic-square hidden portfolio-expandable'>
 			<div class='portfolio-overlay'>
 				<p class='portfolio-overlay-text' ><?php $value = get_field ('translation_speciality_4');
 			if ($value) {
@@ -325,7 +325,7 @@
 				</p>
 			</div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-law-pic pic-square hidden portfolio-expandable'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
+        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-lscape-4 portfolio-law-pic pic-square hidden portfolio-expandable'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
 			if ($value) {
 				echo $value;
 			}
@@ -339,7 +339,7 @@
 				echo 'empty'; }
 			?></p></div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12 portfolio-finance-pic pic-square hidden portfolio-expandable'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
+        <div class='col-lg-4 col-md-4 col-sm-12 col-xs-lscape-4 portfolio-finance-pic pic-square hidden portfolio-expandable'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
 			if ($value) {
 				echo $value;
 			}
@@ -360,7 +360,7 @@
 
 <div class='container-fluid'>
 	<div class='row'>
-		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-md hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
+		<div id='myCarousel' class='col-xs-12 carousel slide hidden-xs-lscape hidden-sm hidden-md hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
 			<div class='carousel-inner' role='listbox'>
 			<div class='item active portfolio-tourism-pic pic-square'>
 			<div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
@@ -478,13 +478,15 @@
 		</div>
 	</div>
 </div>
+
 <!-- Translation buttons --> 
+
    <div class='container-fluid'>
 	   <div class='row'>
         
 			<div class='col-lg-12 col-md-12 morespecialties'>
    
-				<div class='btn-standard btn-blue hidden-xs sr'><a><?php $value = get_field ('translation_button');
+				<div class='btn-standard btn-blue hidden-xs active-xs-lscape sr'><a><?php $value = get_field ('translation_button');
 				if ($value) {
 					echo $value;
 				}
@@ -586,7 +588,7 @@
 
 <div class='container-fluid bg-about' id='about'>
     <div class='row'>
-		<div class='col-lg-12 col-md-12 col-signature col-signature-about hidden-xs'>
+		<div class='col-lg-12 col-md-12 col-signature col-signature-about hidden-xs active-xs-lscape col-xs-lscape-12'>
 			<p class='signature slideanim'><?php $value = get_field ('about_title');
 			if ($value) {
 				echo $value;
@@ -598,9 +600,9 @@
 					
 			
 		</div>
-        <div class='col-lg-3 col-xs-12 col-about hidden-md hidden-sm hidden-lg'>
+        <div class='col-lg-3 col-xs-12 col-xs-lscape-6 col-about hidden-md hidden-sm hidden-lg'>
 			<div class='square1 slideanim'>
-				<p class='signature hidden-sm hidden-md hidden-lg'><?php $value = get_field ('about_title');
+				<p class='signature hidden-xs-lscape hidden-sm hidden-md hidden-lg'><?php $value = get_field ('about_title');
 			if ($value) {
 				echo $value;
 			}
@@ -610,7 +612,7 @@
 			</p>
 			</div>
 		</div>
-        <div class='col-lg-3 col-md-3 col-sm-9 col-xs-12 col-about'>
+        <div class='col-lg-3 col-md-3 col-sm-9 col-xs-12 col-xs-lscape-6 col-about'>
             <div class='square2-about square-about slideanim'>
 				<h2 class='about-headlines' style='background-color:<?php the_field('color')?>'><?php $value = get_field ('about_left_box_title');
 			if ($value) {
@@ -628,7 +630,7 @@
 			?></p>
 			</div>
 		</div>
-		 <div class='col-lg-3 col-md-3 col-sm-8 col-offset-sm-1 col-xs-12 col-about col-about-middle'>
+		 <div class='col-lg-3 col-md-3 col-sm-8 col-offset-sm-1 col-xs-12 col-xs-lscape-6 col-about col-about-middle'>
 
 			<div class='square3-about square-about slideanim'>
 				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent1')?>'><?php $value = get_field ('about_middle_box_title');
@@ -647,7 +649,7 @@
 			?> </p>
 			</div>
 		</div>
-		<div class='col-lg-3 col-md-3 col-sm-7 col-xs-12 col-about'>
+		<div class='col-lg-3 col-md-3 col-sm-7 col-xs-12 col-xs-lscape-6 col-about'>
 			<div class='square4-about square-about slideanim'>
 				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent2')?>'><?php $value = get_field ('about_right_box_title');
 			if ($value) {

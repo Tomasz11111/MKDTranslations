@@ -30,6 +30,7 @@ $type-scale: (
 	
 );
 $type-scale--mobile: (
+	-2: 0.8rem,
 	-1: 0.889rem,
 	 0: 1rem,
 	+0.5: 1.075rem,
@@ -81,8 +82,9 @@ $path-icons: '../icons';
 
 // Screen sizes 
 
+$iphone5-max: 568px;
 $mobile-max: 767px;
-$tablet: 768px;
+$tablet: $mobile-max + 1;
 $medium: 992px;
 $large: 1200px;
 /*small-screen: 

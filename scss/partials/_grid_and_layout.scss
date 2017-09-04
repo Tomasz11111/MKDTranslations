@@ -81,6 +81,9 @@
 	@include mobile {
 		margin-top: 10%;
 	}
+	@include mobile-landscape {
+		margin-top: 0 !important;
+	}
 	@include tablet-only {
 		margin-bottom: 5vh;
 	}
@@ -307,11 +310,18 @@
 
 #about {
 	height: 100vh;
+	@include mobile-landscape {
+		height: auto;
+	}
 	@include medium-device-portrait {
 		height: auto;
 	}
 	row {
 		height: 100%;
+		@include mobile-landscape {
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 }
 
@@ -402,6 +412,31 @@
 .col-md-3-to-md-6 {
 	@include medium-device-portrait {
 		width: 50% !important;
+	}
+}
+
+//additional breakpoint fro bootstrap grid
+
+@for $i from 1 through 12 {
+	.col-xs-lscape-#{$i}
+	{@include mobile-landscape {
+		width: ($i/12) * 100%;
+		padding-left: 15px;
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		float: left;
+		}
+	}
+}
+.hidden-xs-lscape {
+	@include mobile-landscape {
+		display: none;
+	}
+}
+.active-xs-lscape {
+	@include mobile-landscape {
+		display: block !important;
 	}
 }
 

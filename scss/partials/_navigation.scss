@@ -12,6 +12,9 @@
 	@include mobile {
 		justify-content: flex-start;
 	}
+	@include mobile-landscape {
+		height: 15vh;
+	}
 	
 }
 
@@ -39,17 +42,29 @@
 		max-width: 70%;
 		margin-left:50px;
 	}
+	div {
+		@include mobile-landscape {
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 	/*padding-right: 4.3vw; //zobaczyć czy nie trzeba zostawić w komórkowym
 	padding-left: 4.3wv;*/
 	
+}
 	
-	
-    ul {
+ul.menu {
         padding: 0;
 		@include mobile {
 			transform: translateY(50%);
 			margin-bottom: 0;
 			margin-top: 0;
+		}
+		@include mobile-landscape {
+			transform:none;
+			margin:0;
 		}
 		@include tablet-only {
 			transform: translateY(50%);
@@ -63,8 +78,9 @@
 				display: block;
 				width: 100vw; /* to nie wiem po co jest*/
 				text-align: center;
-				padding: 1%;
+				padding: 1.5%;
 			}
+			
 			@include tablet-only {
 				display: block;
 				text-align: center;
@@ -85,9 +101,9 @@
             a[href="#how_i_teach"], a[href="#process"], a[href="learnfrench.html"], a[href="learnpolish.html"], a[href="#pricing"],   {
                 font-weight: $thin;
             }
-        }
-    }
+     }
 }
+
 .nav100vh {
 
 	height: 100vh !important;

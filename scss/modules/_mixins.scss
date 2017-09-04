@@ -6,6 +6,17 @@
 			}
 }
 
+@mixin iphone5-landscape {
+	@media all and(max-width: #{$iphone5-max}) and (orientation: landscape) {
+		@content
+			}
+}
+@mixin mobile-landscape {
+	@media all and(max-width: #{$mobile-max}) and (orientation: landscape) {
+		@content;
+	}
+}
+
 @mixin tablet {
 	@media all and (min-width: #{$tablet}) {
 		@content;

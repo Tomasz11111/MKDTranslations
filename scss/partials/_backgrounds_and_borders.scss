@@ -129,6 +129,12 @@
 		@include mobile {
 			@include bg-img('warsaw_old_town_mob.jpg');
 		}
+		@include mobile-landscape {
+			@include bg-img('warsaw_old_town_2_mob_lscape.jpg');
+			height: 100vh;
+			background-attachment: scroll;
+			justify-content: space-evenly;
+		}
 		@include tablet {
 			@include bg-img('warsaw_old_town_2.jpg');
 		}
