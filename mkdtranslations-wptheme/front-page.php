@@ -48,11 +48,11 @@
 
 <!-- MY SOLUTIONS AND SERVICES SECTIONS -->
 
-<div class='container-fluid bg-fullpage bg-fullpage--solutions-and-services' id='solutions-services'>
+<div class='container-fluid bg-fullpage bg-fullpage--solutions-and-services lazy' id='solutions-services'>
 	<div class='row'>
 		<div class=	'col-lg-12 row-col' id='services'>
     	
-		<img src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo sr'>
+		<img data-src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo sr lazy'>
         <div class='col-lg-12 col-xs-12'><h1 class =' section__title section__title--front-page-services sr'><?php $value = get_field('services_section_title');
 			if ($value) {
 				echo $value;
@@ -83,7 +83,7 @@
 <!-- Core services -->
         <div class='col-xs-12 col-xs-lscape-6 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left'>
 			<a href='#translation'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='subsection__icon--section-services hidden-xs sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-blue.png' class='subsection__icon--section-services hidden-sm hidden-md hidden-lg'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='subsection__icon--section-services hidden-xs sr '><img src='<?php echo get_template_directory_uri(); ?>/images/translation-blue.png' class='subsection__icon--section-services hidden-sm hidden-md hidden-lg'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services sr'><?php $value = get_field ('services_icon_headline');
 				if ($value) {
@@ -528,7 +528,7 @@
 
 <!-- TEACHING SECTION -->
 
-<div class='container-fluid' id='teaching'>
+<div class='container-fluid lazy' id='teaching'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12 learn-polish'><h1 class='section__title section__title--front-page-teaching text-purple sr'><span class='bg-headline-home2'><?php $value = get_field ('teaching_section_title');
 			if ($value) {
@@ -586,7 +586,7 @@
 
 <!-- ABOUT SECTION -->
 
-<div class='container-fluid bg-about' id='about'>
+<div class='container-fluid bg-about lazy' id='about'>
     <div class='row'>
 		<div class='col-lg-12 col-md-12 col-signature col-signature-about hidden-xs active-xs-lscape col-xs-lscape-12'>
 			<p class='signature slideanim'><?php $value = get_field ('about_title');

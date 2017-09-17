@@ -8,9 +8,14 @@ jQuery(document).ready(function($) {
 	
     $('.my-background-video').bgVideo({
 	fullScreen: true,
-	showPausePlay: true
+	showPausePlay: false
 	});
-
+	
+	function lazy() {
+        $('.lazy').Lazy();
+    };
+	lazy();
+	
     
 					   
 		
@@ -274,8 +279,9 @@ jQuery(document).ready(function($) {
 				}
 				
 				$hamburgerContainer.on('click', function() {
-
-	/* dla komórek i małych tabletów */if (window.matchMedia('(max-width: 991px)').matches) { /*strona główna*/
+						var mq = window.matchMedia('(max-width: 991px)');
+	/* dla komórek i małych tabletów */
+							if (mq.matches) { /*strona główna*/
 						if ( $hamburger.hasClass('open') ) {
 							closeHamburgerMobile();
 							console.log('closed');
@@ -297,7 +303,8 @@ jQuery(document).ready(function($) {
 						}
 					}
 				});
-		  }
+		  
+		
 			function openHamburgerMobile() {
 		
 							$hamburger.addClass('open');
@@ -391,19 +398,34 @@ jQuery(document).ready(function($) {
 							
 							
 						}
+		}
 		
-		
+		if(window.matchMedia('max-width: 991px').matches) {
+			hideMenuWhenLinked() }
+	
 					
 /* dla komórek i małych tabletów	*/	function hideMenuWhenLinked() {
-				$menu_link.on('click', function() {
-					if (window.matchMedia('(max-width: 991px)').matches) { 
-						$container.removeClass('nav100vh navigation-container-dimgray');
-						$menu.removeClass('nav100vh').addClass('hidden');
-						$hamburger.removeClass('open');
+				
+					$menu_link.on('click', function() {
 					
-					}
-				});
-			}	
+						$container.removeClass('nav100vh');
+						$menu.removeClass('nav100vh').addClass('invisible');
+						$hamburger.removeClass('open');
+						$switcher.removeClass('language-switcher-mob');
+						$menutext.removeClass('hidden');
+						$hamburger.find('span').removeClass('bg-white'); // to ewentualnie można połączyć z funkcją hamburgerClose
+						
+					
+						if (window.matchMedia('(min-width: 768px)').matches) {
+							$hamburgerContainer.addClass('flex-center-column');
+							$btnsNavbar.removeClass('hidden');
+						}
+						
+						
+					}); // skrócić
+				}
+			
+		
 					function menuBarChangeColor() {
 					if((window.matchMedia('(min-width: 992px)').matches) && $('body').hasClass('home') ) {
 					$(window).scroll(function() {
@@ -555,7 +577,7 @@ jQuery(document).ready(function($) {
 	
 		function screenIsMobile() {
 			var mq = window.matchMedia('(max-width: 767px)');
-			return mq.matches;
+			return mq;
 		}
 		function screenIsPortrait() {
 			return window.innerHeight > window.innerWidth;
