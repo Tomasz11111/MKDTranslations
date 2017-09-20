@@ -13,7 +13,7 @@ endif;
 <div class='container-fluid bg-fullpage bg-fullpage--page-learn' id='about'>
     <div class='row'>
 		
-		<div class='col-lg-12 col-xs-12 col-signature col-signature-learn '>
+		<div class='col-lg-12 col-xs-12 col-xs-lscape-6 col-signature col-signature-learn '>
 		<p class='hidden-lg hidden-sm hidden-md signature-learn slideanim slide'><span class='hidden-lg hidden-sm hidden-md' style='background-color:<?php the_field('color'); ?> !important'><?php $value = get_field ('learn_headline');
 				if ($value) {
 					echo $value;
@@ -42,7 +42,7 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-        <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-left-middle col-md-3-to-md-6'>
+        <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-left-middle col-md-3-to-md-6'>
             <div class='square2 square-learn square2-learn slideanim slide' style='background-color:<?php the_field('color'); ?>'>
 				<h2><span><?php $value = get_field ('learn_left_square_title');
 				if ($value) {
@@ -60,7 +60,7 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-		 <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right-middle col-md-3-to-md-6'>
+		 <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-right-middle col-md-3-to-md-6'>
 
 			<div class='square3 square-learn square3-learn slideanim slide' style='background-color:<?php the_field('color_adjacent1'); ?>'>
 				<h2><span><?php $value = get_field ('learn_middle_square_title');
@@ -79,7 +79,7 @@ endif;
 					?></span></p>
 			</div>
 		</div>
-		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-learn col-learn-right col-md-3-to-md-6 '>
+		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-right col-md-3-to-md-6 '>
 			<div class='square4 square-learn square4-learn slideanim slide' style='background-color:<?php the_field('color_adjacent2'); ?>'>
 				<h2><span><?php $value = get_field ('learn_right_square_title');
 				if ($value) {
@@ -141,7 +141,7 @@ endif;
 </div>
 <div class='container-fluid bg-grey' id='how_i_teach_icons'>
     <div class='row row-icons'>
-        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon1');
 				if ($value) {
 					echo $value;
@@ -166,7 +166,7 @@ endif;
 				?></p>
 			
         </div>
-    	<div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
+    	<div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon sr'><img src= '<?php $value = get_field ('how_i_teach_icon2');
 				if ($value) {
 					echo $value;
@@ -191,7 +191,7 @@ endif;
 				?></p>
 			
         </div>
-        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon3');
 				if ($value) {
 					echo $value;
@@ -216,7 +216,7 @@ endif;
 				?>.</p>
 			
         </div>
-        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon4');
 				if ($value) {
 					echo $value;
@@ -241,7 +241,7 @@ endif;
 				?></p>
 			
         </div>
-        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon5');
 				if ($value) {
 					echo $value;
@@ -267,7 +267,7 @@ endif;
 				?></p>
 			
         </div>
-        <div class='col-xs-12 col-sm-6 col-md-4 col-lg-2'>
+        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src= '<?php $value = get_field ('how_i_teach_icon6');
 				if ($value) {
 					echo $value;

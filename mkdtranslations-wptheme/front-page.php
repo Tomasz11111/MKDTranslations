@@ -50,10 +50,11 @@
 
 <div class='container-fluid bg-fullpage bg-fullpage--solutions-and-services lazy' id='solutions-services'>
 	<div class='row'>
-		<div class=	'col-lg-12 row-col' id='services'>
+		<div class=	'col-lg-12 col-xs-lscape-6 row-col' id='services'>
     	
 		<img data-src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo sr lazy'>
-        <div class='col-lg-12 col-xs-12'><h1 class =' section__title section__title--front-page-services sr'><?php $value = get_field('services_section_title');
+		</div>
+        <div class='col-lg-12 col-xs-12 col-xs-lscape-6'><h1 class =' section__title section__title--front-page-services sr'><?php $value = get_field('services_section_title');
 			if ($value) {
 				echo $value;
 			}
@@ -70,8 +71,8 @@
 			?>
 			</p>
         </div>
-    </div>
-</div>
+   
+
 <div class='col-lg-12' id='services_content'>
     
 		<div class='col-lg-4 col-md-12 col-sm-12 col-xs-12'>
@@ -223,7 +224,9 @@
         	</div>
     	</div>
 
+	</div>
 </div>
+
 
 <!-- TRANSLATION SECTION -->
 

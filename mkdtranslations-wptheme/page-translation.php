@@ -42,9 +42,9 @@ endif;
         </div>
     </div>
 </div>
-<div class='container-fluid hidden-xs' id='photos'>
+<div class='container-fluid hidden-xs active-xs-lscape' id='photos'>
     <div class='row'>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-tourism-pic pic-square'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-tourism-pic pic-square'>
             <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
 			if ($value) {
 				echo $value;
@@ -61,7 +61,7 @@ endif;
                 </p></div>
 
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
 			<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_2');
 			if ($value) {
 				echo $value;
@@ -80,7 +80,7 @@ endif;
 			</div>
         </div>
 
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
 				<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
 			if ($value) {
 				echo $value;
@@ -100,7 +100,7 @@ endif;
 			</div>
         </div>
             
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-technical-pic pic-square sr'>
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-technical-pic pic-square sr'>
 			<div class='portfolio-overlay'>
 				<p class='portfolio-overlay-text' ><?php $value = get_field ('translation_speciality_4');
 			if ($value) {
@@ -120,7 +120,7 @@ endif;
 				</p>
 			</div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-law-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-law-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
 			if ($value) {
 				echo $value;
 			}
@@ -134,7 +134,7 @@ endif;
 				echo 'empty'; }
 			?></p></div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 portfolio-finance-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-finance-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
 			if ($value) {
 				echo $value;
 			}
@@ -155,7 +155,7 @@ endif;
 
 <div class='container-fluid'>
 	<div class='row'>
-		<div id='myCarousel' class='col-xs-12 carousel slide hidden-sm hidden-md hidden-lg' data-ride='carousel' data-interval='false'>
+		<div id='myCarousel' class='col-xs-12 carousel slide hidden-xs-lscape hidden-sm hidden-md hidden-lg' data-ride='carousel' data-interval='false'>
 			<div class='carousel-inner' role='listbox'>
 			<div class='item active portfolio-tourism-pic pic-square'>
 			<div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');

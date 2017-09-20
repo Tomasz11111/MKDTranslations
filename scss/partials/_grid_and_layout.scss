@@ -330,6 +330,10 @@
 	@include mobile {
 		padding: 0 !important;
 	}
+	@include mobile-landscape {
+		height: 100vh;
+		
+	}
 	
 	@include tablet {
 		height: 30vh;
@@ -415,7 +419,7 @@
 	}
 }
 
-//additional breakpoint fro bootstrap grid
+//additional breakpoint for bootstrap grid
 
 @for $i from 1 through 12 {
 	.col-xs-lscape-#{$i}

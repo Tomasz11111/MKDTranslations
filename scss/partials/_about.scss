@@ -33,7 +33,6 @@
 		padding: 0 !important;
 	}
 	@include mobile-landscape {
-		height: auto;
 		justify-content: center;
 		align-items: center;
 	}
@@ -41,6 +40,7 @@
 .col-signature-about {
 	@include mobile-landscape {
 		background-color: $clr-adjacent-3;
+		height: auto !important;
 	}
 	@include medium-device-portrait {
 		height: auto;
@@ -58,6 +58,11 @@
 		height: 100vw;
 		@include bg-img('Warsaw-center-mob.jpg');
 		margin-top: 7vh;
+	}
+	@include mobile-landscape {
+		height: 100vh;
+		margin:0;
+		padding-top: 15vh !important;
 	}
 }
 .signature-photomkd {
@@ -135,6 +140,13 @@
 	}
 	@include mobile-landscape {
 		font-size: type-scale--mobile(-2);
+	}
+}
+.square-learn {
+	@include mobile-landscape {
+		width: 100%;
+		height: 100%;
+		padding-top: 15vh;
 	}
 }
 .square2 {
