@@ -73,15 +73,17 @@ h4 {
 		margin: 0;
 		height: 20vh;
 		color: white;
-	
+		
 		@include mobile {
 		margin-bottom: 15%;
 		}
+		
 		@include mobile-landscape {
 			padding: 0;
 			font-size: type-scale--mobile(+4);
 			margin-bottom: 0;
 		}
+		
 		@include iphone5-landscape {
 			font-size: type-scale--mobile(+3);
 		}
@@ -147,6 +149,10 @@ h4 {
 		text-align: center;
 		line-height: 3rem !important; //to może do przerobienia 
 		margin-top: 8vh;
+		@include iphone5 {
+			font-size: type-scale--mobile(+3);
+		}
+		
 		@include mobile {
 			width: 100%;
 			margin-top: 10%;
@@ -158,9 +164,13 @@ h4 {
 			@include mobile {
 				background: none;
 				color: $clr-secondary;
+				line-height: 1.5 !important;;
 			}
 			@include mobile-landscape {
 				font-size: type-scale--mobile(+3);
+			}
+			@include iphone5-landscape {
+				font-size: type-scale--mobile(+2);
 			}
 			@include tablet {
 				margin-top: 3vh !important;
@@ -205,6 +215,10 @@ h4 {
 		}
 		@include mobile-landscape {
 			font-size: type-scale--mobile(+2);
+			
+		}
+		@include iphone5-landscape {
+			font-size: type-scale--mobile(+1);
 		}
 		@include tablet-only {
 			width: 80%;
@@ -269,8 +283,16 @@ h4 {
 			@include mobile {
 				color: $clr-secondary; 
 			}
+			@include iphone5-landscape {
+				font-size: type-scale--mobile(0);
+			}
 			@include tablet {
 				color: white !important;
+			}
+		}
+		@include m('front-page-services-core') {
+			@include mobile {
+				color: $clr-primary;
 			}
 		}
 	}
@@ -323,7 +345,25 @@ h4 {
 	color: white !important;
 	padding: 5px;
 	font-size: 600;
-	@include font-size(+4);
+	@include font-size(+5);
+	@include large {
+		font-size: type-scale(+4);
+	}
+	@include mobile {
+		font-size: type-scale--mobile(+4);
+	}
+	@include iphone5 {
+		font-size: type-scale--mobile(+3);
+	}
+	@include mobile-landscape {
+		margin-top: 10vh;
+		font-size: type-scale--mobile(+2);
+	}
+	@include iphone5-landscape {
+		margin-top: 10vh;
+		font-size: type-scale--mobile(+2);
+	}
+
 	
 		
 }
@@ -382,10 +422,12 @@ h4 {
 
 .portfolio-overlay-text {
 	color: white;
-	font-weight: $bold;		
+	text-align: center;
+	font-weight: $bold;	
+	margin-bottom: 0;
 	@include font-size(+3);
 	@include mobile-landscape {
-		font-size: type-scale--mobile(+0.5);
+		font-size: type-scale--mobile(0);
 	}
 	
 }
@@ -401,6 +443,7 @@ h4 {
 	margin: 0 auto;
 	line-height: 4.2rem;
 	margin-bottom: 2vh;
+	
 	&-lesson {
 		color: $clr-adjacent-2;
 		font-weight: $ultra-bold;
@@ -430,6 +473,9 @@ h4 {
 		font-size: type-scale--mobile(+3);
 		line-height: 2.5rem;
 		margin-bottom: 0;
+	}
+	@include tablet-only {
+		width:100%;
 	}
 	
 }
@@ -519,19 +565,25 @@ h4 {
 	font-weight: $bold;
 	line-height: 4rem;
 	margin: 0;
+	
+	@include tablet-only {
+		font-size: type-scale--mobile(0);
+	}
 	@include mobile {
 		text-align: center;
 		font-size: type-scale--mobile(0);
 		line-height: 3rem;
 	}
-	@include tablet-only {
-		font-size: type-scale--mobile(0);
+	@include iphone5 {
+		font-size: type-scale--mobile(-1);
 	}
 	
 }
 // belts
 .confidentiality {
 	@include font-size(+4);
+	margin-top: 5vh;
+	margin-bottom: 5vh;;
 	text-align: center;
 	color: white;
 	display: inline-block;
@@ -546,7 +598,7 @@ h4 {
 	
 	}
 	@include mobile-landscape {
-		font-size: type-scale--mobile(+0.5);
+		font-size: type-scale--mobile(0);
 	}
 	@include tablet-only {
 		width: auto;

@@ -4,12 +4,14 @@ jQuery(document).ready(function($) {
     // Scroll reveal
 	 window.sr = ScrollReveal();
 		sr.reveal('.sr'); 
-		
+	
+	if (window.matchMedia('(min-width: 768px)').matches) {
 	
     $('.my-background-video').bgVideo({
 	fullScreen: true,
 	showPausePlay: false
 	});
+	}
 	
 	function lazy() {
         $('.lazy').Lazy();
@@ -56,7 +58,7 @@ jQuery(document).ready(function($) {
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
-                    scrollTop: $(hash).offset().top
+                    scrollTop: $(hash).offset().top 
                 }, 900, function () {
 
                     // Add hash (#) to URL when done scrolling (default click behavior)
@@ -67,7 +69,7 @@ jQuery(document).ready(function($) {
 	}
    function runSmoothScroll() {
 	    if($('body').is('.home')) {
-			smoothScroll('.wordpress-menu a, div a, .headline-btn a, .subsection__text a') //strony z linkami do id w menu
+			smoothScroll('.wordpress-menu a, div a:not(.carousel-control), .headline-btn a, .subsection__text a') //strony z linkami do id w menu
 		}
 		else {
 			smoothScroll('.headline-btn-learn a, .nav-pills a');// strony bez linków do id w menu
@@ -189,10 +191,12 @@ jQuery(document).ready(function($) {
 	
 		  
 
+	
 
 	function portfolioImgs() {
 		function showDetails() {
 			console.log('hide');
+			
 			$(this).find('.portfolio-overlay').animate({
 				height: '100%'});
 		$(this).find('.portfolio-overlay-text').addClass('hidden');
@@ -201,19 +205,42 @@ jQuery(document).ready(function($) {
 		};
 		function hideDetails() {
 			console.log('hidden');
+			
 			$(this).find('.portfolio-overlay').animate({
 				height: '20%'});
 			$(this).find('.portfolio-overlay-text').removeClass('hidden');
 			$(this).find('.portfolio-overlay-text-hover').addClass('hidden');
+			$(this).removeClass('flag');
 		}
+		
+		
 		if (window.matchMedia('(max-width: 768px)').matches) {
 			
-			if($('.portfolio-overlay-text-hover').is('.hidden') )
-				{ $('.pic-square').on('tap', showDetails);
+			$('.pic-square').on('tap', function() {
+				var $this = $(this);
+				if(!($this.is('.flag')) ){
+					console.log('hide');
+			
+			$this.find('.portfolio-overlay').animate({
+				height: '100%'});
+		$this.find('.portfolio-overlay-text').addClass('hidden');
+			$this.find('.portfolio-overlay-text-hover').removeClass('hidden');
+					$this.addClass('flag');
+					
+				
+				
 				}
-			else {
-			$('.pic-square').on('tap', hideDetails);
-			}
+			else
+				{
+			$this.find('.portfolio-overlay').animate({
+				height: '20%'});
+			$this.find('.portfolio-overlay-text').removeClass('hidden');
+			$this.find('.portfolio-overlay-text-hover').addClass('hidden');
+			$this.removeClass('flag');
+			return false;
+				}
+			
+			});
   /* the viewport is at maximum 768 pixels wide */
 } else {
   /* the viewport is more than 768 pixels wide */
@@ -489,8 +516,10 @@ jQuery(document).ready(function($) {
 	}
 }
 	//koniec funkcji hamburger
-		
+//ew. można połączyć z funkcją poniżej
 	function linkToForm() {
+		if(window.matchMedia('(min-width: 768px)').matches) {
+			
 		var $triggerTranslation = $('.btn-navbar-darkblue'),
 			$triggerLessons = $('.btn-navbar-purple'),
 			$formTranslations = $('#form-translation'),
@@ -506,10 +535,10 @@ jQuery(document).ready(function($) {
 				if(!($triggerTranslation.hasClass('hidden')) ) {
 				   $formTranslations.addClass('hidden')};
 			});
+		}
 	} 
 	
 	linkToForm();
-		
 	function showHideForm() {
 		var $lesson_btn = $('.contact-form-lead-lesson'),
 			$translate_btn = $('.contact-form-lead-translation'),
@@ -552,46 +581,13 @@ jQuery(document).ready(function($) {
 	}
 	showHideForm();
 
-	//funkcja do automatycznego ustalania wysokości elementów w zależności od wysokości innych elementów, do których chcemy porównywa
+	//funkcja do automatycznego ustalania wysokości elementów w zależności od wysokości innych elementów, do których chcemy porównywać została usunięta
 	
-	function elSetHeight(el1Selector, el2Selector, el3Selector, el4Selector, el5Selector, el6Selector) {
-		var $el1 = $(el1Selector),
-			$el2 = $(el2Selector),
-			$el3 = $(el3Selector),
-			$el4 = $(el4Selector),
-			$el5 = $(el5Selector),
-			$el6 = $(el6Selector),
-			$h2 = $el1.prev();
-			highestEl = findHighestEl() + $h2.outerHeight(true);
-		console.log(highestEl);
-		console.log($h2);
-			
-		function findHighestEl() {
-				
-			return Math.max($el1.outerHeight(), $el2.outerHeight(), $el3.outerHeight());
-		}
-		$el4.height(highestEl);
-		$el5.height(highestEl);
-		$el6.height(highestEl);
-	}
 	
-		function screenIsMobile() {
-			var mq = window.matchMedia('(max-width: 767px)');
-			return mq;
-		}
-		function screenIsPortrait() {
-			return window.innerHeight > window.innerWidth;
-		}
-
-		
-		if(screenIsMobile() && screenIsPortrait() ){
-				elSetHeight('.square2 p', '.square3 p', '.square4 p', '.square2', '.square3', '.square4');
-				elSetHeight('.square2-about p', '.square3-about p', '.square4-about p', '.square2-about', '.square3-about', '.square4-about')
-		}
 	
 
 });
-            //ew. zmienić na css animation
+           
 	
 	
 	

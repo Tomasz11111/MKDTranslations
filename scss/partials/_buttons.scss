@@ -27,6 +27,10 @@
 				margin: 10%;
 			
 			}
+		@include iphone5 {
+			height: 2.2rem;
+			width: 2.2rem;
+		}
 			@include mobile-landscape {
 				height: 12vh;
 				width: 12vh;
@@ -46,6 +50,10 @@
 					width: 2.5rem;
 					
 					
+				}
+				@include iphone5 {
+					width: 2.2rem;
+					height: 2.2rem;
 				}
 				@include mobile-landscape {
 					width: 12vh !important;
@@ -247,7 +255,7 @@
 	}
 	
 	@include tablet {
-		margin-bottom: 0;
+		margin-bottom: 5vh !important;
 		margin-top: 0;
 	}
 	@include medium-device {

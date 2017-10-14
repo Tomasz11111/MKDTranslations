@@ -5,7 +5,12 @@
 		@content;
 			}
 }
-
+@mixin iphone5 {
+	@media all and(max-width: #{$iphone5-max-vertical}) {
+		@content;
+		
+		}
+}
 @mixin iphone5-landscape {
 	@media all and(max-width: #{$iphone5-max}) and (orientation: landscape) {
 		@content
@@ -23,7 +28,7 @@
 			}
 }
 @mixin tablet-only {
-	@media all and (max-width: 991px) and (min-width: #{$tablet}) {
+	@media all and (min-width: #{$tablet}) and (max-width: (#{$medium} - 1)) {
 		@content;
 	}
 }
@@ -76,15 +81,21 @@
 }
 
 @mixin font-size($level) {
+	
 	@include mobile {
 		font-size: type-scale--mobile($level);
 	}
-	@include tablet-only {
+	@include tablet {
 		font-size: type-scale--mobile($level);
+	}
+	@include medium-device {
+		font-size: type-scale($level);
 	}
 	@include large {
 		font-size: type-scale($level);
 	}
+	
+	
 }
 
 // BEM mixins

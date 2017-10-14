@@ -1,6 +1,9 @@
 // Portfolio images
 
-@each $theme in tourism, business, marketing, technical, law, finance { .portfolio-#{$theme}-pic { background-image: url('#{$path-img}/#{$theme}.jpg') }; 
+@each $theme in tourism, business, marketing, technical, law, finance { .portfolio-#{$theme}-pic { 
+	background-image: url('#{$path-img}/#{$theme}-min.jpg')
+	
+}; 
 } 
 
 // My solutions and services icons 

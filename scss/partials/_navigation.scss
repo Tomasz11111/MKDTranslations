@@ -103,7 +103,11 @@ ul.menu {
             }
      }
 }
-
+.nav-footer .menu {
+	@include tablet-only {
+		margin-bottom: 2vh;
+	}
+}
 .nav100vh {
 
 	height: 100vh !important;
@@ -157,13 +161,17 @@ ul.menu {
 	top: 0;
 	z-index: 10000;
 	
+	@include tablet-only {
+		right: 0;
+	}
 	@include mobile {
 		width: 55px;
 		right: 0;
 	}
-	@include tablet-only {
-		right: 0;
+	@include iphone5 {
+		width: 45px;
 	}
+	
 }
 
 	

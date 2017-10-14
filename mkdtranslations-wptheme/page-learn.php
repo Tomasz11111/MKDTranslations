@@ -150,7 +150,7 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_1');
+            <h4 class='subsection__headline subsection__headline-learn  text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_1');
 				if ($value) {
 					echo $value;
 				}
@@ -175,7 +175,7 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_2');
+            <h4 class='subsection__headline subsection__headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_2');
 				if ($value) {
 					echo $value;
 				}
@@ -200,7 +200,7 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_3');
+            <h4 class='subsection__headline subsection__headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_3');
 				if ($value) {
 					echo $value;
 				}
@@ -276,7 +276,7 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height'>
 			</div>
-            <h4 class='subsection__headline icon-headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_6');
+            <h4 class='subsection__headline subsection__headline-learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('how_i_teach_icon_headline_6');
 				if ($value) {
 					echo $value;
 				}
@@ -338,7 +338,7 @@ endif;
 					echo 'empty'; }
 				?>' alt="" class='icon-set-height sr'>
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline icon-headline-learn text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline-learn text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('learn_pricing_modes_1');
 				if ($value) {
 					echo $value;
 				}

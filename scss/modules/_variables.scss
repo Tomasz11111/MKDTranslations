@@ -4,7 +4,7 @@ $base-font-size: 1.1vw;
 $base-font-size-mobile: calc(13px + 1.15vw);
 $base-font-size-smalls: 2vw;
 $base-font-family: 'Nunito', sans-serif;
-$title-font-family: 'Droid Serif', sans-serif;
+$title-font-family: 'Source Serif Pro', serif;
 
 //Font weights
 
@@ -39,7 +39,7 @@ $type-scale--mobile: (
 	+3: 1.424rem,
 	+4: 1.602rem,
 	+5: 1.802rem,
-	max: 2.027rem,
+	max: 2.027rem
 );
 
 
@@ -81,7 +81,7 @@ $path-img: 'images';
 $path-icons: '../icons';
 
 // Screen sizes 
-
+$iphone5-max-vertical: 320px;
 $iphone5-max: 568px;
 $mobile-max: 767px;
 $tablet: $mobile-max + 1;

@@ -133,9 +133,16 @@
 	
     width: 100%;
     height: 50vh;
+	@include tablet-only {
+		height: 40vh;
+	}
 	@include mobile {
 		height: 100vw;
 	}
+	@include mobile-landscape {
+		height: 40vw;
+	}
+	
 	
 }
 
@@ -154,11 +161,7 @@
 	}
 	
 }
-.col-services:hover {
-	@include large {
-	background-color: rgb(83, 78, 75);
-	}
-}
+
 
 
 
@@ -425,12 +428,17 @@
 	.col-xs-lscape-#{$i}
 	{@include mobile-landscape {
 		width: ($i/12) * 100%;
-		padding-left: 15px;
+		padding-left: 0;
 		position: relative;
 		min-height: 1px;
-		padding-right: 15px;
+		padding-right: 0;
 		float: left;
 		}
+		@include tablet {
+			padding-left: 0;
+			padding-right: 0;
+			
+		} 
 	}
 }
 .hidden-xs-lscape {

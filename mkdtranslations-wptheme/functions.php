@@ -16,7 +16,7 @@ add_action('init', 'register_theme_menus');
 		
 		wp_enqueue_style( 'bootstrap_css' , 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
 		wp_enqueue_style( 'googlenunito_css', 'https://fonts.googleapis.com/css?family=Nunito:300,400,600,900&amp;subset=latin-ext');
-		wp_enqueue_style(' googledroid_css', 'https://fonts.googleapis.com/css?family=Droid+Serif:400,400i');
+		wp_enqueue_style(' googlesourceserif_css', 'https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600');
 		wp_enqueue_style('main_css', get_template_directory_uri() . '/style.css');
 		wp_enqueue_style('backgroundvideo_css', get_template_directory_uri() . '/jquery.background-video.css');
 		
