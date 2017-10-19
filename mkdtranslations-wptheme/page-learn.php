@@ -404,7 +404,7 @@ endif;
 				echo 'empty'; }
 			?></a>
 			</div>
-			<div class='btn-learn-bgfullcolor sr' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php $value = get_field('learn_button_2_link');
+			<div class='btn-learn-bgfullcolor quick-quote sr' data-target='learn' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php $value = get_field('learn_button_2_link');
 				if ($value) {
 					echo $value; }
 				else {

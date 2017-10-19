@@ -17,6 +17,9 @@
 	
 <header>
 	<div class="navigation-container">
+<!-- Slogan for medium and large screens only -->
+		
+		<p class='slogan hidden-xs hidden-sm'>Your gateway to the <span>Polish</span> market</p>
 <!-- Buttons quote and lessons -->
 		<p class='btn-navbar btn-navbar-darkblue hidden-xs'><a href='#form-page'><?php $value = get_field('menu_btn_1'); if ($value) {
 	echo $value; } else {echo 'empty';} ?></a></p>

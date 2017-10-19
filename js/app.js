@@ -4,14 +4,25 @@ jQuery(document).ready(function($) {
     // Scroll reveal
 	 window.sr = ScrollReveal();
 		sr.reveal('.sr'); 
-	
-	if (window.matchMedia('(min-width: 768px)').matches) {
-	
+	if (matchMedia) {
+  		var mq = window.matchMedia("(min-width: 768px)");
+	  	mq.addListener(WidthChange);
+	  	WidthChange(mq);
+	}
+
+// media query change
+function WidthChange(mq) {
+  if (mq.matches) {
     $('.my-background-video').bgVideo({
 	fullScreen: true,
 	showPausePlay: false
-	});
-	}
+  })
+  }
+	else {
+    console.log('takakaka');
+  }
+
+}
 	
 	function lazy() {
         $('.lazy').Lazy();
@@ -261,11 +272,13 @@ jQuery(document).ready(function($) {
         $('.morespecialties .btn-blue').find('a').on('click', function() {
             if($('.portfolio-finance-pic').hasClass('hidden')) {
                 $('html, body').animate({ scrollTop:  $('.portfolio-tourism-pic').offset().top}, 'slow');
+				 $('.portfolio-expandable').removeClass('hidden')
             }
             else {
                 $('html, body').animate({ scrollTop:  $('#translation').offset().top }, 'slow');
+				$('.portfolio-expandable').addClass('hidden'); 
             }
-            $('.portfolio-expandable').toggleClass('hidden');                       
+                                   
         });
     }
 
@@ -294,8 +307,16 @@ jQuery(document).ready(function($) {
 		
 		
 		function toggleHamburger(){
-				
-				if((window.matchMedia ('(min-width: 992px)').matches) && $('body').hasClass('home') ) {
+				if (matchMedia) {
+				  var mq = window.matchMedia("(min-width: 992px)");
+				  mq.addListener(WidthChangeT);
+				  WidthChangeT(mq);
+				}
+
+				// media query change
+				function WidthChangeT(mq) {
+				  if (mq.matches) {
+					if ($('body').hasClass('home'))  {
 					var $trigger = $('#services'),
 						offset = $trigger.offset();
 				$(window).on('scroll', function() {
@@ -303,12 +324,26 @@ jQuery(document).ready(function($) {
 						openHamburger();
 					}
 				});
-				}
+					}
+				  }
+				
+				   else {
+					 console.log('qrwa');
+					   $hamburger.removeClass('open');
+							$menu.addClass('invisible'); 
+							$container.removeClass('navigation-container-purple');
+					// window width is less than 500px
+				  }
+					return false
+				};
+			//tutaj tę funkcję trzeba przerobić, else działa,ale z jakiegoś powodu cały czas od nowa odpala funkcje wyżej		
+				  
+				
 				
 				$hamburgerContainer.on('click', function() {
 						var mq = window.matchMedia('(max-width: 991px)');
-	/* dla komórek i małych tabletów */
-							if (mq.matches) { /*strona główna*/
+	 //dla komórek i małych tabletów 
+							if (mq.matches) { //strona główna
 						if ( $hamburger.hasClass('open') ) {
 							closeHamburgerMobile();
 							console.log('closed');
@@ -318,7 +353,8 @@ jQuery(document).ready(function($) {
 							console.log('opened');
 						}
 					}
-/* dla reg screens */else {
+ //dla reg screens 
+					else {
 						if ( $hamburger.hasClass('open') ) {
 							closeHamburger();
 							$hamburger.addClass('flag');
@@ -452,7 +488,7 @@ jQuery(document).ready(function($) {
 					}); // skrócić
 				}
 			
-		
+		//zmienić nazwę tej funkcji
 					function menuBarChangeColor() {
 					if((window.matchMedia('(min-width: 992px)').matches) && $('body').hasClass('home') ) {
 					$(window).scroll(function() {
@@ -582,9 +618,51 @@ jQuery(document).ready(function($) {
 	showHideForm();
 
 	//funkcja do automatycznego ustalania wysokości elementów w zależności od wysokości innych elementów, do których chcemy porównywać została usunięta
+function quickQuoteSet() {
+	var trigger = $('.quick-quote'),
+		flag,
+		myJSON,
+		$this;
 	
+	trigger.on('click', function(e) {
+		$this = $(this);
+		if ($this.data('target') === 'learn') {
+					
+		flag = {'clickedLearn' : true, 'clickedTranslation' : false};
+		}
+		else if ($this.data('target') === 'translation') {
+		flag = {'clickedLearn' : false, 'clickedTranslation' : true};
+		}
+		myJSON = JSON.stringify(flag);
+		localStorage.setItem("quickQuote", myJSON)
+	});
+}
+	quickQuoteSet();
 	
+function quickQuoteGet() {
+	var myJSON,
+		flag,
+		check,
+		flagContent = {'clickedLearn' : false, 'clickedTranslation': false},
+		$form_translations = $('#form-translation'),
+		$form_lessons = $('#form-lessons')
+	;
+	myJSON = localStorage.getItem('quickQuote');
+	check= JSON.parse(myJSON);
 	
+	if(check.clickedLearn === true) {
+		$form_lessons.removeClass('hidden');
+		$('.contact-form-lead-lesson').addClass('underline');
+		}
+	else if(check.clickedTranslation === true) {
+		$form_translations.removeClass('hidden');
+		$('.contact-form-lead-translation').addClass('underline');
+		}
+	flag = flagContent;
+	myJSON = JSON.stringify(flag);
+	localStorage.setItem('quickQuote', myJSON);
+}
+quickQuoteGet();
 
 });
            

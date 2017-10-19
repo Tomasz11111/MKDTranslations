@@ -164,7 +164,7 @@ h4 {
 			@include mobile {
 				background: none;
 				color: $clr-secondary;
-				line-height: 1.5 !important;;
+				line-height: 1.5 !important;
 			}
 			@include mobile-landscape {
 				font-size: type-scale--mobile(+3);
@@ -173,19 +173,32 @@ h4 {
 				font-size: type-scale--mobile(+2);
 			}
 			@include tablet {
-				margin-top: 3vh !important;
-				margin: 0 auto;
+				margin-top: 10vh !important;
+				padding-left: 30px;
 				margin-bottom: 3vh;
 				display: block;
+				text-align: justify;
+				font-size: type-scale(+4);
 				//border: 3px solid $clr-adjacent-6;
-				width: 47%;
-				box-shadow: 0px 1px 10px 2px lightgrey;
-				line-height: 2.8rem !important;
-				background-color: rgba(83,78,75, 0.5);
+				
 				color: white !important;
 			}
 			@include tablet-only {
 				width: 100%;
+			}
+			span {
+				@include tablet {
+					display: block;
+					font-size: type-scale(+5);
+					
+				}
+				@include mobile {
+					background-color: $clr-secondary;
+					border-radius: 20px;
+					display: block;
+					color: white;
+					
+				}
 			}
 		}
 		
@@ -227,14 +240,21 @@ h4 {
 		
 		@include m('front-page-services') {
 			@include tablet {
-				line-height: 4rem;
-				background-color: rgba(83, 78, 75, 0.5);
+				
 				color: white;
+				text-align: justify;
+				padding-left: 30px;
+				display: inline-block;
+				
+				
 			}
 			@include tablet-only {
-				line-height: 2.0;
-				width: 100%;
+				width: 90%;
 			}
+			@include medium-device {
+				width: 70%;
+			}
+			
 			@include mobile {
 				width: 95%;
 			}
@@ -269,7 +289,7 @@ h4 {
 		@include mobile {
 			margin-bottom: 0;
 			width:75vw;
-			min-height: 2rem;
+			min-height: type-scale--mobile(+0.5);
 		}
 		@include mobile-landscape {
 			margin-bottom: 0;
@@ -287,7 +307,7 @@ h4 {
 				font-size: type-scale--mobile(0);
 			}
 			@include tablet {
-				color: white !important;
+				color: black !important;
 			}
 		}
 		@include m('front-page-services-core') {
@@ -304,9 +324,12 @@ h4 {
 		padding-bottom: 3vh;
 		padding-left: 5%;
 		padding-right: 5%;
+		@include mobile {
+			margin-top: type-scale--mobile(-1);
+		}
 		@include m('front-page-services') {
 			@include tablet {
-				color: white;
+				color: black;
 			}	
 		}
 	}
@@ -443,7 +466,9 @@ h4 {
 	margin: 0 auto;
 	line-height: 4.2rem;
 	margin-bottom: 2vh;
-	
+	@include medium-device-portrait {
+		margin-bottom: 0;
+	}
 	&-lesson {
 		color: $clr-adjacent-2;
 		font-weight: $ultra-bold;
@@ -590,6 +615,10 @@ h4 {
 	width: 60%;
 	font-weight: $bold;
 	font-style: italic ;
+	@include medium-device-portrait {
+		margin-top: 4vh;
+		margin-bottom: 4vh;
+	}
 	@include mobile {
 		width: 100%;
 		padding-top: 5%;
@@ -643,6 +672,7 @@ h4 {
 	@include mobile-landscape {
 		margin-top: 5% !important;
 	}
+	
 	
 }
 
@@ -794,6 +824,22 @@ footer {
 		font-size: type-scale--mobile(-1);
 	}
 }
+.slogan {
+	font-family: $title-font-family;
+    font-size: type-scale(+1);
+    line-height: 7vh;
+    margin: 0;
+    padding-left: 30px;
+    font-weight: 800;
+    color: $clr-adjacent-5 !important;
+	span {
+		background-color: $clr-secondary;
+		border: 4px solid $clr-secondary;
+		border-radius: 10px;
+		color: white;
+	}
+}
+
 
 
 

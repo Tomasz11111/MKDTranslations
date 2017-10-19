@@ -27,13 +27,13 @@
 	/*border: 3px solid rgba(0, 126, 126, 0.3);*/
 		@include m('bg-primary') {
 			@include tablet {
-				background-color:$clr-primary;
+				/*background-color:$clr-primary;*/
 			}
 		}
 		
 		@include m('bg-secondary') {
 			@include tablet {
-			background-color: $clr-secondary;
+			/*background-color: $clr-secondary;*/
 			}
 		}
 		
@@ -66,6 +66,13 @@
 			}
 		}
 	}
+}
+.subsection__icon--section-services::before {
+	content: "Core service";
+	background-color: $clr-secondary;
+	font-size: 1rem;
+	padding: 0.3rem;
+	
 }
 	
 	icon-circle-animate {

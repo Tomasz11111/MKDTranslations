@@ -156,12 +156,17 @@ ul.menu {
 .hamburger-container {
 	position: absolute;
 	height: 100%;
-	right: 50px;
 	width: 80px;
 	top: 0;
 	z-index: 10000;
 	
-	@include tablet-only {
+	@include large {
+		right: 50px;	
+	}
+	@include medium-device {
+		right: 10px;
+	}
+	@include tablet {
 		right: 0;
 	}
 	@include mobile {

@@ -177,12 +177,7 @@
 }
 .bg-fullpage {
 	@extend %fullpage-bgimage;
-	@include m(solutions-and-services) {
-		@include bg-img('office_services_min.jpg');
-		@include tablet-only {
-			height: auto;
-		}
-	}
+	
 	@include m(page-learn) {
 		@include bg-img('Warsaw-center.jpg');
 	}
@@ -190,18 +185,42 @@
 		background: none;
 	}
 }
-		
+.bg-services  {
+	@include bg-img('diagmonds--light-blue.png');
+	height: 100%;
+
+}	
+#services-intro {
+	@include medium-device {
+		height: 45vh;
+	}
+}
+#services-content {
+	position: relative;
+	@include medium-device {
+		height: 55vh;
+	}
+	@include tablet-only {
+		background: none !important;
+	}
+	@include mobile {
+		background: none !important;
+	}
+	.container-fluid {
+		overflow:hidden;
+	}
+}
 		
 #services_content {
 	
 	@include tablet {
 		overflow: hidden;
-		background-color: rgba(83,78,75, 0.5);
+		background-color: /*rgba(83,78,75, 0.5)*/ white;
 	}
 		
 }
 
-.col-services__core:hover {
+/*.col-services__core:hover {
 	@include large {
 		background-color: $clr-primary;
 	}
@@ -210,7 +229,42 @@
 	@include large {
 		background-color: $clr-secondary;
 	}
+	subsection__container-icon--section-services {
+		background-color: $clr-secondary;
+	}
+}*/
+.separator {
+	color: #fff;
 }
+.separator2 {
+	color: transparent;
+}
+.separator::before, separator2::before {
+	border-right: 30px solid transparent;
+    left: 0;
+	content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    z-index: 199;
+    height: 0;
+    width: 50%;
+    border-bottom: 30px solid;
+}
+.separator::after, separator2::after {
+	border-left: 30px solid transparent;
+    right: 0;
+	content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    z-index: 199;
+    height: 0;
+    width: 50%;
+    border-bottom: 30px solid;
+}
+
+
 
    
 

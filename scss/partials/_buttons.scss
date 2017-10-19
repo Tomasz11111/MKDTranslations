@@ -4,6 +4,10 @@
 	align-items: center;
 	width: 20%;
 	margin: 0 auto;
+	@include medium-device {
+		width: 10% !important;
+	}
+	
 	@include tablet-only {
 		display: inline-block;
 		margin: 0;
@@ -282,7 +286,6 @@
 		background-color: $clr-tertiary;
 	}
 	@include mobile {
-		margin: 0 auto;
 		display: block;
 		margin-top: 0;
 		width: 90%;
@@ -302,8 +305,16 @@
 		font-size: 1.5rem;
 	}
 	@include mobile {
-		margin: 0 auto;
+		
 		display: block;
+	}
+}
+.pricing buttons {
+	div {
+		@include mobile {
+			margin-bottom: 2vh;
+		}
+		
 	}
 }
 
@@ -351,7 +362,7 @@
 	@extend %flex-centered;
 	
 	@include medium-device {
-		max-height: 25vh;
+		min-height: 10rem;
 	}
 		@include mobile {
 			flex-direction:column !important;
@@ -359,15 +370,15 @@
 		@include mobile-landscape {
 			flex-direction: row !important;
 	}
+}
+.pricing-buttons {
+	@include tablet-only {
+		min-height: 10rem;
 	}
+}
 	
 	
 
-.pricing-buttons {
-	@include medium-device {
-		margin-top: 5vh;
-	}
-}
 
 
 // Carousel left right buttons - Translations (mobile only)

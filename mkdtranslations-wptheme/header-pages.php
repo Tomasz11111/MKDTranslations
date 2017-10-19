@@ -39,7 +39,7 @@
 
 					$defaults = array(
 					'container' => false,
-					'theme_location' => 'sidepage-menu');
+					'theme_location' => 'primary-menu');
 					wp_nav_menu('defaults')
 					?>
 			</nav>	

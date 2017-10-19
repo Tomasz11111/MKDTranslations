@@ -34,7 +34,9 @@
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
-   
+	@include tablet-only {
+		padding-bottom: 0;
+	}
     
 }
 
@@ -133,9 +135,13 @@
 	
     width: 100%;
     height: 50vh;
+	@include medium-device-portrait {
+		height: 30vh;
+	}
 	@include tablet-only {
 		height: 40vh;
 	}
+	
 	@include mobile {
 		height: 100vw;
 	}
@@ -187,18 +193,13 @@
 	
 }
 
-// LEARN subpage - pricing table div
-
-#learn-polish-pricing {
-	@include medium-device {
-	margin-bottom: 5vh;
-	}
-}
-
 // Contact Page
 #form-page {
 	padding-top: 7vh;
 	padding-bottom: 5vh;
+	@include medium-device-portrait {
+		padding-top: 5vh;
+	}
 	@include mobile {
 		padding-bottom: 5%;
 		padding-top: 5%;
@@ -292,6 +293,9 @@
 
 #services {
 	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
 	div {
 		padding: 0;
 	}
@@ -451,6 +455,8 @@
 		display: block !important;
 	}
 }
+
+
 
 
 

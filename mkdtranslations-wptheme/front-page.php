@@ -66,32 +66,41 @@
 
 <!-- MY SOLUTIONS AND SERVICES SECTIONS -->
 
-<div class='container-fluid bg-fullpage bg-fullpage--solutions-and-services lazy' id='solutions-services'>
-	<div class='row'>
-		<div class=	'col-lg-12 col-xs-lscape-6 row-col' id='services'>
-    	
-		<img data-src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo sr lazy'>
-		</div>
-        <div class='col-lg-12 col-xs-12 col-xs-lscape-6'><h1 class =' section__title section__title--front-page-services sr'><?php $value = get_field('services_section_title');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>
-			</h1>
-            <p class='section__lead section__lead--front-page-services sr'><?php $value = get_field ('services_section_lead');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>
-			</p>
-        </div>
-   
+<!--services intro -->
+<section id='services-intro'>
+	<div class='separator'></div>
+	<div class='container-fluid bg-services lazy' id='solutions-services'>
+		<div class='row'>
+			<div class=	'col-lg-4 col-md-4 col-sm-4 col-xs-lscape-6 row-col' id='services'>
 
-<div class='col-lg-12' id='services_content'>
+			<img data-src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo sr lazy'>
+			</div>
+			<div class='col-lg-8 col-md-8 col-sm-8 col-xs-12 col-xs-lscape-6'><h1 class =' section__title section__title--front-page-services sr'><span>Michał K.Dzieńdziura</span><?php $value = get_field('services_section_title');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
+				</h1>
+				<p class='section__lead section__lead--front-page-services sr'><?php $value = get_field ('services_section_lead');
+				if ($value) {
+					echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?>
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+	<!-- Services content -->
+<section id='services-content' class='bg-services'>
+	<div class='separator'></div>
+   <div class='container-fluid bg-white lazy'>
+	   <div class='row'>
+		<div class='col-lg-12' id='services_content'>
     
 		<div class='col-lg-4 col-md-12 col-sm-12 col-xs-12'>
 			<h2 class='services-headlines sr '><span class='bg-headline-home2'><?php $value = get_field('2_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
@@ -99,10 +108,12 @@
 		<div class='col-lg-8 hidden-md hidden-sm hidden-xs'>
 			<h2 class='services-headlines sr'><span class='bg-headline-home1'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
+	</div>
 <!-- Core services -->
-        <div class='col-xs-12 col-xs-lscape-6 col-md-6 col-sm-6 col-lg-2 col-services col-services__core slideanim-left'>
+    <!--Translations-->    
+		<div class='col-xs-12 col-xs-lscape-6 col-md-6 col-sm-6 col-lg-2 col-services col-services__core slideanim-left'>
 			<a href='#translation'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-white.png' class='subsection__icon--section-services hidden-xs sr '><img src='<?php echo get_template_directory_uri(); ?>/images/translation-purple.png' class='subsection__icon--section-services hidden-sm hidden-md hidden-lg'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img src='<?php echo get_template_directory_uri(); ?>/images/translation-purple.png' class='subsection__icon--section-services hidden-xs sr '><img src='<?php echo get_template_directory_uri(); ?>/images/translation-purple.png' class='subsection__icon--section-services hidden-sm hidden-md hidden-lg'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services subsection__headline--front-page-services-core sr'><?php $value = get_field ('services_icon_headline');
 				if ($value) {
@@ -122,12 +133,14 @@
 				<!--<p class='subsection__text text-white'><a href='#translation'>Read more</a></p>-->
 			
 			</a>
-        </div>
+	</div>
+       
+
 		    
-		
+	<!-- Teaching -->
 		<div class='col-xs-12 col-xs-lscape-6 col-md-6 col-sm-6 col-lg-2 col-services slideanim-left col-services__core'>
 			<a href='#teaching'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img class='subsection__icon--section-services hidden-xs' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-white.png' class='sr'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/teaching-purple.png'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-primary sr'><img class='subsection__icon--section-services hidden-xs' src= '<?php echo get_template_directory_uri(); ?>/images/teaching-purple.png' class='sr'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/teaching-purple.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services subsection__headline--front-page-services-core sr'><?php $value = get_field ('service2_icon_headline');
 				if ($value) {
@@ -155,8 +168,9 @@
 	<div class='hidden-xs hidden-lg col-md-12 col-sm-12 '>
 			<h2 class='services-headlines sr'><span class='bg-headline-home1'><?php $value = get_field('4_columns_headline'); if ($value) { echo $value;} else { echo 'empty'; } ?></span></h2>
 		</div>
-        <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim col-services__additional'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src= '<?php echo get_template_directory_uri(); ?>/images/software-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
+        <!-- software testing -->
+	<div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim col-services__additional'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src= '<?php echo get_template_directory_uri(); ?>/images/software-blue.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/software-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services subsection__headline-animation sr'><span><?php $value = get_field ('service3_icon_headline');
 				if ($value) {
@@ -177,9 +191,9 @@
 				</p>
 		
         </div>
-		
+		<!-- style guide -->
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim col-services__additional'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs' src='<?php echo get_template_directory_uri(); ?>/images/glossary-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services sr' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services sr' src='<?php echo get_template_directory_uri(); ?>/images/glossary-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services icon-headline-animation sr'><span><?php $value = get_field ('service4_icon_headline');
 			if ($value) {
@@ -199,8 +213,9 @@
 				?>
 				</p>
 			</div>
+	<!-- Revision -->
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim col-services__additional'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src='<?php echo get_template_directory_uri(); ?>/images/revision-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/revision-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services icon-headline-animation sr'><span><?php $value = get_field ('service5_icon_headline');
 				if ($value) {
@@ -219,8 +234,9 @@
 				?></p>
 		
         </div>
+	<!-- cultural consultancy -->
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-3 col-lg-2 col-services slideanim col-services__additional'>
-            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-white.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'>
+            <div class='subsection__container-icon subsection__container-icon--section-services subsection__container-icon--bg-secondary sr'><img class='subsection__icon--section-services hidden-xs sr' src = '<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'><img class='hidden-sm hidden-md hidden-lg subsection__icon--section-services' src='<?php echo get_template_directory_uri(); ?>/images/cultural-blue.png'>
 			</div>
             <h4 class='subsection__headline subsection__headline--front-page-services sr'><span><?php $value = get_field ('service6_icon_headline');
 			if ($value) {
@@ -241,9 +257,11 @@
 			
         	</div>
     	</div>
+	</div>	
+<div class='separator2'></div>
+	
 
-	</div>
-</div>
+</section>
 
 
 <!-- TRANSLATION SECTION -->
@@ -376,6 +394,7 @@
         </div>
 	</div>
 </div>
+
 
 <!-- Carousel for mobile version -->
 
