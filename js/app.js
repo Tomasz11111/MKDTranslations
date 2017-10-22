@@ -307,12 +307,12 @@ function WidthChange(mq) {
 		
 		
 		function toggleHamburger(){
-				if (matchMedia) {
+			/*	if (matchMedia) {
 				  var mq = window.matchMedia("(min-width: 992px)");
 				  mq.addListener(WidthChangeT);
 				  WidthChangeT(mq);
-				}
-
+				}*/
+/*
 				// media query change
 				function WidthChangeT(mq) {
 				  if (mq.matches) {
@@ -335,7 +335,7 @@ function WidthChange(mq) {
 					// window width is less than 500px
 				  }
 					return false
-				};
+				};*/
 			//tutaj tę funkcję trzeba przerobić, else działa,ale z jakiegoś powodu cały czas od nowa odpala funkcje wyżej		
 				  
 				
