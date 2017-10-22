@@ -32,7 +32,7 @@
 			
 			<div class='headline-btn-container'>
 				<div class='headline-btn-subcontainer'>
-					<div class='headline-btn bg-belt-green'><a href='#services'><?php $value = get_field ('hero_btn_left');
+					<div class='headline-btn bg-belt-green'><a href='#services-intro'><?php $value = get_field ('hero_btn_left');
 				if ($value) {
 					echo $value;
 				}
