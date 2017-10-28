@@ -16,6 +16,9 @@
 .bg-about {
 	@include bg-img('mkd_color_nobg_min.png');
 	background-position: right;
+	@include large {
+		background-position: right bottom;
+	}
 	background-color: $clr-adjacent-3;
 	padding: 15px;
 	background-size: 35%;
@@ -190,11 +193,7 @@
 	height: 100%;
 
 }	
-#services-intro {
-	@include medium-device {
-		height: 45vh;
-	}
-}
+
 #services-content {
 	position: relative;
 	@include medium-device {

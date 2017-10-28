@@ -144,11 +144,12 @@ h4 {
 .section {
 	@include e('title'){
 		width: 100%;
+		margin-top: 4rem;
 		@include font-size(+4);
 		font-weight: $bold;
 		text-align: center;
 		line-height: 3rem !important; //to może do przerobienia 
-		margin-top: 8vh;
+		
 		@include iphone5 {
 			font-size: type-scale--mobile(+3);
 		}
@@ -163,7 +164,7 @@ h4 {
 		@include m('front-page-services') {
 			@include mobile {
 				background: none;
-				color: $clr-secondary;
+				color: white;
 				line-height: 1.5 !important;
 			}
 			@include mobile-landscape {
@@ -173,15 +174,15 @@ h4 {
 				font-size: type-scale--mobile(+2);
 			}
 			@include tablet {
-				margin-top: 10vh !important;
 				padding-left: 30px;
 				margin-bottom: 3vh;
+				margin-top: 0;
 				display: block;
 				text-align: justify;
 				font-size: type-scale(+4);
 				//border: 3px solid $clr-adjacent-6;
 				
-				color: white !important;
+				color: white;
 			}
 			@include tablet-only {
 				width: 100%;
@@ -196,7 +197,7 @@ h4 {
 					background-color: $clr-secondary;
 					border-radius: 20px;
 					display: block;
-					color: white;
+					color: white !important;
 					
 				}
 			}
@@ -242,7 +243,7 @@ h4 {
 			@include tablet {
 				
 				color: white;
-				text-align: justify;
+				text-align: left;
 				padding-left: 30px;
 				display: inline-block;
 				
@@ -257,6 +258,9 @@ h4 {
 			
 			@include mobile {
 				width: 95%;
+				color: white;
+				margin-bottom: 4rem;
+					
 			}
 			margin-bottom: 4vh;
 			width:100%;
@@ -583,27 +587,7 @@ h4 {
 
 
 
-//contact section
-.contact-data-par {
-	color: white;
-	font-size: type-scale(+3);
-	font-weight: $bold;
-	line-height: 4rem;
-	margin: 0;
-	
-	@include tablet-only {
-		font-size: type-scale--mobile(0);
-	}
-	@include mobile {
-		text-align: center;
-		font-size: type-scale--mobile(0);
-		line-height: 3rem;
-	}
-	@include iphone5 {
-		font-size: type-scale--mobile(-1);
-	}
-	
-}
+
 // belts
 .confidentiality {
 	@include font-size(+4);

@@ -68,7 +68,7 @@
 
 <!--services intro -->
 <section id='services-intro'>
-	<div class='separator'></div>
+	
 	<div class='container-fluid bg-services lazy' id='solutions-services'>
 		<div class='row'>
 			<div class=	'col-lg-4 col-md-4 col-sm-4 col-xs-lscape-6 row-col' id='services'>

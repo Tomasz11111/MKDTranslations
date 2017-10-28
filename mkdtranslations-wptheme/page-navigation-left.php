@@ -19,7 +19,7 @@ endif;
     </div>
  <div class="container-fluid">
         <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 hidden-xs index_container">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 index_container">
                     <ul class="terms_conditions_index nav nav-pills nav-stacked" data-spy="affix" data-offset-top=150 id="terms_sidebar">
 						<?php $value = get_field('table_of_contents');
 							if ($value) {

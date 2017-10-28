@@ -4,25 +4,26 @@ jQuery(document).ready(function($) {
     // Scroll reveal
 	 window.sr = ScrollReveal();
 		sr.reveal('.sr'); 
-	if (matchMedia) {
+	/*if (matchMedia) {
   		var mq = window.matchMedia("(min-width: 768px)");
 	  	mq.addListener(WidthChange);
 	  	WidthChange(mq);
 	}
 
 // media query change
+// media query change
 function WidthChange(mq) {
-  if (mq.matches) {
+  if (mq.matches) {*/
     $('.my-background-video').bgVideo({
 	fullScreen: true,
 	showPausePlay: false
-  })
+  })/*
   }
 	else {
     console.log('takakaka');
   }
 
-}
+}*/
 	
 	function lazy() {
         $('.lazy').Lazy();
@@ -55,28 +56,30 @@ function WidthChange(mq) {
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 	function smoothScroll(elements) {
         //if($('body').is('.home')) {
+			
 			$(elements).on('click', function (event) {
-				
-            // Make sure this.hash has a value before overriding default behavior
+				window.location.hash = '';
+            // Make sure this.hash has a value before overriding default behavior*/
             if (this.hash !== '') {
 
                 // Prevent default anchor click behavior
                 event.preventDefault();
 
-                // Store hash
+                // Store hash and scrollTop value
                 var hash = this.hash;
+					
+					 
 
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
-                    scrollTop: $(hash).offset().top 
-                }, 900, function () {
+                    scrollTop: $(hash).offset().top - $('.navigation-container').outerHeight()             }, 900, function () {
 
                     // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
+                    
                 });
             } // End if
-        });
+			});
 	}
    function runSmoothScroll() {
 	    if($('body').is('.home')) {

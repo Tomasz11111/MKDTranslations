@@ -11,7 +11,7 @@ footer {
 	padding: 0 !important;
 	}
 }
-
+//social media icons
 .footer-proz {
 	/*padding: 5%;*/
 	height:80px;
@@ -41,5 +41,30 @@ footer {
 		margin-top: 2vh;
 	}
 }	
+
+//contact data
+.contact-data-par {
+	color: white;
+	font-size: type-scale(+2);
+	font-weight: $bold;
+	line-height: 4rem;
+	margin: 0;
+	display:inline-block;
+	width: 100%;
+	text-align: center;
+	
+	@include tablet-only {
+		font-size: type-scale--mobile(0);
+	}
+	@include mobile {
+		text-align: center;
+		font-size: type-scale--mobile(0);
+		line-height: 3rem;
+	}
+	@include iphone5 {
+		font-size: type-scale--mobile(-1);
+	}
+	
+}
 
 

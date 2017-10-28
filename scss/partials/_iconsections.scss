@@ -58,6 +58,9 @@
 	@include e('icon') {
 		@include m('section-services') {
 			max-width: 50%;
+			@include medium-device {
+				max-width: 60%;
+			}
 			@include mobile {
 				max-width: 75%;
 			}

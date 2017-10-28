@@ -14,7 +14,25 @@
 	<header>
 		<div class="navigation-container bg-dimgray">
 <!--MKD Translations headline to display on page load -->
-			<p class="navigation-container__headline-text-sidepages">Linguistic services <span style='background-color:<?php the_field('color'); ?> !important'> by </span> MKDTranslations</p>
+			<p class="navigation-container__headline-text-sidepages"><?php $value = get_field ('headline_left');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?><span style='background-color:<?php the_field('color'); ?> !important'> <?php $value = get_field ('headline_middle');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?> </span> <?php $value = get_field ('headline_right');
+				if ($value) {
+				echo $value;
+				}
+				else {
+					echo 'empty'; }
+				?></p>
 
 <!-- Hamburger menu -->
 			<div class='hamburger-container flex-center-column'>

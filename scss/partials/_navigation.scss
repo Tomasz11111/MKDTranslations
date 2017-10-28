@@ -319,7 +319,7 @@ ul.menu {
 }
 
 .terms_conditions_index {
-	margin-top: 5vh;
+	margin-top: 3vh;
 	list-style: none;
 	line-height: 20px;
 	@include tablet {
@@ -328,23 +328,29 @@ ul.menu {
 	@include large {
 		width: 80%;
 	}
+	ul {
+		@include mobile {
+			padding-left: 0;
+		}
+	}
 	
 
 
 }
 
 .affix {
+	
+	@include mobile {
+		position: relative !important;
+	}
+	
 	@include tablet {
 		width: 30vw;
 		top: 10vh;
 		
 	}
 	@include large {
-		width: 20vw;
-	}
-	@include large-screen {
-		
-		width: 250px;
+		width: 25vw;
 	}
 	
 		
