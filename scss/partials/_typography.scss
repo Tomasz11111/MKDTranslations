@@ -319,6 +319,11 @@ h4 {
 				color: $clr-primary;
 			}
 		}
+		@include m('learn') {
+			span {
+				background-color: $clr-tertiary;
+			}
+		}
 	}
 	@include e('text') {
 		@include font-size(0);
@@ -669,6 +674,7 @@ h4 {
 	@include mobile {
 		font-size: 2.5rem;
 		font-weight: $ultra-bold;
+		
 	}
 	@include mobile-landscape {
 		font-size: type-scale--mobile(+1);
@@ -688,6 +694,7 @@ h4 {
 		padding-right:1%;
 			@include mobile {
 				padding: 0.8%;
+				background-color: $clr-tertiary !important;
 			}
 			
 	}

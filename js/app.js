@@ -4,26 +4,26 @@ jQuery(document).ready(function($) {
     // Scroll reveal
 	 window.sr = ScrollReveal();
 		sr.reveal('.sr'); 
-	/*if (matchMedia) {
+	if (matchMedia) {
   		var mq = window.matchMedia("(min-width: 768px)");
 	  	mq.addListener(WidthChange);
 	  	WidthChange(mq);
 	}
 
-// media query change
+
 // media query change
 function WidthChange(mq) {
-  if (mq.matches) {*/
+  if (mq.matches) {
     $('.my-background-video').bgVideo({
 	fullScreen: true,
 	showPausePlay: false
-  })/*
+  })
   }
 	else {
     console.log('takakaka');
   }
 
-}*/
+}
 	
 	function lazy() {
         $('.lazy').Lazy();

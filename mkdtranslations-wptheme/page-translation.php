@@ -22,22 +22,12 @@ endif;
             
 				
 
-        <div class='col-lg-12 col-xs-12'><h1 class='section__title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('translation_section_title');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+        <div class='col-lg-12 col-xs-12'><h1 class='section__title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field ('translation_section_title');
 			?></span></h1>
             <p class='section__lead'>
 				 <?php if ( have_posts() ): while (have_posts() ) : the_post() ;?>
-				<?php $value = get_field ('translation_section_lead');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?>
+				<?php the_field ('translation_section_lead');
+				?>
 			</p>
         </div>
     </div>
@@ -45,56 +35,26 @@ endif;
 <div class='container-fluid hidden-xs active-xs-lscape' id='photos'>
     <div class='row'>
         <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-tourism-pic pic-square'>
-            <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_1');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+            <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php the_field ('translation_speciality_1');
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_1');
 			?>
                 </p></div>
 
         </div>
         <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
-			<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_2');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+			<p class='portfolio-overlay-text'><?php the_field ('translation_speciality_2');
 			?>
 			</p>
-			<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_2');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+			<p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_2');
 			?></p>
 			</div>
         </div>
 
         <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
-				<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+				<p class='portfolio-overlay-text'><?php the_field ('translation_speciality_3');
 			?>
 				</p>
-				<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_3');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+				<p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_3');
 			?>
 				</p>
 			</div>
@@ -102,50 +62,20 @@ endif;
             
         <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-technical-pic pic-square sr'>
 			<div class='portfolio-overlay'>
-				<p class='portfolio-overlay-text' ><?php $value = get_field ('translation_speciality_4');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+				<p class='portfolio-overlay-text' ><?php the_field ('translation_speciality_4');
 			?>
 				</p>
-				<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_4');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+				<p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_4');
 			?>
 				</p>
 			</div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-law-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_5');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-law-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php the_field ('translation_speciality_5');
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_5');
 			?></p></div>
         </div>
-        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-finance-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_6');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xs-lscape-4 portfolio-finance-pic pic-square sr'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php the_field ('translation_speciality_6');
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_6');
 			?></p></div>
         </div>
 	</div>
@@ -158,107 +88,47 @@ endif;
 		<div id='myCarousel' class='col-xs-12 carousel slide hidden-xs-lscape hidden-sm hidden-md hidden-lg' data-ride='carousel' data-interval='false'>
 			<div class='carousel-inner' role='listbox'>
 			<div class='item active portfolio-tourism-pic pic-square'>
-			<div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_1');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_1');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+			<div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php the_field ('translation_speciality_1');
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_1');
 			?>
 				</p></div>
 
 			</div>
 	 
 			 <div class='item portfolio-business-pic pic-square'> <div class='portfolio-overlay'>
-					<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_2');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+					<p class='portfolio-overlay-text'><?php the_field ('translation_speciality_2');
 			?>
 					</p>
-					<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_2');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+					<p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_2');
 			?></p>
 					</div>
 				</div>
 			 <div class='item portfolio-marketing-pic pic-square'>		<div class='portfolio-overlay'>
-						<p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_3');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+						<p class='portfolio-overlay-text'><?php the_field ('translation_speciality_3');
 			?>
 						</p>
-						<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_3');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+						<p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_3');
 			?>
 						</p>
 					</div>
 				</div>
 			 <div class='item portfolio-technical-pic pic-square'>
 					<div class='portfolio-overlay'>
-						<p class='portfolio-overlay-text' ><?php $value = get_field ('translation_speciality_4');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+						<p class='portfolio-overlay-text' ><?php the_field ('translation_speciality_4');
 			?>
 						</p>
-						<p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_4');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+						<p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_4');
 			?>
 						</p>
 					</div>
 				</div>
-			 <div class='item portfolio-law-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_5');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_5');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+			 <div class='item portfolio-law-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php the_field ('translation_speciality_5');
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_5');
 			?></p></div>
 				</div>
 	 
-			 <div class='item portfolio-finance-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php $value = get_field ('translation_speciality_6');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
-			?></p><p class='hidden portfolio-overlay-text-hover'><?php $value = get_field ('translation_speciality_examples_6');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+			 <div class='item portfolio-finance-pic pic-square'><div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php the_field ('translation_speciality_6');
+			?></p><p class='hidden portfolio-overlay-text-hover'><?php the_field ('translation_speciality_examples_6');
 			?></p></div>
 				</div>
 			</div>
@@ -279,19 +149,9 @@ endif;
 
  <div class='container-fluid bg-grey' id='process'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section__title text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field ('process_section_title');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+        <div class='col-lg-12 col-xs-12'><h1 class='section__title text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field ('process_section_title');
 			?></span></h1>
-            <p class='section__lead sr'><?php $value = get_field ('process_section_lead');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <p class='section__lead sr'><?php the_field ('process_section_lead');
 			?></p>
         </div>
     </div>
@@ -303,42 +163,22 @@ endif;
             <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height sr'>
 			</div>
             
-				<h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+				<h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_1');
 				?>
 					</span></h4>
 			
-            <?php $value = get_field('test1001');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
-			?>
+            <?php the_field('test1001');
+				?>
             
         </div>
 		<div class='col-lg-4 col-md-6 col-sm-6'>
 			<div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('process_icon_headline_2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_2');
 				?>
 					</span></h4>
 			
-			<?php $value = get_field('test1000');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+			<?php the_field('test1000');
 				?>
 		</div>
         
@@ -350,12 +190,7 @@ endif;
 
 <div class='container-fluid'>
     <div class='row'>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt bg-belt-green'><p class='confidentiality slideanim'><?php $value = get_field ('belt_green');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt bg-belt-green'><p class='confidentiality slideanim'><?php the_field ('belt_green');
 			?>
 				
 				
@@ -369,12 +204,7 @@ endif;
         
            
     <div class='row'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section__title section__title--translations-pricing text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_section_title');
-			if ($value) {
-				echo $value;
-			}
-			else {
-				echo 'empty'; }
+        <div class='col-lg-12 col-xs-12'><h1 class='section__title section__title--translations-pricing text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_section_title');
 			?></span></h1>
                 
             </div>
@@ -383,60 +213,30 @@ endif;
     
             <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height sr'>
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_1');
 				?></span></h4>
 			</div>
-            <div class='description'><p class='subsection__text sr'><?php $value = get_field('pricing_icon_text_1');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <div class='description'><p class='subsection__text sr'><?php the_field('pricing_icon_text_1');
 				?></p>
 			</div>
          </div>
          <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
             <div class='subsection__container-icon icon-circle-teal '><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height sr'>
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_2');
 				?></span></h4>
 			</div>
-            <div class='description'><p class='subsection__text sr'><?php $value = get_field('pricing_icon_text_2');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <div class='description'><p class='subsection__text sr'><?php the_field('pricing_icon_text_2');
 				?></p>
 			</div>
        </div>
        <div class='col-lg-4 col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-xs-12'>
             <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height sr'>
 		   </div>
-            <div class='icon_title'><h4 class='subsection__headline subsection__headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php $value = get_field('pricing_icon_headline_3');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_3');
 				?></span></h4>
 		   </div>
-           <div class='description'><p class='subsection__text sr'><?php $value = get_field('pricing_icon_text_3');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+           <div class='description'><p class='subsection__text sr'><?php the_field('pricing_icon_text_3');
 				?></p>
 		   </div>
                  <div class='payments_methods_flex sr'>
@@ -445,28 +245,12 @@ endif;
 		</div>
 		
 		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
-			<div class='btn-standard btn-blue sr'><a href='<?php $value = get_field('pricing_button_left_link');
-				if ($value) {
-					echo $value; }
-				else {
-					echo 'empty'; }?>'><?php $value = get_field ('pricing_button_left');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+			<div class='btn-standard btn-blue sr'><a href='<?php the_field('pricing_button_left_link');
+				?>'><?php the_field ('pricing_button_left');
 				?></a>
 			</div>
-            <div class='btn-learn-bgfullcolor quick-quote sr' data-target='translation' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php $value = get_field('pricing_button_right_link');
-				if ($value) {
-					echo $value; }
-				else {
-					echo 'empty'; }?>'><?php $value = get_field ('pricing_button_right');
-				if ($value) {
-					echo $value;
-				}
-				else {
-					echo 'empty'; }
+            <div class='btn-learn-bgfullcolor quick-quote sr' data-target='translation' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php the_field('pricing_button_right_link');
+				?>'><?php the_field ('pricing_button_right');
 				?></a>
 			</div>
        

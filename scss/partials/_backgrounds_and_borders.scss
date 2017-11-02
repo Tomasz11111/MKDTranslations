@@ -148,21 +148,25 @@
 	top: 70%;
 	
 }
-.bg-headline-home1 {
-	color:white;
+%bg-headline {
 	padding: .3rem;
 	font-weight: $bold;
-	background-color: $clr-secondary;
 	border-radius: 15px;
+	color: white;
 	
 }
+.bg-headline-home1 {
+	@extend %bg-headline;
+	background-color: $clr-secondary;
+}
 .bg-headline-home2 {
-	color: white;
-	padding: .3rem;
+	@extend %bg-headline;
 	background-color: $clr-primary;
-	border-radius: 15px;
 	
-	
+}
+.bg-headline-learn {
+	@extend %bg-headline;
+	background-color: $clr-tertiary;
 }
 
 .learn-pricing-modes table {
@@ -261,6 +265,18 @@
     height: 0;
     width: 50%;
     border-bottom: 30px solid;
+}
+
+// squares in Learn page
+
+.square2-learn {
+	background-color: $clr-tertiary;
+}
+.square3-learn {
+	background-color: $clr-primary;
+}
+.square4-learn {
+	background-color: $clr-secondary
 }
 
 

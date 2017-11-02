@@ -62,12 +62,13 @@ textarea {
 	
 }
 label {
-	font-size: type-scale(+1);
+	@include font-size(+2)
 	color: white;
 	font-weight: $thin;
 	width: 100% !important;
 }
 input, textarea {
+	@include font-size(+1);
 	color: black;
 	border: 2px solid white;
 	background-color: white;
@@ -75,25 +76,28 @@ input, textarea {
 	
 }
 select {
-	color: black !important;
+	@include font-size(+1);
 	vertical-align: middle;
 	
 }
-
-input[type='submit'] {
-	
-	border: 2px solid white;
-	background-color: transparent !important;
-	color: white;
-	font-size: type-scale(+2);
-	padding: 10px;
-	&:hover {
-		background-color: purple !important;
-		color: white;
-		font-weight: $regular;
-	}
-	
+/*
+::placeholder {  Chrome/Opera/Safari 
+  color: $clr-primary;
 }
+::placeholder {  Firefox 19+ 
+  color: $clr-primary;
+}
+::placeholder {  IE 10+ 
+  color: $clr-primary;
+}
+::placeholder {  Firefox 18- 
+  color: $clr-primary;
+}
+*/
+
+
+
+
 form {
 	width: 75% !important;
 	margin: 0 auto !important;
@@ -101,12 +105,60 @@ form {
 		width: 90% !important;
 	}
 }
+#wpcf7-f418-o2 p {
+	width: 50%;
+	float: left;
+	display: inline-block;
+	label {
+		color: $clr-primary;
+	}
+	input, select {
+		width: 80%;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+		background-color: $clr-primary;
+		color: white;
+	}
+	textarea {
+		color: white;
+		border-top: 0;
+		border-right: 0;
+		border-left: 0;
+		background-color: $clr-primary
+	}
+	
+}
+#wpcf7-f418-o2 p:nth-child(10) {
+	clear: left;
+
+}
+#wpcf7-f418-o2 p:nth-child(12) {
+	clear:left;
+	width: 95%;
+	
+}
+
+input[type='submit'] {
+	
+	border: 2px solid white !important;
+	background-color: none;
+	color: white;
+	font-size: type-scale(+2);
+	padding: 10px;
+	
+	&:hover {
+		background-color: purple !important;
+		color: white;
+		font-weight: $regular;
+	}
+	
+}
 
 //Form languages
 #wpcf7-f418-o2 p:nth-child(2), #wpcf7-f667-o2 p:nth-child(2) {
-	float: left;
-	display: inline-block;	
-	width: 17%;
+	
+	
 	@include mobile {
 		width: 40%;
 	}
@@ -114,20 +166,16 @@ form {
 	
 }
 #wpcf7-f418-o2 p:nth-child(3), #wpcf7-f667-o2 p:nth-child(3) {
-	float: left;
-	display: inline-block;
-	width: 15%;
+	
+	
 	@include mobile {
 		width: 40%;
 	}
 }
 #wpcf7-f418-o2 p:nth-child(4), #wpcf7-f667-o2 p:nth-child(4) {
-	float: left;
-	display: inline-block;
-	width: 20%;
-	input {
-		width: 26%;
-	}
+	
+	
+	
 	@include mobile {
 		width: 100%;
 		display: block;
@@ -135,9 +183,7 @@ form {
 	}
 }
 #wpcf7-f418-o2 p:nth-child(5), #wpcf7-f667-o2 p:nth-child(5) {
-	float: left;
-	display: inline-block;
-	width: 45%;
+	
 	
 	@include mobile {
 		width: 100%;
@@ -161,12 +207,10 @@ form {
 	}
 }
 #wpcf7-f418-o2 p:nth-child(6), #wpcf7-f667-o2 p:nth-child(6) {
-	clear: left;
-	float: left;
-	width: 25%;
-	display: inline-block;
+	
+		
 	input {
-		width: 80%;
+		
 		@include mobile {
 			width: 100%;
 		}
@@ -178,11 +222,9 @@ form {
 	}
 }
 #wpcf7-f418-o2 p:nth-child(7), #wpcf7-f667-o2 p:nth-child(7) {
-	float: left;
-	display: inline-block;	
-	width: 25%;
+		
 	input {
-		width: 80%;
+		
 		@include mobile {
 			width: 100%;
 		}
@@ -192,9 +234,7 @@ form {
 	}
 }
 #wpcf7-f418-o2 p:nth-child(8), #wpcf7-f667-o2 p:nth-child(8) {
-	float: left;
-	display: inline-block;
-	width: 50%;
+		
 	@include mobile {
 		width: 100%;
 	}
@@ -215,10 +255,7 @@ form {
 	}
 }
 #wpcf7-f667-o2 p:nth-child(9), #wpcf7-f418-o2 p:nth-child(9), #wpcf7-f667-o2 p:nth-child(11), #wpcf7-f418-o2 p:nth-child(11),  {
-	clear: left;
-	float: left;
-	display: inline-block;
-	width: 50%;
+		
 	label {
 		width: 90%;
 		input {
@@ -240,9 +277,7 @@ form {
 #wpcf7-f418-o2 p:nth-child(10), #wpcf7-f418-o2 p:nth-child(12),
 #wpcf7-f667-o2 p:nth-child(10), #wpcf7-f667-o2 p:nth-child(12),{
 	
-	float: left;
-	display: inline-block;
-	width: 50%;
+		
 	@include mobile {
 		width: 100%;
 		
@@ -287,7 +322,7 @@ form {
  #wpcf7-f418-o2 p:nth-child(13), #wpcf7-f667-o2 p:nth-child(13) {
 	float: left;
 	display: block;
-	width: 100%;
+	width: 20%
 	label {
 		width: 95% !important;
 		float: left;
@@ -433,6 +468,7 @@ input[name='file-955'] {
 		width: 100%;
 	}
 }
+
 
 
 

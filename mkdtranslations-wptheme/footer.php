@@ -39,13 +39,13 @@
 			}
 			else {
 				echo 'empty'; }
-			   ?>'><img src='<?php echo get_template_directory_uri(); ?>/images/proZ.png' class='sr' /></a>
+			   ?>'><img src='<?php echo get_template_directory_uri(); ?>/images/proZ.png' class='sr' alt='Icon - ProZ' /></a>
 		</div>
 		<div class='col-xs-6 col-lg-6 footer-facebook'>
-			<a href='https://www.facebook.com/mkdtranslations/'><img src='<?php echo get_template_directory_uri(); ?>/images/facebook.png' class='sr' /></a>
+			<a href='https://www.facebook.com/mkdtranslations/'><img src='<?php echo get_template_directory_uri(); ?>/images/facebook.png' class='sr' alt='Icon - Facebook'/></a>
 		</div>
 		<div class='col-xs-6 col-lg-6 footer-linkedin'>
-			<a href='https://www.linkedin.com/in/mdziendziura'><img src='<?php echo get_template_directory_uri(); ?>/images/linkedin.png'/ class='sr'></a>
+			<a href='https://www.linkedin.com/in/mdziendziura'><img src='<?php echo get_template_directory_uri(); ?>/images/linkedin.png' class='sr' alt='Icon - LinkedIn'></a>
 		</div>
 		<div class='col-xs-12 col-lg-12 footer-copy'>
 			<nav class="nav-footer hidden-xs sr">
