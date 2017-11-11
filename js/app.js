@@ -58,7 +58,7 @@ function WidthChange(mq) {
         //if($('body').is('.home')) {
 			
 			$(elements).on('click', function (event) {
-				window.location.hash = '';
+				/*window.location.hash = '';*/
             // Make sure this.hash has a value before overriding default behavior*/
             if (this.hash !== '') {
 
@@ -76,7 +76,7 @@ function WidthChange(mq) {
                     scrollTop: $(hash).offset().top - $('.navigation-container').outerHeight()             }, 900, function () {
 
                     // Add hash (#) to URL when done scrolling (default click behavior)
-                    
+                   /* window.location.hash = hash;*/ //to opuszczam, bo przeskakuje na wysokośc id, nie uwzględniając przesunięcia o wysokość kontenera nawigacji, 
                 });
             } // End if
 			});
@@ -90,7 +90,6 @@ function WidthChange(mq) {
 		}
    }
 		runSmoothScroll();
-   
 	
 	
 /* Swipe for mobile */
@@ -563,6 +562,7 @@ function WidthChange(mq) {
 			$triggerLessons = $('.btn-navbar-purple'),
 			$formTranslations = $('#form-translation'),
 			$formLessons = $('#form-lessons');
+			
 		
 			$triggerTranslation.on('click', function() {
 				$formTranslations.removeClass('hidden');
@@ -608,15 +608,19 @@ function WidthChange(mq) {
 			
 		}
 		
-		$lesson_btn.on('click', function() {
+		$lesson_btn.on('click', function(event) {
+			event.preventDefault();
 			showHideForms($form_lessons, $form_translations);
 			$this = $(this);
-			underlineWhenActive($form_lessons, $translate_btn)});
+			underlineWhenActive($form_lessons, $translate_btn);
+			});
 		
-		$translate_btn.on('click', function() {
+		$translate_btn.on('click', function(event) {
+			event.preventDefault();
 			showHideForms($form_translations, $form_lessons);
 			$this = $(this);
-			underlineWhenActive($form_translations, $lesson_btn)});
+			underlineWhenActive($form_translations, $lesson_btn);
+			});
 	}
 	showHideForm();
 
@@ -664,6 +668,7 @@ function quickQuoteGet() {
 	flag = flagContent;
 	myJSON = JSON.stringify(flag);
 	localStorage.setItem('quickQuote', myJSON);
+	
 }
 quickQuoteGet();
 
