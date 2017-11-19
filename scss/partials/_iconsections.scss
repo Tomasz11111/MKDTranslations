@@ -2,6 +2,9 @@
 
 .high_standards_and_guidelines_list {
 	padding: 0;
+	@include mobile {
+		padding-top: 2rem;
+	}
 		li {
 			@include font-size(0);
 			padding: 5px;
@@ -59,15 +62,18 @@
 	}
 	@include e('icon') {
 		@include m('section-services') {
-			max-width: 50%;
+			width: 50%;
 			@include medium-device {
-				max-width: 60%;
+				width: 60%;
+			}
+			@include tablet-only {
+				width: 70%
 			}
 			@include mobile {
-				max-width: 75%;
+				width: 75%;
 			}
 			@include mobile-landscape {
-				max-width: 50%;
+				width: 50%;
 			}
 		}
 	}

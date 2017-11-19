@@ -160,7 +160,7 @@ endif;
     <div class='row'>
         <div class='col-lg-2'></div>
         <div class='col-lg-4 col-md-6 col-sm-6'>
-            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height sr'>
+            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height sr' alt='icon - standards'>
 			</div>
             
 				<h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_1');
@@ -172,7 +172,7 @@ endif;
             
         </div>
 		<div class='col-lg-4 col-md-6 col-sm-6'>
-			<div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height sr'>
+			<div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height sr' alt='icon - guidelines'>
 			</div>
             <h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_2');
 				?>
@@ -211,7 +211,7 @@ endif;
           
         <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>    
     
-            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height sr'>
+            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height sr' alt="Icon - pricing policy">
 			</div>
             <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_1');
 				?></span></h4>
@@ -221,7 +221,7 @@ endif;
 			</div>
          </div>
          <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
-            <div class='subsection__container-icon icon-circle-teal '><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height sr'>
+            <div class='subsection__container-icon icon-circle-teal '><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height sr' alt='icon - discount'>
 			</div>
             <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_2');
 				?></span></h4>
@@ -231,7 +231,7 @@ endif;
 			</div>
        </div>
        <div class='col-lg-4 col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-xs-12'>
-            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height sr'>
+            <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height sr' alt='icon - payment methods'>
 		   </div>
             <div class='icon_title'><h4 class='subsection__headline subsection__headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_3');
 				?></span></h4>
@@ -244,12 +244,12 @@ endif;
 		   </div>
 		</div>
 		
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 pricing-buttons'>
-			<div class='btn-standard btn-blue sr'><a href='<?php the_field('pricing_button_left_link');
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 btn-container btn-container--sidepage'>
+			<div class='btn btn--blue sr'><a href='<?php the_field('pricing_button_left_link');
 				?>'><?php the_field ('pricing_button_left');
 				?></a>
 			</div>
-            <div class='btn-learn-bgfullcolor quick-quote sr' data-target='translation' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php the_field('pricing_button_right_link');
+            <div class='btn btn--blue-full btn--quick-quote sr' data-target='translation'><a href='<?php the_field('pricing_button_right_link');
 				?>'><?php the_field ('pricing_button_right');
 				?></a>
 			</div>

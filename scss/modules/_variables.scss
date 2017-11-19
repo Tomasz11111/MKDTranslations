@@ -39,8 +39,10 @@ $type-scale--mobile: (
 	+3: 1.424rem,
 	+4: 1.602rem,
 	+5: 1.802rem,
-	max: 2.027rem
+	max: 2.027rem // hero headline
 );
+
+
 
 
 
@@ -55,6 +57,7 @@ $japanese-maple: #77010c;
 $dove-gray: #696969;
 $blaze-orange: #ff6400;
 $gray-nurse: #dce6dc;
+$lily: #bdacbd;
 
 
 // Colors as used in stylesheet
@@ -71,6 +74,7 @@ $clr-adjacent-3: $pewter;
 $clr-adjacent-4: $jagged-ice;
 $clr-adjacent-5: $dove-gray;
 $clr-adjacent-6: $gray-nurse;
+$clr-adjacent-7: $lily;
 
 $menu-color: $clr-primary + #696969;
 

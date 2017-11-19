@@ -87,6 +87,9 @@ h4 {
 		@include iphone5-landscape {
 			font-size: type-scale--mobile(+3);
 		}
+		@include tablet-only {
+			font-size: type-scale(+4);
+		}
 		span {
 			border-radius: 20%;
 			height: 2em;
@@ -123,6 +126,10 @@ h4 {
 		margin: 0;
 		
 			}
+	@include mobile-landscape {
+		width: 100%;
+		font-size: type-scale--mobile(+1);
+	}
 	span {
 			height: 2em;
 			width: 2em;
@@ -160,7 +167,9 @@ h4 {
 		}
 		@include mobile-landscape {
 			margin-top: 5vh;
+			font-size: type-scale--mobile(+3);
 		}
+		
 		@include m('front-page-services') {
 			@include mobile {
 				background: none;
@@ -228,8 +237,9 @@ h4 {
 			width: 100%;
 		}
 		@include mobile-landscape {
-			font-size: type-scale--mobile(+2);
-			
+			font-size: type-scale--mobile(+1);
+			padding-left:3%;
+			padding-right: 3%;
 		}
 		@include iphone5-landscape {
 			font-size: type-scale--mobile(+1);
@@ -298,9 +308,13 @@ h4 {
 		@include mobile-landscape {
 			margin-bottom: 0;
 			width: auto;
+			min-height: 2.5rem;
 		}
 		@include tablet {
 		width:90%;
+		}
+		@include medium-only {
+			font-size: type-scale(+2);
 		}
 		
 		@include m('front-page-services') {
@@ -335,6 +349,12 @@ h4 {
 		padding-right: 5%;
 		@include mobile {
 			margin-top: type-scale--mobile(-1);
+		}
+		@inlude mobile-landscape {
+			margin-top: 0;
+		}
+		@include medium-device {
+			font-size: type-scale(+0.5);
 		}
 		@include m('front-page-services') {
 			@include tablet {
@@ -481,6 +501,12 @@ h4 {
 	&-lesson {
 		color: $clr-adjacent-2;
 		font-weight: $ultra-bold;
+		&:visited {
+			color: $clr-adjacent-2 !important;
+		}
+		&:focus {
+			text-decoration: none;
+		}
 		&:hover {
 			font-weight: $ultra-bold;
 			text-decoration: underline;
@@ -488,18 +514,27 @@ h4 {
 		}
 		&:active {
 			text-decoration: underline;
+			color: $clr-adjacent-2 !important;
 		}
 	}
 	&-translation {
 		color: $clr-adjacent-1;
 		font-weight: $ultra-bold;
+		&:visited {
+			color: $clr-adjacent-1 !important;
+			
+		}
+		&:focus {
+			text-decoration: none;
+		}
 		&:hover {
 			font-weight: $ultra-bold;
 			text-decoration: underline;
 			color: $clr-adjacent-1 !important;
 		}
 		&:active {
-			text-decoration: underline;
+			
+			color: $clr-adjacent-1 !important;
 		}
 	}
 	@include mobile {
@@ -617,6 +652,8 @@ h4 {
 	}
 	@include mobile-landscape {
 		font-size: type-scale--mobile(0);
+		padding-top: 1%;
+		padding-bottom: 1%;
 	}
 	@include tablet-only {
 		width: auto;
@@ -822,7 +859,7 @@ footer {
     margin: 0;
     padding-left: 30px;
     font-weight: 800;
-    color: $clr-adjacent-5 !important;
+    color: $clr-secondary;
 	span {
 		background-color: $clr-secondary;
 		border: 4px solid $clr-secondary;

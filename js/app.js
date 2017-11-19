@@ -56,7 +56,7 @@ function WidthChange(mq) {
   		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
 	function smoothScroll(elements) {
         //if($('body').is('.home')) {
-			
+			var height = $('.navigation-container').outerHeight();
 			$(elements).on('click', function (event) {
 				/*window.location.hash = '';*/
             // Make sure this.hash has a value before overriding default behavior*/
@@ -73,22 +73,28 @@ function WidthChange(mq) {
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
-                    scrollTop: $(hash).offset().top - $('.navigation-container').outerHeight()             }, 900, function () {
+                    scrollTop: $(hash).offset().top - height             }, 900, function () {
 
                     // Add hash (#) to URL when done scrolling (default click behavior)
                    /* window.location.hash = hash;*/ //to opuszczam, bo przeskakuje na wysokośc id, nie uwzględniając przesunięcia o wysokość kontenera nawigacji, 
                 });
-            } // End if
+            }
+				
+				// End if
+			
 			});
 	}
    function runSmoothScroll() {
-	    if($('body').is('.home')) {
+	    
+			
+			if($('body').is('.home')) {
 			smoothScroll('.wordpress-menu a, div a:not(.carousel-control), .headline-btn a, .subsection__text a') //strony z linkami do id w menu
-		}
-		else {
-			smoothScroll('.headline-btn-learn a, .nav-pills a');// strony bez linków do id w menu
-		}
-   }
+			}
+			else {
+				smoothScroll('.headline-btn-learn a, .nav-pills a');// strony bez linków do id w menu
+			}
+   		}
+   
 		runSmoothScroll();
 	
 	
@@ -271,7 +277,7 @@ function WidthChange(mq) {
 	portfolioImgs();
 	
     function expandPortfolio() {
-        $('.morespecialties .btn-blue').find('a').on('click', function() {
+        $('.btn--translation').find('a').on('click', function() {
             if($('.portfolio-finance-pic').hasClass('hidden')) {
                 $('html, body').animate({ scrollTop:  $('.portfolio-tourism-pic').offset().top}, 'slow');
 				 $('.portfolio-expandable').removeClass('hidden')
@@ -600,6 +606,10 @@ function WidthChange(mq) {
 		function showHideForms(formToShow, formToHide) {
 			if(formToShow.hasClass('hidden') ) {
 			   formToShow.removeClass('hidden');
+				$('.wpcf7 form').removeClass('sent').css('display', 'block');
+				$('.wpcf7-form').find('p').removeClass('hidden');
+				$('.wpcf7-response-output').css('display', '');
+															
 				formToHide.addClass('hidden');
 			   }
 			else {
@@ -626,7 +636,7 @@ function WidthChange(mq) {
 
 	//funkcja do automatycznego ustalania wysokości elementów w zależności od wysokości innych elementów, do których chcemy porównywać została usunięta
 function quickQuoteSet() {
-	var trigger = $('.quick-quote'),
+	var trigger = $('.btn--quick-quote'),
 		flag,
 		myJSON,
 		$this;
@@ -648,13 +658,14 @@ function quickQuoteSet() {
 	
 function quickQuoteGet() {
 	var myJSON,
-		flag,
+		flag = {'clickedLearn' : false, 'clickedTranslation': false},
 		check,
-		flagContent = {'clickedLearn' : false, 'clickedTranslation': false},
 		$form_translations = $('#form-translation'),
 		$form_lessons = $('#form-lessons')
 	;
 	myJSON = localStorage.getItem('quickQuote');
+	if (!(myJSON === null)) {
+		
 	check= JSON.parse(myJSON);
 	
 	if(check.clickedLearn === true) {
@@ -665,7 +676,7 @@ function quickQuoteGet() {
 		$form_translations.removeClass('hidden');
 		$('.contact-form-lead-translation').addClass('underline');
 		}
-	flag = flagContent;
+	}
 	myJSON = JSON.stringify(flag);
 	localStorage.setItem('quickQuote', myJSON);
 	

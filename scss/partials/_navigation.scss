@@ -1,7 +1,7 @@
 .navigation-container {
 	width: 100%;
 	position: fixed;
-	height: 8vh;
+	min-height: 65px;
 	top: 0;
 	display: flex;
 	justify-content: space-around;
@@ -88,7 +88,7 @@ ul.menu {
 			}
             a {
               color:  $clr-adjacent-5 !important; /*tu zmieniam kolor czcionki w menu*/
-	           font-size: type-scale(0); 
+	           font-size: type-scale(+0.5); 
 				@include mobile {
 				font-size: type-scale(+3);
 				 color:  white !important;	

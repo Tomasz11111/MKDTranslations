@@ -38,6 +38,52 @@ add_action( 'wp_enqueue_scripts', 'mkd_theme_styles' );
 
 add_action( 'wp_enqueue_scripts', 'mkd_theme_js' );
 
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+ 
+	function mycustom_wp_footer() {
+		?>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function(event) {
+				var wpcf7elm = document.querySelectorAll('div.wpcf7');
+				console.log(wpcf7elm);
+				for (var i=0; i < wpcf7elm.length; i++) {
+					
+					wpcf7elm[i].addEventListener( 'wpcf7mailsent', function(event){
+						console.log('tak');
+
+								var $this = event.target,
+									defaultOutput,
+									paragraphs = $this.getElementsByTagName('p'),
+									formContainer = $this.parentElement;
+						
+
+							for(var i = 0; i < paragraphs.length; i++) {
+									paragraphs[i].classList.add('hidden');
+							}
+						var rspMsg = $this.lastChild;
+						setTimeout(function() {
+							rspMsg.style.display = 'none';
+							formContainer.classList.add('hidden');
+						}, 2500);
+
+
+
+
+
+
+					},false);
+				}
+			});
+				
+				
+			
+		</script>
+		<?php
+	}
+	
+
 add_filter( 'show_admin_bar', '__return_false' );
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
 		
 		?>

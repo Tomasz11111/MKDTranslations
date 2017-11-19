@@ -1,4 +1,16 @@
-<?php get_header() ?>
+<?php get_header() ;
+
+if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+wpcf7_enqueue_scripts();
+
+}
+
+if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+wpcf7_enqueue_styles();
+
+}
+
+?>
 
 <!-- HERO MODULE -->
 
@@ -17,17 +29,17 @@
 			
 			<div class='headline-btn-container'>
 				<div class='headline-btn-subcontainer'>
-					<div class='headline-btn bg-belt-green'><a href='#services-intro'><?php the_field('hero_btn_left') ;
+					<div class='headline-btn headline-btn--left bg-belt-green'><a href='#services-intro'><?php the_field('hero_btn_left') ;
 				?></a>
 					</div>
-					<div class='triangle triangle-mobile-blue bg-belt-green hidden-xs'></div>
+					
 				</div>
 				<div class='headline-btn-subcontainer'>
 					
-					<div class='headline-btn bg-belt-purple'><a href='#about'><?php the_field('hero_btn_right');
+					<div class='headline-btn headline-btn--right bg-belt-purple'><a href='#about'><?php the_field('hero_btn_right');
 				?></a>
 					</div>
-					<div class='triangle triangle-mobile-purple bg-belt-purple hidden-xs'></div>
+					
 				</div>
 				
 			</div>
@@ -46,11 +58,11 @@
 	
 	<div class='container-fluid bg-services lazy' id='solutions-services'>
 		<div class='row'>
-			<div class=	'col-lg-4 col-md-4 col-sm-4 col-xs-lscape-6 row-col' id='services'>
+			<div class=	'col-lg-4 col-md-4 col-sm-3 col-xs-lscape-6 row-col' id='services'>
 
 			<img src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo sr lazy' alt='Michał K. Dzieńdziura photo'>
 			</div>
-			<div class='col-lg-8 col-md-8 col-sm-8 col-xs-12 col-xs-lscape-6'><h1 class =' section__title section__title--front-page-services sr'><span>Michał K.Dzieńdziura</span><?php the_field('services_section_title');
+			<div class='col-lg-8 col-md-8 col-sm-8 col-xs-12 col-xs-lscape-6'><h1 class ='section__title section__title--front-page-services sr'><span>Michał K.Dzieńdziura</span><?php the_field('services_section_title');
 				?>
 				</h1>
 				<p class='section__lead section__lead--front-page-services sr'><?php the_field ('services_section_lead');
@@ -68,7 +80,7 @@
 		<div class='col-lg-12' id='services_content'>
     
 		<div class='col-lg-4 col-md-12 col-sm-12 col-xs-12'>
-			<h2 class='services-headlines sr '><span class='bg-headline-home2'><?php the_field('2_columns_headline'); ?></span></h2>
+			<h2 class='services-headlines sr'><span class='bg-headline-home2'><?php the_field('2_columns_headline'); ?></span></h2>
 		</div>
 		<div class='col-lg-8 hidden-md hidden-sm hidden-xs'>
 			<h2 class='services-headlines sr'><span class='bg-headline-home1'><?php the_field('4_columns_headline'); ?></span></h2>
@@ -165,7 +177,7 @@
         	</div>
     	</div>
 	</div>	
-<div class='separator2'></div>
+
 	
 
 </section>
@@ -304,12 +316,12 @@
    <div class='container-fluid'>
 	   <div class='row'>
         
-			<div class='col-lg-12 col-md-12 morespecialties'>
+			<div class='col-lg-12 col-md-12 btn-container'>
    
-				<div class='btn-standard btn-blue hidden-xs active-xs-lscape sr'><a><?php the_field ('translation_button');
+				<div class='btn btn--translation btn--blue hidden-xs active-xs-lscape sr'><a><?php the_field ('translation_button');
 				?></a>
 				</div>
-				<div class='btn-blue-bgfullcolor sr'><a href='<?php the_field('translation_button_2_link');
+				<div class='btn btn--blue-full sr'><a href='<?php the_field('translation_button_2_link');
 				?>'><?php the_field ('translation_button_2');
 				?></a></div>
         	</div>
@@ -421,18 +433,18 @@
 		<div class='col-lg-12'>
 			<p class='contact-form-lead slideanim slide '><?php the_field ('contact_headline_1st_part');
 			?>
-			<a  class='contact-form-lead-lesson'><?php the_field ('contact_headline_1st_link');
+			<a  href='#form-page' class='contact-form-lead-lesson'><?php the_field ('contact_headline_1st_link');
 			?></a> <?php the_field ('contact_headline_2nd_part');
-			?>  <a  class='contact-form-lead-translation'><?php the_field ('contact_headline_2nd_link');
+			?>  <a  href='#form-page' class='contact-form-lead-translation'><?php the_field ('contact_headline_2nd_link');
 			?></a>
 			</p>
 		</div>
 		<div class='col-lg-12'>
-			<div id='form-translation' class=' hidden'><?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form') ); ?>
+			<div id='form-translation' class='form-container hidden'><?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form') ); ?>
         	</div>
 		</div>
 		<div class='col-lg-12'>
-			<div id='form-lessons' class= 'hidden'>		
+			<div id='form-lessons' class= 'form-container hidden'>		
 				<?php if( function_exists( 'iinclude_page' ) ) iinclude_page( $value = get_field('contact_form_languages') ); ?>
 			</div>
 		</div>

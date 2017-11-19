@@ -19,12 +19,13 @@
 	<div class="navigation-container">
 <!-- Slogan for medium and large screens only -->
 		
-		<p class='slogan hidden-xs hidden-sm'>Your gateway to the <span>Polish</span> market</p>
+		<p class='slogan hidden-xs hidden-sm'><?php the_field ('header_slogan_first');
+				?> <span><?php the_field ('header_slogan_middle');
+				?></span> <?php the_field ('header_slogan_last');
+				?></p>
 <!-- Buttons quote and lessons -->
-		<p class='btn-navbar btn-navbar-darkblue hidden-xs'><a href='#form-page'><?php $value = get_field('menu_btn_1'); if ($value) {
-	echo $value; } else {echo 'empty';} ?></a></p>
-		<p class='btn-navbar btn-navbar-purple hidden-xs'><a href='#form-page'><?php $value = get_field('menu_btn_2'); if ($value) {
-	echo $value; } else {echo 'empty';} ?></a></p>
+		<p class='btn-navbar btn-navbar-darkblue hidden-xs'><a href='#form-page'><?php the_field('menu_btn_1') ?></a></p>
+		<p class='btn-navbar btn-navbar-purple hidden-xs'><a href='#form-page'><?php the_field('menu_btn_2') ?></a></p>
 		
 <!-- Wordpress menu-->
         <nav class="wordpress-menu invisible">

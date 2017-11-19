@@ -185,13 +185,13 @@ endif;
 	
 <!-- BUTTONS -->
 		
-<div class='col-lg-12 pricing-buttons'>
+<div class='col-lg-12 btn-container btn-container--sidepage'>
    
-			<div class='btn-learn sr' style='border-color:<?php the_field('color');?>'><a href='<?php the_field('learn_button_1_link');
+			<div class='btn btn--red sr'><a href='<?php the_field('learn_button_1_link');
 				?>'><?php the_field ('learn_button_1');
 			?></a>
 			</div>
-			<div class='btn-learn-bgfullcolor quick-quote sr' data-target='learn' style='background-color:<?php the_field('color');?>;border-color: <?php the_field('color');?>'><a href='<?php the_field('learn_button_2_link');
+			<div class='btn btn--red-full btn--quick-quote sr' data-target='learn'><a href='<?php the_field('learn_button_2_link');
 				?>'><?php the_field ('learn_button_2');
 			?></a></div>
         </div>

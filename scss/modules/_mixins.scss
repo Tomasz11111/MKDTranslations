@@ -86,7 +86,7 @@
 		font-size: type-scale--mobile($level);
 	}
 	@include tablet {
-		font-size: type-scale--mobile($level);
+		font-size: type-scale($level);
 	}
 	@include medium-device {
 		font-size: type-scale($level);

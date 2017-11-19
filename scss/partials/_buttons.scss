@@ -164,6 +164,7 @@
 }
 
 .headline-btn {
+	position: relative;
 	z-index: 1001;
 	padding: 10px;
 	margin-bottom: 20px;
@@ -179,153 +180,156 @@
 	}
 	&:hover {
 		padding: 20px;
-	}
-	
-	
-}
-
-.btn-standard{
-	
-	padding: 10px;
-	border-radius: 15px;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 5vh;
-	min-width: 16vw;
-	text-align:center;
-	background: transparent;	
-		&:hover a, &:hover span  {
-			color: white;
-		font-weight: 600;
-			
-			
+		a {
+			font-weight: $ultra-bold;
 		}
-	@include medium-device {
-		margin-bottom: 0 ;
-		margin-top: 0 ;
 	}
-	@include mobile {
-		margin-top: 0 ;
-		width: 90%;
-	}
-	@include mobile-landscape {
-		width: auto !important;
-		margin-top: 5vh;
-	}
-	
 	
 	
 }
+.headline-btn--left::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 22px solid transparent;
+	border-top-color: $clr-secondary;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -11px;
+	margin-bottom: -22px;
+	@include mobile {
+		display: none;
+	}
+}
+.headline-btn--right::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 22px solid transparent;
+	border-top-color: $clr-primary;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -11px;
+	margin-bottom: -22px;
+	@include mobile {
+		display: none;
+	}
+}
 
-.btn-blue {
-	@extend .btn-standard;
-	border: 2px solid $clr-secondary;
-	a, span {
-	color: $clr-secondary;
-		font-size: 1.5rem;
-		&:hover {
-			color: white !important;
+
+.btn {
+	
+		padding: 10px;
+		border-radius: 15px;
+		min-width: 16vw;
+		text-align: center;
+		border-width: 2px;
+		border-style: solid;
+		@include mobile {
+		width: 100%;
 		}
 		@include mobile-landscape {
-			font-size: type-scale--mobile(0);
+			width: auto;
+		}
+		a, span {
+			@include font-size(+3);
+			@include mobile-landscape {
+				font-size: type-scale--mobile(0);
+			}
+		}
+		@include m(blue) {
+			@include mobile {
+				margin-bottom: 2rem;
+			}
+			@include mobile-landscape {
+				margin-right: 3%;
+				margin-bottom: 0;
+			}
+			@include tablet {
+				margin-right: 3%;
+			}
+			border-color: $clr-secondary;
+			&:hover {
+				background-color: $clr-secondary;
+			}
+			&:hover  {
+				a, span {
+				color: white !important;
+				font-weight: 600;
+				}
+			}
+			a, span {
+					color: $clr-secondary;
+				
+			}
+		}
+		@include m(blue-full) {
+			
+			@include mobile-landscape {
+				margin-left: 3%;
+				
+			}
+			@include tablet {
+				margin-left: 3%;
+			}
+			border-color: $clr-secondary;
+			background-color: $clr-secondary;
+			a, span {
+				color: white;
+				
+			}
+		}
+		@include m(red) {
+			@include mobile {
+				margin-bottom: 2rem;
+			}
+			@include mobile-landscape {
+				margin-right: 3%;
+				margin-bottom: 0;
+			}
+			@include tablet {
+				margin-right: 3%;
+			}
+			border-color: $clr-tertiary;
+			a, span {
+				color: $clr-tertiary;
+				
+			}
+			&:hover {
+				background-color: $clr-tertiary;
+				a, span {
+				color: white;
+				}
+			
+			}
+		}
+		@include m(red-full) {
+			
+			@include mobile-landscape {
+				margin-left: 3%;
+				margin-top: 0;
+			}
+			@include tablet {
+				margin-left: 3%;
+			}
+			border-color: $clr-tertiary;
+			background-color: $clr-tertiary;
+			a, span {
+				color: white ;
+			}
+			
 		}
 		
-					
-	}
 	
-	&:hover {
-		background-color: $clr-secondary;
-	}
 }
-
-
-.btn-blue-bgfullcolor {
-	@extend .btn-standard;
-	border: 2px solid $clr-secondary;
-	background-color: $clr-secondary;
-	a, span {
-		color: white;
-		font-size: 1.5rem;
-		@include mobile-landscape {
-			font-size: type-scale--mobile(0) ;
-		}
-	}
-	&:hover {
-		font-size: 1.5rem;
-	}
-	@include mobile {
-		margin-bottom: 8% !important;
-		margin-top: 8% !important;
-	}
-	
-	@include tablet {
-		margin-bottom: 5vh !important;
-		margin-top: 0;
-	}
-	@include medium-device {
-		margin-bottom: 4% !important;
-		margin-top: 4% !important;
-	}
-}
-
-.btn-learn {
-	@extend .btn-standard;
-	border-width: 2px;
-	border-style: solid;
-	a, span {
-	color: $clr-tertiary;
-		font-size: type-scale(+3);
-		@include mobile {
-			font-size: type-scale--mobile(+2);
-		}
-		
-					
-	}
-	
-	&:hover {
-		background-color: $clr-tertiary;
-	}
-	@include mobile {
-		display: block;
-		margin-top: 0;
-		width: 90%;
-	
-	}
-}
-.btn-learn-bgfullcolor {
-	@extend .btn-standard;
-	border-width: 2px;
-	border-style: solid;
-	
-	a, span {
-		color: white;
-		font-size: 1.5rem;
-		}
-	&:hover {
-		font-size: 1.5rem;
-	}
-	@include mobile {
-		
-		display: block;
-	}
-}
-.pricing buttons {
-	div {
-		@include mobile {
-			margin-bottom: 2vh;
-		}
-		
-	}
-}
-
-
   
-.btn-quote:hover {
-	border: 4px white solid;
-	background-color: #0E365C;
-	text-decoration: none;
-	color: white;
-}
+
 
 
 // Navbar buttons
@@ -346,39 +350,72 @@
 		a {
 			color: $clr-primary !important;
 		}
+		&:hover {
+			a 
+			{color: white !important;}
+			background-color: $clr-primary;
+		}
 	}
 	&-darkblue {
-		color: $clr-adjacent-1;
+		color: $clr-secondary;
 		border: 2px solid $clr-secondary;
 		a {
 			color: $clr-secondary !important;
 		}
+		&:hover {
+			a 
+			{color: white !important;}
+			background-color: $clr-secondary;
+		}
 	}
 	
 }
 
 
-.morespecialties, .pricing-buttons {
+.btn-container {
 	@extend %flex-centered;
+		
 	
-	@include medium-device {
-		min-height: 10rem;
-	}
 		@include mobile {
-			flex-direction:column !important;
+			flex-direction:column;
+			padding-left: 10%;
+			padding-right: 10%;
+			height: 6rem;
 		}
 		@include mobile-landscape {
-			flex-direction: row !important;
+			flex-direction: row;
+		}
+		
+		@include tablet {
+			padding-left: 10%;
+			padding-right: 10%;
+			height: 8rem;
+		}
+		@include medium-device {
+			padding-left: 25%;
+			padding-right: 25%;
+			height: 10rem;
+		}
+	@include m(sidepage) {
+		
+		@include mobile {
+			height: 10rem;
+		}
+		@include mobile-landscape {
+			height: 6rem;
+		}
+		@include tablet {
+			padding-left: 20%;
+			padding-right: 20%;
+		}
+		@include medium-device {
+			padding-left: 30%;
+			padding-right: 30%;
+		}
+		
 	}
+		
 }
-.pricing-buttons {
-	@include tablet-only {
-		min-height: 10rem;
-	}
-}
-	
-	
-
 
 
 // Carousel left right buttons - Translations (mobile only)
@@ -390,8 +427,6 @@
 	padding: 8%;
 	border-radius: 50%;
 	color: white;
-	
-	
 }
 
 // Learn
@@ -405,9 +440,6 @@
 	@include tablet {
 		bottom:15px;
 	}
-	
-	
-	
 
 }
 
@@ -443,9 +475,12 @@
 	
 	&:hover {
 		padding: 20px;
+		a {
+			font-weight: $ultra-bold;
+		}
 	}
-	
 }
+
 	
 
 

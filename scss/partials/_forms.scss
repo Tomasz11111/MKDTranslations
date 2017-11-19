@@ -1,188 +1,123 @@
-/*#two-column{
-	width: 550px;
-}
-#two-column #left{
-	width: 300px;
-	float: left;
-}
-#two-column #right{
-	width: 250px;
-	float: right;
-}
-#two-column p{
-	margin-bottom: 12px;
-}
-#two-column input[type="text"]{
-	border:none;
-	border:1px solid #000;
-	font-size :14px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	width: 540px;
-	padding: 5px;
-}
-#two-column #right input[type="text"], #two-column #left input[type="text"]{
-	width:240px;
-}
-#two-column textarea {
-    position: relative;
-    padding: 5px;
-    border:1px solid #000;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    width: 540px;
-}
-#two-column input[type="submit"]{
-	padding:8px 18px;
-	background:#222;
-	color:#fff;
-	border: 1px solid #fff;
-	float:right;
-	font-size: 14px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-}
-#two-column input[type="text"]:focus, #two-column textarea:focus{
-	background: #eee;
-}
-#two-column input[type="submit"]:hover{
-	background:#fff;
-	color:#222;
-	border: 1px solid #222;
-}
-*/
 // Base selectors
+
+input,
+select,
+textarea {
+	@include font-size(+1);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+	background-color: $clr-primary;
+	color: white;
+		
+}
+input,
+select {
+	width: 80%;
+	@include mobile {
+		width: 100%; 
+	}
+	@include tablet-only {
+		width: 100%;
+	}
+			
+}
+select {
+	option:first-child {
+		color: white;
+	}
+}
+	
 textarea {
 	width: 100%;
-	
-	
+	outline: none;
 	
 }
+
 label {
-	@include font-size(+2)
+	@include font-size(0);
 	color: white;
 	font-weight: $thin;
 	width: 100% !important;
 }
-input, textarea {
-	@include font-size(+1);
-	color: black;
-	border: 2px solid white;
-	background-color: white;
-	//box-shadow: 1px 1px $base-color-2;
-	
+
+/*::placeholder {  
+  color: white;
 }
-select {
-	@include font-size(+1);
-	vertical-align: middle;
-	
-}
-/*
-::placeholder {  Chrome/Opera/Safari 
-  color: $clr-primary;
-}
-::placeholder {  Firefox 19+ 
-  color: $clr-primary;
-}
-::placeholder {  IE 10+ 
-  color: $clr-primary;
-}
-::placeholder {  Firefox 18- 
-  color: $clr-primary;
+input:focus::placeholder {
+    opacity: 0;
 }
 */
+input:focus,
+select:focus {
+	outline: none;
+}
 
-
-
-
+.wpcf7 {
+	width: 100%;
+}
 form {
 	width: 75% !important;
 	margin: 0 auto !important;
 	@include mobile {
 		width: 90% !important;
 	}
-}
-#wpcf7-f418-o2 p {
-	width: 50%;
-	float: left;
-	display: inline-block;
-	label {
-		color: $clr-primary;
-	}
-	input, select {
-		width: 80%;
-		border-top: 0;
-		border-right: 0;
-		border-left: 0;
-		background-color: $clr-primary;
-		color: white;
-	}
-	textarea {
-		color: white;
-		border-top: 0;
-		border-right: 0;
-		border-left: 0;
-		background-color: $clr-primary
-	}
+	
+	p {
+		width: 50%;
+		@include mobile {
+		width: 100%;
+		}
+		@include tablet-only {
+			width: 100%;
+		}
+		float: left;
+		display: inline-block;
+	}	
 	
 }
-#wpcf7-f418-o2 p:nth-child(10) {
-	clear: left;
 
-}
-#wpcf7-f418-o2 p:nth-child(12) {
+//specific inputs styles
+
+#wpcf7-f418-o2 p:nth-child(12), #wpcf7-f667-o2 p:nth-child(12) {
 	clear:left;
-	width: 95%;
-	
+	width: 90%;
+	background-color: $clr-primary;
+
 }
 
 input[type='submit'] {
 	
-	border: 2px solid white !important;
-	background-color: none;
 	color: white;
 	font-size: type-scale(+2);
-	padding: 10px;
-	
+	padding: .5rem 1rem .5rem 1rem;
+	width: 100%;
+	border:0;
+	background-color: $clr-adjacent-2;
 	&:hover {
-		background-color: purple !important;
 		color: white;
-		font-weight: $regular;
+		font-weight: $ultra-bold;
 	}
 	
+}
+form p:nth-child(even) {
+	clear: left;
 }
 
-//Form languages
-#wpcf7-f418-o2 p:nth-child(2), #wpcf7-f667-o2 p:nth-child(2) {
-	
-	
-	@include mobile {
-		width: 40%;
-	}
-		
-	
+
+div.wpcf7-validation-errors {
+border: none;
+color: red;
 }
-#wpcf7-f418-o2 p:nth-child(3), #wpcf7-f667-o2 p:nth-child(3) {
+
+//Form learn languages
 	
-	
-	@include mobile {
-		width: 40%;
-	}
+#wpcf7-f418-o1 p:nth-child(even), #wpcf7-667-o2 p:nth-child(even) {
+	clear: left;
 }
-#wpcf7-f418-o2 p:nth-child(4), #wpcf7-f667-o2 p:nth-child(4) {
-	
-	
-	
-	@include mobile {
-		width: 100%;
-		display: block;
-		
-	}
-}
-#wpcf7-f418-o2 p:nth-child(5), #wpcf7-f667-o2 p:nth-child(5) {
+
+#wpcf7-f418-o1 p:nth-child(5), #wpcf7-f667-o2 p:nth-child(5) {
 	
 	
 	@include mobile {
@@ -206,38 +141,11 @@ input[type='submit'] {
 		}
 	}
 }
-#wpcf7-f418-o2 p:nth-child(6), #wpcf7-f667-o2 p:nth-child(6) {
+
 	
+
+#wpcf7-f418-o1 p:nth-child(8), #wpcf7-f667-o2 p:nth-child(8) {
 		
-	input {
-		
-		@include mobile {
-			width: 100%;
-		}
-	}
-	@include mobile {
-		width: 100%;
-		float: left;
-		
-	}
-}
-#wpcf7-f418-o2 p:nth-child(7), #wpcf7-f667-o2 p:nth-child(7) {
-		
-	input {
-		
-		@include mobile {
-			width: 100%;
-		}
-	}
-	@include mobile {
-		width: 100%;
-	}
-}
-#wpcf7-f418-o2 p:nth-child(8), #wpcf7-f667-o2 p:nth-child(8) {
-		
-	@include mobile {
-		width: 100%;
-	}
 	label {
 		width: 90%;
 		margin-left: 5%;
@@ -254,7 +162,7 @@ input[type='submit'] {
 		}
 	}
 }
-#wpcf7-f667-o2 p:nth-child(9), #wpcf7-f418-o2 p:nth-child(9), #wpcf7-f667-o2 p:nth-child(11), #wpcf7-f418-o2 p:nth-child(11),  {
+#wpcf7-f667-o2 p:nth-child(9), #wpcf7-f418-o1 p:nth-child(9), #wpcf7-f667-o2 p:nth-child(11), #wpcf7-f418-o1 p:nth-child(11),  {
 		
 	label {
 		width: 90%;
@@ -273,15 +181,10 @@ input[type='submit'] {
 }
 
 
-
-#wpcf7-f418-o2 p:nth-child(10), #wpcf7-f418-o2 p:nth-child(12),
+#wpcf7-f418-o1 p:nth-child(10), #wpcf7-f418-o1 p:nth-child(12),
 #wpcf7-f667-o2 p:nth-child(10), #wpcf7-f667-o2 p:nth-child(12),{
 	
 		
-	@include mobile {
-		width: 100%;
-		
-	}
 	label {
 		width: 95% !important;
 		float: right;
@@ -299,175 +202,118 @@ input[type='submit'] {
 			@include tablet {
 				width: 90%;
 			}
-			@include mobile {
-				width: 100%;
-			}
 		}
 			
 		
 	}
 }
-
-
-.form--element__full-width {
-	float: left;
-	display: block;
-	width: 100%;
-	label {
-		width: 95% !important;
-		float: left;
-		margin-left: 0;
-	}
-}
- #wpcf7-f418-o2 p:nth-child(13), #wpcf7-f667-o2 p:nth-child(13) {
-	float: left;
-	display: block;
-	width: 20%
-	label {
-		width: 95% !important;
-		float: left;
-		margin-left: 0;
-		@include mobile {
-			width: 100% !important;
-		}
-	}
-}
-	
-
-#wpcf7-f418-o2 p:nth-child(14), #wpcf7-f667-o2 p:nth-child(14) {
-	clear: left;
-	float: left;
-	display: inline-block;
-	width: 50%;
+#wpcf7-f418-o1 p:nth-child(12), #wpcf7-f667-o1 p:nth-child(12) {
+	clear:left;
+	width: 90%;
+	background-color: $clr-primary;
 	@include mobile {
 		width: 100%;
-		margin: 0 auto;
-		
 	}
+	@include tablet-only {
+		width: 100%;
+	}
+}
+
+#wpcf7-f418-o1 p:nth-child(13), #wpcf7-f667-o2 p:nth-child(13) {
+	width: 90%;
+	@include mobile {
+		width: 100%;
+	}
+	@include tablet-only {
+		width: 100%;
+	}
+		
 }
 
 // Form translation
 
-#wpcf7-f132-o1 p:nth-child(2), #wpcf7-f663-o1 p:nth-child(2) {
-	float: left; 
-	display: inline-block;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		
-		
-	}
-}
-#wpcf7-f132-o1 p:nth-child(3), #wpcf7-f663-o1 p:nth-child(3){
-	float: left;
-	display: inline-block;
-	margin-left: 10%;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		margin-left: 0;
-		
-		
-	}
-}
-#wpcf7-f132-o1 p:nth-child(4), #wpcf7-f663-o1 p:nth-child(4) {
-	clear: left;
-	float: left;
-	display: inline-block;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		
-	}
-}
-#wpcf7-f132-o1 p:nth-child(5), #wpcf7-f663-o1 p:nth-child(5){
-	float: left;
-	display: inline-block;
-	margin-left: 10%;
-	width: 45%;
-	@include mobile {
-		width: 100%;
-		display: block;
-		margin-left: 0;
-		
-	}
-}
-/*#wpcf7-f132-o1 p:nth-child(6), #wpcf7-f663-o1 p:nth-child(6) {
-	clear: left;
-	
-	label {
-		width: 100%;
-		float: left;
-		
-	}
-}
-*/
-#wpcf7-f132-o1 p:nth-child(7), #wpcf7-f663-o1 p:nth-child(7) {
-	float: left;
-	display: inline-block;	
-	width: 20%;
-	@include mobile {
-		width: 40%;
-	}
-}
-#wpcf7-f132-o1 p:nth-child(8), #wpcf7-f663-o1 p:nth-child(8){
-	float: left;
-	display: inline-block;
-	width: 12%;
-	@include mobile {
-		width: 40%;
-	}
-}
-#wpcf7-f132-o1 p:nth-child(9), #wpcf7-f663-o1 p:nth-child(9){
-	float: left;
-	display: inline-block;
-	width: 20%;
-	@include mobile {
-		width: 40%;
-		clear: left;
-		
-	}
-
-}
-
-#wpcf7-f132-o1 p:nth-child(10), #wpcf7-f663-o1 p:nth-child(10) {
-	float: left;
-	display: inline-block;
-	width: 12%;
-	@include mobile {
-		width: 40%;
-		
-	}
-}
 #wpcf7-f132-o1 p:nth-child(11), #wpcf7-f663-o1 p:nth-child(11) {
-	float:left;
-	width: 12%;
-	display: inline-block;
+	width: 90%; 
 	@include mobile {
-		clear: left;
-		width: 40%;
+		width: 100%;
+	}
+	@include tablet-only {
+		width: 100%;
+	}
+			
+}
+#wpcf7-f132-o1 p:nth-child(10), #wpcf7-f663-o1 p:nth-child(10) {
+	width: 90%;
+	@include mobile {
+		width: 100%;
+	}
+	@include tablet-only {
+		width: 100%;
+	}
+	span {
+		input {
+			width: 100%;
+			background-color: $clr-adjacent-1;
+		}
 	}
 }
-#wpcf7-f132-o1 p:nth-child(12), #wpcf7-f663-o1 p:nth-child(12){
-	float: left;
+form p:nth-last-of-type(1), form p:nth-last-of-type(2) {
+	@include medium-device {
+		width: 90%;
+	}
 }
+
+
+
 
 #form-lessons, #form-translation {
 	width: 100%;
 }
-#wpcf7-f132-o1 input[type='text'], #wpcf7-f132-o1 input[type='email'], #wpcf7-f132-o1 [type='tel'], #wpcf7-f663-o1 input[type='text'], #wpcf7-f663-o1 input[type='email'], #wpcf7-f663-o1 input[type='tel'] {
-	 
-	width: 100%;
+
+// form output message. Displays only if form has been sent succesfully
+
+.formOutputMsg {
+	width: 75%;
+	@include mobile {
+		width: 90%;
+	}
+	margin: 0 auto;
+	color: white;
+	font-family: $base-font-family;
+	@include font-size(+4);
+	font-weight: $bold;
+}
+
+//hides default output message {
+.wpcf7-response-output {
+	display: none;
+
+}
+//Fallback for disabled js or malfunctions {
+div.wpcf7-mail-sent-ok {
+	color: white;
+	float: left;
+	@include font-size(+3);
+	border: none;
 	
 }
-input[name='file-955'] {
-	@include mobile {
-		width: 100%;
-	}
+div.wpcf7-response-output {
+	margin: 0;
+	padding: 0;
 }
+
+//Validation errors messages 
+
+.wpcf7-validation-errors {
+	clear: both !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	
+}
+
+
+
 
 
 
