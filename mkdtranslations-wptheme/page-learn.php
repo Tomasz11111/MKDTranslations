@@ -21,39 +21,39 @@ endif;
 			</p>
 		</div>
         <div class='col-lg-3 col-md-3 col-sm-6 hidden-xs col-learn col-learn-left col-md-3-to-md-6'>
-			<div class='square1-learn slideanim slide'>
+			<div class='square square1-learn slideanim slide'>
 				<p class='signature-photomkd'><span style='background-color:<?php the_field('color'); ?>'><?php the_field('learn_photo_text');
 				?></span></p>
 			</div>
 		</div>
         <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-left-middle col-md-3-to-md-6'>
-            <div class='square2 square-learn square2-learn slideanim slide'>
-				<h2><span><?php the_field('learn_left_square_title');
-				?></span></h2>
-				<p class='square-text square-text-learn'><span  class='square-learn--inner-text'><?php the_field ('learn_left_square');
-					?></span></p>
+            <div class='square square2 square-learn square2-learn slideanim slide'>
+				<h2 class='square__title--learn'><?php the_field('learn_left_square_title');
+				?></h2>
+				<p class='square__text square__text--learn'><?php the_field ('learn_left_square');
+					?></p>
 			</div>
 		</div>
 		 <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-right-middle col-md-3-to-md-6'>
 
-			<div class='square3 square-learn square3-learn slideanim slide'>
-				<h2><span><?php the_field('learn_middle_square_title');
-				?></span></h2>
-				<p class='square-text square-text-learn'><span  class='square-learn--inner-text'><?php the_field ('learn_middle_square');
-				?></span></p>
+			<div class='square square3 square-learn square3-learn slideanim slide'>
+				<h2 class='square__title--learn'><?php the_field('learn_middle_square_title');
+				?></h2>
+				<p class='square__text square__text--learn'><?php the_field ('learn_middle_square');
+				?></p>
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-right col-md-3-to-md-6 '>
-			<div class='square4 square-learn square4-learn slideanim slide'>
-				<h2><span><?php the_field ('learn_right_square_title');
-					?></span></h2>
-				<p class='square-text square-text-learn'><span  class='square-learn--inner-text'><?php the_field ('learn_right_square');
-				?></span></p>
+			<div class='square square4 square-learn square4-learn slideanim slide'>
+				<h2 class='square__title--learn'><?php the_field ('learn_right_square_title');
+					?></h2>
+				<p class='square__text square__text--learn'><?php the_field ('learn_right_square');
+				?></p>
 			</div>
             
 		</div>
 		<div class='col-lg-12 learn-btn-container hidden-xs'>
-			<div class='headline-btn-learn' style='background-color:<?php the_field('color'); ?>'><a href='#how_i_teach'><?php the_field ('read_more');
+			<div class='headline__btn headline__btn--learn' style='background-color:<?php the_field('color'); ?>'><a href='#how_i_teach' class='headline__link'><?php the_field ('read_more');
 			?></a>
 			</div>
 			<div class='triangle-learn' style='background-color:<?php the_field('color'); ?>'></div>
@@ -141,7 +141,7 @@ endif;
 
 <div class='container-fluid'>
     <div class='row'>
-        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt' style='background-color:<?php the_field('color'); ?>'><p class='confidentiality slideanim'><?php the_field ('belt_purple');
+        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--teaching-page'><p class='belt__text slideanim'><?php the_field ('belt_purple');
 			?></p>
 		</div>
 	</div>

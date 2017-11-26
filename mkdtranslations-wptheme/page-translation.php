@@ -190,7 +190,7 @@ endif;
 
 <div class='container-fluid'>
     <div class='row'>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt bg-belt-green'><p class='confidentiality slideanim'><?php the_field ('belt_green');
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--translation'><p class='belt__text slideanim'><?php the_field ('belt_green');
 			?>
 				
 				

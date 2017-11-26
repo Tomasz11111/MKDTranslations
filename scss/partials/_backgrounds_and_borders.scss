@@ -64,20 +64,54 @@
 .changeWidth {
     width: 600px;
 }
-.bg-belt {
+
+.belt {
 	@extend %flex-centered;
 	height: auto;
-	
-	&-green {
-	background-color: $clr-secondary;
+	@include m('translation') {
+		background-color: $clr-secondary;
 	}
-	
-	&-purple {
-	background-color: $clr-primary;
+	@include m('teaching') {
+		background-color: $clr-primary;
 	}
-	
-	
-} 
+	@include m('teaching-page') {
+		background-color: $clr-tertiary;
+	}
+	@include e('text') {
+		@include font-size(+4);
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		text-align: center;
+		color: white;
+		display: inline-block;
+		width: 60%;
+		font-weight: $bold;
+		font-style: italic ;
+		@include medium-device-portrait {
+			margin-top: 4vh;
+			margin-bottom: 4vh;
+		}
+		@include mobile {
+			width: 100%;
+			padding-top: 5%;
+			padding-bottom: 5%;
+
+		}
+		@include mobile-landscape {
+			font-size: type-scale--mobile(0);
+			padding-top: 1%;
+			padding-bottom: 1%;
+		}
+		@include tablet-only {
+			width: auto;
+			font-size: type-scale--mobile(+2) !important;
+		}
+    }
+}
+
+
+		
+
 
 
 // Subpages header images

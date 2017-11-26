@@ -1,4 +1,4 @@
-<div class='container-fluid' id='contact-data'>
+<section class='container-fluid' id='contact-data'>
 	<div class='row'>
 		<div class='col-lg-4 col-xs-12'>
 			<p class='contact-data-par sr'><?php $value = get_field ('footer_phone_number');
@@ -28,7 +28,7 @@
 			?></p>
 		</div>
 	</div>
-</div>		
+</section>		
 
 <footer class="container-fluid bg-darkgrey">
 	<div class="row">

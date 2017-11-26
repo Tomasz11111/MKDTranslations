@@ -14,29 +14,30 @@ wpcf7_enqueue_styles();
 
 <!-- HERO MODULE -->
 
-<div class='homepage-hero-module element-with-video-bg jquery-background-video-wrapper'>
+<section id='hero' class='homepage-hero-module element-with-video-bg jquery-background-video-wrapper'>
 	
 		<video class="my-background-video jquery-background-video" loop autoplay muted poster="<?php echo get_template_directory_uri(); ?>/White-Keyboard/Snapshots/White-Keyboard.jpg">
 			<source src="<?php echo get_template_directory_uri(); ?>/White-Keyboard/MP4/White-Keyboard.mp4" type="video/mp4">
 			<source src="<?php echo get_template_directory_uri(); ?>/White-Keyboard/WEBM/White-Keyboard.webm" type="video/webm">
 			<source src="<?php echo get_template_directory_uri(); ?>/White-Keyboard/OGV/White-Keyboard.OGV" type="video/ogv">
 		</video>
-		<div class='container-headline'>
-			<p class='container-headline__text-big'><?php the_field ('headline_left');
-				?><span> <?php the_field ('headline_middle');
+		<div class='headline'>
+			<p class='headline__text'><?php the_field ('headline_left');
+				?><span class='headline__square'> <?php the_field ('headline_middle');
 				?> </span><?php the_field ('headline_right');
-				?></p>
+				?>
+			</p>
 			
-			<div class='headline-btn-container'>
-				<div class='headline-btn-subcontainer'>
-					<div class='headline-btn headline-btn--left bg-belt-green'><a href='#services-intro'><?php the_field('hero_btn_left') ;
+			<div class='headline__btn-container'>
+				<div class='headline__btn-subcontainer'>
+					<div class='headline__btn headline__btn--left'><a href='#services-intro' class='headline__link'><?php the_field('hero_btn_left') ;
 				?></a>
 					</div>
 					
 				</div>
-				<div class='headline-btn-subcontainer'>
+				<div class='headline__btn-subcontainer'>
 					
-					<div class='headline-btn headline-btn--right bg-belt-purple'><a href='#about'><?php the_field('hero_btn_right');
+					<div class='headline__btn headline__btn--right'><a href='#about' class='headline__link'><?php the_field('hero_btn_right');
 				?></a>
 					</div>
 					
@@ -48,7 +49,7 @@ wpcf7_enqueue_styles();
 				
 			
         
-</div>
+</section>
 
 
 <!-- MY SOLUTIONS AND SERVICES SECTIONS -->
@@ -62,7 +63,8 @@ wpcf7_enqueue_styles();
 
 			<img src='<?php echo get_template_directory_uri()?>/images/mkd_photo_nobg2.png' class='mkd-photo sr lazy' alt='Michał K. Dzieńdziura photo'>
 			</div>
-			<div class='col-lg-8 col-md-8 col-sm-8 col-xs-12 col-xs-lscape-6'><h1 class ='section__title section__title--front-page-services sr'><span>Michał K.Dzieńdziura</span><?php the_field('services_section_title');
+			<div class='col-lg-8 col-md-8 col-sm-8 col-xs-12 col-xs-lscape-6'><h1 class ='section__title section__title--front-page-services sr'><span><?php the_field('services_section_title_name');
+				?></span><?php the_field('services_section_title');
 				?>
 				</h1>
 				<p class='section__lead section__lead--front-page-services sr'><?php the_field ('services_section_lead');
@@ -185,7 +187,7 @@ wpcf7_enqueue_styles();
 
 <!-- TRANSLATION SECTION -->
 
-<div class='container-fluid' id='translation'>
+<section class='container-fluid' id='translation'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12 col-translation-mobile'><h1 class='section__title sr'><span class='bg-headline-home1'><?php the_field ('translation_section_title');
 			
@@ -196,8 +198,8 @@ wpcf7_enqueue_styles();
 			</p>
         </div>
     </div>
-</div>
-<div class='container-fluid hidden-xs active-xs-lscape sr' id='photos'>
+</section>
+<section class='container-fluid hidden-xs active-xs-lscape sr' id='photos'>
     <div class='row'>
         <div class='col-lg-4 col-md-4 col-sm-4 col-xs-lscape-4 portfolio-tourism-pic pic-square'>
             <div class='portfolio-overlay'><p class='portfolio-overlay-text'><?php the_field ('translation_speciality_1');
@@ -245,12 +247,12 @@ wpcf7_enqueue_styles();
 			?></p></div>
         </div>
 	</div>
-</div>
+</section>
 
 
 <!-- Carousel for mobile version -->
 
-<div class='container-fluid'>
+<section class='container-fluid' id='translation-carousel'>
 	<div class='row'>
 		<div id='myCarousel' class='col-xs-12 carousel slide hidden-xs-lscape hidden-sm hidden-md hidden-lg hidden-xl' data-ride='carousel' data-interval='false'>
 			<div class='carousel-inner' role='listbox'>
@@ -309,11 +311,11 @@ wpcf7_enqueue_styles();
 			</a>
 		</div>
 	</div>
-</div>
+</section>
 
 <!-- Translation buttons --> 
 
-   <div class='container-fluid'>
+   <section class='container-fluid' id='translation-buttons'>
 	   <div class='row'>
         
 			<div class='col-lg-12 col-md-12 btn-container'>
@@ -326,23 +328,23 @@ wpcf7_enqueue_styles();
 				?></a></div>
         	</div>
     	</div>
- </div>
+ </section>
   
 
  
- <!-- GREEN BELT -->       
+ <!-- TRANSLATION BELT -->       
 
-<div class='container-fluid'>
+<section id='translation-belt' class='container-fluid'>
     <div class='row'>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt bg-belt-green'><p class='confidentiality slideanim'><?php the_field ('belt_green');
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--translation'><p class='confidentiality slideanim'><?php the_field ('belt_green');
 			?></p>
 		</div>
     </div>
-</div>
+</section>
 
 <!-- TEACHING SECTION -->
 
-<div class='container-fluid lazy' id='teaching'>
+<section class='container-fluid lazy' id='teaching'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12 learn-polish'><h1 class='section__title section__title--front-page-teaching text-purple sr'><span class='bg-headline-home2'><?php the_field ('teaching_section_title');
 			?></span></h1>
@@ -359,25 +361,25 @@ wpcf7_enqueue_styles();
 		
 		</div>
 	</div>
-</div>
+</section>
 
 
 
-<!-- PURPLE BELT -->
+<!-- TEACHING BELT -->
 
-<div class='container-fluid'>
+<section id='teaching-belt' class='container-fluid'>
     <div class='row'>
-        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-belt bg-belt-purple'><p class='confidentiality slideanim'><?php the_field ('belt_purple');
+        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--teaching'><p class='confidentiality slideanim'><?php the_field ('belt_purple');
 			
 			?></p>
 		</div>
 	</div>
-</div>
+</section>
 
 
 <!-- ABOUT SECTION -->
 
-<div class='container-fluid bg-about lazy' id='about'>
+<section class='container-fluid bg-about lazy' id='about'>
     <div class='row'>
 		<div class='col-lg-12 col-md-12 col-signature col-signature-about hidden-xs active-xs-lscape col-xs-lscape-12'>
 			<p class='signature slideanim'><?php the_field ('about_title');
@@ -387,7 +389,7 @@ wpcf7_enqueue_styles();
 			
 		</div>
         <div class='col-lg-3 col-xs-12 col-xs-lscape-6 col-about hidden-md hidden-sm hidden-lg'>
-			<div class='square1 slideanim'>
+			<div class='square square1 slideanim'>
 				<p class='signature hidden-xs-lscape hidden-sm hidden-md hidden-lg'><?php the_field ('about_title');
 			?>
 			</p>
@@ -395,40 +397,40 @@ wpcf7_enqueue_styles();
 		</div>
         <div class='col-lg-3 col-md-3 col-sm-9 col-xs-12 col-xs-lscape-6 col-about'>
             <div class='square2-about square-about slideanim'>
-				<h2 class='about-headlines' style='background-color:<?php the_field('color')?>'><?php the_field ('about_left_box_title');
+				<h2 class='square__title square__title--about square__title--left'><?php the_field ('about_left_box_title');
 			?></h2>
-				<p class='square-text'><?php the_field ('about_left_box_content');
+				<p class='square__text square__text--about'><?php the_field ('about_left_box_content');
 			?></p>
 			</div>
 		</div>
 		 <div class='col-lg-3 col-md-3 col-sm-8 col-offset-sm-1 col-xs-12 col-xs-lscape-6 col-about col-about-middle'>
 
 			<div class='square3-about square-about slideanim'>
-				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent1')?>'><?php the_field ('about_middle_box_title');
+				<h2 class='square__title square__title--about square__title--middle'><?php the_field ('about_middle_box_title');
 			?></h2>
-				<p class='square-text'><?php the_field ('about_middle_box_content');
+				<p class='square__text square__text--about'><?php the_field ('about_middle_box_content');
 			?> </p>
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-3 col-sm-7 col-xs-12 col-xs-lscape-6 col-about'>
 			<div class='square4-about square-about slideanim'>
-				<h2 class='about-headlines' style='background-color:<?php the_field('color_adjacent2')?>'><?php the_field ('about_right_box_title');
+				<h2 class='square__title square__title--about square__title--right'><?php the_field ('about_right_box_title');
 			?></h2>
-				<p class='square-text'><?php the_field ('about_right_box_content');
+				<p class='square__text square__text--about'><?php the_field ('about_right_box_content');
 			?></p>
 			</div>
             
 		</div>
 		
    	</div>
-</div>
+</section>
 
 
 <!-- CONTACT SECTION -->
 
 
 
-<div class='container-fluid' id='form-page'>
+<section class='container-fluid' id='form-page'>
 	<div class='row'>
 		<div class='col-lg-12'>
 			<p class='contact-form-lead slideanim slide '><?php the_field ('contact_headline_1st_part');
@@ -451,17 +453,17 @@ wpcf7_enqueue_styles();
 		
 				
 	</div>
-</div>
+</section>
 
 <!-- Google Map -->
 
-<div class='container-fluid'>
+<section class='container-fluid'>
 	<div class='row'>
 		<div class='col-lg-12'>
 			<div id='googleMap'></div>
 		</div>
 	</div>
-</div>
+</section>
 
 
 

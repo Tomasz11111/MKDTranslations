@@ -73,7 +73,8 @@
 		font-weight: $ultra-bold;
 	}
 }
-%square {
+
+.square {
 	width: 23vw;
 	height: 23vw;
 	@include mobile {
@@ -88,8 +89,6 @@
 		width:40vw;
 		height: 40vw;
 	}
-	
-	
 }
 
 .square-about {
@@ -110,7 +109,7 @@
 	}
 }
 .square1 {
-		@extend %square;
+		
 		@include bg-img('mkd_color.jpg');
 		background-size: cover;
 		background-position: center;
@@ -122,7 +121,7 @@
 	
 }
 .square1-learn {
-	@extend %square;
+	
 	@include bg-img('mkd_photo.jpg');
 		background-size: cover;
 		background-position: center;
@@ -130,18 +129,73 @@
 		justify-content: center;
 		align-items: flex-end;
 }
-.square-text {
-	@include font-size(+0.5);
+.square {
+	@include e('title') {
+			color: white;
+			font-weight: $bold;
+		@include m('about') {
+			padding-left: 4%;
+			@include font-size(+2);
+			@include mobile {
+				padding: 5% 5% 5% 5%;
+			}
+			@include mobile-landscape {
+				padding: 3% 3% 3% 5%;
+				font-size: type-scale--mobile(-2);
+			}
+			@include tablet {
+				border-radius: 20px;
+			}
+		}
+		@include m('left') {
+			background-color: $clr-secondary;
+		}
+		@include m('middle') {
+			background-color: $clr-primary;
+		}
+		@include m('right') {
+			background-color: $clr-adjacent-1;
+		}
+		
+		@include m('learn') {
+			margin-left: 4.5%;
+			margin-top: 5%;
+			
+		}
+	}
+	@include e('text') {
 	font-weight: $thin;
 	color: white;
 	padding: 0 5% 5% 5%;
-	@include tablet-only {
-		font-size: type-scale--mobile(0);
+		@include m('about') {
+			@include font-size(+0.5);
+			@include tablet-only {
+				font-size: type-scale--mobile(0);
+			}
+			@include mobile-landscape {
+				font-size: type-scale--mobile(-2);
+			}
+		}
+		@include m('learn') {
+			@include font-size(+3);
+			@include mobile-landscape {
+				font-size: type-scale--mobile(+1);
+			}
+			@include tablet-only {
+				padding: 1%;
+			}
+			@incldue medium-device {
+				font-size: type-scale(+3);
+			}
+			@include medium-device-portrait {
+				font-size: 2.5rem !important;
+			}
+		}
+		
 	}
-	@include mobile-landscape {
-		font-size: type-scale--mobile(-2);
-	}
+	
 }
+
 .square-learn {
 	
 	@include mobile {
@@ -153,54 +207,20 @@
 		padding-top: 15vh;
 	}
 }
-.square2 {
-	@extend %square;
-	
-}
-.square3 {
-	@extend %square;
-	
-}
-.square4 {
-	@extend %square;
-	
-}
+
 .square2-about, .square4-about {
 	@include mobile-landscape {
 		border-left: 1px solid white;
 	}
 }
 
-.square2 h2, .square3 h2, .square4 h2 {
-	color: white;
-	margin-left: 4.5%;
-	margin-top: 5%;
-	font-weight: $bold;
-}
 
 
 
 
 
-.square2-learn > h2 > span {
-	@include tablet {
-		
-		padding: 1%;
-	}
-}
 
-.square3-learn > h2 > span {
-	@include tablet {
-		
-		padding: 1%;
-	}
-}
-.square4-learn > h2 > span {
-	@include tablet {
-		
-		padding: 1%;
-	}
-}
+
 
 
     

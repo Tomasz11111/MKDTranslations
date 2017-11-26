@@ -19,6 +19,7 @@ add_action('init', 'register_theme_menus');
 		wp_enqueue_style('googlesourceserif_css', 'https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600');
 		wp_enqueue_style('main_css', get_template_directory_uri() . '/style.css');
 		wp_enqueue_style('backgroundvideo_css', get_template_directory_uri() . '/jquery.background-video.css');
+		wp_enqueue_style('jqueryui_css', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.14/jquery.datetimepicker.min.css');
 		
 	}
 
@@ -32,7 +33,7 @@ add_action( 'wp_enqueue_scripts', 'mkd_theme_styles' );
 		wp_enqueue_script('jquerymobile_js', get_template_directory_uri(). '/js/jquery.mobile.custom.min.js', array('jquery'), '', false);
 		wp_enqueue_script('backgroundvideo_js', get_template_directory_uri(). '/js/jquery.background-video.js', array('jquery'), '', false);
 		wp_enqueue_script('googlemap_js',		'http://maps.googleapis.com/maps/api/js?key=AIzaSyCKTWa1GvwK0w-D5Y9ca5Or1ZFnLJDzy_Q', array('jquery'), '', false);  
-		wp_enqueue_script('scrollreveal_js', get_template_directory_uri(). '/js/scrollreveal.min.js', '', '', false);
+		wp_enqueue_script('scrollreveal_js', get_template_directory_uri(). '/js/scrollreveal.min.js', '', '', false);		wp_enqueue_script('jqueryui_js','https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.14/jquery.datetimepicker.full.min.js', array('jquery'), '', false);
 		
 	}
 

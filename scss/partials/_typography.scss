@@ -43,8 +43,7 @@ h4 {
 	}
 	
 }
-
-.container-headline {
+.headline {
 	text-align:center;
 	color: white;
 	z-index: 1000;
@@ -53,8 +52,6 @@ h4 {
 	height: 65%;
 	width: 100%;
 	@include mobile {
-		
-			
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -66,7 +63,7 @@ h4 {
 		height: 100vh;
 		width: 100%;
 	}
-	@include e('text-big') {
+	@include e('text') {
 		padding-top: 8vh;
 		@include font-size(max);
 		font-family: $title-font-family;
@@ -88,10 +85,11 @@ h4 {
 			font-size: type-scale--mobile(+3);
 		}
 		@include tablet-only {
-			font-size: type-scale(+4);
+			font-size: 2.5rem;
 		}
-		span {
-			border-radius: 20%;
+	}
+	@include e('square') {
+		border-radius: 20%;
 			height: 2em;
 			width: 2em;
 			font-size: 0.4em;
@@ -103,11 +101,13 @@ h4 {
 			margin: -0.44em 0.1em 0;
 			border: 0.1em solid #fff;
 			background-color: $clr-primary;
-			
-		}
-			
 	}
 }
+
+
+	
+		
+		
 
 .navigation-container__headline-text-sidepages {
 	
@@ -374,20 +374,6 @@ h4 {
 
 
 
-//sprrawdzić czy potrzebne
-
-
-.headline-btn a, .headline-btn-learn a {
-	@include font-size(+3);
-	color: white;
-	@include mobile-landscape {
-		font-size: type-scale--mobile(0);
-	}
-	@include iphone5-landscape {
-		font-size: type-scale--mobile(-1);
-	}
-}
-
 
 // Sidepage Terms and conditions
 
@@ -606,24 +592,7 @@ h4 {
 		}
 	}
 }
-.square-learn--inner-text {
-	font-weight: $thin;
-	@include font-size(+3);
-	@include mobile-landscape {
-		font-size: type-scale--mobile(+1);
-	}
-	@include tablet-only {
-		
-		padding: 1%;
-		
-	}
-	@include medium-device {
-		font-size: type-scale(+3) !important;
-	}
-	@include medium-device-portrait {
-		font-size: 2.5rem !important;
-	}
-}
+
 
 
 
@@ -796,22 +765,7 @@ h4 {
 		}
 	}
 }
-.about-headlines {
-	color: white;
-	font-weight: $bold;
-	padding-left: 4%;
-	@include font-size(+2);
-	@include mobile {
-		padding: 5% 5% 5% 5%;
-	}
-	@include mobile-landscape {
-		padding: 3% 3% 3% 5%;
-		font-size: type-scale--mobile(-2);
-	}
-	@include tablet {
-		border-radius: 20px;
-	}
-}
+
 .button-teaching {
 	font-size: type-scale(+5);
 	font-weight: $bold;
@@ -867,6 +821,8 @@ footer {
 		color: white;
 	}
 }
+
+
 
 
 

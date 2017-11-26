@@ -20,7 +20,7 @@ function WidthChange(mq) {
   })
   }
 	else {
-    console.log('takakaka');
+    
   }
 
 }
@@ -40,7 +40,7 @@ function WidthChange(mq) {
 					var pos = $(this).offset().top;
 						winHeight = window.innerHeight,
 					 	winTop = $(window).scrollTop();
-					console.log(winTop);
+					
 					if (pos < (winTop + winHeight)) {
 						$(this).addClass(classActivatingSlide);
 					}
@@ -88,10 +88,10 @@ function WidthChange(mq) {
 	    
 			
 			if($('body').is('.home')) {
-			smoothScroll('.wordpress-menu a, div a:not(.carousel-control), .headline-btn a, .subsection__text a') //strony z linkami do id w menu
+			smoothScroll('.wordpress-menu a, div a:not(.carousel-control), .headline__link, .subsection__text a') //strony z linkami do id w menu
 			}
 			else {
-				smoothScroll('.headline-btn-learn a, .nav-pills a');// strony bez linków do id w menu
+				smoothScroll('.headline__link, .nav-pills a');// strony bez linków do id w menu
 			}
    		}
    
@@ -126,7 +126,7 @@ function WidthChange(mq) {
         //tutaj sprawdzam, czy jest e ogóle w DOMie ten element, dla innych podstron, żeby nie wywalało błędów, być może potrzebne jakieś docelowe bardziej eleganckie rozwiązanie
 			if($('.container-fluid').is($services)) {
 				if(winoffset > offsetServices.top - 20) {
-					console.log('jeje');
+					
 				  //dopisać opóźnienie np. setTimeout
 				   $('.bg-grey .subsection__container-icon').addClass('subsection__container-icon-animate');
 					
@@ -214,7 +214,7 @@ function WidthChange(mq) {
 
 	function portfolioImgs() {
 		function showDetails() {
-			console.log('hide');
+			
 			
 			$(this).find('.portfolio-overlay').animate({
 				height: '100%'});
@@ -223,7 +223,7 @@ function WidthChange(mq) {
 
 		};
 		function hideDetails() {
-			console.log('hidden');
+			
 			
 			$(this).find('.portfolio-overlay').animate({
 				height: '20%'});
@@ -238,7 +238,7 @@ function WidthChange(mq) {
 			$('.pic-square').on('tap', function() {
 				var $this = $(this);
 				if(!($this.is('.flag')) ){
-					console.log('hide');
+					
 			
 			$this.find('.portfolio-overlay').animate({
 				height: '100%'});
@@ -354,11 +354,11 @@ function WidthChange(mq) {
 							if (mq.matches) { //strona główna
 						if ( $hamburger.hasClass('open') ) {
 							closeHamburgerMobile();
-							console.log('closed');
+							
 						}
 						else {
 							openHamburgerMobile();
-							console.log('opened');
+							
 						}
 					}
  //dla reg screens 
@@ -366,11 +366,11 @@ function WidthChange(mq) {
 						if ( $hamburger.hasClass('open') ) {
 							closeHamburger();
 							$hamburger.addClass('flag');
-							console.log('closed');
+							
 						}
 						else {
 							openHamburger();
-							console.log('opened');
+							
 						}
 					}
 				});
@@ -381,7 +381,8 @@ function WidthChange(mq) {
 							$hamburger.addClass('open');
 							$menutext.addClass('hidden');
 							$hamburger.find('span').addClass('bg-white');
-							$hamburgerContainer.removeClass('flex-center-column');
+							$hamburgerContainer.css('height', '65px');
+							
 							
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 								
@@ -398,7 +399,7 @@ function WidthChange(mq) {
 		/* dla homepage */  else {
 								$menu.removeClass('invisible').addClass('nav100vh');
 								$container.addClass('nav100vh');
-								$switcher.addClass('language-switcher-mob');
+								$switcher.addClass('language-switcher--mob');
 								$btnsNavbar.addClass('hidden');
 								
 								
@@ -410,7 +411,7 @@ function WidthChange(mq) {
 							$menutext.removeClass('hidden');
 							$menu.removeClass('nav100vh').addClass('invisible');
 							$hamburger.find('span').removeClass('bg-white');
-							$hamburgerContainer.addClass('flex-center-column');
+							$hamburgerContainer.css('height', '100%');
 		/* dla podstron*/	if ($('body').is('#sidepage')) {
 								var $elementToPickColorFrom = $('.headline-text-sidepages span'),
 								newNavBgColor = $elementToPickColorFrom.attr('style');
@@ -422,7 +423,7 @@ function WidthChange(mq) {
 							
 		/* dla homepage */  else {				
 							$container.removeClass('nav100vh').removeClass('navigation-container-dimgray');
-							$switcher.removeClass('language-switcher-mob');
+							$switcher.removeClass('language-switcher--mob');
 							$btnsNavbar.removeClass('hidden');
 							}
 			}
@@ -482,7 +483,7 @@ function WidthChange(mq) {
 						$container.removeClass('nav100vh');
 						$menu.removeClass('nav100vh').addClass('invisible');
 						$hamburger.removeClass('open');
-						$switcher.removeClass('language-switcher-mob');
+						$switcher.removeClass('language-switcher--mob');
 						$menutext.removeClass('hidden');
 						$hamburger.find('span').removeClass('bg-white'); // to ewentualnie można połączyć z funkcją hamburgerClose
 						
@@ -503,14 +504,14 @@ function WidthChange(mq) {
 					if( ( $(window).scrollTop() > ($('#services').offset().top ) - 1) ){
 						if($hamburger.hasClass('open') ){
 						$container.removeClass('navigation-container-purple').addClass('navigation-container-dimgray')
-						console.log('szary');
+						
 							}
 						}
 					else {
 						$container.removeClass('navigation-container-dimgray');
 						if($hamburger.hasClass('open')) {
 						$container.addClass('navigation-container-purple');
-						console.log('fioletowy');
+						
 						}
 					}
 					});
@@ -526,7 +527,7 @@ function WidthChange(mq) {
 		 if(elText.length > 34) {
 				$el.addClass('reduce-font');
 			}
-		console.log(elText.length);
+		
 		});
 		
 	}
@@ -538,19 +539,19 @@ function WidthChange(mq) {
 		var language = $('html').attr('lang'),
 		$langBtns = $('.language-switcher p a'),
 		pickColor = $('.hamburger span').css('backgroundColor');
-		console.log(pickColor);
+		
 		$langBtns.each(function() {
 		langSymbol = $(this).text();
 		
 		if(!(language.indexOf(langSymbol) === -1)) {
-			$(this).addClass('language-switcher-active');
+			$(this).addClass('language-switcher--is-active');
 			$(this).parent().css('backgroundColor', pickColor);
 			}
 		$langBtns.on('mouseenter', function() {
 			$(this).parent().css('backgroundColor', pickColor);
 		});
 		$langBtns.on('mouseleave', function() {
-			if(!($(this).hasClass('language-switcher-active') ) ) {
+			if(!($(this).hasClass('language-switcher--is-active') ) ) {
 				$(this).parent().css('backgroundColor', '');
 			};
 		});
@@ -683,6 +684,15 @@ function quickQuoteGet() {
 }
 quickQuoteGet();
 
+	function datepickerFallback (input) {
+		var $j = jQuery.noConflict();
+			$input = $(input);
+		if ($input.prop('type') != 'date' ) {
+    $j($input).datetimepicker();
+			console.log('datetimepicker');
+}
+	}
+	datepickerFallback('#date_lesson_cz','#date_lesson_cz', '#date_translate_en', '#date_translate_cz');
 });
            
 	

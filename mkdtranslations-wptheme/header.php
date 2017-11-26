@@ -24,8 +24,8 @@
 				?></span> <?php the_field ('header_slogan_last');
 				?></p>
 <!-- Buttons quote and lessons -->
-		<p class='btn-navbar btn-navbar-darkblue hidden-xs'><a href='#form-page'><?php the_field('menu_btn_1') ?></a></p>
-		<p class='btn-navbar btn-navbar-purple hidden-xs'><a href='#form-page'><?php the_field('menu_btn_2') ?></a></p>
+		<p class='btn-navbar btn-navbar--translation hidden-xs'><a href='#form-page'><?php the_field('menu_btn_1') ?></a></p>
+		<p class='btn-navbar btn-navbar--teaching hidden-xs'><a href='#form-page'><?php the_field('menu_btn_2') ?></a></p>
 		
 <!-- Wordpress menu-->
         <nav class="wordpress-menu invisible">
@@ -40,7 +40,7 @@
 		
         </nav>
 <!-- language switchers -->
-		<div class='language-switcher language-switcher-homepage'>
+		<div class='language-switcher language-switcher--homepage'>
 			<p><a href='<?php $value = get_field ('language_switcher_link_cs');
 				if ($value) {
 					echo $value;
