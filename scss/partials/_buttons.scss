@@ -20,26 +20,29 @@
 	}
 	p {
 			
-			border-radius: 15%;
-			text-align: center;
-			height: 2.2rem;
-			width: 2.2rem;
-			display: inline-block;
-			border: 0.1rem solid;
-			margin: 0;
-			@include mobile {
-				height: 2.5rem;
-				width: 2.5rem;
-				margin: 10%;
+		@extend %flex-centered; 
+		border-radius: 15%;
+		text-align: center;
+		height: 2.2rem;
+		width: 2.2rem;
+		border: 0.1rem solid;
+		margin: 0;
+		@include mobile {
+			height: 2.5rem;
+			width: 2.5rem;
+			margin: 10%;
 			
-			}
+		}
 		@include iphone5 {
 			height: 2.2rem;
 			width: 2.2rem;
 		}
-			@include mobile-landscape {
+		@include mobile-landscape {
 				height: 12vh;
 				width: 12vh;
+		}
+		@include tablet-only {
+			display: inline-block;
 		}
 			a {
 				font-family: $title-font-family;
@@ -52,24 +55,23 @@
 				padding-top: 0.3rem;
 				padding-bottom: 0.3rem;
 				@include mobile {
-					height: 2.5rem;
+					height: auto;
 					width: 2.5rem;
-					
-					
+					display: flex;
+					justify-content: center;
+					align-content: center;
+									
 				}
 				@include iphone5 {
 					width: 2.2rem;
-					height: 2.2rem;
+					height: auto;
 				}
 				@include mobile-landscape {
 					width: 12vh !important;
 					height: 12vh !important;
 					padding:0;
 				}
-				@include medium-device {
-					width: 2rem !important;
-					height: 2rem !important;
-				}
+				
 				
 				
 				&:hover {

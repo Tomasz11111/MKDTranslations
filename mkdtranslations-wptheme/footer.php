@@ -67,6 +67,7 @@
 			<p class='sr'>Hero video by <a href='http://www.coverr.co/'>coverr</a>
 			</p>
 		</div>
+		
 			
 	</div>
 </footer>

@@ -3,11 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      
+    
 
-    
-    <!--<script src="jquery.lazyload.js"></script>-->
-    
    
 
     <title><?php wp_title(); ?></title>
@@ -16,6 +13,8 @@
 <body <?php body_class(); ?>>
 	
 <header>
+
+<!-- NAVIGATION -->
 	<div class="navigation-container">
 <!-- Slogan for medium and large screens only -->
 		
@@ -69,4 +68,10 @@
 			
 		</div>
    </div>
+	<div class='cookie-bar'>
+			<p class='cookie-bar__text'><?php the_field('cookie_bar'); ?> <a class='cookie-bar__link'><?php the_field('cookie_bar_link'); ?></a></p>
+			
+			
+			
+	</div> 
 </header>

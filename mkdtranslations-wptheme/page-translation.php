@@ -22,7 +22,7 @@ endif;
             
 				
 
-        <div class='col-lg-12 col-xs-12'><h1 class='section__title text-white'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field ('translation_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section__title'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field ('translation_section_title');
 			?></span></h1>
             <p class='section__lead'>
 				 <?php if ( have_posts() ): while (have_posts() ) : the_post() ;?>
@@ -149,7 +149,7 @@ endif;
 
  <div class='container-fluid bg-grey' id='process'>
     <div class='row-col'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section__title text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field ('process_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section__title sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field ('process_section_title');
 			?></span></h1>
             <p class='section__lead sr'><?php the_field ('process_section_lead');
 			?></p>
@@ -163,7 +163,7 @@ endif;
             <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/standards-blue.png' class='icon-set-height sr' alt='icon - standards'>
 			</div>
             
-				<h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_1');
+				<h4 class='subsection__headline sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_1');
 				?>
 					</span></h4>
 			
@@ -174,7 +174,7 @@ endif;
 		<div class='col-lg-4 col-md-6 col-sm-6'>
 			<div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/guidelines-blue.png' class='icon-set-height sr' alt='icon - guidelines'>
 			</div>
-            <h4 class='subsection__headline text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_2');
+            <h4 class='subsection__headline sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('process_icon_headline_2');
 				?>
 					</span></h4>
 			
@@ -204,7 +204,7 @@ endif;
         
            
     <div class='row'>
-        <div class='col-lg-12 col-xs-12'><h1 class='section__title section__title--translations-pricing text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_section_title');
+        <div class='col-lg-12 col-xs-12'><h1 class='section__title section__title--translations-pricing sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_section_title');
 			?></span></h1>
                 
             </div>
@@ -213,7 +213,7 @@ endif;
     
             <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/pricingpolicy-blue.png' class='icon-set-height sr' alt="Icon - pricing policy">
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_1');
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_1');
 				?></span></h4>
 			</div>
             <div class='description'><p class='subsection__text sr'><?php the_field('pricing_icon_text_1');
@@ -223,7 +223,7 @@ endif;
          <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12'>
             <div class='subsection__container-icon icon-circle-teal '><img src='<?php echo get_template_directory_uri()?>/images/discount-blue.png' class='icon-set-height sr' alt='icon - discount'>
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_2');
+            <div class='icon_title'><h4 class='subsection__headline icon-headline-animation sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_2');
 				?></span></h4>
 			</div>
             <div class='description'><p class='subsection__text sr'><?php the_field('pricing_icon_text_2');
@@ -233,7 +233,7 @@ endif;
        <div class='col-lg-4 col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-0 col-xs-12'>
             <div class='subsection__container-icon icon-circle-teal'><img src='<?php echo get_template_directory_uri()?>/images/payment-blue.png' class='icon-set-height sr' alt='icon - payment methods'>
 		   </div>
-            <div class='icon_title'><h4 class='subsection__headline subsection__headline-animation text-white sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_3');
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline-animation sr'><span class='bg-headline-home1' style='background-color:<?php the_field('color'); ?>'><?php the_field('pricing_icon_headline_3');
 				?></span></h4>
 		   </div>
            <div class='description'><p class='subsection__text sr'><?php the_field('pricing_icon_text_3');

@@ -334,6 +334,7 @@ h4 {
 			}
 		}
 		@include m('learn') {
+			color: white;
 			span {
 				background-color: $clr-tertiary;
 			}
@@ -388,10 +389,10 @@ h4 {
 		font-size: type-scale(+4);
 	}
 	@include mobile {
-		font-size: type-scale--mobile(+4);
+		font-size: type-scale--mobile(+2);
 	}
 	@include iphone5 {
-		font-size: type-scale--mobile(+3);
+		font-size: type-scale--mobile(+2);
 	}
 	@include mobile-landscape {
 		margin-top: 10vh;
@@ -405,37 +406,6 @@ h4 {
 	
 		
 }
-
-
-// czy to potrzebne
-
-.text {
-	&-violet {
-	color: #504cff !important;
-		}
-	&-red {
-	color: #f04150 !important;
-		}
-	&-blue {
-	color: #ff5d19 !important;
-		}
-	&-grey {
-	color: slategrey !important;
-		}
-	&-teal {
-	color: $clr-secondary !important;
-		}
-	&-gainsboro {
-	color: gainsboro;
-		}
-	&-purple {
-	color: $clr-primary !important;
-	}
-	&-white {
-		color: white !important;
-	}
-}
-
 
 
 // Portfolio section 
@@ -593,44 +563,6 @@ h4 {
 	}
 }
 
-
-
-
-
-// belts
-.confidentiality {
-	@include font-size(+4);
-	margin-top: 5vh;
-	margin-bottom: 5vh;;
-	text-align: center;
-	color: white;
-	display: inline-block;
-	width: 60%;
-	font-weight: $bold;
-	font-style: italic ;
-	@include medium-device-portrait {
-		margin-top: 4vh;
-		margin-bottom: 4vh;
-	}
-	@include mobile {
-		width: 100%;
-		padding-top: 5%;
-		padding-bottom: 5%;
-             
-	
-	}
-	@include mobile-landscape {
-		font-size: type-scale--mobile(0);
-		padding-top: 1%;
-		padding-bottom: 1%;
-	}
-	@include tablet-only {
-		width: auto;
-		font-size: type-scale--mobile(+2) !important;
-	}
-    
-
-}
 
 //footer {
 .footer-copy {

@@ -100,7 +100,7 @@ wpcf7_enqueue_styles();
 			
             <p class='subsection__text subsection__text--front-page-services sr'><?php the_field ('service1_icon_description');
 				?></p>
-				<!--<p class='subsection__text text-white'><a href='#translation'>Read more</a></p>-->
+				
 			
 			</a>
 	</div>
@@ -118,12 +118,12 @@ wpcf7_enqueue_styles();
 			<p class='subsection__text subsection__text--front-page-services sr'><?php the_field ('service2_icon_description');
 				?>
 				</p>
-				<!--<p class='subsection__text text-white'><a href='#teaching'>Read more</a></p>-->
+				
 			</a>
 		</div>
 <!-- Additional services -->
 		<div class='col-xs-12 hidden-sm hidden-md hidden-lg slideanim'>
-			<h2 class='services-headlines text-teal'><span class='bg-headline-home1'><?php the_field('4_columns_headline'); ?></span></h2>
+			<h2 class='services-headlines'><span class='bg-headline-home1'><?php the_field('4_columns_headline'); ?></span></h2>
 		</div>
 	<div class='hidden-xs hidden-lg col-md-12 col-sm-12 '>
 			<h2 class='services-headlines sr'><span class='bg-headline-home1'><?php the_field('4_columns_headline'); ?></span></h2>
@@ -336,7 +336,7 @@ wpcf7_enqueue_styles();
 
 <section id='translation-belt' class='container-fluid'>
     <div class='row'>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--translation'><p class='confidentiality slideanim'><?php the_field ('belt_green');
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--translation'><p class='belt__text slideanim'><?php the_field ('belt_green');
 			?></p>
 		</div>
     </div>
@@ -369,7 +369,7 @@ wpcf7_enqueue_styles();
 
 <section id='teaching-belt' class='container-fluid'>
     <div class='row'>
-        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--teaching'><p class='confidentiality slideanim'><?php the_field ('belt_purple');
+        <div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 belt belt--teaching'><p class='belt__text slideanim'><?php the_field ('belt_purple');
 			
 			?></p>
 		</div>
@@ -389,14 +389,14 @@ wpcf7_enqueue_styles();
 			
 		</div>
         <div class='col-lg-3 col-xs-12 col-xs-lscape-6 col-about hidden-md hidden-sm hidden-lg'>
-			<div class='square square1 slideanim'>
+			<div class='square square__photo square--about slideanim'>
 				<p class='signature hidden-xs-lscape hidden-sm hidden-md hidden-lg'><?php the_field ('about_title');
 			?>
 			</p>
 			</div>
 		</div>
         <div class='col-lg-3 col-md-3 col-sm-9 col-xs-12 col-xs-lscape-6 col-about'>
-            <div class='square2-about square-about slideanim'>
+            <div class='square2-about square square--about slideanim'>
 				<h2 class='square__title square__title--about square__title--left'><?php the_field ('about_left_box_title');
 			?></h2>
 				<p class='square__text square__text--about'><?php the_field ('about_left_box_content');
@@ -405,7 +405,7 @@ wpcf7_enqueue_styles();
 		</div>
 		 <div class='col-lg-3 col-md-3 col-sm-8 col-offset-sm-1 col-xs-12 col-xs-lscape-6 col-about col-about-middle'>
 
-			<div class='square3-about square-about slideanim'>
+			<div class='square3-about square square--about slideanim'>
 				<h2 class='square__title square__title--about square__title--middle'><?php the_field ('about_middle_box_title');
 			?></h2>
 				<p class='square__text square__text--about'><?php the_field ('about_middle_box_content');
@@ -413,7 +413,7 @@ wpcf7_enqueue_styles();
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-3 col-sm-7 col-xs-12 col-xs-lscape-6 col-about'>
-			<div class='square4-about square-about slideanim'>
+			<div class='square4-about square square--about slideanim'>
 				<h2 class='square__title square__title--about square__title--right'><?php the_field ('about_right_box_title');
 			?></h2>
 				<p class='square__text square__text--about'><?php the_field ('about_right_box_content');

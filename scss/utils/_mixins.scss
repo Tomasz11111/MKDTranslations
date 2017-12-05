@@ -107,7 +107,6 @@
 }
 
 /// Block Modifier
-/// @access public
 /// @param {String} $modifier - Modifier's name
 @mixin m($modifier) {
     &--#{$modifier} {

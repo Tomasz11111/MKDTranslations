@@ -79,5 +79,11 @@
 				?>'>en</a></p>
 					</div>		
 		</div>
+		<!-- <div class='cookie-bar hidden-sm hidden-md hidden-lg'>
+			<p class='cookie-bar__text'><?php the_field('cookie_bar'); ?> <a class='cookie-bar__link'><?php the_field('cookie_bar_link'); ?></a></p>
+			
+			
+			
+	</div> -->
 	
 	</header>

@@ -43,7 +43,10 @@
 
 //sprawdzić czy potrzebne
 #terms_title {
-    margin-top: 7.2vh !important;
+    margin-top: 65px;
+	@include medium-device {
+		margin-top: 80px;
+	}
 }
 
 
@@ -148,6 +151,76 @@
 	
 }
 
+// Columns - About
+
+.col-about {
+	@extend %flex-centered;
+	@include medium-device {
+		height: 70vh;
+	}
+	@include medium-device-portrait {
+		height: 30vh;
+		
+	}
+	@include tablet-only {
+		height: auto;
+	}
+	@include mobile {
+		padding: 0 !important;
+	}
+}
+
+.col-about-middle {
+		@include tablet {
+			align-items: flex-start !important;
+	}
+}
+
+
+.col-signature {
+	display: flex;
+	justify-content:flex-start;
+	align-items: flex-end;
+	height: 30vh;
+	@include tablet {
+		padding-left: 2%;
+	}
+	@include mobile {
+		padding: 0 !important;
+	}
+	@include mobile-landscape {
+		justify-content: center;
+		align-items: center;
+	}
+}
+.col-signature-about {
+	@include mobile-landscape {
+		background-color: $clr-adjacent-3;
+		height: auto !important;
+	}
+	@include medium-device-portrait {
+		height: auto;
+	}
+	@include tablet-only {
+		height: 15vh !important;
+	}
+}
+
+.col-signature-learn {
+	@include mobile {
+		justify-content: center !important;
+		align-items: center !important;
+		background-size: cover;
+		height: 100vw;
+		@include bg-img('Warsaw-center-mob.jpg');
+		margin-top: 7vh;
+	}
+	@include mobile-landscape {
+		height: 100vh;
+		margin:0;
+		padding-top: 15vh !important;
+	}
+}
 .col-centered{
 	float: none;
 	margin: 0 auto;

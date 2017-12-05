@@ -21,13 +21,13 @@ endif;
 			</p>
 		</div>
         <div class='col-lg-3 col-md-3 col-sm-6 hidden-xs col-learn col-learn-left col-md-3-to-md-6'>
-			<div class='square square1-learn slideanim slide'>
+			<div class='square square__photo square__photo--learn slideanim slide'>
 				<p class='signature-photomkd'><span style='background-color:<?php the_field('color'); ?>'><?php the_field('learn_photo_text');
 				?></span></p>
 			</div>
 		</div>
         <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-left-middle col-md-3-to-md-6'>
-            <div class='square square2 square-learn square2-learn slideanim slide'>
+            <div class='square square--learn square2-learn slideanim slide'>
 				<h2 class='square__title--learn'><?php the_field('learn_left_square_title');
 				?></h2>
 				<p class='square__text square__text--learn'><?php the_field ('learn_left_square');
@@ -36,7 +36,7 @@ endif;
 		</div>
 		 <div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-right-middle col-md-3-to-md-6'>
 
-			<div class='square square3 square-learn square3-learn slideanim slide'>
+			<div class='square square--learn square3-learn slideanim slide'>
 				<h2 class='square__title--learn'><?php the_field('learn_middle_square_title');
 				?></h2>
 				<p class='square__text square__text--learn'><?php the_field ('learn_middle_square');
@@ -44,7 +44,7 @@ endif;
 			</div>
 		</div>
 		<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 col-xs-lscape-6 col-learn col-learn-right col-md-3-to-md-6 '>
-			<div class='square square4 square-learn square4-learn slideanim slide'>
+			<div class='square square--learn square4-learn slideanim slide'>
 				<h2 class='square__title--learn'><?php the_field ('learn_right_square_title');
 					?></h2>
 				<p class='square__text square__text--learn'><?php the_field ('learn_right_square');
@@ -67,7 +67,7 @@ endif;
  <div class='container-fluid bg-grey' id='how_i_teach'>
     <div class='row-col'>
         <div class='col-lg-12 col-xs-12'>
-			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section__title text-white sr'><span class='bg-headline-learn'><?php the_field ('how_i_teach_section_title');
+			<?php if ( have_posts() ): while (have_posts() ) : the_post() ;?><h1 class='section__title sr'><span class='bg-headline-learn'><?php the_field ('how_i_teach_section_title');
 			?></span></h1>
             <p class='section__lead sr'><?php the_field ('how_i_teach_section_lead');
 				?>
@@ -82,7 +82,7 @@ endif;
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src='<?php echo get_template_directory_uri(); ?>/images/pin-red.png' alt="Icon - Convenient location" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline subsection__headline--learn  text-white subsection__headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_1');
+            <h4 class='subsection__headline subsection__headline--learn subsection__headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_1');
 				?></span></h4>
 			<p class='subsection__text sr'><?php the_field ('how_i_teach_icon_description_1');
 				?></p>
@@ -91,7 +91,7 @@ endif;
     	<div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon sr'><img src='<?php echo get_template_directory_uri(); ?>/images/group-red.png' alt="Icon - Individual or group courses" class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline subsection__headline--learn text-white icon-headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_2');
+            <h4 class='subsection__headline subsection__headline--learn icon-headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_2');
 				?></span></h4>
 			<p class='subsection__text sr'><?php the_field ('how_i_teach_icon_description_2');
 				?></p>
@@ -100,7 +100,7 @@ endif;
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src='<?php echo get_template_directory_uri(); ?>/images/onlinelesson-red.png' alt='Icon - online classes' class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline subsection__headline--learn text-white icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php the_field ('how_i_teach_icon_headline_3');
+            <h4 class='subsection__headline subsection__headline--learn icon-headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php the_field ('how_i_teach_icon_headline_3');
 				?></span></h4>
 			<p class='subsection__text sr'><?php the_field ('how_i_teach_icon_description_3');
 				?>.</p>
@@ -109,7 +109,7 @@ endif;
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src= '<?php echo get_template_directory_uri(); ?>/images/online-red.png'  alt='Icon - online tools' class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline subsection__headline--learn text-white subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php the_field ('how_i_teach_icon_headline_4');
+            <h4 class='subsection__headline subsection__headline--learn subsection__headline-animation sr'><span style='background-color:<?php the_field('color'); ?>'><?php the_field ('how_i_teach_icon_headline_4');
 				?></span></h4>
 			<p class='subsection__text sr'><?php the_field ('how_i_teach_icon_description_4');
 				?></p>
@@ -118,7 +118,7 @@ endif;
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src='<?php echo get_template_directory_uri(); ?>/images/progress-red.png' alt='Icon - regular progress assesment' class='icon-set-height sr'>
 			</div>
-            <h4 class='subsection__headline subsection__headline--learn text-white icon-headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_5');
+            <h4 class='subsection__headline subsection__headline--learn icon-headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_5');
 				?></span></h4>
 			
            <p class='subsection__text sr'><?php the_field ('how_i_teach_icon_description_5');
@@ -128,7 +128,7 @@ endif;
         <div class='col-xs-12 col-xs-lscape-6 col-sm-6 col-md-4 col-lg-2'>
             <div class='subsection__container-icon'><img src='<?php echo get_template_directory_uri(); ?>/images/books-red.png'  alt='Icon - Various coursebooks' class='icon-set-height'>
 			</div>
-            <h4 class='subsection__headline subsection__headline--learn text-white icon-headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_6');
+            <h4 class='subsection__headline subsection__headline--learn icon-headline-animation sr'><span><?php the_field ('how_i_teach_icon_headline_6');
 				?></span></h4>
 			<p class='subsection__text sr'><?php the_field ('how_i_teach_icon_description_6');
 				?></p>
@@ -151,7 +151,7 @@ endif;
 
 <div class='container' id='learn-polish-pricing'>
 	<div class='row'>
-		<div class='col-lg-12'><h1 class='section__title text-white sr'><span class='bg-headline-learn'><?php the_field('learn_pricing_title');
+		<div class='col-lg-12'><h1 class='section__title sr'><span class='bg-headline-learn'><?php the_field('learn_pricing_title');
 				
 				?></span></h1>
 			<p class='section__lead sr'><?php the_field('learn_pricing_headline');
@@ -161,7 +161,7 @@ endif;
 		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6 learn-pricing-modes'>
             <div class='subsection__container-icon'><img src= '<?php echo get_template_directory_uri(); ?>/images/lessons_stationary_red.png'  alt='Icon - prices stationary lessons' class='icon-set-height sr'> 
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline subsection__headline--learn text-white subsection__headline-animation sr'><span><?php the_field ('learn_pricing_modes_1');
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline--learn subsection__headline-animation sr'><span><?php the_field ('learn_pricing_modes_1');
 				?></span></h4>
 			</div>
             
@@ -171,7 +171,7 @@ endif;
 		<div class='col-xs-12 col-sm-6 col-md-6 col-lg-6 learn-pricing-modes'>
             <div class='subsection__container-icon'><img src= '<?php echo get_template_directory_uri(); ?>/images/lessons_city_red.png'  alt='Icon - prices lessons city' class='icon-set-height sr'>
 			</div>
-            <div class='icon_title'><h4 class='subsection__headline subsection__headline--learn text-white subsection__headline-animation sr'><span><?php the_field ('learn_pricing_modes_2');
+            <div class='icon_title'><h4 class='subsection__headline subsection__headline--learn subsection__headline-animation sr'><span><?php the_field ('learn_pricing_modes_2');
 				?></span></h4>
 			</div>
             
