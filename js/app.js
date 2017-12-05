@@ -1,9 +1,10 @@
 
 
-jQuery(document).ready(function($) {
-    // Scroll reveal
+jQuery(document).ready(function ($) {
+    'use strict';
+	// Scroll reveal
 	 window.sr = ScrollReveal();
-		sr.reveal('.sr'); 
+		sr.reveal('.sr');
 	if (matchMedia) {
   		var mq = window.matchMedia("(min-width: 768px)");
 	  	mq.addListener(WidthChange);
@@ -12,32 +13,23 @@ jQuery(document).ready(function($) {
 
 
 // media query change
-function WidthChange(mq) {
-  if (mq.matches) {
-    $('.my-background-video').bgVideo({
-	fullScreen: true,
-	showPausePlay: false
-  })
-  }
-	else {
-    
-  }
+	function WidthChange(mq) {
+	  if (mq.matches) {
+		$('.my-background-video').bgVideo({
+		fullScreen: true,
+		showPausePlay: false
+		});
+	  }
 
-}
-	
-	function lazy() {
-        $('.lazy').Lazy();
-    };
-	lazy();
-	
-    
+
+	}
 					   
 		
 	function slides(elementToSlide, classActivatingSlide) {
 				
 			$(window).scroll(function () {
 				$(elementToSlide).each(function () {
-					var pos = $(this).offset().top;
+					var pos = $(this).offset().top,
 						winHeight = window.innerHeight,
 					 	winTop = $(window).scrollTop();
 					
@@ -50,15 +42,12 @@ function WidthChange(mq) {
 	slides('.slideanim', 'slide' );
 	slides('.slideanim-left', 'slide-left');
 		
-	
-	
-	
-  		// w tej funkcjo trzeba poprawic dla termsandconditions.html, przez to nie działa przeniesienie do innych stron, bo jest eventprevent default. Więc trzeba coś tu zmienić, albo oddzielny plik.js dla termsandconditions
+  		
 	function smoothScroll(elements) {
-        //if($('body').is('.home')) {
+      
 			var height = $('.navigation-container').outerHeight();
 			$(elements).on('click', function (event) {
-				/*window.location.hash = '';*/
+				
             // Make sure this.hash has a value before overriding default behavior*/
             if (this.hash !== '') {
 
@@ -67,16 +56,10 @@ function WidthChange(mq) {
 
                 // Store hash and scrollTop value
                 var hash = this.hash;
-					
-					 
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+								
                 $('html, body').animate({
-                    scrollTop: $(hash).offset().top - height             }, 900, function () {
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                   /* window.location.hash = hash;*/ //to opuszczam, bo przeskakuje na wysokośc id, nie uwzględniając przesunięcia o wysokość kontenera nawigacji, 
+                    scrollTop: $(hash).offset().top - height }, 900, function () {
+                   
                 });
             }
 				
@@ -110,60 +93,7 @@ function WidthChange(mq) {
 	}
 	swipe();  
 
-    
-
-    function activateIconsAnimation() {
-        //funkcja do skrócenia, uogólnienie klas
-        $(window).scroll (function() {
-             var $services = $('#services'),
-                offsetServices = $services.offset(),
-                $process = $('#process'),
-                offsetProcess = $process.offset(),
-                $howiTeach = $('#how_i_teach'),
-                offsetHowiTeach = $howiTeach.offset(),
-                winoffset = $(window).scrollTop();
-                
-        //tutaj sprawdzam, czy jest e ogóle w DOMie ten element, dla innych podstron, żeby nie wywalało błędów, być może potrzebne jakieś docelowe bardziej eleganckie rozwiązanie
-			if($('.container-fluid').is($services)) {
-				if(winoffset > offsetServices.top - 20) {
-					
-				  //dopisać opóźnienie np. setTimeout
-				   $('.bg-grey .subsection__container-icon').addClass('subsection__container-icon-animate');
-					
-				   }
-				else { $('.bg-grey .subsection__container-icon').removeClass('subsection__container-icon-animate');
-					  
-					 }
-			}
-			if($('.container-fluid').is($process)) {
-    
-            if(winoffset > offsetProcess.top - 20) {
-                $('#process-content .subsection__container-icon').addClass('subsection__container-icon-animate');
-                $('#process-content .subsection__headline').addClass('subsection__headline-animation');
-                setTimeout(function() {
-                    
-                $('.check_empty').addClass('hidden');
-                $('.check_full').removeClass('hidden');
-                }, 1000);
-               //potrzeba skrócić tę funkcję
-        	}
-            else {
-                $('#process-content .subsection__container-icon').removeClass('subsection__container-icon-animate');
-                 $('#process-content .subsection__headline').removeClass('subsection__headline-animation');
-                $('.check_empty').removeClass('hidden');
-                $('.check_full').addClass('hidden');
-                }
-        	}
-		
-        	});
-                         
-            
-                
-          
-	}
-   
-    activateIconsAnimation();
-    
+   // GOOGLE MAPS    
     function googleMaps() {
 
 		if($('body').hasClass('home')) {
@@ -207,8 +137,7 @@ function WidthChange(mq) {
 		});
 	}
 	termsShowHide();
-	
-		  
+
 
 	
 
@@ -307,7 +236,6 @@ function WidthChange(mq) {
 			
 		toggleHamburger();
 		hideMenuWhenLinked();
-		menuBarChangeColor();
 		highlightActiveLangBtn();
 		
 		/*hideLanguagesMob();
@@ -315,37 +243,7 @@ function WidthChange(mq) {
 		
 		
 		function toggleHamburger(){
-			/*	if (matchMedia) {
-				  var mq = window.matchMedia("(min-width: 992px)");
-				  mq.addListener(WidthChangeT);
-				  WidthChangeT(mq);
-				}*/
-/*
-				// media query change
-				function WidthChangeT(mq) {
-				  if (mq.matches) {
-					if ($('body').hasClass('home'))  {
-					var $trigger = $('#services'),
-						offset = $trigger.offset();
-				$(window).on('scroll', function() {
-					if( ($(window).scrollTop() > offset.top) && !($hamburger.hasClass('flag')) ) {
-						openHamburger();
-					}
-				});
-					}
-				  }
-				
-				   else {
-					 console.log('qrwa');
-					   $hamburger.removeClass('open');
-							$menu.addClass('invisible'); 
-							$container.removeClass('navigation-container-purple');
-					// window width is less than 500px
-				  }
-					return false
-				};*/
-			//tutaj tę funkcję trzeba przerobić, else działa,ale z jakiegoś powodu cały czas od nowa odpala funkcje wyżej		
-				  
+						  
 				
 				
 				$hamburgerContainer.on('click', function() {
@@ -476,7 +374,9 @@ function WidthChange(mq) {
 			hideMenuWhenLinked() }
 	
 					
-/* dla komórek i małych tabletów	*/	function hideMenuWhenLinked() {
+/* dla komórek i małych tabletów	*/
+		
+		function hideMenuWhenLinked() {
 				
 					$menu_link.on('click', function() {
 					
@@ -497,27 +397,7 @@ function WidthChange(mq) {
 					}); // skrócić
 				}
 			
-		//zmienić nazwę tej funkcji
-					function menuBarChangeColor() {
-					if((window.matchMedia('(min-width: 992px)').matches) && $('body').hasClass('home') ) {
-					$(window).scroll(function() {
-					if( ( $(window).scrollTop() > ($('#services').offset().top ) - 1) ){
-						if($hamburger.hasClass('open') ){
-						$container.removeClass('navigation-container-purple').addClass('navigation-container-dimgray')
-						
-							}
-						}
-					else {
-						$container.removeClass('navigation-container-dimgray');
-						if($hamburger.hasClass('open')) {
-						$container.addClass('navigation-container-purple');
-						
-						}
-					}
-					});
-				}
 		
-			};
 		
 
 	function reduceFont(el) {
@@ -537,11 +417,11 @@ function WidthChange(mq) {
 		
 	function highlightActiveLangBtn() {
 		var language = $('html').attr('lang'),
-		$langBtns = $('.language-switcher p a'),
-		pickColor = $('.hamburger span').css('backgroundColor');
+			$langBtns = $('.language-switcher p a'),
+			pickColor = $('.hamburger span').css('backgroundColor');
 		
 		$langBtns.each(function() {
-		langSymbol = $(this).text();
+		var langSymbol = $(this).text();
 		
 		if(!(language.indexOf(langSymbol) === -1)) {
 			$(this).addClass('language-switcher--is-active');
@@ -560,13 +440,14 @@ function WidthChange(mq) {
 		});
 	}
 }
-	//koniec funkcji hamburger
-//ew. można połączyć z funkcją poniżej
+//koniec funkcji hamburger
+
+//funkcja otwierająca formularze
 	function linkToForm() {
 		if(window.matchMedia('(min-width: 768px)').matches) {
 			
-		var $triggerTranslation = $('.btn-navbar-darkblue'),
-			$triggerLessons = $('.btn-navbar-purple'),
+		var $triggerTranslation = $('.btn-navbar--translation'),
+			$triggerLessons = $('.btn-navbar--teaching'),
 			$formTranslations = $('#form-translation'),
 			$formLessons = $('#form-lessons');
 			
@@ -634,8 +515,44 @@ function WidthChange(mq) {
 			});
 	}
 	showHideForm();
-
-	//funkcja do automatycznego ustalania wysokości elementów w zależności od wysokości innych elementów, do których chcemy porównywać została usunięta
+ 
+	function checkUncheck() {
+        //funkcja do skrócenia, uogólnienie klas
+        $(window).scroll (function() {
+             var $process = $('#process'),
+                 offsetProcess = $process.offset(),
+                 winoffset = $(window).scrollTop();
+                
+        //tutaj sprawdzam, czy jest e ogóle w DOMie ten element, dla innych podstron, żeby nie wywalało błędów, być może potrzebne jakieś docelowe bardziej eleganckie rozwiązanie
+			
+			if($('.container-fluid').is($process)) {
+    
+            if(winoffset > offsetProcess.top - 20) {
+                
+                setTimeout(function() {
+                    
+					$('.check_empty').addClass('hidden');
+					$('.check_full').removeClass('hidden');
+                }, 1000);
+               
+        	}
+            else {
+               
+                $('.check_empty').removeClass('hidden');
+                $('.check_full').addClass('hidden');
+                }
+        	}
+		
+        });
+                     
+            
+             
+         
+	}
+	checkUncheck();
+   
+    
+	// funkcja przekierowująca do właściwych formularzy z podstron po naciśnięciu buttona 'quick quote'
 function quickQuoteSet() {
 	var trigger = $('.btn--quick-quote'),
 		flag,
@@ -684,16 +601,43 @@ function quickQuoteGet() {
 }
 quickQuoteGet();
 
-	function datepickerFallback (input) {
-		var $j = jQuery.noConflict();
-			$input = $(input);
-		if ($input.prop('type') != 'date' ) {
-    $j($input).datetimepicker();
-			console.log('datetimepicker');
-}
+	
+	
+//Cookie bar
+function cookie() {
+	function closeCookieBar() {
+		$('.cookie-bar__text').find('a').on('click', function(event) {
+			event.preventDefault();
+			$('.cookie-bar').addClass('hidden');
+			var cookieFlag = {mKDcookieSeenAndTurnedOff: true},
+				myJSON;
+			myJSON = JSON.stringify(cookieFlag);
+			localStorage.setItem('mKDcookie', myJSON);
+		});
+		
+		
 	}
-	datepickerFallback('#date_lesson_cz','#date_lesson_cz', '#date_translate_en', '#date_translate_cz');
+	function verifyCookie() {
+		var myJSON = localStorage.getItem('mKDcookie'),
+			cookieFlag;
+		
+		if(!(myJSON === null)) {
+			cookieFlag = JSON.parse(myJSON);
+			
+			if (cookieFlag.mKDcookieSeenAndTurnedOff === true) {
+				
+				$('.cookie-bar').addClass('hidden');
+			}
+		}
+		
+	
+	}
+	verifyCookie();
+	closeCookieBar();
+}
+	cookie();
 });
+
            
 	
 	
